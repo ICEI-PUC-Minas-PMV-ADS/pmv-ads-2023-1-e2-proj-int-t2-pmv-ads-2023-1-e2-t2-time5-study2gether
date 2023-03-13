@@ -1,23 +1,27 @@
-# TÍTULO DO PROJETO
+# Study2gether
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`2023/1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo deste projeto é desenvolver uma ferramenta de comunicação assíncrona que busca aumentar a interação entre estudantes de Análise e Desenvolvimento de Sistemas (ADS) da PUCMinas Virtual, permitindo o compartilhamento de informaçoes sobre disciplinas e assuntos relacionados ao curso, podendo fazer perguntas, respondê-las, postar materiais e interagir com os colegas. Essa aplicação além de auxiliar os estudantes na parte técnica, visa também criar um ambiente participativo e colaborativo entre seus usuários.
+
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Amanda de Lima Ventura
+* Ellen Caroline Trindade Gonçalves Cândido
+* Elpídio Lomeu Junior
+* Fabrício Maia dos Santos
+* Leonardo Correia de Sá e Silva
+* Odair Cordeiro Marra
+* Shinji Matsumoto Fernandes
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson da Costa
 
 ## Instruções de utilização
 
