@@ -2,92 +2,153 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A abordagem do problema e seus objetivos foram extraídos de uma pesquisa realizada pelos alunos participantes do grupo. Nessa pesquisa foram entrevistados outros alunos do curso de Análise e Desenvolvimento de Sistemas por serem os pretensos usuários da aplicação. Os dados obtidos são apresentados a seguir como personas e histórias de usuários.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As personas levantadas durante o processo de entendimento do problema são apresentadas a seguir:
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+1 - RINGUI FERDINANDO tem 27 anos, é mecânico e estudante prestes a se formar no ensino superior de TI. Seus Hobbies são: passar tempo com a família; programar; estudar e assistir animes.
+
+Ringui exerce atualmente a atividade de mecânico, porém percebeu que estava distante de sua família e perdendo muito do crescimento dos filhos trabalhando na oficina, portanto, com muito esforço, está em mudança de carreira para a área de TI. Agora completamente motivado a seguir nessa área, Ringui procura as melhores formas de estudar e se aprimorar para no futuro poder trabalhar de casa ao lado de sua família.
+
+Suas frustrações são: a dificuldade de encontrar uma forma de tirar dúvidas enquanto estuda para a faculdade em horários noturnos e não saber onde procurar materiais mais específico para as suas dúvidas de cada eixo. 
+
+Já sua motivação é o aprimoramento de seus estudos para se tornar destaque na área de TI quando se formar e concorrer a vagas no exterior. 
+
+
+2 - ARTHUR SILVA tem 23 anos, é auxiliar de escritório e estudante de programação. Seus Hobbies são: programar, praticar atividades físicas, ficar com a família e ler bons livros.
+
+Arthur é um jovem que mora com os pais, trabalha durante o dia como auxiliar de escritório e a noite faz um curso na modalidade EAD de desenvolvimento de software. Está em busca de uma boa oportunidade na área de TI para que possa ajudar sua família.
+
+Sua frustação é a dificuldade em buscar conteúdos gratuitos relacionados às matérias de seu curso.
+
+Já suas motivações são: fazer networking com outros estudantes de ADS e ter mais produtividade acadêmica.
+
+
+3 - CLÁUDIA SANCHES tem 25 anos, é economista e estudante de Análise e Desenvolvimento de Sistemas na PUC Minas Virtual. Seus Hobbies são: ler, ouvir podcasts, praticar Inglês e sair com amigos.
+
+Cláudia é solteira e trabalha como analista de investimentos em uma corretora paulista que tem escritório em Belo Horizonte. Por se interessar muito pela área de TI resolveu investir em uma nova formação, optando pelo curso de Análise e Desenvolvimento de Sistemas na PUC-Minas Virtual. Seu objetivo é se tornar uma Software Engineer e assim ter a liberdade de se candidatar a vagas no exterior.
+
+Sua frustração é sentir-se um pouco só no curso a distância, tem baixíssima interação com colegas e professores. Sente falta das discussões em sala de aula, que para ela, agregam muito no desenvolvimento da classe.
+
+Já suas motivações são: desenvolver-se profissionalmente e vê na sua formação em tecnologia uma forma de impulsionar uma nova carreira no exterior e quer também ampliar seus conhecimentos.
+
+
+4 - ALPÍDIO ROMEO tem 26 anos, é programador Freelancer, estudante de Análise e Desenvolvimento de Sistemas. Seus Hobbies são: programar, jogar RPG de mesa e jogar League of Legends. 
+
+Alpídio entrou no mundo da computação desde muito cedo, quando criança sempre sonhou em desenvolver um jogo do tipo RPG de mesa, em sua adolescência conseguiu criar o seu primeiro protótipo. Alpídio, de família simples, teve que procurar logo seu primeiro emprego para ajudar nas despesas de casa, e teve que abandonar o seu tão amado projeto e procurar por um emprego informal na área de desenvolvimento web. Com o passar dos anos, Alpídio adquiriu uma vasta experiência na área, mas nunca teve um emprego formal, tampouco tempo para voltar a desenvolver jogos.
+
+Sua frustração está na dificuldade de encontrar uma forma de testar seus conhecimentos já adquiridos, e os em desenvolvimento no curso superior, e fortalecer a sua rede de contatos profissionais na área.
+
+Já sua motivação está em obter o diploma de ensino superior para conseguir entrar no mercado formal de desenvolvimento de software, e poder aproveitar de todos os benefícios concedidos pela empresa à classe.
+
+
+5 - JANSOM BERGSON tem 27 anos, é auxiliar administrativo na PUC Minas e estudante de ADS. Seus Hobbies são: games, treinar e assistir séries.
+
+Jansom sempre gostou de jogos de RPG e Simulação e isso o aproximou da computação, a curiosidade fez descobrir algumas tecnologias, no entanto, acabou se distanciando desse universo. Então conheceu o curso de análise e desenvolvimento de sistemas, e desde então vem buscando se desenvolver nesta área.
+
+Suas frustrações estão na dificuldade de tirar dúvidas com outros alunos, do meu eixo e/ou diferentes eixos, podendo aprender com experiência de outros alunos e contribuir com o aprendizado de outros alunos.
+
+Já sua motivação está em buscar na graduação de Análise e Desenvolvimento de Sistemas o conhecimento necessário para mudar de carreira.
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Ringui Ferdinando   | um local onde eu possa estudar e   | poder estudar em horários que não      |
+|                    | tirar dúvidas independente do      | comprometam meu trabalho atual.        |
+|                    | horário                            |                                        | 
+|--------------------|------------------------------------|----------------------------------------|
+|Ringui Ferdinando   | uma plataforma organizada e dividi-| encontrar materiais específicos mais   |
+|                    | da por cada eixo da faculdade de   | rapidamente e otimizar o pouco tempo   |
+|                    | ADS                                | que tenho para estudar.                | 
+|--------------------|------------------------------------|----------------------------------------|
+|Arthur Silva        | um espaço onde eu possa fazer      | esclarecer minhas dúvidas como         |
+|                    | perguntas relacionadas às matérias | iniciante na área.                     |
+|                    | e ao mundo da programação          |                                        | 
+|--------------------|------------------------------------|----------------------------------------|
+|Arthur Silva        | uma plataforma que permita conhecer| fortalecer minha networking e conseguir|
+|                    | novas pessoas aspirantes do setor  | indicações em empresas de interesse.   |
+|                    | de tecnologia                      |                                        | 
+|--------------------|------------------------------------|----------------------------------------|
+|Cláudia Sanches     | poder pesquisar informações sobre  | me auxiliar no esclarecimento de       |
+|                    | determinado assunto ou disciplina  | dúvidas específicas sobre o conteúdo   |
+|                    | do curso                           | das matérias.                          | 
+|--------------------|------------------------------------|----------------------------------------|
+|Cláudia Sanches     | uma ferramenta que me permita      | resgatar o senso de comunidade         |
+|                    | interagir com colegas              | estudantil.                            |
+|--------------------|------------------------------------|----------------------------------------|
+|Alpídio Romeo       | um local onde eu possa estudar e   | poder treinar meus conhecimentos       |
+|                    | responder as dúvidas de outros     | adquiridos, aprimorar minha expertise  |
+|                    | alunos                             | em determinados tópicos e me sentir    | 
+|                    |                                    | mais preparado para procurar por uma   | 
+|                    |                                    | vaga de engenheiro de software.        | 
+|--------------------|------------------------------------|----------------------------------------|
+|Alpídio Romeo       | poder saber o feedback de minhas   | conseguir estimar a didática e domínio |
+|                    | respostas e ser notificado quando  | no assunto, e saber se preciso revisar |
+|                    | respondido                         | algum conceito.                        | 
+|--------------------|------------------------------------|----------------------------------------|
+|Jansom Bergson      | poder ter acesso às minhas         | relembrar e/ou responder as perguntas  |
+|                    | interações.                        | que já eu fiz, ou respondi.            |
+|--------------------|------------------------------------|----------------------------------------|
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+## Requisitos e Restrições do Projeto
 
-## Requisitos
-
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir.
 
 ### Requisitos Funcionais
 
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
+
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-01 | A aplicação deve permitir ao usuário a fazer publicações. | ALTA | 
+|RF-02 | A aplicação deve apresentar um filtro por eixos ou por microfundamentos.   | ALTA |
+|RF-03 | A aplicação deve permitir ao usuário postar perguntas. | ALTA | 
+|RF-04 | A aplicação deve permitir ao usuário responder as perguntas e publicações.   | ALTA |
+|RF-05 | A aplicação deve oferecer uma funcionalidade de pesquisa com campo de texto. | ALTA | 
+|RF-06 | A aplicação deve permitir ao usuário se cadastrar, e realizar o login.   | ALTA |
+|RF-07 | A aplicação deve permitir ao usuário ter acesso a um feed com o histórico de suas interações. | ALTA | 
+|RF-08 | A aplicação deve permitir acesso a materiais de apoio determinado.   | MÉDIA |
+|RF-09 | A aplicação deve permitir criar a interação entre as pessoas com as publicações através de comentários e reações. | BAIXA | 
+|RF-10 | A aplicação deve permitir ao usuário ser notificado quando alguém responder uma publicação a qual ele participou ou favoritou.   | BAIXA |
+|RF-11 | A aplicação deve permitir ao usuário recuperar sua senha. | BAIXA | 
+|RF-12 | A aplicação deve permitir que usuários denunciem uma publicação duvidosa.   | BAIXA |
 
 ### Requisitos não Funcionais
 
+Abaixo estão listados os requisitos não funcionais que devem ser atendidos pelo projeto.
+
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-01 | A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. | ALTA  | 
+|RNF-02 | A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. | ALTA  | 
+|RNF-03 | A aplicação deve ser compatível com os principais navegadores do mercado. | ALTA | 
+|RNF-04 | O tempo de resposta do sistema não deve ser maior do que 30 segundos. | MÉDIA | 
+|RNF-05 | A aplicação deve estar acessível e sem interrupções por pelo menos 95% do tempo, apresentando um tempo de inatividade mínimo. | MÉDIA | 
+|RNF-06 | A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade. | BAIXA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+A tabela abaixo apresenta as limitações que afetam a execução deste projeto e que devem ser consideradas como obrigações claras durante o seu desenvolvimento.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 19/06/2023. |
+|02| A aplicação deve se restringir às tecnologias apresentadas até o eixo 2 do curso.        |
+|03| Os integrantes devem fazer reuniões semanais para discutirem sobre o andamento do projeto e planejarem as próximas etapas a serem executadas. |
+|04| Os dados devem ser armazenados em um banco de dados relacional.        |
+|05| O repositório deve ser gerado a partir do repositório template fornecido pelo professor, e só deve ser utilizado no Github Classroom. |
+|06| A aplicação deve ser hospedada em uma plataforma gratuita. |
+|07| O Backend deverá ser desenvolvido na linguagem C#.        |
 
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
