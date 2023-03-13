@@ -19,8 +19,11 @@ O problema que se busca resolver com este projeto é a baixa interação dos est
 O objetivo do trabalho é desenvolver uma ferramenta de comunicação assíncrona que possibilite a interação dos estudantes, permitindo o compartilhamento de informações sobre disciplinas, tecnologias e conhecimentos adquiridos.
 
 Como objetivos específicos, tem-se:
+  
   ● Permitir que os usuários iniciem discussões sobre tópicos relacionados ao curso.
+  
   ● Permitir que os usuários possam interagir entre os tópicos criados.
+  
   ● Permitir a divulgação de materiais de estudos gratuitos por meio de links de conteúdos relevantes sobre o assunto que estiver em pauta.  
 
 
