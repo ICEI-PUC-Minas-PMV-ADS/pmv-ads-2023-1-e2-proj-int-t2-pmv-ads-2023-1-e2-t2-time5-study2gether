@@ -1,46 +1,40 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.(teste)
+Nos últimos anos, o Brasil tem registrado um aumento significativo dos cursos superiores na modalidade a distância. Segundo o INEP (2022), o número de alunos matriculados nessa modalidade de ensino ultrapassou 41% do total de alunos universitários em 2021.
+
+Para avaliar a qualidade do ensino, o Governo Federal implementou, em 2004, de acordo com CAETANO et al. (2015) o Sistema Nacional de Avaliação da Educação Superior (SINAES), que inclui o Exame Nacional de Desempenho dos Estudantes (ENADE). Ao analisar os dados do ENADE edição 2021, um fato foi destacado por VESSONI (2022) no Jornal da UNESP: 48% dos participantes eram estudantes de cursos presenciais e 52% de cursos de Educação a distância (EAD), porém os alunos do ensino a distância obtiveram notas significativamente inferiores àqueles da modalidade presencial. Essa observação ressalta a importância de equilibrar esses resultados.
+
+De acordo com ANTUNES e BATISTA (2016), a Educação à Distância enfrenta diversos desafios que frequentemente resultam em sensação de frustração, ressentimento e medo relacionados à metodologia, dentre eles, a dificuldade de interação entre alunos e entre alunos e professores. Assim, notam a necessidade dos participantes do EAD em estabelecerem vínculos para que juntos possam  construir relações de interação que favoreçam o aprendizado coletivo e fortaleçam a metodologia, possibilitando que surjam sentimentos de dedicação, entusiasmo e autoconfiança que aprimorem a experiência nas suas formações.
+
+Frente ao baixo rendimento encontrado nos cursos do EAD e a necessidade de estabelecerem-se vínculos entre os alunos, emerge a necessidade de avaliar possíveis soluções que promovam o aprimoramento das formações dos alunos. Assim, propõe-se a construção de um ambiente acadêmico de interação que possibilite o compartilhamento de informações entre os alunos e apresente-se como um auxílio potencial para o desenvolvimento e formação dos alunos.
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+O problema que se busca resolver com este projeto é a baixa interação dos estudantes para estabelecerem vínculos e compartilharem informações sobre temáticas relacionadas ao curso de Análise e Desenvolvimento de Sistemas (ADS) da PUC Minas Virtual, que possam ser utilizadas para incrementar o aprendizado e a experiência dos alunos em suas formações.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo do trabalho é desenvolver uma ferramenta de comunicação assíncrona que possibilite a interação dos estudantes, permitindo o compartilhamento de informações sobre disciplinas, tecnologias e conhecimentos adquiridos.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, tem-se:
+  ● Permitir que os usuários iniciem discussões sobre tópicos relacionados ao curso.
+  ● Permitir que os usuários possam interagir entre os tópicos criados.
+  ● Permitir a divulgação de materiais de estudos gratuitos por meio de links de conteúdos relevantes sobre o assunto que estiver em pauta.  
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Em estudo realizado por SCHEMBRI (2019), foram investigados os desafios da interação dos alunos no sistema EAD no Brasil e nesse estudo, foi apontado que redes sociais tem se apresentado como um importante apoio ao ensino à distância e que novas aplicações tecnológicas oferecerão novidades e soluções para aumentar a interatividade nos cursos e disciplinas.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+De acordo com ZWICKER et al. (2021), um recurso de comunicação assíncrona entre estudantes pode contribuir na apropriação e construção coletiva do conhecimento, por incentivar a participação ativa no processo de aprendizagem, formação de vínculos entre conteúdos, discussões reflexivas e compartilhamento de experiências. Ainda segundo os mesmos autores, uma ferramenta assíncrona contribui com a Educação à Distância por permitir a flexibilidade de horário e localização.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Assim, percebe-se a necessidade de uma ferramenta assíncrona que permita uma conexão direta dos estudantes com seus pares, possibilitando a formação de grupos de estudos, compartilhamento de conhecimentos e discussões sobre diversos assuntos relacionados a suas formações.
+
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Por apresentar o intuito de possibilitar o compartilhamento de informações e conhecimentos para o desenvolvimento acadêmico de estudantes das diversas áreas de Tecnologia da Informação, especialmente Análise e Desenvolvimento de Sistemas (ADS), o foco deste trabalho são graduandos e graduandas que buscam compartilhar suas experiências e conhecimentos, além de aprender com outros membros da comunidade.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Com isso, estabeleceu-se como público alvo deste projeto: estudantes do ensino superior do curso de Análise e Desenvolvimento de Sistemas da PUC Minas Virtual, independente de gênero ou idade, com computadores ou dispositivos móveis que permitam acesso à internet, que pretendem estabelecer interações com outros estudantes para o compartilhamento de aprendizados e construção de conhecimento coletivo.
