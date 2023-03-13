@@ -11,7 +11,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 1 - RINGUI FERDINANDO tem 27 anos, é mecânico e estudante prestes a se formar no ensino superior de TI. Seus Hobbies são: passar tempo com a família; programar; estudar e assistir animes.
 
-Ringui exerce atualmente a atividade de mecânico, porém percebeu que estava distante de sua família e perdendo muito do crescimento dos filhos trabalhando na oficina, portanto, com muito esforço, está em mudança de carreira para a área de TI. Agora completamente motivado a seguir nessa área, Ringui procura as melhores formas de estudar e se aprimorar para no futuro poder trabalhar de casa ao lado de sua família.
+Atualmente Ringui exerce a atividade de mecânico, porém percebeu que estava distante de sua família e perdendo muito do crescimento dos filhos trabalhando na oficina, portanto, com muito esforço, está em mudança de carreira para a área de TI. Agora completamente motivado a seguir nessa área, ele procura as melhores formas de estudar e se aprimorar para no futuro poder trabalhar de casa ao lado de sua família.
 
 Suas frustrações são: a dificuldade de encontrar uma forma de tirar dúvidas enquanto estuda para a faculdade em horários noturnos e não saber onde procurar materiais mais específico para as suas dúvidas de cada eixo. 
 
@@ -94,7 +94,7 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 |                    | respondido                         | algum conceito.                        | 
 |--------------------|------------------------------------|----------------------------------------|
 |Jansom Bergson      | poder ter acesso às minhas         | relembrar e/ou responder as perguntas  |
-|                    | interações.                        | que já eu fiz, ou respondi.            |
+|                    | interações.                        | que eu fiz, ou respondi.               |
 |--------------------|------------------------------------|----------------------------------------|
 
 
@@ -106,20 +106,20 @@ O escopo funcional do projeto é definido por meio dos requisitos funcionais que
 
 A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-01 | A aplicação deve permitir ao usuário a fazer publicações. | ALTA | 
-|RF-02 | A aplicação deve apresentar um filtro por eixos ou por microfundamentos.   | ALTA |
-|RF-03 | A aplicação deve permitir ao usuário postar perguntas. | ALTA | 
-|RF-04 | A aplicação deve permitir ao usuário responder as perguntas e publicações.   | ALTA |
-|RF-05 | A aplicação deve oferecer uma funcionalidade de pesquisa com campo de texto. | ALTA | 
-|RF-06 | A aplicação deve permitir ao usuário se cadastrar, e realizar o login.   | ALTA |
-|RF-07 | A aplicação deve permitir ao usuário ter acesso a um feed com o histórico de suas interações. | ALTA | 
-|RF-08 | A aplicação deve permitir acesso a materiais de apoio determinado.   | MÉDIA |
-|RF-09 | A aplicação deve permitir criar a interação entre as pessoas com as publicações através de comentários e reações. | BAIXA | 
-|RF-10 | A aplicação deve permitir ao usuário ser notificado quando alguém responder uma publicação a qual ele participou ou favoritou.   | BAIXA |
-|RF-11 | A aplicação deve permitir ao usuário recuperar sua senha. | BAIXA | 
-|RF-12 | A aplicação deve permitir que usuários denunciem uma publicação duvidosa.   | BAIXA |
+|ID     | Descrição do Requisito  | Prioridade |
+|-------|-----------------------------------------|----|
+|RF-01  | A aplicação deve permitir ao usuário a fazer publicações. | ALTA | 
+|RF-02  | A aplicação deve apresentar um filtro por eixos ou por microfundamentos.   | ALTA |
+|RF-03  | A aplicação deve permitir ao usuário postar perguntas. | ALTA | 
+|RF-04  | A aplicação deve permitir ao usuário responder as perguntas e publicações.   | ALTA |
+|RF-05  | A aplicação deve oferecer uma funcionalidade de pesquisa com campo de texto. | ALTA | 
+|RF-06  | A aplicação deve permitir ao usuário se cadastrar, e realizar o login.   | ALTA |
+|RF-07  | A aplicação deve permitir ao usuário ter acesso a um feed com o histórico de suas interações. | ALTA | 
+|RF-08  | A aplicação deve permitir acesso a materiais de apoio determinado.   | MÉDIA |
+|RF-09  | A aplicação deve permitir criar a interação entre as pessoas com as publicações através de comentários e reações. | BAIXA | 
+|RF-10  | A aplicação deve permitir ao usuário ser notificado quando alguém responder uma publicação a qual ele participou ou favoritou.   | BAIXA |
+|RF-11  | A aplicação deve permitir ao usuário recuperar sua senha. | BAIXA | 
+|RF-12  | A aplicação deve permitir que usuários denunciem uma publicação duvidosa.   | BAIXA |
 
 ### Requisitos não Funcionais
 
