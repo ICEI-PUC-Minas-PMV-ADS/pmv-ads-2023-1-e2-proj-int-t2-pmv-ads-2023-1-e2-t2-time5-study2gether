@@ -106,33 +106,32 @@ O escopo funcional do projeto é definido por meio dos requisitos funcionais que
 
 A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
 
-|ID     | Descrição do Requisito  | Prioridade |
-|-------|-----------------------------------------|----|
-|RF-01  | A aplicação deve permitir ao usuário a fazer publicações. | ALTA | 
-|RF-02  | A aplicação deve apresentar um filtro por eixos ou por microfundamentos.   | ALTA |
-|RF-03  | A aplicação deve permitir ao usuário postar perguntas. | ALTA | 
-|RF-04  | A aplicação deve permitir ao usuário responder as perguntas e publicações.   | ALTA |
-|RF-05  | A aplicação deve oferecer uma funcionalidade de pesquisa com campo de texto. | ALTA | 
-|RF-06  | A aplicação deve permitir ao usuário se cadastrar, e realizar o login.   | ALTA |
-|RF-07  | A aplicação deve permitir ao usuário ter acesso a um feed com o histórico de suas interações. | ALTA | 
-|RF-08  | A aplicação deve permitir acesso a materiais de apoio determinado.   | MÉDIA |
-|RF-09  | A aplicação deve permitir criar a interação entre as pessoas com as publicações através de comentários e reações. | BAIXA | 
-|RF-10  | A aplicação deve permitir ao usuário ser notificado quando alguém responder uma publicação a qual ele participou ou favoritou.   | BAIXA |
-|RF-11  | A aplicação deve permitir ao usuário recuperar sua senha. | BAIXA | 
-|RF-12  | A aplicação deve permitir que usuários denunciem uma publicação duvidosa.   | BAIXA |
+|ID      | Descrição do Requisito  | Prioridade |
+|--------|-----------------------------------------|----|
+|RF-01   | A aplicação deve permitir ao usuário a fazer publicações. | ALTA | 
+|RF-02   | A aplicação deve apresentar um filtro por eixos ou por microfundamentos.   | ALTA |
+|RF-03   | A aplicação deve permitir ao usuário postar perguntas. | ALTA | 
+|RF-04   | A aplicação deve permitir ao usuário responder as perguntas e publicações.   | ALTA |
+|RF-05   | A aplicação deve oferecer uma funcionalidade de pesquisa com campo de texto. | ALTA | 
+|RF-06   | A aplicação deve permitir ao usuário se cadastrar, e realizar o login.   | ALTA |
+|RF-07   | A aplicação deve permitir ao usuário ter acesso a um feed com o histórico de suas interações. | ALTA | 
+|RF-08   | A aplicação deve permitir visualizar todas as publicações.   | MÉDIA |
+|RF-09   | A aplicação deve permitir ao usuário reagir com reações de emojis. | BAIXA | 
+|RF-10   | A aplicação deve permitir ao usuário recuperar sua senha.   | BAIXA |
+|RF-11   | A aplicação deve permitir ao administrador inserir postagem de indicações de materiais relevantes. | BAIXA | 
 
 ### Requisitos não Funcionais
 
 Abaixo estão listados os requisitos não funcionais que devem ser atendidos pelo projeto.
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-01 | A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. | ALTA  | 
-|RNF-02 | A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. | ALTA  | 
-|RNF-03 | A aplicação deve ser compatível com os principais navegadores do mercado. | ALTA | 
-|RNF-04 | O tempo de resposta do sistema não deve ser maior do que 30 segundos. | MÉDIA | 
-|RNF-05 | A aplicação deve estar acessível e sem interrupções por pelo menos 95% do tempo, apresentando um tempo de inatividade mínimo. | MÉDIA | 
-|RNF-06 | A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade. | BAIXA | 
+|ID      | Descrição do Requisito  |Prioridade |
+|--------|-------------------------|----|
+|RNF-01  | A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. | ALTA  | 
+|RNF-02  | A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. | ALTA  | 
+|RNF-03  | A aplicação deve ser compatível com os principais navegadores do mercado. | ALTA | 
+|RNF-04  | O tempo de resposta do sistema não deve ser maior do que 30 segundos. | MÉDIA | 
+|RNF-05  | A aplicação deve estar acessível e sem interrupções por pelo menos 95% do tempo, apresentando um tempo de inatividade mínimo. | MÉDIA | 
+|RNF-06  | A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade. | BAIXA | 
 
 
 ## Restrições
