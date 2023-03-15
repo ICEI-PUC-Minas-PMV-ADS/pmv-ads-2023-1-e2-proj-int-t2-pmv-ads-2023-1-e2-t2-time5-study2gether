@@ -124,14 +124,14 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 Abaixo estão listados os requisitos não funcionais que devem ser atendidos pelo projeto.
 
-|ID        | Descrição do Requisito  |Prioridade |
-|----------|-------------------------|----|
-|RNF-01    | A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. | ALTA  | 
-|RNF-02    | A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. | ALTA  | 
-|RNF-03    | A aplicação deve ser compatível com os principais navegadores do mercado. | ALTA | 
-|RNF-04    | O tempo de resposta do sistema não deve ser maior do que 30 segundos. | MÉDIA | 
-|RNF-05    | A aplicação deve estar acessível e sem interrupções por pelo menos 95% do tempo, apresentando um tempo de inatividade mínimo. | MÉDIA | 
-|RNF-06    | A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade. | BAIXA | 
+|ID         | Descrição do Requisito  |Prioridade |
+|-----------|-------------------------|----|
+|RNF-01     | A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. | ALTA  | 
+|RNF-02     | A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. | ALTA  | 
+|RNF-03     | A aplicação deve ser compatível com os principais navegadores do mercado. | ALTA | 
+|RNF-04     | O tempo de resposta do sistema não deve ser maior do que 30 segundos. | MÉDIA | 
+|RNF-05     | A aplicação deve estar acessível e sem interrupções por pelo menos 95% do tempo, apresentando um tempo de inatividade mínimo. | MÉDIA | 
+|RNF-06     | A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade. | BAIXA | 
 
 
 ## Restrições
