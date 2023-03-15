@@ -13,7 +13,7 @@ O objetivo deste projeto é desenvolver uma ferramenta de comunicação assíncr
 
 * Amanda de Lima Ventura
 * Ellen Caroline Trindade Gonçalves Cândido
-* Elpídio Lomeu Junior
+* Elpidio Lomeu Junior
 * Fabrício Maia dos Santos
 * Leonardo Correia de Sá e Silva
 * Odair Cordeiro Marra
