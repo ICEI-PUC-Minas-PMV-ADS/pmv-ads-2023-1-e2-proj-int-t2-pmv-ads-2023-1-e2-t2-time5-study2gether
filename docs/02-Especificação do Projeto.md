@@ -113,8 +113,8 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-03   | A aplicação deve permitir ao usuário postar perguntas. | ALTA | 
 |RF-04   | A aplicação deve permitir ao usuário responder as perguntas e publicações.   | ALTA |
 |RF-05   | A aplicação deve oferecer uma funcionalidade de pesquisa com campo de texto. | ALTA | 
-|RF-06   | A aplicação deve permitir ao usuário se cadastrar, e realizar o login.   | ALTA |
-|RF-07   | A aplicação deve permitir ao usuário ter acesso a um feed com o histórico de suas interações. | ALTA | 
+|RF-06   | A aplicação deve permitir ao usuário se cadastrar e realizar o login.   | ALTA |
+|RF-07   | A aplicação deve permitir ao usuário ter acesso a um feed com seu histórico de interações. | ALTA | 
 |RF-08   | A aplicação deve permitir visualizar todas as publicações.   | MÉDIA |
 |RF-09   | A aplicação deve permitir ao usuário reagir com reações de emojis. | BAIXA | 
 |RF-10   | A aplicação deve permitir ao usuário recuperar sua senha.   | BAIXA |
