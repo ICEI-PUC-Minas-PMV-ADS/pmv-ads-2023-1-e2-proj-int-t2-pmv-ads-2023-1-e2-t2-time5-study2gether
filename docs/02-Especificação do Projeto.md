@@ -63,7 +63,6 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 |Ringui Ferdinando   | um local onde eu possa estudar e   | poder estudar em horários que não      |
 |                    | tirar dúvidas independente do      | comprometam meu trabalho atual.        |
 |                    | horário                            |                                        | 
-|--------------------|------------------------------------|----------------------------------------|
 |Ringui Ferdinando   | uma plataforma organizada e dividi-| encontrar materiais específicos mais   |
 |                    | da por cada eixo da faculdade de   | rapidamente e otimizar o pouco tempo   |
 |                    | ADS                                | que tenho para estudar.                | 
