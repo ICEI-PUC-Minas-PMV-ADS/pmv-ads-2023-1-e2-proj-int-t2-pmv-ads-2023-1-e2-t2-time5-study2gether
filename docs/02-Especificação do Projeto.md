@@ -151,4 +151,4 @@ A tabela abaixo apresenta as limitações que afetam a execução deste projeto 
 
 ## Diagrama de Casos de Uso
 
-![Diagrama Caso de Uso](img/diagrama_caso_de_uso.png)
+![Diagrama Caso de Uso](img/Diagrama_caso_de_uso.png)
