@@ -60,42 +60,15 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Ringui Ferdinando   | um local onde eu possa estudar e   | poder estudar em horários que não      |
-|                    | tirar dúvidas independente do      | comprometam meu trabalho atual.        |
-|                    | horário                            |                                        | 
-|Ringui Ferdinando   | uma plataforma organizada e dividi-| encontrar materiais específicos mais   |
-|                    | da por cada eixo da faculdade de   | rapidamente e otimizar o pouco tempo   |
-|                    | ADS                                | que tenho para estudar.                | 
-|--------------------|------------------------------------|----------------------------------------|
-|Arthur Silva        | um espaço onde eu possa fazer      | esclarecer minhas dúvidas como         |
-|                    | perguntas relacionadas às matérias | iniciante na área.                     |
-|                    | e ao mundo da programação          |                                        | 
-|--------------------|------------------------------------|----------------------------------------|
-|Arthur Silva        | uma plataforma que permita conhecer| fortalecer minha networking e conseguir|
-|                    | novas pessoas aspirantes do setor  | indicações em empresas de interesse.   |
-|                    | de tecnologia                      |                                        | 
-|--------------------|------------------------------------|----------------------------------------|
-|Cláudia Sanches     | poder pesquisar informações sobre  | me auxiliar no esclarecimento de       |
-|                    | determinado assunto ou disciplina  | dúvidas específicas sobre o conteúdo   |
-|                    | do curso                           | das matérias.                          | 
-|--------------------|------------------------------------|----------------------------------------|
-|Cláudia Sanches     | uma ferramenta que me permita      | resgatar o senso de comunidade         |
-|                    | interagir com colegas              | estudantil.                            |
-|--------------------|------------------------------------|----------------------------------------|
-|Alpídio Romeo       | um local onde eu possa estudar e   | poder treinar meus conhecimentos       |
-|                    | responder as dúvidas de outros     | adquiridos, aprimorar minha expertise  |
-|                    | alunos                             | em determinados tópicos e me sentir    | 
-|                    |                                    | mais preparado para procurar por uma   | 
-|                    |                                    | vaga de engenheiro de software.        | 
-|--------------------|------------------------------------|----------------------------------------|
-|Alpídio Romeo       | poder saber o feedback de minhas   | conseguir estimar a didática e domínio |
-|                    | respostas e ser notificado quando  | no assunto, e saber se preciso revisar |
-|                    | respondido                         | algum conceito.                        | 
-|--------------------|------------------------------------|----------------------------------------|
-|Jansom Bergson      | poder ter acesso às minhas         | relembrar e/ou responder as perguntas  |
-|                    | interações.                        | que eu fiz, ou respondi.               |
-|--------------------|------------------------------------|----------------------------------------|
-
+|Ringui Ferdinando   | um local onde eu possa estudar e tirar dúvidas independente do horário  | poder estudar em horários que não comprometam meu trabalho atual. |   
+|Ringui Ferdinando   | uma plataforma organizada e dividida por cada eixo da faculdade de ADS | encontrar materiais específicos mais rapidamente e otimizar o pouco tempo que tenho para estudar. | 
+|Arthur Silva        | um espaço onde eu possa fazer perguntas relacionadas às matérias e ao mundo da programação | esclarecer minhas dúvidas como iniciante na área.|
+|Arthur Silva        | uma plataforma que permita conhecer novas pessoas aspirantes do setor de tecnologia | fortalecer minha networking e conseguir indicações em empresas de interesse.|
+|Cláudia Sanches     | poder pesquisar informações sobre determinado assunto ou disciplina do curso | me auxiliar no esclarecimento de dúvidas específicas sobre o conteúdo das matérias.|
+|Cláudia Sanches     | uma ferramenta que me permita  interagir com colegas | resgatar o senso de comunidade estudantil.|
+|Alpídio Romeo       | um local onde eu possa estudar e responder as dúvidas de outros alunos | poder treinar meus conhecimentos adquiridos, aprimorar minha expertise em determinados tópicos e me sentir mais preparado para procurar por uma vaga de engenheiro de software.|
+|Alpídio Romeo       | poder saber o feedback de minhas respostas e ser notificado quando respondido | conseguir estimar a didática e domínio no assunto, e saber se preciso revisar algum conceito.|
+|Jansom Bergson      | poder ter acesso às minhas interações | relembrar e/ou responder as perguntas que eu fiz, ou respondi.|
 
 ## Requisitos e Restrições do Projeto
 
