@@ -2,11 +2,34 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+Para a realização dos Testes de Software, adotaremos os seguintes requisitos:
+ * Site publicado na Internet;
+ * Navegador da Internet - Chrome, Firefox ou Edge;
+ * Conectividade de Internet para acesso às plataformas.
 
-Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o(s) requisito(s) associado(s) a cada um deles está(ão) correto(s) - de acordo com o que foi definido na seção "2 - Especificação do Projeto". 
+Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, conforme descritos a seguir:
+ 
+| **Caso de Teste** 	| **CT-01 – Cadastre-se** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-06 - RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login. |
+| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (https://study2gether.com/src/index.html)<br> - Clicar em "Cadastre-se" <br> - Preencher os campos obrigatórios (e-mail, senha, confirmação de senha) <br> - Clicar no botão "Cadastre-se" |
+|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|  	|  	|
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-01 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
+| Registro de tela | |
+ 
+ 
 
-Por exemplo:
+| Caso de Teste 	| CT-02 – Efetuar login	|
+|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
+| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
+| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
+|Critério de Êxito | - O login foi realizado com sucesso. |
+
 
 # Cadaster-se
 |Caso de teste|Requisitos Associados|
@@ -15,22 +38,8 @@ Por exemplo:
 
 |Objetivo do teste| Passos | Criterios de exito|
 |-|-|-|
+|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>informar o endereço do site [<](https://study2gether.com/src/index.html)/li><li>clicar em cadastre-se</li><li>preencher campos</li><li>clicar em cadastre-se</li></ol> | O cadastro foi realizado com sucesso|
 |Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>informar o endereço do site</li><li>clicar em cadastre-se</li><li>preencher campos</li><li>clicar em cadastre-se</li></ol> | O cadastro foi realizado com sucesso|
-|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>informar o endereço do site</li><li>clicar em cadastre-se</li><li>preencher campos</li><li>clicar em cadastre-se</li></ol> | O cadastro foi realizado com sucesso|
-
- 
-| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
-|:---:	|:---:	|
-|	Requisito Associado 	| RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
-| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
-|  	|  	|
-| Caso de Teste 	| CT-02 – Efetuar login	|
-|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
-|Critério de Êxito | - O login foi realizado com sucesso. |
 
  
 > **Links Úteis**:
