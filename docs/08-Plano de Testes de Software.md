@@ -15,7 +15,7 @@ Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, con
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
+|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastrar-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
@@ -30,12 +30,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se é impossível se cadastrar duas vezes com o mesmo email.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo email com "aluno@sga.pucminas.br</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li><li>Clicar em "Desconectar"</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo e-mail com o valor "aluno@sga.pucminas.br"</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
+|Verificar se é impossível se cadastrar duas vezes com o mesmo email.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo email com "aluno@sga.pucminas.br</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li><li>Clicar em "Desconectar"</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo e-mail com o valor "aluno@sga.pucminas.br"</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar no botão "Cadastrar-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo email. |    |    |
+| CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. |    |    |
 | Registro da tela: | 
  
  
@@ -61,7 +61,7 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o sistema impede a realização de login com campos em branco ou inválidos.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Login” ou “Entrar"</li><li>Manter campo e-mail em branco</li><li>Preencher o campo senha</li>Clicar em "Entrar"</li></ol> | A aplicação deve demonstrar uma mensagem de login inválido. |
+|Verificar se o sistema impede a realização de login com campos em branco ou inválidos.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Login” ou “Entrar"</li><li>Manter campo e-mail em branco</li><li>Preencher o campo senha</li><li>Clicar em "Entrar"</li></ol> | A aplicação deve demonstrar uma mensagem de login inválido. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
@@ -75,7 +75,7 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário cadastrado consegue redefinir sua senha esquecida.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Recuperar Senha”</li><li>Preencher os campos obrigatórios (e-mail cadastrado)</li><li>Clicar em "Redefinir Senha"</li><li>Acessar o e-mail cadastrado</><li>Clicar no link recebido</li><li>Preencher os campos obrigatórios (nova senha, repetir nova senha)</li><li>Clicar em "Redefinir Senha"</li></ol> | O usuário consegue redefinir sua senha e acessar a aplicação. |
+|Verificar se o usuário cadastrado consegue redefinir sua senha esquecida.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Recuperar Senha”</li><li>Preencher os campos obrigatórios (e-mail cadastrado)</li><li>Clicar em "Redefinir Senha"</li><li>Acessar o e-mail cadastrado</li><li>Clicar no link recebido</li><li>Preencher os campos obrigatórios (nova senha, repetir nova senha)</li><li>Clicar em "Redefinir Senha"</li></ol> | O usuário consegue redefinir sua senha e acessar a aplicação. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
@@ -99,7 +99,7 @@ Registro:
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
-|CT-07 - Fazer Login |RF-02 – A aplicação deve apresentar um filtro por eixos ou por microfundamentos.|
+|CT-07 - Filtrar Pergunta por Eixo |RF-02 – A aplicação deve apresentar um filtro por eixos ou por microfundamentos.|
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
@@ -122,7 +122,7 @@ Registro:
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-08 - RF-11 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Perguntas por este Microfundamento. |    |    |
+| CT-08 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Perguntas por este Microfundamento. |    |    |
 | Registro da tela: |
 
 | **Caso de teste** | **Requisitos Associados**|
