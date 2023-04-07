@@ -9,10 +9,6 @@ Para a realização dos Testes de Software, adotaremos os seguintes requisitos:
 
 Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, conforme descritos a seguir:
 
-| **Caso de Teste** | CT-01 - Cadastre-se |
-| **Requisito Associado** 	| RF-06 - A aplicação deve permitir ao usuário se cadastrar e realizar o login. |
-|--|--|
-
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
 |CT-01 - Cadastre-se |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
