@@ -11,9 +11,9 @@ Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, con
  
 | **Caso de Teste** 	| **CT-01 – Cadastre-se** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-06 - RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login. |
+|	Requisito Associado 	| RF-06 - A aplicação deve permitir ao usuário se cadastrar e realizar o login. |
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site (https://study2gether.com/src/index.html)<br> - Clicar em "Cadastre-se" <br> - Preencher os campos obrigatórios (e-mail, senha, confirmação de senha) <br> - Clicar no botão "Cadastre-se" |
+| Passos 	| <ol><li> Acessar o navegador </li><li> Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Cadastre-se" </li><li> Preencher os campos obrigatórios (e-mail, senha, confirmação de senha) </li><li> Clicar no botão "Cadastre-se"</li></ol> |
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 
 Registro:
@@ -38,13 +38,13 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site [<](https://study2gether.com/src/index.html)/li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li></ol> | O cadastro foi realizado com sucesso|
+|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li></ol> | O cadastro foi realizado com sucesso|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
-| Registro de tela | | 
+| Registro da tela | | 
 
 |**Caso de teste**|**Requisitos Associados**|
 |--|--|
@@ -52,13 +52,13 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se é impossível se cadastrar duas vezes com o mesmo email.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site [<](https://study2gether.com/src/index.html)/li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo email com "aluno@sga.pucminas.br</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li><li>Clicar em "Desconectar"</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo e-mail com o valor "aluno@sga.pucminas.br"</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
+|Verificar se é impossível se cadastrar duas vezes com o mesmo email.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo email com "aluno@sga.pucminas.br</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li><li>Clicar em "Desconectar"</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo e-mail com o valor "aluno@sga.pucminas.br"</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo email. |    |    |
-| Registro de tela | |  
+| Registro da tela: | 
  
  
 
