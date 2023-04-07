@@ -13,8 +13,8 @@ Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, con
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-06 - A aplicação deve permitir ao usuário se cadastrar e realizar o login. |
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| <ol><li> Acessar o navegador </li><li> Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Cadastre-se" </li><li> Preencher os campos obrigatórios (e-mail, senha, confirmação de senha) </li><li> Clicar no botão "Cadastre-se"</li></ol> |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+| Passos 	| <ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> |
+|Critério de Êxito | O cadastro foi realizado com sucesso. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
@@ -23,18 +23,8 @@ Registro:
 | Registro de tela | |
  
  
-
-| Caso de Teste 	| CT-02 – Efetuar login	|
-|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
-|Critério de Êxito | - O login foi realizado com sucesso. |
-
-
-# Casos de Teste
-|**Caso de teste**|**Requisitos Associados**|
-|--|--|
-|CT-01 - Cadastre-se |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
+|**Caso de teste**| CT-01 - Cadastre-se |
+|**Requisitos Associados**|RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
