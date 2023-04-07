@@ -39,11 +39,81 @@ Registro:
 | Registro da tela: | 
  
  
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-03 - Fazer Login |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se o usuário consegue realizar o Login na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Login” ou “Entrar"</li><li>Preencher os campos obrigatórios (e-mail e senha)</li><li>Clicar em "Entrar"</li></ol> | O login foi realizado com sucesso. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. |    |    |
+| Registro da tela: |  
+
+
+ 
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-04 - Fazer Login |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se o sistema impede a realização de login com campos em branco ou inválidos.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Login” ou “Entrar"</li><li>Manter campo e-mail em branco</li><li>Preencher o campo senha</li>Clicar em "Entrar"</li></ol> | A aplicação deve demonstrar uma mensagem de login inválido. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. |    |    |
+| Registro da tela: |  
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-05 - Fazer Login |RF-10 – A aplicação deve permitir ao usuário recuperar sua senha.|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se o usuário cadastrado consegue redefinir sua senha esquecida.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Recuperar Senha”</li><li>Preencher os campos obrigatórios (e-mail cadastrado)</li><li>Clicar em "Redefinir Senha"</li><li>Acessar o e-mail cadastrado</><li>Clicar no link recebido</li><li>Preencher os campos obrigatórios (nova senha, repetir nova senha)</li><li>Clicar em "Redefinir Senha"</li></ol> | O usuário consegue redefinir sua senha e acessar a aplicação. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-05 - RF-10 | Verificar se o usuário cadastrado consegue redefinir sua senha esquecida. |    |    |
+| Registro da tela: |
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-06 - Fazer Login |RF-10 – A aplicação deve permitir ao usuário recuperar sua senha.|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação impede a recuperação de senha com um e-mail inválido |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Recuperar Senha”</li><li>Preencher o campo e-mail com o valor "funcionário@gmail.com"</li><li>Clicar em "Redefinir Senha"</li></ol> | A aplicação deve mostrar uma mensagem de descritiva informando que o email não está cadastrado. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-06 - RF-10 | Verificar se a aplicação impede a recuperação de senha com um e-mail inválido. |    |    |
+| Registro da tela: |
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-07 - Fazer Login |RF-02 – A aplicação deve apresentar um filtro por eixos ou por microfundamentos.|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se o filtro por Eixo está fazendo a busca correta de Perguntas por Eixo. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Acessar a opção “Perguntas”</li><li>Clicar no Filtro "Eixo"</li><li>Escolher "Eixo 2"</li><li>Clicar "Enter"</li></ol> | A aplicação filtrou corretamente as “Perguntas” que foram classificadas na postagem como sendo do Eixo 2 ou com uma mensagem que diga “A aplicação não encontrou perguntas classificada como sendo do Eixo 2, tente com outro filtro”. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-07 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Perguntas por Eixo. |    |    |
+| Registro da tela: |
+
+
+
+
+
+
+
