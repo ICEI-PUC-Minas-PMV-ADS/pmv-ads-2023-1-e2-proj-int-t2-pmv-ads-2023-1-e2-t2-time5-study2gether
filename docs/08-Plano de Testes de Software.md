@@ -7,6 +7,17 @@ Apresente os cenários de testes utilizados na realização dos testes da sua ap
 Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o(s) requisito(s) associado(s) a cada um deles está(ão) correto(s) - de acordo com o que foi definido na seção "2 - Especificação do Projeto". 
 
 Por exemplo:
+
+# Cadaster-se
+|Caso de teste|Requisitos Associados|
+|--|--|
+|CT-01|RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
+
+|Objetivo do teste| Passos | Criterios de exito|
+|-|-|-|
+|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>informar o endereço do site</li><li>clicar em cadastre-se</li><li>preencher campos</li><li>clicar em cadastre-se</li></ol> | O cadastro foi realizado com sucesso|
+|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>informar o endereço do site</li><li>clicar em cadastre-se</li><li>preencher campos</li><li>clicar em cadastre-se</li></ol> | O cadastro foi realizado com sucesso|
+
  
 | **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
 |:---:	|:---:	|
