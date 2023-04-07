@@ -8,20 +8,9 @@ Para a realização dos Testes de Software, adotaremos os seguintes requisitos:
  * Conectividade de Internet para acesso às plataformas.
 
 Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, conforme descritos a seguir:
- 
-| **Caso de Teste** 	| **CT-01 – Cadastre-se** 	|
-|:---:	|:---:	|
-|	Requisito Associado 	| RF-06 - A aplicação deve permitir ao usuário se cadastrar e realizar o login. |
-| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| <ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> |
-|Critério de Êxito | O cadastro foi realizado com sucesso. |
 
-##Registro:
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-01 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
-| Registro de tela | |
-
+| Caso de Teste | CT-01 - Cadastre-se |
+| Requisito Associado 	| RF-06 - A aplicação deve permitir ao usuário se cadastrar e realizar o login. |
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -31,7 +20,7 @@ Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, con
 |-|-|-|
 |Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
 
-##Registro:
+Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
