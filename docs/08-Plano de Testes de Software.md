@@ -16,27 +16,29 @@ Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, con
 | Passos 	| <ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> |
 |Critério de Êxito | O cadastro foi realizado com sucesso. |
 
-Registro:
+##Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-01 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
 | Registro de tela | |
- 
- 
-|**Caso de teste**| CT-01 - Cadastre-se |
-|**Requisitos Associados**|RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-01 - Cadastre-se |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li></ol> | O cadastro foi realizado com sucesso|
+|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastre-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
 
-Registro:
+##Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
 | Registro da tela | | 
 
-|**Caso de teste**|**Requisitos Associados**|
+
+| **Caso de teste** | **Requisitos Associados**|
 |--|--|
 |CT-02 - Cadastre-se |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
 
