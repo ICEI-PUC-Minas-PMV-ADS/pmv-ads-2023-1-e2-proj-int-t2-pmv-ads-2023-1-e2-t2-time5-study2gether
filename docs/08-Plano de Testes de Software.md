@@ -695,7 +695,7 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de registro da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "registro" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de cadastro da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de cadastro </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
