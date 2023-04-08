@@ -35,13 +35,9 @@ Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, 
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
+<br>
+
 ## Hospedagem
+<br>
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+O site do projeto é hospedado na plataforma gratuita **GitHub Pages**, que permite que os usuários publiquem sites estáticos diretamente de um repositório **GitHub**. O domínio utilizado é um subdomínio do github.io, fornecido gratuitamente pelo **GitHub**. Já para a hospedagem do banco de dados, é utilizado o serviço **Microsoft Azure**, que oferece recursos escaláveis de computação em nuvem. O banco de dados é hospedado no **Microsoft SQL Server**, e o acesso é feito utilizando o crédito fornecido pela **PUC Minas** para fins educacionais.
