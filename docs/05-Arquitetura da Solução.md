@@ -29,11 +29,22 @@ O projeto da base de dados corresponde à representação das entidades e relaci
  
 Para mais informações, consulte o microfundamento "Modelagem de Dados".
 
+<br>
+
 ## Tecnologias Utilizadas
+<br>
+ 
+ - IDEs de desenvolvimento: [Visual Studio Code](https://code.visualstudio.com/), e [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/);
+ - Linguagens utilizadas: [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS), [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript), [C#](https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/) e SQL;
+ - Ferramentas de modelagem do banco de dados: [MySQL Workbench](https://www.mysql.com/products/workbench/);
+ - Framework de ORM: [Entity](https://learn.microsoft.com/en-us/ef/);
+ - Ferramenta de design: [Figma](https://www.figma.com/);
+ - Plataforma para hospedagem do Site: [Github Pages](https://pages.github.com/).
+ - Plataforma para hospedagem do banco de dados: [Microsoft SQL Server (Azure)](https://azure.microsoft.com/pt-br/products/azure-sql/?culture=pt-br&country=br#product-overview);
+ - Ferramenta de versionamento: [Git](https://git-scm.com/);
+  - Ferramenta de Diagramação: [Lucidchart](https://www.lucidchart.com/pages/pt);
+ - Ferramenta de Gestão de Projeto: [Trello](https://trello.com/pt-BR).
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 <br>
 
