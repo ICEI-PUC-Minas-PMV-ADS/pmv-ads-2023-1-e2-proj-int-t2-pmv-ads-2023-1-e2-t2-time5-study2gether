@@ -410,8 +410,295 @@ Registro:
 | Registro da tela: |
 
 
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-28 - Reagir às Perguntas. |RF-09 – A aplicação deve permitir ao usuário reagir com emojis. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Emojis" abaixo da pergunta e ecolher um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| Registro da tela: |
 
 
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-29 - Reagir às Respostas. |RF-09 – A aplicação deve permitir ao usuário reagir com emojis. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Diálogo" para ver as respostas de uma pergunta</li><li>Clicar no ícone de "Emojis" abaixo da Resposta e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| Registro da tela: |
 
 
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-30 - Reagir às Interações. |RF-09 – A aplicação deve permitir ao usuário reagir com emojis. |
 
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Clicar no ícone de "Emojis" abaixo do Conteúdo selecionado e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-31 - Reagir aos Comentários das Interações. |RF-09 – A aplicação deve permitir ao usuário reagir com emojis. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Escolher um conteúdo na lista de interações </li><li>Escolher o primeiro comentário no rodapé do conteúdo </li><li> Clicar no ícone de "Emojis" e escolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-32 - Reagir às Indicações. |RF-09 – A aplicação deve permitir ao usuário reagir com emojis. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Clicar no ícone de "Emojis" abaixo do Conteúdo selecionado e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-32 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-33 - Reagir aos Comentários das Indicações. |RF-09 – A aplicação deve permitir ao usuário reagir com emojis. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Escolher um conteúdo na lista de indicações </li><li>Escolher o primeiro comentário no rodapé do conteúdo </li><li> Clicar no ícone de "Emojis" e escolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-34 - Visualização de todas as Perguntas com respectivas respostas. |RF-08 – A aplicação deve permitir visualizar todas as publicações. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Perguntas"</li><li>Escolher a primeira da listagem"</li><li>Clicar no ícone de "Diálogo" abaixo do título da pergunta para ver as respostas.</li></ol> | A aplicação apresentou os conteúdos para visualização sem limitações. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-32 - RF-09 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-35 - Visualização de todas as Interações com respectivos comentários. |RF-08 – A aplicação deve permitir visualizar todas as publicações. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Interações"</li><li>Clicar na primeira interação da listagem"</li><li>Visualizar os comentários no rodapé do conteúdo publicado.</li></ol> | A aplicação apresentou os conteúdos para visualização sem limitações. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-35 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-36 - Visualização de todas as Indicações com respectivos comentários. |RF-08 – A aplicação deve permitir visualizar todas as publicações. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação está apresentando todas as indicações com os respectivos comentários para todos os usuários, logados ou não. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em "Indicações"</li><li>Clicar na primeira indicação da listagem"</li><li>Visualizar os comentários no rodapé do conteúdo publicado.</li></ol> | A aplicação apresentou os conteúdos para visualização sem limitações. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-36 - RF-08 | Verificar se a aplicação está apresentando todas as indicações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-37 - Acesso ao feed com o histórico de interações feitas pelo usuário cadastrado. | RF-07 – A aplicação deve permitir ao usuário acesso a um feed com seu próprio histórico de interações. |
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se as interações do usuário estão sewndo apresentadas corretamente na página de Perfil do usuário. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Fazer o Login </li><li> Clicar no ícone de usuário logado "no canto superior direito" para acessar o Perfil do Usuário</li><li>Na página do Perfil, clicar em "Perguntas", "Respostas", "Favoritos" para acessar o Histórico de interações</li><li>Verificar se as postagens feitas nos testes de publicação foram registradas no histórico.</li></ol> | A aplicação apresentou o Histórico corretamente. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-37 - RF-07 | Verificar se as interações do usuário estão sewndo apresentadas corretamente na página de Perfil do usuário. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-38 - Teste de Publicização. | RNF-01 – A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. RNF-03 - A aplicação deve ser compatível com os principais navegadores do mercado.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Fazer o teste usando o navegador Chrome.</li></ol> | A aplicação foi acessada corretamente no navegador. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-38 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-39 - Teste de Publicização. | RNF-01 – A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. RNF-03 - A aplicação deve ser compatível com os principais navegadores do mercado.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação está publicada na internet e acessível pelo navegador Firefox. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Fazer o teste usando o navegador Firefox.</li></ol> | A aplicação foi acessada corretamente no navegador. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-39 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Firefox. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-40 - Teste de Publicização. | RNF-01 – A aplicação deve ser publicada em um ambiente acessível publicamente na Internet. RNF-03 - A aplicação deve ser compatível com os principais navegadores do mercado.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação está publicada na internet e acessível pelo navegador Edge. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Fazer o teste usando o navegador Edge.</li></ol> | A aplicação foi acessada corretamente no navegador. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-40 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Edge. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-41 - Teste de Tempo de Resposta. | RNF-04 – O tempo de resposta do sistema não deve ser maior do que 30 segundos.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se o tempo de resposta da aplicação não será superior a 30 segundos. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://pagespeed.web.dev)</li><li>Inserir o endereço da tela de perguntas</li><li>Verificar o tempo de carregamento do conteúdo completo.</li></ol> | A aplicação atendeu os requisitos e a página carregou em menos de 30 segundos. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-41 - RNF-04 | Verificar se o tempo de resposta da aplicação não será superior a 30 segundos. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-42 - Teste de Acessibilidade. | RNF-05 - A aplicação deve estar acessível e sem interrupções por pelo menos 95% do tempo, apresentando um tempo de inatividade mínimo.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |<ol><li>Acessar o navegador</li><li>Acessar o provedor de Host da aplicação</li><li>Verificar o Uptime da aplicação.</li></ol> | A aplicação atendeu os requisitos e teve um uptime igual ou superior a 95%. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-42 - RNF-05 | Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-43 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela inicial "Home-Page" da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela "Home-Page" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-43 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-44 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de inicial da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Perguntas" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-44 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-45 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de Login da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Login" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-45 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| Registro da tela: |
+
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-46 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
+
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de registro da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "registro" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-46 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| Registro da tela: |
