@@ -1,9 +1,9 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+<span>Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Para o desenvolvimento deste trabalho, adotaremos a metodologia descrita a seguir, a qual abrangerá a relação de ambientes utilizados, a gestão do código fonte, definições dos processos, ferramentas e como a equipe se organizará e fará a gestão das tarefas ao longo do tempo disponível para a realização do projeto.
 
 ## Controle de Versão
 
@@ -11,67 +11,54 @@ A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
 foi utilizado para hospedagem do repositório.
 
-O projeto segue a seguinte convenção para o nome de branches:
+O projeto segue a seguinte convenção para o nome de **branches**:
 
-- `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+- `main`: Representa a versão atualmente estável e testada do software, pronta para ser entregue ou implantada em produção;
+- `develop`: Representa a versão em desenvolvimento do software, onde as funcionalidades estão sendo incorporadas e testadas continuamente;
+- `feature`: Para cada nova funcionalidade a ser desenvolvida, uma nova **branch** de `feature` deve ser criada a partir da **branch** `develop`, seguindo o padrão de nomenclatura `feature-numero-do-cartao`, onde `numero-do-cartao` representa o código numérico identificador da tarefa no **Trello**.
 
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
+Exemplo da nossa gestão de código:
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
+![image](https://user-images.githubusercontent.com/107289791/230728090-bf0a77e2-cdf7-484d-8337-f5d9fd81ef40.png)
+<p align="center">Figura 02 - Diagrama da representação do Controle de Versão.</p>
+Quanto à gerência de **commits**, o projeto adota a seguinte convenção para etiquetas:
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
+- `doc`: Melhorias ou adições à documentação;
+- `bug`: Resolução de problemas de uma funcionalidade já existente;
+- `feature`: Novas funcionalidades a serem adicionadas ao projeto;
+- `enhance`: Melhorias em funcionalidades já existentes;
 
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
+As tarefas serão gerenciadas no Trello e estarão organizadas da seguinte forma:
+
+- `Backlog`: Contém todas as atividades que devem ser realizadas no projeto, desde a documentação até o desenvolvimento da aplicação.
+- `To-do`: Lista as tarefas definidas previamente para a sprint atual, e deve ser atualizada com a data de início da sprint.
+- `In progress`: Contém as tarefas em andamento durante a sprint atual.
+- `Validating`: Contém as tarefas que precisam ser testadas.
+- `Done`: Contém todas as tarefas finalizadas, independentemente da sprint.
+
+Ao receber uma tarefa que estará listada na coluna "To-do", a pessoa estudante deverá clonar o repositório localmente e criar uma nova **branch** de `feature` para trabalhar na funcionalidade. Após concluir a implementação, o desenvolvedor deve realizar um **commit** e, em seguida, fazer o merge da **branch** `feature` criada com a **branch** `develop`. Somente após a conclusão e testes da versão do projeto é que se deve fazer o merge da `develop` com a `main` para seguir com o fluxo normal do projeto.
 
 ## Gerenciamento de Projeto
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+ - `Scrum Master`: Ellen Caroline Trindade Gonçalves Cândido;
+ - `Product Owner`: Shinji Matsumoto Fernandes;
+ - `Designer`: Amanda de Lima Ventura;
+ - `Equipe de Desenvolvimento`: 
+   - Amanda de Lima Ventura,
+   - Ellen Caroline Trindade Gonçalves Cândido,
+   - Elpidio Lomeu Junior,
+   - Fabrício Maia dos Santos,
+   - Leonardo Correia de Sá e Silva,
+   - Odair Cordeiro Marra,
+   - Shinji Matsumoto Fernandes.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+O projeto será gerenciado pelo [Trello](https://trello.com), assim como a marcação das entregas.
+Abaixo, a forma que nosso **Kanban** está organizado:
+
+![image](https://user-images.githubusercontent.com/107289791/230728406-21c418c3-953b-44d2-9475-e524bdd32900.png)
+<p align="center">Figura 03 - Kanban do Projeto.</p>
  
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
-
-### Ferramentas
-
-As ferramentas empregadas no projeto são:
-
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
