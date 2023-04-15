@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y2rJz5z8wp5i5KpSeLCvqZSIXLRvb2inEFHzrCJrlnbySNbdg7gHC3fsbHCkqVGJCwpt+fwkko3pNtjFk1Strg==",
+  "dgSpecHash": "SbDY5akU5x7DHPmQd+DZMA28E6fL9QNiz9tVUNVZoFtrapxwYdurF1TXMPUu6KER0lgqhm441LA+1sXheBVHzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sh1nj\\source\\repos\\Study2together\\Study2together\\Study2together.csproj",
+  "projectFilePath": "C:\\Users\\sh1nj\\source\\repos\\Study2gether\\Study2gether\\Study2gether.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sh1nj\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",
     "C:\\Users\\sh1nj\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.17\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.17.nupkg.sha512",
