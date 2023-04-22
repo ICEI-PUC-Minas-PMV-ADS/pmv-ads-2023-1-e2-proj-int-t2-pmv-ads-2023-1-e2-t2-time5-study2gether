@@ -6,11 +6,11 @@ namespace Study2gether.Models
 {
     public class Post_Axis
     {
-        public int idPost{ get; set; }
+        public Guid idPost { get; set; }
         [ForeignKey("idPost")]
         public Post Post { get; set; }
 
-        public int idAxis{ get; set; }
+        public Guid idAxis{ get; set; }
         [ForeignKey("idAxis")]
         public Axis Axis { get; set; }
     }

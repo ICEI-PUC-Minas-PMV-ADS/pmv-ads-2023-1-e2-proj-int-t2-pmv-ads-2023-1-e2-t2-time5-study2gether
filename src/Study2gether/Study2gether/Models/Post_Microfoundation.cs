@@ -6,11 +6,11 @@ namespace Study2gether.Models
 {
     public class Post_Microfoundation
     {
-        public int idPost{ get; set; }
+        public Guid idPost { get; set; }
         [ForeignKey("idPost")]
         public Post Post { get; set; }
 
-        public int idMicrofoundation{ get; set; }
+        public Guid idMicrofoundation { get; set; }
         [ForeignKey("idMicrofoundation")]
         public Microfoundation Microfoundation { get; set; }
     }
