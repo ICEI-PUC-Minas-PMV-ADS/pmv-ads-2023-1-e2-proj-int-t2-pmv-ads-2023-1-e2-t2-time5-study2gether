@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -30,6 +31,10 @@ namespace Study2gether.Models
         public DateTime createdDate { get; set; }
 
         public bool isAdmin { get; set; }
+
+        public IList<Post> Posts { get; } = new List<Post>();
+        public IList<Answer> Answers { get; } = new List<Answer>();
+
     }
 
 }

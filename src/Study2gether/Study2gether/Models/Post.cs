@@ -31,6 +31,8 @@ namespace Study2gether.Models
         public ICollection<Post_Axis> Post_Axis { get; set; }
         public ICollection<Post_Microfoundation> Post_Microfoundation { get; set; }
         public ICollection<Post_Category> Post_Category { get; set; }
+
+        public IList<Answer> Answers { get; } = new List<Answer>();
     }
 
 }
