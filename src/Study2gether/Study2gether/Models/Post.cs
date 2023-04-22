@@ -22,7 +22,7 @@ namespace Study2gether.Models
 
         public DateTime created_date { get; set; }
 
-        public int idUser{ get; set; }
+        public Guid idUser{ get; set; }
 
         [ForeignKey("idUser")]
         public User User { get; set; }  

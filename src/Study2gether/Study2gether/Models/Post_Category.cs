@@ -6,11 +6,11 @@ namespace Study2gether.Models
 {
     public class Post_Category
     {
-        public int idPost{ get; set; }
+        public Guid idPost{ get; set; }
         [ForeignKey("idPost")]
         public Post Post { get; set; }
 
-        public int idCategory{ get; set; }
+        public Guid idCategory { get; set; }
         [ForeignKey("idCategory")]
         public Category Category { get; set; } 
     }
