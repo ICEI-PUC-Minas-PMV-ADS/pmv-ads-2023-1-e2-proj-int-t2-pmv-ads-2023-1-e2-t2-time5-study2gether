@@ -9,11 +9,11 @@ using Study2gether.Models;
 
 namespace Study2gether.Controllers
 {
-    public class PostsController : Controller
+    public class PostController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public PostsController(ApplicationDbContext context)
+        public PostController(ApplicationDbContext context)
         {
             _context = context;
         }
