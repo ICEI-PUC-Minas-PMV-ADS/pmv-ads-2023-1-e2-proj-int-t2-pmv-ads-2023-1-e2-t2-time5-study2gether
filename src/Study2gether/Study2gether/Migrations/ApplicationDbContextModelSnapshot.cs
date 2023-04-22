@@ -19,6 +19,82 @@ namespace Study2gether.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Study2gether.Models.Axis", b =>
+                {
+                    b.Property<Guid>("idAxis")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("idAxis");
+
+                    b.ToTable("Axis");
+                });
+
+            modelBuilder.Entity("Study2gether.Models.Category", b =>
+                {
+                    b.Property<Guid>("idCategory")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("idCategory");
+
+                    b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("Study2gether.Models.Microfoundation", b =>
+                {
+                    b.Property<Guid>("idMicrofoundation")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("idMicrofoundation");
+
+                    b.ToTable("Microfoundation");
+                });
+
+            modelBuilder.Entity("Study2gether.Models.Post", b =>
+                {
+                    b.Property<Guid>("idPost")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("created_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("idUser")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("views")
+                        .HasColumnType("int");
+
+                    b.HasKey("idPost");
+
+                    b.HasIndex("idUser");
+
+                    b.ToTable("Post");
+                });
+
             modelBuilder.Entity("Study2gether.Models.User", b =>
                 {
                     b.Property<Guid>("idUser")
@@ -54,6 +130,17 @@ namespace Study2gether.Migrations
                     b.HasKey("idUser");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Study2gether.Models.Post", b =>
+                {
+                    b.HasOne("Study2gether.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("idUser")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }
