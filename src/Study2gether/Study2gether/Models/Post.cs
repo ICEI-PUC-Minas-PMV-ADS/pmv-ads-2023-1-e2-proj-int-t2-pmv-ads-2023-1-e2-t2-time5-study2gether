@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace Study2gether.Models
 {
@@ -25,7 +26,11 @@ namespace Study2gether.Models
         public Guid idUser{ get; set; }
 
         [ForeignKey("idUser")]
-        public User User { get; set; }  
+        public User User { get; set; }
+
+        public ICollection<Post_Axis> Post_Axis { get; set; }
+        public ICollection<Post_Microfoundation> Post_Microfoundation { get; set; }
+        public ICollection<Post_Category> Post_Category { get; set; }
     }
 
 }

@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace Study2gether.Models
 {
@@ -11,6 +12,7 @@ namespace Study2gether.Models
 
         // [Required(ErrorMessage = "Obrigatório fornecer uma categoria!")]
         public string name{ get; set; }
-    }
 
+        public ICollection<Post_Microfoundation> Post_Microfoundation { get; set; }
+    }
 }
