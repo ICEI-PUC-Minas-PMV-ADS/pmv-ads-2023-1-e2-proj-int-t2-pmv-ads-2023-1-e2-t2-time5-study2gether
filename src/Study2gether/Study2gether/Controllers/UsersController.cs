@@ -18,6 +18,33 @@ namespace Study2gether.Controllers
             _context = context;
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
+        // POST: Users/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Cadastro([Bind("idUser,email,password,createdDate")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
+                user.idUser = Guid.NewGuid();
+                _context.Add(user);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(user);
+        }
+
         // GET: Users
         public async Task<IActionResult> Index()
         {
