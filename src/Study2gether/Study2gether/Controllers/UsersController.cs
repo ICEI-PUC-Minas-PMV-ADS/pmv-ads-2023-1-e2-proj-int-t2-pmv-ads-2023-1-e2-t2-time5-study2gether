@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +25,65 @@ namespace Study2gether.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Login([Bind("email,password")] User userForm)
+        {
+            var userDb = await _context.Users
+                .FirstOrDefaultAsync(m => m.email == userForm.email);
+
+            if (userDb == null)
+            {
+                ViewBag.Message = "Usuário e/ou Senha inválidos!";
+                return View();
+            }
+
+            bool ispasswordOk = BCrypt.Net.BCrypt.Verify(userForm.password, userDb.password);
+
+            if (ispasswordOk)
+            {
+                var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, userDb.email),
+                        new Claim(ClaimTypes.NameIdentifier, userDb.email),
+                    };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7),
+                    IsPersistent = true
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
+                return Redirect("/");
+
+            }
+
+            ViewBag.Message = "Usuário e/ou Senha inválidos!";
+            return View();
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Logout() 
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
 
         public IActionResult Cadastro()
         {
