@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +24,63 @@ namespace Study2gether.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Login([Bind("email,password")] User user)
+        {
+            var usuario = await _context.Users
+                .FirstOrDefaultAsync(m => m.email == user.email);
+
+            if (usuario == null)
+            {
+                ViewBag.Message = "Usuário e/ou Senha inválidos!";
+                return View();
+            }
+
+            bool ispasswordOk = BCrypt.Net.BCrypt.Verify(user.password, user.password);
+
+            if (ispasswordOk)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.name),
+                    new Claim(ClaimTypes.NameIdentifier, user.name),                  
+                };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(1),
+                    IsPersistent = true
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
+                return Redirect("/");
+
+            }
+
+            ViewBag.Message = "Usuário e/ou Senha inválidos!";
+            return View();
+        }
+        public async Task<IActionResult> Logout() 
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "User");
+        }
+
+
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
 
         public IActionResult Cadastro()
         {
