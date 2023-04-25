@@ -11,6 +11,54 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Answers\**" />
+    <Compile Remove="Views\Axis\**" />
+    <Compile Remove="Views\Categories\**" />
+    <Compile Remove="Views\Microfoundations\**" />
+    <Compile Remove="Views\Post\**" />
+    <Compile Remove="Views\Users\**" />
+    <Content Remove="Views\Answers\**" />
+    <Content Remove="Views\Axis\**" />
+    <Content Remove="Views\Categories\**" />
+    <Content Remove="Views\Microfoundations\**" />
+    <Content Remove="Views\Post\**" />
+    <Content Remove="Views\Users\**" />
+    <EmbeddedResource Remove="Views\Answers\**" />
+    <EmbeddedResource Remove="Views\Axis\**" />
+    <EmbeddedResource Remove="Views\Categories\**" />
+    <EmbeddedResource Remove="Views\Microfoundations\**" />
+    <EmbeddedResource Remove="Views\Post\**" />
+    <EmbeddedResource Remove="Views\Users\**" />
+    <None Remove="Views\Answers\**" />
+    <None Remove="Views\Axis\**" />
+    <None Remove="Views\Categories\**" />
+    <None Remove="Views\Microfoundations\**" />
+    <None Remove="Views\Post\**" />
+    <None Remove="Views\Users\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Admin\Index.cshtml" />
+    <Content Remove="Areas\Admin\Views\AdminUsers\Cadastro.cshtml" />
+    <Content Remove="Areas\Admin\Views\AdminUsers\Login.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Users\AccessDenied.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Views\Users\Cadastro.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Views\Users\Login.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
 	 <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
@@ -20,6 +68,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
 	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
 
 </Project>
