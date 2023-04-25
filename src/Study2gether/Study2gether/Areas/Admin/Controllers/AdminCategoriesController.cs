@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,23 +10,23 @@ using Study2gether.Models;
 
 namespace Study2gether.Controllers
 {
-    public class AnswersController : Controller
+    [Authorize(Roles = "admin")]
+    public class AdminCategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public AnswersController(ApplicationDbContext context)
+        public AdminCategoriesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Answers
+        // GET: Categories
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Answers.Include(a => a.Post).Include(a => a.User);
-            return View(await applicationDbContext.ToListAsync());
+            return View(await _context.Category.ToListAsync());
         }
 
-        // GET: Answers/Details/5
+        // GET: Categories/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -33,46 +34,40 @@ namespace Study2gether.Controllers
                 return NotFound();
             }
 
-            var answer = await _context.Answers
-                .Include(a => a.Post)
-                .Include(a => a.User)
-                .FirstOrDefaultAsync(m => m.idAnswer == id);
-            if (answer == null)
+            var category = await _context.Category
+                .FirstOrDefaultAsync(m => m.idCategory == id);
+            if (category == null)
             {
                 return NotFound();
             }
 
-            return View(answer);
+            return View(category);
         }
 
-        // GET: Answers/Create
+        // GET: Categories/Create
         public IActionResult Create()
         {
-            ViewData["idPost"] = new SelectList(_context.Post, "idPost", "content");
-            ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email");
             return View();
         }
 
-        // POST: Answers/Create
+        // POST: Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("idAnswer,idPost,idUser,title,content")] Answer answer)
+        public async Task<IActionResult> Create([Bind("idCategory,name")] Category category)
         {
             if (ModelState.IsValid)
             {
-                answer.idAnswer = Guid.NewGuid();
-                _context.Add(answer);
+                category.idCategory = Guid.NewGuid();
+                _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["idPost"] = new SelectList(_context.Post, "idPost", "content", answer.idPost);
-            ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email", answer.idUser);
-            return View(answer);
+            return View(category);
         }
 
-        // GET: Answers/Edit/5
+        // GET: Categories/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -80,24 +75,22 @@ namespace Study2gether.Controllers
                 return NotFound();
             }
 
-            var answer = await _context.Answers.FindAsync(id);
-            if (answer == null)
+            var category = await _context.Category.FindAsync(id);
+            if (category == null)
             {
                 return NotFound();
             }
-            ViewData["idPost"] = new SelectList(_context.Post, "idPost", "content", answer.idPost);
-            ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email", answer.idUser);
-            return View(answer);
+            return View(category);
         }
 
-        // POST: Answers/Edit/5
+        // POST: Categories/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("idAnswer,idPost,idUser,title,content")] Answer answer)
+        public async Task<IActionResult> Edit(Guid id, [Bind("idCategory,name")] Category category)
         {
-            if (id != answer.idAnswer)
+            if (id != category.idCategory)
             {
                 return NotFound();
             }
@@ -106,12 +99,12 @@ namespace Study2gether.Controllers
             {
                 try
                 {
-                    _context.Update(answer);
+                    _context.Update(category);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AnswerExists(answer.idAnswer))
+                    if (!CategoryExists(category.idCategory))
                     {
                         return NotFound();
                     }
@@ -122,12 +115,10 @@ namespace Study2gether.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["idPost"] = new SelectList(_context.Post, "idPost", "content", answer.idPost);
-            ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email", answer.idUser);
-            return View(answer);
+            return View(category);
         }
 
-        // GET: Answers/Delete/5
+        // GET: Categories/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -135,32 +126,30 @@ namespace Study2gether.Controllers
                 return NotFound();
             }
 
-            var answer = await _context.Answers
-                .Include(a => a.Post)
-                .Include(a => a.User)
-                .FirstOrDefaultAsync(m => m.idAnswer == id);
-            if (answer == null)
+            var category = await _context.Category
+                .FirstOrDefaultAsync(m => m.idCategory == id);
+            if (category == null)
             {
                 return NotFound();
             }
 
-            return View(answer);
+            return View(category);
         }
 
-        // POST: Answers/Delete/5
+        // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var answer = await _context.Answers.FindAsync(id);
-            _context.Answers.Remove(answer);
+            var category = await _context.Category.FindAsync(id);
+            _context.Category.Remove(category);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AnswerExists(Guid id)
+        private bool CategoryExists(Guid id)
         {
-            return _context.Answers.Any(e => e.idAnswer == id);
+            return _context.Category.Any(e => e.idCategory == id);
         }
     }
 }
