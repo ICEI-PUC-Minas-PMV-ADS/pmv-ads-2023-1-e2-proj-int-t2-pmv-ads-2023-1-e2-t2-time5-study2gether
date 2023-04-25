@@ -45,8 +45,8 @@ namespace Study2gether.Controllers
             {
                 var claims = new List<Claim>
                     {
-                        new Claim(ClaimTypes.Name, userDb.email),
-                        new Claim(ClaimTypes.NameIdentifier, userDb.email),
+                        new Claim(ClaimTypes.Name, userDb.name == null ? userDb.email : userDb.name),
+                        new Claim(ClaimTypes.NameIdentifier, userDb.name == null ? userDb.email : userDb.name),
                     };
 
                 var userIdentity = new ClaimsIdentity(claims, "login");
