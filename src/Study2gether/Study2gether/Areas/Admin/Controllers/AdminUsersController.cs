@@ -42,6 +42,8 @@ namespace Study2gether.Controllers
             }
 
             var user = await _context.Users
+                .Include(o => o.Posts)
+                .Include(o => o.Answers)
                 .FirstOrDefaultAsync(m => m.idUser == id);
             if (user == null)
             {

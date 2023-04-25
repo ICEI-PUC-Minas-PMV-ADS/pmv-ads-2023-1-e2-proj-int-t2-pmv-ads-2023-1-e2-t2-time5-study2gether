@@ -28,11 +28,10 @@ namespace Study2gether.Models
         [ForeignKey("idUser")]
         public User User { get; set; }
 
-        public ICollection<Post_Axis> Post_Axis { get; set; }
-        public ICollection<Post_Microfoundation> Post_Microfoundation { get; set; }
-        public ICollection<Post_Category> Post_Category { get; set; }
-
-        public IList<Answer> Answers { get; } = new List<Answer>();
+        public virtual IList<Microfoundation> Microfoundations { get; } = new List<Microfoundation>();
+        public virtual IList<Category> Categories { get; } = new List<Category>();
+        public virtual IList<Axis> Axes { get; } = new List<Axis>();
+        public virtual IList<Answer> Answers { get; } = new List<Answer>();
     }
 
 }

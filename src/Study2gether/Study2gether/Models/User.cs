@@ -32,8 +32,8 @@ namespace Study2gether.Models
 
         public bool isAdmin { get; set; }
 
-        public IList<Post> Posts { get; } = new List<Post>();
-        public IList<Answer> Answers { get; } = new List<Answer>();
+        public virtual IList<Post> Posts { get; } = new List<Post>();
+        public virtual IList<Answer> Answers { get; } = new List<Answer>();
 
     }
 
