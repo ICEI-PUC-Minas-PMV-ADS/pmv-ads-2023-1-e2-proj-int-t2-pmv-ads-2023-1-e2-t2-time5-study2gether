@@ -13,6 +13,6 @@ namespace Study2gether.Models
         // [Required(ErrorMessage = "Obrigatório fornecer uma categoria!")]
         public string name{ get; set; }
 
-        public ICollection<Post_Microfoundation> Post_Microfoundation { get; set; }
+        public virtual IList<Post> Posts { get; } = new List<Post>();
     }
 }

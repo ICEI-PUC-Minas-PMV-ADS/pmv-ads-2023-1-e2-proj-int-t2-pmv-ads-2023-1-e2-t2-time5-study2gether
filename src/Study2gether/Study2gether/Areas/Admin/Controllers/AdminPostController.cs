@@ -37,6 +37,9 @@ namespace Study2gether.Controllers
 
             var post = await _context.Post
                 .Include(p => p.User)
+                .Include(o => o.Axes)
+                .Include(o => o.Microfoundations)
+                .Include(o => o.Categories)
                 .FirstOrDefaultAsync(m => m.idPost == id);
             if (post == null)
             {

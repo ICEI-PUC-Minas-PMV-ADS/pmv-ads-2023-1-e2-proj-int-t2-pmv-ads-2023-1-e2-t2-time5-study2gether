@@ -13,7 +13,7 @@ namespace Study2gether.Models
         // [Required(ErrorMessage = "Obrigatório fornecer uma categoria!")]
         public string name{ get; set; }
 
-        public ICollection<Post_Category> Post_Category { get; set; }
+        public virtual IList<Post> Posts { get; } = new List<Post>();
     }
 
 }

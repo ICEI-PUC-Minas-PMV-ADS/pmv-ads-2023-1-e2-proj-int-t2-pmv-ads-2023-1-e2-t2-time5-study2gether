@@ -35,6 +35,7 @@ namespace Study2gether.Controllers
             }
 
             var microfoundation = await _context.Microfoundation
+                .Include(o => o.Posts)
                 .FirstOrDefaultAsync(m => m.idMicrofoundation == id);
             if (microfoundation == null)
             {

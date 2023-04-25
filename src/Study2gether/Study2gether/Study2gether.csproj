@@ -38,6 +38,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Post_Axis.cs" />
+    <Compile Remove="Models\Post_Category.cs" />
+    <Compile Remove="Models\Post_Microfoundation.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Areas\Admin\Index.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Cadastro.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Login.cshtml" />

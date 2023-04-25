@@ -35,6 +35,7 @@ namespace Study2gether.Controllers
             }
 
             var category = await _context.Category
+                .Include(o => o.Posts)
                 .FirstOrDefaultAsync(m => m.idCategory == id);
             if (category == null)
             {

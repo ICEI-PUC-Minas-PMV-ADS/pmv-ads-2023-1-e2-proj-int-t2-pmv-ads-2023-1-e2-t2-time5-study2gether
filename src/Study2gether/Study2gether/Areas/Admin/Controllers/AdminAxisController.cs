@@ -35,6 +35,7 @@ namespace Study2gether.Controllers
             }
 
             var axis = await _context.Axis
+                .Include(o => o.Posts)
                 .FirstOrDefaultAsync(m => m.idAxis == id);
             if (axis == null)
             {
