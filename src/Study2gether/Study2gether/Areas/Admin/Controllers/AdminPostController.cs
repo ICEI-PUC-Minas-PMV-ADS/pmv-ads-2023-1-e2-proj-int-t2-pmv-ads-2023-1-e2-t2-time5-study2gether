@@ -158,5 +158,46 @@ namespace Study2gether.Controllers
         {
             return _context.Post.Any(e => e.idPost == id);
         }
+
+        //Views INDICAÇÕES, INTERAÇÕES E PERGUNTAS
+        public IActionResult Perguntas()
+        {
+            return View();
+        }
+
+        public IActionResult PostagemPergunta()
+        {
+            return View();
+        }
+
+        public IActionResult Indicacoes()
+        {
+            return View();
+        }
+
+        public IActionResult PostagemIndicacoes()
+        {
+            return View();
+        }
+
+        public IActionResult Interacoes()
+        {
+            return View();
+        }
+
+        public IActionResult PostagemInteracoes()
+        {
+            return View();
+        }
+
+        public IActionResult PostagemResposta()
+        {
+            return View();
+        }
+
+        public IActionResult Respostas()
+        {
+            return View();
+        }
     }
 }

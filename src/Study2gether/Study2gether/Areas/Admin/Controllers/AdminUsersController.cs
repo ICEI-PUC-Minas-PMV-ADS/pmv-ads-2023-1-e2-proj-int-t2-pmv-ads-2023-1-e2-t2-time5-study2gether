@@ -160,5 +160,27 @@ namespace Study2gether.Controllers
         {
             return _context.Users.Any(e => e.idUser == id);
         }
+
+        // VIEWS EDITAR PERFIL, CADASTRO, HISTORICO, RECUPERAR SENHA
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
+
+        public IActionResult EditarPerfil()
+        {
+            return View();
+        }
+
+        public IActionResult Historico()
+        {
+            return View();
+        }
+
+        public IActionResult Redefinicaodesenha()
+        {
+            return View();
+        }
     }
 }
