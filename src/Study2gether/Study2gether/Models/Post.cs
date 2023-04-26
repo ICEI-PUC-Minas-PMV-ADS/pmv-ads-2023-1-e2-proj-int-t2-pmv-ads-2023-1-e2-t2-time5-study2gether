@@ -32,6 +32,7 @@ namespace Study2gether.Models
         public virtual IList<Category> Categories { get; } = new List<Category>();
         public virtual IList<Axis> Axes { get; } = new List<Axis>();
         public virtual IList<Answer> Answers { get; } = new List<Answer>();
+        public virtual IList<Reaction> Reactions { get; } = new List<Reaction>();
     }
 
 }

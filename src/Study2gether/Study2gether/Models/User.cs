@@ -34,6 +34,7 @@ namespace Study2gether.Models
 
         public virtual IList<Post> Posts { get; } = new List<Post>();
         public virtual IList<Answer> Answers { get; } = new List<Answer>();
+        public virtual IList<Reaction> Reactions { get; } = new List<Reaction>();
 
     }
 
