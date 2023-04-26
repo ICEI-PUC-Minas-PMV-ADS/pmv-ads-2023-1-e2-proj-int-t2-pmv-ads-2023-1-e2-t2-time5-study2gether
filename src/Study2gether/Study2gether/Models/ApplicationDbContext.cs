@@ -15,8 +15,8 @@ namespace Study2gether.Models
         public DbSet<Axis> Axis { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Microfoundation> Microfoundation { get; set; }
-
         public DbSet<Answer> Answers { get; set; }
+        public DbSet<Reaction> Reactions { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Answer>()
