@@ -9,9 +9,7 @@ namespace Study2gether.Models
     {
         [Key]
         public Guid idPost { get; set; }
-
-        [Required(ErrorMessage = "Obrigatório escolher um tipo!")]
-        public string type { get; set; }
+        public Types type { get; set; }
 
         [Required(ErrorMessage = "Obrigatório fornecer um título!")]
         public string title { get; set; }
@@ -33,6 +31,12 @@ namespace Study2gether.Models
         public virtual IList<Axis> Axes { get; } = new List<Axis>();
         public virtual IList<Answer> Answers { get; } = new List<Answer>();
         public virtual IList<Reaction> Reactions { get; } = new List<Reaction>();
+    }
+    public enum Types
+    {
+        Indication,
+        Interaction,
+        Question,
     }
 
 }
