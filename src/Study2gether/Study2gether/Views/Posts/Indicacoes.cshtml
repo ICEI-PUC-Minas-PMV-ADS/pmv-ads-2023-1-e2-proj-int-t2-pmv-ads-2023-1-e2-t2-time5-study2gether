@@ -1,0 +1,101 @@
+@model Study2gether.Models.Post
+
+@{
+    ViewData["Title"] = "Indicações";
+}
+@{
+    var categories = ViewData["Categories"] as List<Category>;
+    var axes = ViewData["Axes"] as List<Axis>;
+    var microfoundations = ViewData["Microfoundations"] as List<Microfoundation>;
+    var postList = ViewData["postList"] as List<Post>;
+}
+
+<div class="row">
+    <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
+        <div>
+            <ul>
+                <li class="btn btn-warning d-block mt-2">Indicações</li>
+                <li class="btn btn-warning d-block mt-2">Perguntas</li>
+                <li class="btn btn-warning d-block mt-2">Interações</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="posts col-sm-9 mt-5">
+        <div id="post-1">
+            @foreach (var obj in postList)
+            {
+                <div class="caixa card rounded-lg mb-3">
+                    <div class="card-header">
+                        <h4 class="text-center">@obj.title</h4>
+                    </div>
+                    <div class="card-body">
+                        <div>@obj.content</div>
+                    </div>
+                    <div class="card-footer">
+
+                        <div class="reactions d-inline">
+                            <i class="fa-regular fa-comment-dots"></i>
+
+                            <i class="fa-regular fa-face-smile"></i>
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <label class="float-right" for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <a><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3"></i></a>
+</div>
+
+
+<form asp-action="Indicacoes">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label for="categoryId"><b>Categorias</b></label>
+        <select multiple class="form-control selectpicker" data-live-search="true" id="categoryId" name="categoryId">
+            @foreach (var obj in categories)
+            {
+                <option value="@obj.idCategory">@obj.name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label><b>Eixos</b></label>
+        <select multiple class="form-control selectpicker" data-live-search="true" id="axisId" name="axisId">
+            @foreach (var obj in axes)
+            {
+                <option value="@obj.idAxis">@obj.name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label><b>Microfundamentos</b></label>
+        <select multiple class="form-control selectpicker" data-live-search="true" id="microfoundationId" name="microfoundationId">
+            @foreach (var obj in microfoundations)
+            {
+                <option value="@obj.idMicrofoundation">@obj.name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="title" class="control-label"></label>
+        <input asp-for="title" class="form-control" />
+        <span asp-validation-for="title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="content" class="control-label"></label>
+        <input asp-for="content" class="form-control" />
+        <span asp-validation-for="content" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+</div>
