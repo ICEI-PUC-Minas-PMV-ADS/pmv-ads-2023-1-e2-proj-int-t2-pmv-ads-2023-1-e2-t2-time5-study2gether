@@ -4,48 +4,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Study2gether</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/landingpage.css" runat="server">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Study2gether</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        @if (User.IsInRole("admin"))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">Admin Area</a>
-                            </li>
-                        }
-                    </ul>
-                    <ul class="navbar-nav">
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item">
-                                <p>Oi, @User.Identity.Name</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Logout">Sair</a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Cadastro">Cadastro</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
-                            </li>
-                        }
-                    </ul>
-                </div>
+        <nav id="nav-bar">
+            <div class="menu-img">
+                @if (User.IsInRole("admin"))
+                {
+                    <a asp-area="Admin" asp-controller="AdminUsers" asp-action="Index"><img src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
+                }
+                else
+                {
+                    <img src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server">
+                }
+            </div>
+
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Pesquisar..." />
+                <img src="images/search.png" id="btnBusca" alt="Buscar" />
+            </div>
+            <div id="btnLogin">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <p class="text-white">Oi, @User.Identity.Name</p>
+                    <a class="btn btn-primary btn-lg ml-2 mr-5" asp-area="" asp-controller="Users" asp-action="Logout">Sair</a>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-lg ml-2 mr-2" asp-area="" asp-controller="Users" asp-action="Cadastro">Cadastre-se</a>
+                    <a class="btn btn-primary btn-lg ml-2 mr-5" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
+                }
             </div>
         </nav>
     </header>
