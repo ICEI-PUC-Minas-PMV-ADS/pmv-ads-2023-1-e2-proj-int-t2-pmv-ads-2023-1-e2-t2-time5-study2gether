@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ namespace Study2gether.Controllers
 {
     public class UsersController : Controller
     {
+        
         private readonly ApplicationDbContext _context;
 
         public UsersController(ApplicationDbContext context)
@@ -111,5 +113,40 @@ namespace Study2gether.Controllers
         {
             return _context.Users.Any(e => e.idUser == id);
         }
+
+
+
+        /*
+        // Rascunho - EditarPeril
+        // Primeiro precisamos utilizar o método GET: para obter os dados e depois Editá-los.
+        public IActionResult EditarPerfil(Guid? idUser)
+
+        {
+
+            User.Identity.GetUserId();
+            return View();
+        }
+
+        
+        // Obtidos os dados (pelo GET:) vamos ao método POST:
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditarPerfil([Bind("name,password,email,description,imageLink,socialMedia")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Entry(user).State = EntityState.Modified;
+                _context.SaveChanges();
+                return View("Views/Home/Historico.cshtml");
+            }
+            return View(user);
+        } 
+        */
+       
+
+
+        //Segundo Teste - 27/04/23
+
+        
     }
 }
