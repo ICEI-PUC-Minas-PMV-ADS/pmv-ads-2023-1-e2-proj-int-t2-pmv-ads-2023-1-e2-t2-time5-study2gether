@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -163,10 +164,6 @@ namespace Study2gether.Controllers
         }
 
         //Views INDICAÇÕES, INTERAÇÕES E PERGUNTAS
-        public IActionResult Perguntas()
-        {
-            return View();
-        }
 
         public IActionResult PostagemPergunta()
         {
@@ -202,5 +199,6 @@ namespace Study2gether.Controllers
         {
             return View();
         }
+
     }
 }
