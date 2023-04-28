@@ -48,6 +48,7 @@ namespace Study2gether.Controllers
                         new Claim(ClaimTypes.Name, userDb.name == null ? userDb.email : userDb.name),
                         new Claim(ClaimTypes.NameIdentifier, userDb.name == null ? userDb.email : userDb.name),
                         new Claim(ClaimTypes.Role, userDb.isAdmin ? "admin" : "user"),
+                        new Claim("idUser", userDb.idUser.ToString()),
                     };
 
                 var userIdentity = new ClaimsIdentity(claims, "login");
