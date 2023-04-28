@@ -1,0 +1,56 @@
+@model Study2gether.Models.User
+
+@{
+    ViewData["Title"] = "Histórico";
+}
+
+<h1>Histórico</h1>
+
+
+
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Historico">
+            <!--
+            <div class="form-group">
+                <label asp-for="imageLink" class="text-danger">Imagem</label>
+                <label asp-for="User.imageLink" class="text-danger"></label>
+                <span asp-validation-for="imageLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="text-danger">Nome</label>
+                <label asp-for="User.name" class="text-danger"></label>
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label">Sobre Você</label>
+                <label asp-for="User.description" class="control-label"></label>
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
+                <label asp-for="User.socialMedia" class="control-label"></label>
+                <span asp-validation-for="socialMedia" class="text-danger"></span>
+            </div>
+
+            // Aqui entraremos com o Histórico (PERGUNTAS, RESPOSTAS e FAVORITOS)
+            -->
+
+            <div class="form-group">
+                <a class="btn btn-info" asp-controller="Home" asp-action="EditarPerfil">Editar Perfil</a>
+                <a class="btn btn-info" asp-controller="Home" asp-action="Index">Sair</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
