@@ -41,7 +41,7 @@ namespace Study2gether
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => {
                     options.AccessDeniedPath = "/user/AccessDenied/";
-                    options.LoginPath = "/user/Login/";
+                    options.LoginPath = "/user/Login/";                 
                 });
 
         services.AddControllersWithViews();

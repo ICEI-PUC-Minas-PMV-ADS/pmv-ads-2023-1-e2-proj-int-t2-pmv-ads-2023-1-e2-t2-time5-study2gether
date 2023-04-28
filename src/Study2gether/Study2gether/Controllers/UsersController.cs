@@ -15,7 +15,7 @@ namespace Study2gether.Controllers
 {
     public class UsersController : Controller
     {
-        
+        private readonly UserManager<User> _userManager;
         private readonly ApplicationDbContext _context;
 
         public UsersController(ApplicationDbContext context)
@@ -92,9 +92,7 @@ namespace Study2gether.Controllers
         {
             return View();
         }
-        // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Cadastro([Bind("idUser,email,password,createdDate")] User user)
@@ -115,12 +113,102 @@ namespace Study2gether.Controllers
             return _context.Users.Any(e => e.idUser == id);
         }
 
+        public IActionResult Historico()
+        {
+            return View();
+        }
+
+        //private Task<User> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
+        
+        public async Task<IActionResult> EditarPefil(string email)
+        {
+           
+            var user = await _context.Users
+                .FirstOrDefaultAsync(m => m.email == email);
+            /*
+           
+            User user = await _userManager.FindByEmailAsync(email);
+           
+            User user = await _userManager.FindByEmailAsync();
+            */
+            //var user = await GetCurrentUserAsync();
+
+            if (user != null)
+                return View(user);
+            else
+                return RedirectToAction("Historico");
+        }
+
+        public IActionResult EditarPerfil()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> EditarPerfil(Guid idUser, string name, string password, string email, string description, string imageLink, string socialMedia)
+        {
+
+            User user = await _userManager.FindByIdAsync(idUser.ToString());
+            if (user != null)
+            {
+                if (!string.IsNullOrEmpty(email))
+                    user.email = email;
+                else
+                    ModelState.AddModelError("", "O E-mail não pode ser vazio");
+
+                if (!string.IsNullOrEmpty(name))
+                    user.name = name;
+                else
+                    ModelState.AddModelError("", "O Nome não pode ser vazio");
+
+                if (!string.IsNullOrEmpty(password))
+                    user.password = password;
+                else
+                    ModelState.AddModelError("", "A senha não pode ser vazia");
+
+                if (!string.IsNullOrEmpty(description))
+                    user.description = description;
+                else
+                    ModelState.AddModelError("", "A descrição não pode ser vazia");
+
+                if (!string.IsNullOrEmpty(imageLink))
+                    user.imageLink = imageLink;
+                else
+                    ModelState.AddModelError("", "A imagem do usuário não pode ser vazia");
+
+                if (!string.IsNullOrEmpty(socialMedia))
+                    user.socialMedia = socialMedia;
+                else
+                    ModelState.AddModelError("", "A rede social do usuário não pode ser vazia");
+
+
+
+                if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+                {
+                    IdentityResult result = await _userManager.UpdateAsync(user);
+                    if (result.Succeeded)
+                        return RedirectToAction("Historico");
+                    else
+                        Errors(result);
+                }
+            }
+            else
+                ModelState.AddModelError("", "Usuário não encontrado");
+            return View(user);
+        }
+        private void Errors(IdentityResult result)
+        {
+            foreach (IdentityError error in result.Errors)
+                ModelState.AddModelError("", error.Description);
+        }
 
 
         /*
         // Rascunho - EditarPeril
         // Primeiro precisamos utilizar o método GET: para obter os dados e depois Editá-los.
         public IActionResult EditarPerfil(Guid? idUser)
+
 
         {
 
@@ -131,7 +219,7 @@ namespace Study2gether.Controllers
         
         // Obtidos os dados (pelo GET:) vamos ao método POST:
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public IActionResult EditarPerfil([Bind("name,password,email,description,imageLink,socialMedia")] User user)
         {
             if (ModelState.IsValid)
@@ -143,11 +231,11 @@ namespace Study2gether.Controllers
             return View(user);
         } 
         */
-       
+
 
 
         //Segundo Teste - 27/04/23
 
-        
+
     }
 }
