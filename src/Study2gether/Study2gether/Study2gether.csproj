@@ -81,4 +81,9 @@
     <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\Users\EditarPerfil.cshtml" />
+    <None Include="Views\Users\Historico.cshtml" />
+  </ItemGroup>
+
 </Project>
