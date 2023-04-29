@@ -13,44 +13,44 @@
         <form asp-action="EditarPerfil">
 
             <div class="form-group">
-                <label asp-for="imageLink" class="text-danger">Foto</label>
-                <input asp-for="imageLink" class="text-danger" />
-                <span asp-validation-for="imageLink" class="text-danger"></span>
+                <label asp-for="imageLink">Foto</label>
+                <input asp-for="imageLink" />
+                <span asp-validation-for="imageLink"></span>
             </div>
             <div class="form-group">
-                <label asp-for="name" class="text-danger">Nome</label>
-                <input asp-for="name" class="text-danger" />
-                <span asp-validation-for="name" class="text-danger"></span>
+                <label asp-for="name">Nome</label>
+                <input asp-for="name" />
+                <span asp-validation-for="name"></span>
             </div>
             <div class="form-group">
                 <label asp-for="description" class="control-label">Sobre Você</label>
                 <input asp-for="description" class="form-control" />
-                <span asp-validation-for="description" class="text-danger"></span>
+                <span asp-validation-for="description"></span>
             </div>
             <div class="form-group">
                 <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
                 <input asp-for="socialMedia" class="form-control" />
-                <span asp-validation-for="socialMedia" class="text-danger"></span>
+                <span asp-validation-for="socialMedia"></span>
+            </div>
+            <!--div class="form-group">
+                <label asp-for="email">E-mail</label>
+                <input asp-for="email" />
+                <span asp-validation-for="email"></span>
+            </div-->
+            <div class="form-group">
+                <label asp-for="password" class="control-label">Senha Atual</label>
+                <input type="password" name="previousPassword" value="" />
+                <!--span asp-validation-for="password"></!--span-->
             </div>
             <div class="form-group">
-                <label asp-for="email" class="text-danger">E-mail</label>
-                <input asp-for="email" class="text-danger" />
-                <span asp-validation-for="email" class="text-danger"></span>
+                <label>Nova Senha</label>
+                <input type="password" name="newPassword1" value="" />
+                <!--span-- asp-validation-for="password"></!--span-->
             </div>
             <div class="form-group">
-                <label asp-for="password" class="text-danger">Senha Atual</label>
-                <input asp-for="password" class="text-danger" />
-                <span asp-validation-for="password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="password" class="text-danger">Nova Senha</label>
-                <input asp-for="password" class="text-danger" />
-                <span asp-validation-for="password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="password" class="text-danger">Confirmação Nova Senha</label>
-                <input asp-for="password" class="text-danger" />
-                <span asp-validation-for="password" class="text-danger"></span>
+                <label>Confirmação Nova Senha</label>
+                <input type="password" name="newPassword1" value="" />
+                <!--span-- asp-validation-for="password"></!--span-->
             </div>
 
             <div class="form-group">
