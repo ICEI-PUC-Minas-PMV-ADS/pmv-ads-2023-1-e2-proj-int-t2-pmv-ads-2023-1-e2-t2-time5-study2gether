@@ -1,7 +1,7 @@
 @model Study2gether.Models.Post
 
 @{
-    ViewData["Title"] = "Indicações";
+    ViewData["Title"] = "Perguntas";
 }
 @{
     var categories = ViewData["Categories"] as List<Category>;
@@ -22,7 +22,7 @@
     </div>
 
     <div class="posts col-sm-9 mt-5">
-        <div id="post-1">
+        <div id="   -1">
             @foreach (var obj in postList)
             {
                 <div class="caixa card rounded-lg mb-3">
@@ -33,9 +33,11 @@
                         <div>@obj.content</div>
                     </div>
                     <div class="card-footer">
-
                         <div class="reactions d-inline">
-                            <i class="fa-regular fa-comment-dots"></i>
+                            <a asp-action="Comentar">
+
+                                <i class="fa-regular fa-comment-dots"></i>
+                            </a>
 
                             <i class="fa-regular fa-face-smile"></i>
 
@@ -44,21 +46,21 @@
                             <i class="fa-solid fa-star"></i>
                         </div>
 
-                        <label class="float-right" for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                        <label class="float-right" for="data-pergunta"><small>Data da pergunta: @obj.created_date</small></label>
                     </div>
                 </div>
             }
         </div>
     </div>
-    <a class="pe-auto" data-toggle="modal" data-target="#postIndication" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
+    <a class="pe-auto" data-toggle="modal" data-target="#postQuestion" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
 </div>
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="postIndication" tabindex="-1" role="dialog" aria-labelledby="postIndicationitle" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="postQuestion" tabindex="-1" role="dialog" aria-labelledby="postQuestionitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-        <form asp-action="Indicacoes">
+        <form asp-action="Perguntas">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="postIndicationLongTitle">Modal title</h5>
+                    <h5 class="modal-title" id="postQuestionLongTitle">Modal title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -110,7 +112,7 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
+            </div>
         </form>
     </div>
-</div>
 </div>

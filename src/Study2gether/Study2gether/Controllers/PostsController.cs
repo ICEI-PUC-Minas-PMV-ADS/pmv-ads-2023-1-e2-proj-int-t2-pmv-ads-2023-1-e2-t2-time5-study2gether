@@ -141,10 +141,26 @@ namespace Study2gether.Controllers
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.ToList();
+            ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).ToList();
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
+
+        public class HomeController : Controller
+        {
+            // Action para redirecionar o usuário para a página de respostas
+            public IActionResult Respostas()
+            {
+                return View();
+            }
+
+            // Action para lidar com o clique no ícone de comentário
+            public IActionResult Comentar()
+            {
+                return RedirectToAction("Respostas");
+            }
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -163,13 +179,13 @@ namespace Study2gether.Controllers
 
                 post.views = 0;
                 post.created_date = DateTime.Now;
-                post.type = (Types)0;
+                post.type = (Types)2;
                 post.idPost = Guid.NewGuid();
                 post.idUser = Guid.Parse(User.FindFirstValue("idUser"));
 
                 _context.Add(post);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Perguntas));
             }
             ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email", post.idUser);
             return View(post);
