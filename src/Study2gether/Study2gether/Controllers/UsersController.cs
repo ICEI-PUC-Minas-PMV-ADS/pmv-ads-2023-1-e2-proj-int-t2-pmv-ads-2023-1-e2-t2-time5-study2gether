@@ -97,6 +97,23 @@ namespace Study2gether.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Cadastro([Bind("idUser,email,password,createdDate")] User user)
         {
+            var validateEmail = user.email.EndsWith("@sga.pucminas.br");
+            var checkExistingEmail = _context.Users.FirstOrDefault(stored => stored.email == user.email);
+            var validatePasswordLength = user.password.Length >= 8;
+            if (!validateEmail)
+{
+    ModelState.AddModelError("email", "O e-mail deve ser um endereço de e-mail da PUC Minas.");
+}
+
+if (checkExistingEmail != null)
+{
+    ModelState.AddModelError("email", "Este e-mail já está em uso. Por favor, use outro e-mail.");
+}
+
+if (!validatePasswordLength)
+{
+    ModelState.AddModelError("password", "A senha deve ter pelo menos 8 caracteres.");
+}
             if (ModelState.IsValid)
             {
                 user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
