@@ -33,17 +33,16 @@
                         <div>@obj.content</div>
                     </div>
                     <div class="card-footer">
-
                         <div class="reactions d-inline">
-                            <i class="fa-regular fa-comment-dots"></i>
+                            
+                            @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="comment"><i class="fa-regular fa-comment-dots"></i></a>
 
-                            <i class="fa-regular fa-face-smile"></i>
+                            @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
 
-                            <i class="fa-solid fa-chart-column"></i>
+                            @obj.Reactions.Count(r => r.Name == "chart") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="chart"><i class="fa-solid fa-chart-column"></i></a>
 
-                            <i class="fa-solid fa-star"></i>
+                            @obj.Reactions.Count(r => r.Name == "star") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="star"><i class="fa-solid fa-star"></i></a>
                         </div>
-
                         <label class="float-right" for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
                     </div>
                 </div>
@@ -55,15 +54,15 @@
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="postIndication" tabindex="-1" role="dialog" aria-labelledby="postIndicationitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-        <form asp-action="Indicacoes">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="postIndicationLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="postIndicationLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Indicacoes">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label for="categoryId"><b>Categorias</b></label>
@@ -103,14 +102,13 @@
                         <span asp-validation-for="content" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <div class="float-right d-inline-block">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-        </form>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
 </div>
