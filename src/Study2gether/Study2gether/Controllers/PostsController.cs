@@ -102,11 +102,33 @@ namespace Study2gether.Controllers
             return View();
         }
 
-        public IActionResult Respostas()
-        {
-            return View();
+        public IActionResult Respostas(Guid id)
+        {            
+                ViewData["perguntas"] = _context.Post.Include(p => p.Answers).SingleOrDefault(p => p.idPost == id);
+                return View();            
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Respostas([Bind("title,content")] Answer resposta, Guid id)
+        {
+            
+                if (ModelState.IsValid)
+                {
+                    resposta.idAnswer = Guid.NewGuid();
+                    resposta.idPost = id;
+                    resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+
+                    // Salva a resposta no banco de dados
+                    _context.Add(resposta);
+                    _context.SaveChanges();
+                    // Redireciona o usuário de volta para a página da pergunta correspondente
+                    return RedirectToAction("Detalhes", "Pergunta", new { id = resposta.idPost });
+                }
+            
+            // Se o modelo for inválido, exiba o formulário novamente com as mensagens de erro apropriadas
+            return View(resposta);
+        }
         public IActionResult Perguntas()
         {
             //Provavelmente não é a melhor forma de fazer isso
