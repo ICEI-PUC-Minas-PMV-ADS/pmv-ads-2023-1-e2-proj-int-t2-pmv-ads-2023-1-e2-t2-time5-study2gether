@@ -47,6 +47,7 @@
     <Content Remove="Areas\Admin\Index.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Cadastro.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Login.cshtml" />
+    <Content Remove="wwwroot\css\StyleSheet.css" />
   </ItemGroup>
 
   <ItemGroup>

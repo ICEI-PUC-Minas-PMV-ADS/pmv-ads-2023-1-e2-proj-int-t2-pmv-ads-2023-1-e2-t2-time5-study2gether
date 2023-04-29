@@ -10,12 +10,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Study2gether.Models;
+using System.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace Study2gether.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly UserManager<User> _userManager;
         private readonly ApplicationDbContext _context;
 
         public UsersController(ApplicationDbContext context)
@@ -50,6 +51,7 @@ namespace Study2gether.Controllers
                         new Claim(ClaimTypes.Name, userDb.name == null ? userDb.email : userDb.name),
                         new Claim(ClaimTypes.NameIdentifier, userDb.name == null ? userDb.email : userDb.name),
                         new Claim(ClaimTypes.Role, userDb.isAdmin ? "admin" : "user"),
+                        new Claim("idUser", userDb.idUser.ToString()),
                     };
 
                 var userIdentity = new ClaimsIdentity(claims, "login");
@@ -73,7 +75,7 @@ namespace Study2gether.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Logout() 
+        public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
@@ -91,7 +93,7 @@ namespace Study2gether.Controllers
         {
             return View();
         }
-       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Cadastro([Bind("idUser,email,password,createdDate")] User user)
@@ -112,89 +114,84 @@ namespace Study2gether.Controllers
             return _context.Users.Any(e => e.idUser == id);
         }
 
-        public IActionResult Historico()
+        public async Task<IActionResult> Historico()
         {
-            return View();
-        }
+            ClaimsPrincipal claimIdentity = User;
+            String identityName = claimIdentity.Identity.Name;
 
-        //private Task<User> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
-        
-        public async Task<IActionResult> EditarPefil(string email)
-        {
-           
             var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.email == email);
-            /*
-           
-            User user = await _userManager.FindByEmailAsync(email);
-           
-            User user = await _userManager.FindByEmailAsync();
-            */
-            //var user = await GetCurrentUserAsync();
+                .FirstOrDefaultAsync(m => m.email == identityName);
 
-            if (user != null)
-                return View(user);
-            else
-                return RedirectToAction("Historico");
+            return View("Historico", user);
         }
 
-        public IActionResult EditarPerfil()
+        public async Task<IActionResult> EditarPerfil()
         {
-            return View();
-        }
+            ClaimsPrincipal claimIdentity = User;
+            String identityName = claimIdentity.Identity.Name;
 
+            var user = await _context.Users
+                .FirstOrDefaultAsync(m => m.email == identityName);
+
+            return View("EditarPerfil", user);
+        }
 
         [HttpPost]
-        public async Task<IActionResult> EditarPerfil(Guid idUser, string name, string password, string email, string description, string imageLink, string socialMedia)
+        public async Task<IActionResult> EditarPerfil(string name, string previousPassword, string newPassword1, string newPassword2, string description, string imageLink, string socialMedia)
         {
+            ClaimsPrincipal claimIdentity = HttpContext.User;
 
-            User user = await _userManager.FindByIdAsync(idUser.ToString());
+            String identityName = claimIdentity.Identity.Name;
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(m => m.email == identityName);
+
             if (user != null)
             {
-                if (!string.IsNullOrEmpty(email))
-                    user.email = email;
-                else
-                    ModelState.AddModelError("", "O E-mail não pode ser vazio");
-
                 if (!string.IsNullOrEmpty(name))
                     user.name = name;
-                else
-                    ModelState.AddModelError("", "O Nome não pode ser vazio");
 
-                if (!string.IsNullOrEmpty(password))
-                    user.password = password;
-                else
-                    ModelState.AddModelError("", "A senha não pode ser vazia");
+                if (!string.IsNullOrEmpty(previousPassword))
+                {
+                    previousPassword = BCrypt.Net.BCrypt.HashPassword(previousPassword);
+                    bool ispasswordOk = BCrypt.Net.BCrypt.Verify(previousPassword, user.password);
+                    if (ispasswordOk)
+                    {
+                        if (!string.IsNullOrEmpty(newPassword1) && !string.IsNullOrEmpty(newPassword2) && newPassword1 == newPassword2)
+                            user.password = newPassword1;
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Senha atual errada.");
+                        return View();
+                    }
+                }
 
                 if (!string.IsNullOrEmpty(description))
                     user.description = description;
-                else
-                    ModelState.AddModelError("", "A descrição não pode ser vazia");
 
                 if (!string.IsNullOrEmpty(imageLink))
                     user.imageLink = imageLink;
-                else
-                    ModelState.AddModelError("", "A imagem do usuário não pode ser vazia");
 
                 if (!string.IsNullOrEmpty(socialMedia))
                     user.socialMedia = socialMedia;
-                else
-                    ModelState.AddModelError("", "A rede social do usuário não pode ser vazia");
 
+                await _context.SaveChangesAsync();
 
-
-                if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+                /*if (!string.IsNullOrEmpty(identityName) && !string.IsNullOrEmpty(password))
                 {
-                    IdentityResult result = await _userManager.UpdateAsync(user);
+                    await _context.SaveChangesAsync();
                     if (result.Succeeded)
                         return RedirectToAction("Historico");
                     else
-                        Errors(result);
-                }
+                        Errors(result);*/
             }
-            else
+            else {
                 ModelState.AddModelError("", "Usuário não encontrado");
-            return View(user);
+                return View();
+            }
+
+            return View("Historico", user);
         }
         private void Errors(IdentityResult result)
         {
