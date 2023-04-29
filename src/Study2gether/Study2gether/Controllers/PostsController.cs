@@ -104,7 +104,7 @@ namespace Study2gether.Controllers
 
         public IActionResult Respostas(Guid id)
         {            
-                ViewData["perguntas"] = _context.Post.Include(p => p.Answers).SingleOrDefault(p => p.idPost == id);
+                ViewData["perguntas"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
                 return View();            
         }
 

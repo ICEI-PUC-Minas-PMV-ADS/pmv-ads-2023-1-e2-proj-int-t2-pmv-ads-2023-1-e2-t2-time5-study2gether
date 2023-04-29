@@ -4,7 +4,7 @@
     ViewData["Title"] = "Respostas";
 }
 @{
-    var postList = ViewData["perguntas"] as List<Post>;
+    var postList = ViewData["perguntas"] as Post;
 }
 
 <div class="row">
@@ -24,13 +24,13 @@
 
             <div class="caixa card rounded-lg mb-3">
                 <div class="card-header">
-                    <h4 class="text-center">@postList.First().title</h4>
+                    <h4 class="text-center">@postList.title</h4>
                 </div>
                 <div class="card-body">
-                    <div>@postList.First().content</div>
+                    <div>@postList.content</div>
                 </div>
                 <div class="card-footer">
-
+                    
                     <div class="reactions d-inline">
                         <i class="fa-regular fa-comment-dots"></i>
 
@@ -41,7 +41,7 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
 
-                    <label class="float-right" for="data-resposta"><small>Data da resposta: @postList.First().created_date)</small></label>
+                    <label class="float-right" for="data-resposta"><small>Data da resposta: @postList.created_date)</small></label>
                 </div>
             </div>
 
