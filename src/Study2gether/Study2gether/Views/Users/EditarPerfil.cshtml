@@ -28,12 +28,12 @@
             <div class="form-group">
                 <label asp-for="description" class="control-label">Sobre Você</label>
                 <input asp-for="description" class="form-control" />
-                <span asp-validation-for="description" class="text-danger"></span>
+                <span asp-validation-for="description"></span>
             </div>
             <div class="form-group">
                 <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
                 <input asp-for="socialMedia" class="form-control" />
-                <span asp-validation-for="socialMedia" class="text-danger"></span>
+                <span asp-validation-for="socialMedia"></span>
             </div>
         </form>
     </div>
@@ -45,9 +45,9 @@
                 <span asp-validation-for="password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="password" class="text-danger">Nova Senha</label>
-                <input asp-for="password" class="text-danger" />
-                <span asp-validation-for="password" class="text-danger"></span>
+                <label>Nova Senha</label>
+                <input type="password" name="newPassword1" value="" />
+                <!--span-- asp-validation-for="password"></!--span-->
             </div>
             <div class="form-group">
                 <label asp-for="password" class="confirmarNovaSenha">Confirmar Nova Senha</label>

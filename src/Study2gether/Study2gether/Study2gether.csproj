@@ -11,29 +11,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="static\**" />
     <Compile Remove="Views\Answers\**" />
     <Compile Remove="Views\Axis\**" />
     <Compile Remove="Views\Categories\**" />
     <Compile Remove="Views\Microfoundations\**" />
+    <Compile Remove="Views\NovaPasta\**" />
     <Compile Remove="Views\Post\**" />
+    <Compile Remove="Views\Shared\NovaPasta\**" />
     <Compile Remove="Views\Users\**" />
+    <Content Remove="static\**" />
     <Content Remove="Views\Answers\**" />
     <Content Remove="Views\Axis\**" />
     <Content Remove="Views\Categories\**" />
     <Content Remove="Views\Microfoundations\**" />
+    <Content Remove="Views\NovaPasta\**" />
     <Content Remove="Views\Post\**" />
+    <Content Remove="Views\Shared\NovaPasta\**" />
     <Content Remove="Views\Users\**" />
+    <EmbeddedResource Remove="static\**" />
     <EmbeddedResource Remove="Views\Answers\**" />
     <EmbeddedResource Remove="Views\Axis\**" />
     <EmbeddedResource Remove="Views\Categories\**" />
     <EmbeddedResource Remove="Views\Microfoundations\**" />
+    <EmbeddedResource Remove="Views\NovaPasta\**" />
     <EmbeddedResource Remove="Views\Post\**" />
+    <EmbeddedResource Remove="Views\Shared\NovaPasta\**" />
     <EmbeddedResource Remove="Views\Users\**" />
+    <None Remove="static\**" />
     <None Remove="Views\Answers\**" />
     <None Remove="Views\Axis\**" />
     <None Remove="Views\Categories\**" />
     <None Remove="Views\Microfoundations\**" />
+    <None Remove="Views\NovaPasta\**" />
     <None Remove="Views\Post\**" />
+    <None Remove="Views\Shared\NovaPasta\**" />
     <None Remove="Views\Users\**" />
   </ItemGroup>
 
@@ -49,6 +61,7 @@
     <Content Remove="Areas\Admin\Views\AdminUsers\Login.cshtml" />
     <Content Remove="wwwroot\css\Historico.cs" />
     <Content Remove="wwwroot\js\Historico.js" />
+    <Content Remove="wwwroot\css\StyleSheet.css" />
   </ItemGroup>
 
   <ItemGroup>
