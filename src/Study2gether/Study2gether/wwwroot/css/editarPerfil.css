@@ -1,0 +1,36 @@
+﻿
+
+
+#container-c {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    float: left;
+}
+
+#container-d {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    float: left;
+    right: -25px;
+    max-height: 350px;
+}
+
+
+#sobreVoce-redesSociais {
+    height: 100px;
+}
+
+
+#fotoPerfil {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #808080;
+    width: 80px;
+    height: 80px;
+}
+
+.fs-exclude ic-avatar {
+    display: inline-block;
+}

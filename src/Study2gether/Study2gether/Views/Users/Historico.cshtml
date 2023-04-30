@@ -4,61 +4,57 @@
     ViewData["Title"] = "Histórico";
 }
 
-<h1>Histórico</h1>
+<link rel="stylesheet" href="../../css/historico.css">
 
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="perfilHistorico">          
+    <table aria-hidden="true" class="fs-exclude ic-avatar">
+        <tr>
+            <td><img id="fotoPerfil" src="https://cdn.inst-fs-iad-prod.inscloudgate.net/6a83047d-f8ec-4036-aca7-c348772d7c77?token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCIsImtpZCI6ImNkbiJ9.eyJyZXNvdXJjZSI6Ii82YTgzMDQ3ZC1mOGVjLTQwMzYtYWNhNy1jMzQ4NzcyZDdjNzciLCJ0ZW5hbnQiOiJjYW52YXMiLCJ1c2VyX2lkIjoiMTE3NDgwMDAwMDAwMjE3NTQyIiwiaWF0IjoxNjgyODQxNjQ2LCJleHAiOjE2ODI5MjgwNDZ9.X7T5CBuhoq7PXxtWpPUBI3G0imNj2FddveqaT_TtK3NbEJHywFevBJNu7rVo22R5V-TfD_2RVMPO2JsPipS5Pg&content_type=image%2Fpng" alt="Odair Cordeiro Marra"></td>
+            <td><a id="nomePerfil" class="nomePefil" href=""><p>Odair</p></a></td>
+        </tr>
+    </table>
+     <div id="container-a">
         <form asp-action="Historico">
-            <div class="form-group">
-                <label asp-for="imageLink" class="text-danger">Foto</label>
-                <input asp-for="imageLink" class="text-danger" />
-                <span asp-validation-for="imageLink" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="name" class="text-danger">Nome</label>
-                <input asp-for="name" class="text-danger" />
-                <span asp-validation-for="name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            <div class="form-group" id="sobreVoce-redesSociais">
                 <label asp-for="description" class="control-label">Sobre Você</label>
                 <input asp-for="description" class="form-control" />
                 <span asp-validation-for="description" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="sobreVoce-redesSociais">
                 <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
                 <input asp-for="socialMedia" class="form-control" />
                 <span asp-validation-for="socialMedia" class="text-danger"></span>
             </div>
-
-            <h3>Histórico</h3>
-            <h5>Perguntas</h5>
-            <div class="form-group">
-                <p>Pergunta 1</p>
-                <p>Pergunta 2</p>
-                <p>Pergunta 3</p>
-            </div>
-               
-            <h5>Respostas</h5>
-            <div class="form-group">
-                <p>Resposta 1</p>
-                <p>Resposta 2</p>
-                <p>Resposta 3</p>
-            </div>
-            <h5>Favoritos</h5>
-            <div class="form-group">
-                <p>Favorito 1</p>
-                <p>Favorito 2</p>
-                <p>Favorito 3</p>
-            </div>
-
             <div class="form-group">
                 <a class="btn btn-info" asp-controller="Users" asp-action="EditarPerfil">Editar Perfil</a>
                 <a class="btn btn-info" asp-controller="Home" asp-action="Index">Sair</a>
             </div>
         </form>
     </div>
+    <div id="container-b">
+        <div id="historicoTitle"
+            <p>Histórico</p>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Perguntas')" id="defaultOpen">PERGUNTAS</button>
+            <button class="tablinks" onclick="openCity(event, 'Respostas')">RESPOSTAS</button>
+            <button class="tablinks" onclick="openCity(event, 'Favoritos')">FAVORITOS</button>
+        </div>
+        <div id="Perguntas" class="tabcontent">
+            <h6>Ask Title</h6>
+            <p>Can I do a Cascade on C#?</p>
+        </div>
+        <div id="Respostas" class="tabcontent">
+            <h6>Answer Title</h6>
+            <p>Yes, you can!</p>
+        </div>
+        <div id="Favoritos" class="tabcontent">
+            <h6>Favority Subject Title Title</h6>
+            <p>The best way to do something is to plan before.</p>
+        </div>
+    </div>  
+    <script src="../../js/historico.js"></script>  
 </div>
 
 @section Scripts {

@@ -47,6 +47,12 @@
     <Content Remove="Areas\Admin\Index.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Cadastro.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Login.cshtml" />
+    <Content Remove="wwwroot\css\Historico.cs" />
+    <Content Remove="wwwroot\js\Historico.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\Historico.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -84,6 +90,7 @@
   <ItemGroup>
     <None Include="Views\Users\EditarPerfil.cshtml" />
     <None Include="Views\Users\Historico.cshtml" />
+    <None Include="wwwroot\js\historico.js" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,110 @@
+﻿
+/* Inclusão CSS.Histórico - Toggleable Tabs 
+*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+    background-color: #ddd;   
+}
+
+.tablinks.active {
+    margin: 0px;
+    padding-inline: 22px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 22px;
+    transition: 0.3s;
+    font-size: 13px;
+    border-radius: background-color: #f1f1f1;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ccc;
+    border-top-left-radius: 0.75rem; 
+}
+
+        /* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ffffff;
+    border-top-left-radius: 0.75rem;
+    border-bottom: none;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    font-size: 12px;
+    overflow-y: scroll;
+    height: 200px;
+    margin-top: 0px;
+}
+
+
+#container-a {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    float: left;
+}
+
+#container-b {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    float: left;
+    right: -25px;
+    max-height: 350px;
+}
+
+#historicoTitle {
+    fonte-size: 15px;
+    background-color: #ddd;
+    display: flex;
+    width: 100%;
+    border: 1px px solid #ced4da;
+    border-radius: 0.25rem;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+#sobreVoce-redesSociais {
+    height: 100px;
+}
+
+
+#fotoPerfil {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #808080;
+    width: 80px;
+    height: 80px;
+}
+
+.confirmarNovaSenha {
+    break-word:  
+}
+
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
