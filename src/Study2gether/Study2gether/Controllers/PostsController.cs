@@ -103,10 +103,11 @@ namespace Study2gether.Controllers
         }
 
         public IActionResult Respostas(Guid id)
-        {            
-                ViewData["perguntas"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
-                return View();            
+        {
+            ViewData["perguntas"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
+            return View();
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -141,22 +142,7 @@ namespace Study2gether.Controllers
             return View();
         }
 
-        public class HomeController : Controller
-        {
-            // Action para redirecionar o usuário para a página de respostas
-            public IActionResult Respostas()
-            {
-                return View();
-            }
-
-            // Action para lidar com o clique no ícone de comentário
-            public IActionResult Comentar()
-            {
-                return RedirectToAction("Respostas");
-            }
-        }
-
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Perguntas([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)

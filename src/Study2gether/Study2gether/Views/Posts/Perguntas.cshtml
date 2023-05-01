@@ -25,30 +25,29 @@
         <div id="   -1">
             @foreach (var obj in postList)
             {
-                <div class="caixa card rounded-lg mb-3">
-                    <div class="card-header">
-                        <h4 class="text-center">@obj.title</h4>
-                    </div>
-                    <div class="card-body">
-                        <div>@obj.content</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="reactions d-inline">
-                            <a asp-action="Comentar">
-
-                                <i class="fa-regular fa-comment-dots"></i>
-                            </a>
-
-                            <i class="fa-regular fa-face-smile"></i>
-
-                            <i class="fa-solid fa-chart-column"></i>
-
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-
-                        <label class="float-right" for="data-pergunta"><small>Data da pergunta: @obj.created_date</small></label>
-                    </div>
+            <div class="caixa card rounded-lg mb-3">
+                <div class="card-header">
+                    <h4 class="text-center">@obj.title</h4>
                 </div>
+                <div class="card-body">
+                    <div>@obj.content</div>
+                </div>
+
+                <div class="card-footer">
+                    <div class="reactions d-inline">
+
+                        @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="Respostas" asp-route-id=""><i class="fa-regular fa-comment-dots"></i></a>
+
+                        @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
+
+                        @obj.Reactions.Count(r => r.Name == "chart") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="chart"><i class="fa-solid fa-chart-column"></i></a>
+
+                        @obj.Reactions.Count(r => r.Name == "star") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="star"><i class="fa-solid fa-star"></i></a>
+                    </div>
+                    <label class="float-right" for="data-pergunta"><small>Data da pergunta: @obj.created_date</small></label>
+                </div>
+
+            </div>
             }
         </div>
     </div>
