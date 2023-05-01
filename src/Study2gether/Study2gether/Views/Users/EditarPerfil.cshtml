@@ -12,14 +12,14 @@
 <hr />
 
 <div class="editarPerfil">
-    <table aria-hidden="true" class="fs-exclude ic-avatar">
-        <tr>
-            <td><img id="fotoPerfil" src="https://cdn.inst-fs-iad-prod.inscloudgate.net/6a83047d-f8ec-4036-aca7-c348772d7c77?token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCIsImtpZCI6ImNkbiJ9.eyJyZXNvdXJjZSI6Ii82YTgzMDQ3ZC1mOGVjLTQwMzYtYWNhNy1jMzQ4NzcyZDdjNzciLCJ0ZW5hbnQiOiJjYW52YXMiLCJ1c2VyX2lkIjoiMTE3NDgwMDAwMDAwMjE3NTQyIiwiaWF0IjoxNjgyODQxNjQ2LCJleHAiOjE2ODI5MjgwNDZ9.X7T5CBuhoq7PXxtWpPUBI3G0imNj2FddveqaT_TtK3NbEJHywFevBJNu7rVo22R5V-TfD_2RVMPO2JsPipS5Pg&content_type=image%2Fpng" alt="Odair Cordeiro Marra"></td>
-            <td><a id="nomePerfil" class="nomePefil" href=""><p>Odair</p></a></td>
-        </tr>        
-    </table>
-    <div id="container-c">
-        <form asp-action="EditarPerfil">
+    <h6 class="text-danger">@ViewBag.Message</h6>
+    <form asp-action="EditarPerfil">
+        <div id="container-c">
+            <div class="form-group">
+                <img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil">
+                <input asp-for="imageLink" type="url" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="name" class="text-danger">Nome do Perfil</label>
                 <input asp-for="name" class="text-danger" />
@@ -35,14 +35,12 @@
                 <input asp-for="socialMedia" class="form-control" />
                 <span asp-validation-for="socialMedia"></span>
             </div>
-        </form>
-    </div>
-    <div id="container-d">
-        <form asp-action="EditarPerfil">
+        </div>
+        <div id="container-d">
             <div class="form-group">
-                <label asp-for="password" class="text-danger">Senha Atual</label>
-                <input asp-for="password" class="text-danger" />
-                <span asp-validation-for="password" class="text-danger"></span>
+                <label asp-for="password">Senha Atual</label>
+                <input type="password" name="previousPassword" value="" />
+                <span asp-validation-for="password"></span>
             </div>
             <div class="form-group">
                 <label>Nova Senha</label>
@@ -51,15 +49,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="password" class="confirmarNovaSenha">Confirmar Nova Senha</label>
-                <input asp-for="password" class="text-danger" />
+                <input type="password" name="newPassword2" value="" />
                 <span asp-validation-for="password" class="text-danger"></span>
-            </div> 
+            </div>
             <div class="form-group">
                 <a class="btn btn-info" asp-controller="Users" asp-action="Historico">Cancelar</a>
                 <input type="submit" value="Salvar Perfil" class="btn btn-primary" />
             </div>
-        </form>
-    </div> 
+
+        </div>
+    </form>
 </div>
 
 @section Scripts {

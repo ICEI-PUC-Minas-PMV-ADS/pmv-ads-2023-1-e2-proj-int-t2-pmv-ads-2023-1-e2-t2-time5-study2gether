@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Study2gether.Models;
 using System.Web;
 using Microsoft.AspNetCore.Http;
+using System.Text.RegularExpressions;
 
 namespace Study2gether.Controllers
 {
@@ -102,6 +103,7 @@ namespace Study2gether.Controllers
             {
                 user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
                 user.idUser = Guid.NewGuid();
+                user.name = user.email;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Home");
@@ -116,22 +118,16 @@ namespace Study2gether.Controllers
 
         public async Task<IActionResult> Historico()
         {
-            ClaimsPrincipal claimIdentity = User;
-            String identityName = claimIdentity.Identity.Name;
-
             var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.email == identityName);
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
 
             return View("Historico", user);
         }
 
         public async Task<IActionResult> EditarPerfil()
         {
-            ClaimsPrincipal claimIdentity = User;
-            String identityName = claimIdentity.Identity.Name;
-
             var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.email == identityName);
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
 
             return View("EditarPerfil", user);
         }
@@ -139,12 +135,8 @@ namespace Study2gether.Controllers
         [HttpPost]
         public async Task<IActionResult> EditarPerfil(string name, string previousPassword, string newPassword1, string newPassword2, string description, string imageLink, string socialMedia)
         {
-            ClaimsPrincipal claimIdentity = HttpContext.User;
-
-            String identityName = claimIdentity.Identity.Name;
-
             var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.email == identityName);
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
 
             if (user != null)
             {
@@ -153,16 +145,20 @@ namespace Study2gether.Controllers
 
                 if (!string.IsNullOrEmpty(previousPassword))
                 {
-                    previousPassword = BCrypt.Net.BCrypt.HashPassword(previousPassword);
                     bool ispasswordOk = BCrypt.Net.BCrypt.Verify(previousPassword, user.password);
                     if (ispasswordOk)
                     {
                         if (!string.IsNullOrEmpty(newPassword1) && !string.IsNullOrEmpty(newPassword2) && newPassword1 == newPassword2)
-                            user.password = newPassword1;
+                            user.password = BCrypt.Net.BCrypt.HashPassword(newPassword1);
+                        else
+                        {
+                            ViewBag.Message = "Confirmação de senha inválida";
+                            return View();
+                        }
                     }
                     else
                     {
-                        ModelState.AddModelError("", "Senha atual errada.");
+                        ViewBag.Message = "Senha atual errada.";
                         return View();
                     }
                 }
@@ -171,67 +167,23 @@ namespace Study2gether.Controllers
                     user.description = description;
 
                 if (!string.IsNullOrEmpty(imageLink))
+                { 
                     user.imageLink = imageLink;
+                }
 
                 if (!string.IsNullOrEmpty(socialMedia))
                     user.socialMedia = socialMedia;
 
                 await _context.SaveChangesAsync();
-
-                /*if (!string.IsNullOrEmpty(identityName) && !string.IsNullOrEmpty(password))
-                {
-                    await _context.SaveChangesAsync();
-                    if (result.Succeeded)
-                        return RedirectToAction("Historico");
-                    else
-                        Errors(result);*/
             }
-            else {
-                ModelState.AddModelError("", "Usuário não encontrado");
+            else
+            {
+                //ModelState.AddModelError("", "Usuário não encontrado");
+                ViewBag.Message = "Usuário não encontrado.";
                 return View();
             }
 
             return View("Historico", user);
         }
-        private void Errors(IdentityResult result)
-        {
-            foreach (IdentityError error in result.Errors)
-                ModelState.AddModelError("", error.Description);
-        }
-
-
-        /*
-        // Rascunho - EditarPeril
-        // Primeiro precisamos utilizar o método GET: para obter os dados e depois Editá-los.
-        public IActionResult EditarPerfil(Guid? idUser)
-
-
-        {
-
-            User.Identity.GetUserId();
-            return View();
-        }
-
-        
-        // Obtidos os dados (pelo GET:) vamos ao método POST:
-        [HttpPost]
-        
-        public IActionResult EditarPerfil([Bind("name,password,email,description,imageLink,socialMedia")] User user)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Entry(user).State = EntityState.Modified;
-                _context.SaveChanges();
-                return View("Views/Home/Historico.cshtml");
-            }
-            return View(user);
-        } 
-        */
-
-
-
-        //Segundo Teste - 27/04/23
-
-
     }
 }

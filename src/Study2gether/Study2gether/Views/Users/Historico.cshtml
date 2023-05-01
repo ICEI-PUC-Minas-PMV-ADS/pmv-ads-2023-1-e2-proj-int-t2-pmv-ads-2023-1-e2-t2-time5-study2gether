@@ -10,8 +10,17 @@
 <div class="perfilHistorico">          
     <table aria-hidden="true" class="fs-exclude ic-avatar">
         <tr>
-            <td><img id="fotoPerfil" src="https://cdn.inst-fs-iad-prod.inscloudgate.net/6a83047d-f8ec-4036-aca7-c348772d7c77?token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCIsImtpZCI6ImNkbiJ9.eyJyZXNvdXJjZSI6Ii82YTgzMDQ3ZC1mOGVjLTQwMzYtYWNhNy1jMzQ4NzcyZDdjNzciLCJ0ZW5hbnQiOiJjYW52YXMiLCJ1c2VyX2lkIjoiMTE3NDgwMDAwMDAwMjE3NTQyIiwiaWF0IjoxNjgyODQxNjQ2LCJleHAiOjE2ODI5MjgwNDZ9.X7T5CBuhoq7PXxtWpPUBI3G0imNj2FddveqaT_TtK3NbEJHywFevBJNu7rVo22R5V-TfD_2RVMPO2JsPipS5Pg&content_type=image%2Fpng" alt="Odair Cordeiro Marra"></td>
-            <td><a id="nomePerfil" class="nomePefil" href=""><p>Odair</p></a></td>
+            @{
+                if (string.IsNullOrEmpty(Model.imageLink))
+                {
+                    <td><img id="fotoPerfil" src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="Foto de Perfil"></td>
+                }
+                else
+                {
+                    <td><img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil"></td>
+                }
+            }
+            <td><p>@Model.name</p></td>
         </tr>
     </table>
      <div id="container-a">
@@ -19,12 +28,12 @@
             <div class="form-group" id="sobreVoce-redesSociais">
                 <label asp-for="description" class="control-label">Sobre Você</label>
                 <input asp-for="description" class="form-control" />
-                <span asp-validation-for="description" class="text-danger"></span>
+                <span asp-validation-for="description"></span>
             </div>
             <div class="form-group" id="sobreVoce-redesSociais">
                 <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
                 <input asp-for="socialMedia" class="form-control" />
-                <span asp-validation-for="socialMedia" class="text-danger"></span>
+                <span asp-validation-for="socialMedia"></span>
             </div>
             <div class="form-group">
                 <a class="btn btn-info" asp-controller="Users" asp-action="EditarPerfil">Editar Perfil</a>
@@ -33,7 +42,7 @@
         </form>
     </div>
     <div id="container-b">
-        <div id="historicoTitle"
+        <div id="historicoTitle">
             <p>Histórico</p>
         </div>
         <div class="tab">
