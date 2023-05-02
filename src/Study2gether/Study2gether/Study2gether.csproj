@@ -18,6 +18,7 @@
     <Compile Remove="Views\Microfoundations\**" />
     <Compile Remove="Views\NovaPasta\**" />
     <Compile Remove="Views\Post\**" />
+    <Compile Remove="Views\Shared\css\**" />
     <Compile Remove="Views\Shared\NovaPasta\**" />
     <Compile Remove="Views\Users\**" />
     <Content Remove="static\**" />
@@ -27,6 +28,7 @@
     <Content Remove="Views\Microfoundations\**" />
     <Content Remove="Views\NovaPasta\**" />
     <Content Remove="Views\Post\**" />
+    <Content Remove="Views\Shared\css\**" />
     <Content Remove="Views\Shared\NovaPasta\**" />
     <Content Remove="Views\Users\**" />
     <EmbeddedResource Remove="static\**" />
@@ -36,6 +38,7 @@
     <EmbeddedResource Remove="Views\Microfoundations\**" />
     <EmbeddedResource Remove="Views\NovaPasta\**" />
     <EmbeddedResource Remove="Views\Post\**" />
+    <EmbeddedResource Remove="Views\Shared\css\**" />
     <EmbeddedResource Remove="Views\Shared\NovaPasta\**" />
     <EmbeddedResource Remove="Views\Users\**" />
     <None Remove="static\**" />
@@ -45,6 +48,7 @@
     <None Remove="Views\Microfoundations\**" />
     <None Remove="Views\NovaPasta\**" />
     <None Remove="Views\Post\**" />
+    <None Remove="Views\Shared\css\**" />
     <None Remove="Views\Shared\NovaPasta\**" />
     <None Remove="Views\Users\**" />
   </ItemGroup>

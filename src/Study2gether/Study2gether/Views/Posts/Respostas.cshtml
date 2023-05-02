@@ -1,0 +1,63 @@
+@model Study2gether.Models.Post
+
+@{
+    ViewData["Title"] = "Respostas";
+}
+@{
+    var postList = ViewData["perguntas"] as Post;
+}
+
+<div class="row">
+    <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
+        <div>
+            <ul>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="replies col-sm-9 mt-5">
+        <div id="replies-container">
+
+
+            <div class="caixa card rounded-lg mb-3">
+                <div class="card-header">
+                    <h4 class="text-center">@postList.title</h4>
+                </div>
+                <div class="card-body">
+                    <div>@postList.content</div>
+                </div>
+                <!--Text area-->
+                <div class="container">
+                    <form asp-action="Respostas">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Digite Sua Resposta" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                            <a class="btn btn-secondary" asp-action="Perguntas" role="button">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="card-footer">
+
+                <div class="reactions d-inline">
+                    <i class="fa-regular fa-comment-dots"></i>
+
+                    <i class="fa-regular fa-face-smile"></i>
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <label class="float-right" for="data-resposta"><small>Data da resposta: @postList.created_date)</small></label>
+            </div>
+        </div>
+
+    </div>
+</div>
+<a class="pe-auto" data-toggle="modal" data-target="#postIndication" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>

@@ -11,7 +11,7 @@ namespace Study2gether.Models
     {
         [Key]
         public Guid Id { get; set; }
-
+        //necessario criar uma nova tabela de FG simples para nomes de reações
         [Required]
         public string Name { get; set; }
         
