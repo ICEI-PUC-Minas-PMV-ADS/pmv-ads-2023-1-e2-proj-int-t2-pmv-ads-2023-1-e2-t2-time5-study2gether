@@ -29,16 +29,16 @@
             {
                 <div class="caixa card rounded-lg mb-3">
                     <div class="card-header">
-                        <h4 class="text-center">@obj.title</h4>
+                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="obj.idPost">@obj.title</a></h4>
                     </div>
                     <div class="card-body">
-                        <div>@obj.content</div>
+                        <div>@Html.Raw(@obj.content)</div>
                     </div>
 
                     <div class="card-footer">
                         <div class="reactions d-inline">
 
-                            @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="" Respostas" asp-route-id=""><i class="fa-regular fa-comment-dots"></i></a>
+                            @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
                             @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
 
