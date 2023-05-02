@@ -163,41 +163,46 @@ namespace Study2gether.Controllers
             return _context.Post.Any(e => e.idPost == id);
         }
 
-        //Views INDICAÇÕES, INTERAÇÕES E PERGUNTAS
-
-        public IActionResult PostagemPergunta()
-        {
-            return View();
-        }
-
-        public IActionResult Indicacoes()
-        {
-            return View();
-        }
-
-        public IActionResult PostagemIndicacoes()
-        {
-            return View();
-        }
-
         public IActionResult Interacoes()
         {
+            var categories = _context.Category.ToList();
+            var axes = _context.Axis.ToList();
+            var microfoundations = _context.Microfoundation.ToList();
+            ViewData["Categories"] = categories;
+            ViewData["Axes"] = axes;
+            ViewData["Microfoundations"] = microfoundations;
+            //ViewData["postList"] = _context.Post.Where(c => c.type == (Types)1).ToList();
+            var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
 
-        public IActionResult PostagemInteracoes()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Interacoes([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)
         {
-            return View();
-        }
 
-        public IActionResult PostagemResposta()
-        {
-            return View();
-        }
+            if (ModelState.IsValid)
+            {
+                var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
+                var axis = await _context.Axis.Where(c => axisId.Contains(c.idAxis)).ToListAsync();
+                var microfoundation = await _context.Microfoundation.Where(c => microfoundationId.Contains(c.idMicrofoundation)).ToListAsync();
 
-        public IActionResult Respostas()
-        {
-            return View();
+                foreach (var obj in category) { post.Categories.Add(obj); }
+                foreach (var obj in axis) { post.Axes.Add(obj); }
+                foreach (var obj in microfoundation) { post.Microfoundations.Add(obj); }
+
+                post.views = 0;
+                post.created_date = DateTime.Now;
+                post.type = (Types)1;
+                post.idPost = Guid.NewGuid();
+                post.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+
+                _context.Add(post);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email", post.idUser);
+            return View(post);
         }
 
     }
