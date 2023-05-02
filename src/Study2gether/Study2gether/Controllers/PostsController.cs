@@ -11,7 +11,6 @@ using Study2gether.Models;
 
 namespace Study2gether.Controllers
 {
-    [Authorize(Roles = "admin")]
     public class PostsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -53,7 +52,7 @@ namespace Study2gether.Controllers
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Include(o => o.Reactions).ToList();
+            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).OrderByDescending(o => o.created_date).ToList();
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -197,8 +196,22 @@ namespace Study2gether.Controllers
                 _context.Reactions.Remove(reaction);
                 _context.SaveChanges();
             }
-           
-            return RedirectToAction(nameof(Indicacoes));
+
+            var post = _context.Post.First(m => m.idPost == idPost);
+            if (post.type == (Types)0)
+            {
+                return RedirectToAction(nameof(Indicacoes));
+            }
+            else if (post.type == (Types)1)
+            {
+                return RedirectToAction(nameof(Indicacoes)); //fixme não tinha interações ainda
+            }
+            else if (post.type == (Types)2)
+            {
+                return RedirectToAction(nameof(Perguntas));
+            }
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
