@@ -100,23 +100,25 @@ namespace Study2gether.Controllers
             var checkExistingEmail = _context.Users.FirstOrDefault(stored => stored.email == user.email);
             var validatePasswordLength = user.password.Length >= 8;
             if (!validateEmail)
-{
-    ModelState.AddModelError("email", "O e-mail deve ser um endereço de e-mail da PUC Minas.");
-}
+            {
+                ModelState.AddModelError("email", "O e-mail deve ser um endereço de e-mail da PUC Minas.");
+            }
 
-if (checkExistingEmail != null)
-{
-    ModelState.AddModelError("email", "Este e-mail já está em uso. Por favor, use outro e-mail.");
-}
+            if (checkExistingEmail != null)
+            {
+                ModelState.AddModelError("email", "Este e-mail já está em uso. Por favor, use outro e-mail.");
+            }
 
-if (!validatePasswordLength)
-{
-    ModelState.AddModelError("password", "A senha deve ter pelo menos 8 caracteres.");
-}
+            if (!validatePasswordLength)
+            {
+                ModelState.AddModelError("password", "A senha deve ter pelo menos 8 caracteres.");
+            }
             if (ModelState.IsValid)
             {
                 user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
                 user.idUser = Guid.NewGuid();
+                user.name = user.email;
+                user.imageLink = "https://cdn-icons-png.flaticon.com/512/6596/6596121.png";
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Home");
@@ -130,7 +132,7 @@ if (!validatePasswordLength)
         }
 
         public async Task<IActionResult> Historico()
-        {
+        {   
             var user = await _context.Users
                 .Include(teste => teste.Posts)
                 .Include(teste => teste.Answers)
@@ -170,7 +172,6 @@ if (!validatePasswordLength)
             }
             else
             {
-                //ModelState.AddModelError("", "Usuário não encontrado");
                 ViewBag.Message = "Usuário não encontrado.";
                 return View();
             }
@@ -194,31 +195,34 @@ if (!validatePasswordLength)
 
             if (user != null)
             {
-                if (!string.IsNullOrEmpty(previousPassword))
+                if (string.IsNullOrEmpty(previousPassword))
+                {
+                    ViewBag.Message = "Senha atual vazia.";
+                }
+                else
                 {
                     bool ispasswordOk = BCrypt.Net.BCrypt.Verify(previousPassword, user.password);
                     if (ispasswordOk)
                     {
-                        if (!string.IsNullOrEmpty(newPassword1) && !string.IsNullOrEmpty(newPassword2) && newPassword1 == newPassword2)
+                        if (!string.IsNullOrEmpty(newPassword1) && !string.IsNullOrEmpty(newPassword2) && newPassword1 == newPassword2 && newPassword1.Length >= 8)
                         {
                             user.password = BCrypt.Net.BCrypt.HashPassword(newPassword1);
+                            await _context.SaveChangesAsync();
+                            return RedirectToAction("Historico");
                         }
                         else
                         {
                             ViewBag.Message = "Confirmação de senha inválida";
-                            return View();
                         }
                     }
                     else
                     {
                         ViewBag.Message = "Senha atual errada.";
-                        return View();
                     }
                 }
             }
-            return RedirectToAction("Historico");
+            return View();
         }
-
 
         public async Task<IActionResult> DeleteUser()
         {
@@ -230,7 +234,4 @@ if (!validatePasswordLength)
             return RedirectToAction("Index", "Home");
         }
     }
-
-
-
 }
