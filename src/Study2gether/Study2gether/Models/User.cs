@@ -18,7 +18,7 @@ namespace Study2gether.Models
         [DataType(DataType.Password)]
         public string password { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório Informar a Email!")]
+        [Required(ErrorMessage = "Obrigatório Informar o Email!")]
 
         public string email { get; set; }
 
