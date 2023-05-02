@@ -14,12 +14,12 @@
 <div class="editarPerfil">
     <h6 class="text-danger">@ViewBag.Message</h6>
     <form asp-action="EditarPerfil">
-        <div id="container-c">
-            <div class="form-group">
-                <img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil">
-                <input asp-for="imageLink" type="url" />
-                <span asp-validation-for="name" class="text-danger"></span>
-            </div>
+        <div class="form-group">
+            <img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil">
+            <input asp-for="imageLink" type="url" placeholder="Inclua a URL da sua foto!" />
+            <span asp-validation-for="name" class="text-danger"></span>
+        </div>
+        <div id="container-c">   
             <div class="form-group">
                 <label asp-for="name" class="text-danger">Nome do Perfil</label>
                 <input asp-for="name" class="text-danger" />
@@ -27,12 +27,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="description" class="control-label">Sobre Você</label>
-                <input asp-for="description" class="form-control" />
+                <textarea asp-for="description" class="form-control"></textarea>
                 <span asp-validation-for="description"></span>
+              
             </div>
             <div class="form-group">
                 <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
-                <input asp-for="socialMedia" class="form-control" />
+                <textarea asp-for="socialMedia" class="form-control"></textarea>
                 <span asp-validation-for="socialMedia"></span>
             </div>
         </div>
@@ -53,10 +54,10 @@
                 <span asp-validation-for="password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <a class="btn btn-info" asp-controller="Users" asp-action="Historico">Cancelar</a>
                 <input type="submit" value="Salvar Perfil" class="btn btn-primary" />
+                <a class="btn btn-info" asp-controller="Users" asp-action="Historico">Cancelar</a>              
+                <a class="btn btn-danger" asp-controller="Users" asp-action="DeleteUser">Excluir Perfil</a>
             </div>
-
         </div>
     </form>
 </div>

@@ -119,8 +119,9 @@ namespace Study2gether.Controllers
         public async Task<IActionResult> Historico()
         {
             var user = await _context.Users
+                .Include( teste => teste.Posts)
+                .Include( teste => teste.Answers)
                 .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
-
             return View("Historico", user);
         }
 
@@ -185,5 +186,20 @@ namespace Study2gether.Controllers
 
             return View("Historico", user);
         }
+        
+
+
+        public async Task<IActionResult> DeleteUser()
+        {
+            var user = _context.Users.First( excluir => excluir.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+            _context.Users.Remove(user);
+            _context.SaveChanges();
+            await HttpContext.SignOutAsync();
+            
+            return RedirectToAction("Index", "Home");
+        }
     }
+
+
+
 }

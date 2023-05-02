@@ -108,3 +108,14 @@
     }
 }
 
+
+.box-description-socialMedia {
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    height: 100px;
+    width: 100%;
+    min-width: 250px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}

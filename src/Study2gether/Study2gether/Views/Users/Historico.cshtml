@@ -2,8 +2,8 @@
 
 @{
     ViewData["Title"] = "Histórico";
-}
 
+}
 <link rel="stylesheet" href="../../css/historico.css">
 
 
@@ -24,22 +24,22 @@
         </tr>
     </table>
      <div id="container-a">
-        <form asp-action="Historico">
-            <div class="form-group" id="sobreVoce-redesSociais">
-                <label asp-for="description" class="control-label">Sobre Você</label>
-                <input asp-for="description" class="form-control" />
-                <span asp-validation-for="description"></span>
+        <div class="sobreVoce-redesSociais">
+            <label asp-for="description" class="control-label">Sobre Você</label>
+            <div class="box-description-socialMedia">
+                <p>@Model.description</p>
             </div>
-            <div class="form-group" id="sobreVoce-redesSociais">
-                <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
-                <input asp-for="socialMedia" class="form-control" />
-                <span asp-validation-for="socialMedia"></span>
+        </div>
+        <div class="sobreVoce-redesSociais">
+            <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
+            <div class="box-description-socialMedia">
+                <p>@Model.socialMedia</p>
             </div>
-            <div class="form-group">
-                <a class="btn btn-info" asp-controller="Users" asp-action="EditarPerfil">Editar Perfil</a>
-                <a class="btn btn-info" asp-controller="Home" asp-action="Index">Sair</a>
-            </div>
-        </form>
+        </div>
+        <div class="form-group">
+            <a class="btn btn-info" asp-controller="Users" asp-action="EditarPerfil">Editar Perfil</a>
+            <a class="btn btn-info" asp-controller="Home" asp-action="Index">Sair</a>
+        </div>
     </div>
     <div id="container-b">
         <div id="historicoTitle">
@@ -51,12 +51,26 @@
             <button class="tablinks" onclick="openCity(event, 'Favoritos')">FAVORITOS</button>
         </div>
         <div id="Perguntas" class="tabcontent">
-            <h6>Ask Title</h6>
-            <p>Can I do a Cascade on C#?</p>
+            @foreach(var pergunta in @Model.Posts) {
+                @if(pergunta.type == Types.Question)
+                    {
+                    <div>
+                        <h6>@pergunta.title</h6>
+                        <p>@pergunta.content</p>
+                    </div>    
+                <hr>
+                }                  
+            }       
         </div>
         <div id="Respostas" class="tabcontent">
-            <h6>Answer Title</h6>
-            <p>Yes, you can!</p>
+            @foreach (var resposta in @Model.Answers)
+            {          
+                <div>
+                    <h6>@resposta.title</h6>
+                    <p>@resposta.content</p>
+                </div>
+                <hr>              
+            }
         </div>
         <div id="Favoritos" class="tabcontent">
             <h6>Favority Subject Title Title</h6>
