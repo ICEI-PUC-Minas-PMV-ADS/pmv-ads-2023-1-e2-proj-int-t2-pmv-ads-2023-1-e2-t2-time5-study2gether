@@ -23,7 +23,8 @@
     padding: 10px 22px;
     transition: 0.3s;
     font-size: 13px;
-    border-radius: background-color: #f1f1f1;
+    border-radius: 1px;
+    background-color: #f1f1f1;
 }
 
 /* Change background color of buttons on hover */
@@ -70,11 +71,11 @@
 }
 
 #historicoTitle {
-    fonte-size: 15px;
+    font-size: 15px;
     background-color: #ddd;
     display: flex;
     width: 100%;
-    border: 1px px solid #ced4da;
+    border: 1px solid #ced4da;
     border-radius: 0.25rem;
     justify-content: center;
     margin-bottom: 3px;
@@ -92,11 +93,6 @@
     width: 80px;
     height: 80px;
 }
-
-.confirmarNovaSenha {
-    break-word:  
-}
-
 
 @keyframes fadeEffect {
     from {
