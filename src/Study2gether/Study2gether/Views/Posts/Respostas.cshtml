@@ -29,23 +29,35 @@
                 <div class="card-body">
                     <div>@postList.content</div>
                 </div>
-                <div class="card-footer">
-                    
-                    <div class="reactions d-inline">
-                        <i class="fa-regular fa-comment-dots"></i>
-
-                        <i class="fa-regular fa-face-smile"></i>
-
-                        <i class="fa-solid fa-chart-column"></i>
-
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <label class="float-right" for="data-resposta"><small>Data da resposta: @postList.created_date)</small></label>
+                <!--Text area-->
+                <div class="container">
+                    <form asp-action="Respostas">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Digite Sua Resposta" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                            <a class="btn btn-secondary" href="https://localhost:5001/Posts/Respostas/" role="button">Cancelar</a>
+                        </div>
+                    </form>
                 </div>
-            </div>
 
+            </div>
+            <div class="card-footer">
+
+                <div class="reactions d-inline">
+                    <i class="fa-regular fa-comment-dots"></i>
+
+                    <i class="fa-regular fa-face-smile"></i>
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <label class="float-right" for="data-resposta"><small>Data da resposta: @postList.created_date)</small></label>
+            </div>
         </div>
+
     </div>
-    <a class="pe-auto" data-toggle="modal" data-target="#postIndication" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
 </div>
+<a class="pe-auto" data-toggle="modal" data-target="#postIndication" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
