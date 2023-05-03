@@ -1,25 +1,24 @@
 ﻿
 
 
-#container-c {
-    position: relative;
-    width: 50%;
-    min-width: 250px;
-    float: left;
+
+.completePage-editarPerfil {
+    width: 100%;
+    margin-right:15%;
+    margin-left:15%;
 }
 
-#container-d {
-    position: relative;
-    width: 50%;
+
+.description-socialMedia {
+    width: 100%;
+    min-height: 120px; 
+    max-height: 400px;
     min-width: 250px;
-    float: left;
-    right: -25px;
-    max-height: 350px;
 }
 
 
 #sobreVoce-redesSociais {
-    height: 100px;
+    height: 200px;
 }
 
 

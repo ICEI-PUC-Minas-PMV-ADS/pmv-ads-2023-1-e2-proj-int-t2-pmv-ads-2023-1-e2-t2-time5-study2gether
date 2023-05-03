@@ -6,37 +6,40 @@
 
 <link rel="stylesheet" href="../../css/editarPerfil.css">
 
+<div class="completePage-editarPerfil">
+    <h1>Editar Perfil</h1>
+    <hr />
 
-<h1>Editar Perfil</h1>
-<hr />
-
-<div class="editarPerfil">
-    <form asp-action="EditarPerfil">
-        <div class="form-group">
-            <img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil">
-            <input asp-for="imageLink" type="url" placeholder="Inclua a URL da sua foto!" />
-        </div>
-        <div id="container-c">
+    <div class="editarPerfil">
+        <form asp-action="EditarPerfil">
+            
+                <img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil">
             <div class="form-group">
-                <label asp-for="name">Nome </label>
-                <input asp-for="name" class="form-control"/>
+                <label asp-for="name">Inclua a URL da sua foto! </label><br>
+                <input asp-for="imageLink" type="url" placeholder="Inclua a URL da sua foto!" />
             </div>
-            <div class="form-group">
-                <label asp-for="description" class="control-label">Sobre Você </label>
-                <textarea asp-for="description" class="form-control"></textarea>
+            <div id="container-c">
+                <div class="form-group">
+                    <label asp-for="name">Nome </label>
+                    <input asp-for="name" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label asp-for="description" class="control-label">Sobre Você </label>
+                    <textarea asp-for="description" class="description-socialMedia"></textarea>
               
+                </div>
+                <div class="form-group">
+                    <label asp-for="socialMedia" class="control-label">Redes Sociais </label>
+                    <textarea asp-for="socialMedia" class="description-socialMedia"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Salvar Perfil" class="btn btn-primary" />
+                    <a class="btn btn-info" asp-controller="Users" asp-action="Historico">Cancelar</a>
+                    <a class="btn btn-danger" asp-controller="Users" onclick="return confirm('Você deseja apagar sua conta DEFINITIVAMENTE?')" asp-action="DeleteUser">Excluir Perfil</a>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="socialMedia" class="control-label">Redes Sociais </label>
-                <textarea asp-for="socialMedia" class="form-control"></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Salvar Perfil" class="btn btn-primary" />
-                <a class="btn btn-info" asp-controller="Users" asp-action="Historico">Cancelar</a>
-                <a class="btn btn-danger" asp-controller="Users" onclick="return confirm('Você deseja apagar sua conta DEFINITIVAMENTE?')" asp-action="DeleteUser">Excluir Perfil</a>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 @section Scripts {

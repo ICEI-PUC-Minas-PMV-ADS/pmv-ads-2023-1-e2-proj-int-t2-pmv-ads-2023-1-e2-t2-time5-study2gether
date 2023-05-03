@@ -40,6 +40,7 @@
         <div class="tab">
             <button class="tablinks" onclick="openCity(event, 'Perguntas')" id="defaultOpen">PERGUNTAS</button>
             <button class="tablinks" onclick="openCity(event, 'Respostas')">RESPOSTAS</button>
+            <button class="tablinks" onclick="openCity(event, 'Interacoes')">INTERAÇÕES</button>
             <button class="tablinks" onclick="openCity(event, 'Favoritos')">FAVORITOS</button>
         </div>
         <div id="Perguntas" class="tabcontent">
@@ -65,6 +66,21 @@
                 <hr>
             }
         </div>
+        <div id="Interacoes" class="tabcontent">
+            @foreach (var interacao in @Model.Posts)
+            {
+                @if (interacao.type == Types.Interaction)
+                {
+                    <div>
+                        <h6>@interacao.title</h6>
+                        <p>@interacao.content</p>
+                    </div>
+                    <hr>
+                }
+            }
+
+        </div>
+
         <div id="Favoritos" class="tabcontent">
             <h6>Favority Subject Title Title</h6>
             <p>The best way to do something is to plan before.</p>
