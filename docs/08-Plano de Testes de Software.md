@@ -23,6 +23,7 @@ Registro:
 | CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
 | Registro da tela | | 
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -38,6 +39,7 @@ Registro:
 | CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. |    |    |
 | Registro da tela: | 
  
+ # 
  
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -53,7 +55,7 @@ Registro:
 | CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. |    |    |
 | Registro da tela: |  
 
-
+# 
  
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -69,6 +71,8 @@ Registro:
 | CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. |    |    |
 | Registro da tela: |  
 
+# 
+
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
 |CT-05 - Fazer Login |RF-10 – A aplicação deve permitir ao usuário recuperar sua senha.|
@@ -82,6 +86,8 @@ Registro:
 |:---: |:---: |:---: |:---: |
 | CT-05 - RF-10 | Verificar se o usuário cadastrado consegue redefinir sua senha esquecida. |    |    |
 | Registro da tela: |
+
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -97,6 +103,8 @@ Registro:
 | CT-06 - RF-10 | Verificar se a aplicação impede a recuperação de senha com um e-mail inválido. |    |    |
 | Registro da tela: |
 
+# 
+
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
 |CT-07 - Filtrar Pergunta por Eixo |RF-02 – A aplicação deve apresentar um filtro por eixos ou por microfundamentos.|
@@ -110,6 +118,8 @@ Registro:
 |:---: |:---: |:---: |:---: |
 | CT-07 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Perguntas por Eixo. |    |    |
 | Registro da tela: |
+
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -125,6 +135,8 @@ Registro:
 | CT-08 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Perguntas por este Microfundamento. |    |    |
 | Registro da tela: |
 
+# 
+
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
 |CT-09 - Filtrar Perguntas por Microfundamento |RF-02 – A aplicação deve apresentar um filtro por eixos ou por microfundametos.|
@@ -139,6 +151,7 @@ Registro:
 | CT-09 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Perguntas por essa categoria. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -154,6 +167,7 @@ Registro:
 | CT-10 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Interaçoes por Eixo. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -169,6 +183,7 @@ Registro:
 | CT-11 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Interações por este Microfundamento. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -184,6 +199,7 @@ Registro:
 | CT-12 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Interações por essa Categoria. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -199,6 +215,7 @@ Registro:
 | CT-13 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Indicações por Eixo. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -214,6 +231,7 @@ Registro:
 | CT-14 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Indicações por Microfundamento. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -229,6 +247,7 @@ Registro:
 | CT-15 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Indicações por essa categoria. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -244,6 +263,7 @@ Registro:
 | CT-16 - RF-05 | Verificar se a busca de perguntas por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -259,6 +279,7 @@ Registro:
 | CT-17 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -274,6 +295,7 @@ Registro:
 | CT-18 - RF-05 | Verificar se a busca de indicações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -289,6 +311,7 @@ Registro:
 | CT-19 - RF-03 | Verificar se usuário consegue postar uma pergunta. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -304,6 +327,7 @@ Registro:
 | CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -319,6 +343,7 @@ Registro:
 | CT-21 - RF-04 | Verificar se as respostas serão apresentadas corretamente junto às perguntas. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -334,6 +359,7 @@ Registro:
 | CT-22 - RF-04 | Verificar se o campo de comentários no rodapé das interações está registrando adequadamente os comentários feitos. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -349,6 +375,7 @@ Registro:
 | CT-23 - RF-04 | Verificar se o campo de comentários no rodapé das indicações está registrando adequadamente os comentários feitos. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -364,6 +391,7 @@ Registro:
 | CT-24 - RF-01 | Verificar se as publicações estão sendo apresentadas na "Lista de Interações". |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -379,6 +407,7 @@ Registro:
 | CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -394,6 +423,7 @@ Registro:
 | CT-26 - RF-11 | Verificar se as postagens de indicações estão sendo apresentadas na "Lista de Indicações". |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -409,6 +439,7 @@ Registro:
 | CT-27 - RF-11 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -424,6 +455,7 @@ Registro:
 | CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -439,6 +471,7 @@ Registro:
 | CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -454,6 +487,7 @@ Registro:
 | CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -469,6 +503,7 @@ Registro:
 | CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -484,6 +519,7 @@ Registro:
 | CT-32 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -499,6 +535,7 @@ Registro:
 | CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -514,6 +551,7 @@ Registro:
 | CT-34 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -529,6 +567,7 @@ Registro:
 | CT-35 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -544,6 +583,7 @@ Registro:
 | CT-36 - RF-08 | Verificar se a aplicação está apresentando todas as indicações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -559,6 +599,7 @@ Registro:
 | CT-37 - RF-07 | Verificar se as interações do usuário estão sewndo apresentadas corretamente na página de Perfil do usuário. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -575,6 +616,7 @@ Registro:
 | CT-38 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -591,6 +633,7 @@ Registro:
 | CT-39 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Firefox. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -607,6 +650,7 @@ Registro:
 | CT-40 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Edge. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -623,6 +667,7 @@ Registro:
 | CT-41 - RNF-04 | Verificar se o tempo de resposta da aplicação não será superior a 30 segundos. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -639,6 +684,7 @@ Registro:
 | CT-42 - RNF-05 | Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -655,6 +701,7 @@ Registro:
 | CT-43 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -671,6 +718,7 @@ Registro:
 | CT-44 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -687,6 +735,7 @@ Registro:
 | CT-45 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
