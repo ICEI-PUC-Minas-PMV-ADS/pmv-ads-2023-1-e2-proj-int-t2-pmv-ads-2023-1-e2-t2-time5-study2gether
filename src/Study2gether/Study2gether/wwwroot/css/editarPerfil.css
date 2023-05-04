@@ -1,26 +1,48 @@
 ﻿
+input {
+    display: block;
+    box-sizing: border-box;
+    height: calc(1.5em + 0.75rem + 2px);
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+   
+}
+
+
+
+.completePage-alterarSenha {
+    display: block;
+    align-content: center;
+    width: 100%;
+    margin-left: 35%;
+    margin-right: 35%;
+    font-size: 12px;
+}
+
+
 
 
 
 .completePage-editarPerfil {
-    width: 100%;
-    margin-right:15%;
-    margin-left:15%;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 12px;
 }
 
 
 .description-socialMedia {
     width: 100%;
-    min-height: 120px; 
-    max-height: 400px;
+    min-height: 120px;
+    max-height: 300px;
     min-width: 250px;
+    font-size: 12px;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25
 }
-
-
-#sobreVoce-redesSociais {
-    height: 200px;
-}
-
 
 #fotoPerfil {
     border-radius: 50%;
@@ -30,6 +52,53 @@
     height: 80px;
 }
 
-.fs-exclude ic-avatar {
-    display: inline-block;
+@media screen and (max-width: 480px) {
+    .description-socialMedia {
+        width: 70%;
+        min-height: 100px;
+        max-height: 200px;
+        min-width: 50px;
+        font-size: 12px;
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.25rem;     
+    }
 }
+
+
+
+
+/*
+@media screen and (min-width: 768px) {
+    .description-socialMedia {
+
+
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .description-socialMedia {
+
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .description-socialMedia {
+
+
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    {}}
+
+
+
+320px — 480px: dispositivos móveis.
+481px — 768px: iPads, tablets.
+769px — 1024px: telas pequenas, laptops.
+1025px — 1200px: desktops, telas grandes.
+1201px e acima — telas muito grandes, TVs.
+
+*/

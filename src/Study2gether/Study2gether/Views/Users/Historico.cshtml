@@ -11,18 +11,18 @@
     <table aria-hidden="true" class="fs-exclude ic-avatar">
         <tr>
             <td><img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil"></td>
-            <td><p>@Model.name</p></td>
+            <td style="color: white"><p>@Model.name</p></td>
         </tr>
     </table>
     <div id="container-a">
         <div class="sobreVoce-redesSociais">
-            <label asp-for="description" class="control-label">Sobre Você</label>
+            <label style="color: white" asp-for="description" class="control-label">Sobre Você</label>
             <div class="box-description-socialMedia">
                 <p>@Model.description</p>
             </div>
         </div>
         <div class="sobreVoce-redesSociais">
-            <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
+            <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais</label>
             <div class="box-description-socialMedia">
                 <p>@Model.socialMedia</p>
             </div>
@@ -46,7 +46,7 @@
         <div id="Perguntas" class="tabcontent">
             @foreach (var pergunta in @Model.Posts)
             {
-                @if (pergunta.type == Types.Question)
+                @if (pergunta.type == Study2gether.Models.Types.Question)
                 {
                     <div>
                         <h6>@pergunta.title</h6>
@@ -69,7 +69,7 @@
         <div id="Interacoes" class="tabcontent">
             @foreach (var interacao in @Model.Posts)
             {
-                @if (interacao.type == Types.Interaction)
+                @if (interacao.type == Study2gether.Models.Types.Interaction)
                 {
                     <div>
                         <h6>@interacao.title</h6>
