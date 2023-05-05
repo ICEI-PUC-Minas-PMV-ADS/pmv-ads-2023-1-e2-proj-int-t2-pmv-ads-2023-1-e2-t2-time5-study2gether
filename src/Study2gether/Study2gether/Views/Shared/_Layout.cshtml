@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Study2gether</title>
 
-
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 
@@ -49,18 +48,18 @@
                         <a asp-controller="Posts" asp-action="Perguntas"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                     }
                 </div>
-                <div class="col-sm-2 row align-content-center" id="divFiltroEixos">
-                    <select class="form-select" name="eixo" id="eixo" style="background-color: #343a40 !important; color: white; border: none;">
+                <div class="col-sm-2 row justify-content-end align-content-center" id="divFiltroEixos">
+                    <select class="form-select bg-dark" name="eixo" id="eixo" style="color: white; border: none;">
                         <option value="" default>Selecione um Eixo </option>
                     </select>
                 </div>
-                <div class="col-sm-3 row align-content-center" id="divFiltroMicrofundamentos">
-                    <select class="form-select" name="microfundamento" id="microfundamento" style="background-color: #343a40 !important; color: white; border: none;">
+                <div class="col-sm-3 row justify-content-end align-content-center" id="divFiltroMicrofundamentos">
+                    <select class="form-select bg-dark" name="microfundamento" id="microfundamento" style="color: white; border: none;">
                         <option value="" default>Selecione um Microfundamento </option>
                     </select>
                 </div>
-                <div class="col-sm-2 row align-content-center" id="divFiltroCategorias">
-                    <select class="form-select" name="categoria" id="categoria" style="background-color: #343a40 !important; color: white; border: none;">
+                <div class="col-sm-2 row justify-content-end align-content-center" id="divFiltroCategorias">
+                    <select class="form-select bg-dark" name="categoria" id="categoria" style="color: white; border: none;">
                         <option value="" default> Selecione uma Categoria</option>
                     </select>
                 </div>
@@ -89,11 +88,13 @@
     </header>
     <div class="">
         <main role="main" class="pb-3">
-            <div class="col-sm-3 row align-content-center float-right" id="divBusca">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon1">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+            <div class="d-flex flex-row-reverse col-11">
+                <div class="col-sm-3 row align-content-end" id="divBusca">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
