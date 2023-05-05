@@ -1,4 +1,4 @@
-# Plano de Testes de Usabilidade
+# Registro de Testes de Usabilidade
 
 | **Atividade**| **Tarefa** |
 |-|-|
