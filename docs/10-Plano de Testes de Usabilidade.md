@@ -67,9 +67,9 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |Identificar se a nova interação foi publicada com sucesso|||||
 |--|--|--|--|--|
 |**Tarefa 5: Login**|||||
-|Preencher campos para login|||||
-|Fazer login|||||
-|Identificar se o login foi feito|||||
+|Preencher campos para login|Sim|Sim|Sim|Sim|
+|Fazer login|Sim|Sim|Sim|Sim|
+|Identificar se o login foi feito|Sim|Sim|Sim|Sim|
 |--|--|--|--|--|
 |**Tarefa 6: Histórico de interações**|||||
 |Acessar o perfil|||||
@@ -77,9 +77,9 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |Acessar uma interação|||||
 |--|--|--|--|--|
 |**Tarefa 7: Cadastro**|||||
-|Preencher dados de cadastro|||||
-|Fazer cadastro|||||
-|Identificar se cadastro foi realizado|||||
+|Preencher dados de cadastro|Sim|Sim|Sim|Sim|
+|Fazer cadastro|Sim|Sim|Sim|Sim|
+|Identificar se cadastro foi realizado|Sim|Sim|Sim|Sim|
 |--|--|--|--|--|
 |**Tarefa 8: Redefinição de senha**|||||
 |Preencher formulário de redefinição de senha|||||
@@ -93,7 +93,7 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |**Tarefa 2: Postagem de perguntas**||||
 |**Tarefa 3: Pesquisa de Indicações**||||
 |**Tarefa 4: Postagem de interações**||||
-|**Tarefa 5: Login**||||
+|**Tarefa 5: Login**|0|Não|5|
 |**Tarefa 6: Histórico de interações**||||
-|**Tarefa 7: Cadastro**||||
+|**Tarefa 7: Cadastro**|0|Não|5|
 |**Tarefa 8: Redefinição de senha**||||
