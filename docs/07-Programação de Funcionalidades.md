@@ -8,8 +8,17 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-002| Emitir um relatório de tarefas no mês   | relatorio.shtml |
+|RF-001| A aplicação deve permitir ao usuário a fazer publicações. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs | 
+|RF-002|A aplicação deve apresentar um filtro por eixos ou por microfundamentos. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-003| A aplicação deve permitir ao usuário postar perguntas. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-004| A aplicação deve permitir ao usuário responder as perguntas e publicações. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-005| A aplicação deve oferecer uma funcionalidade de pesquisa com campo de texto. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-006| A aplicação deve permitir ao usuário se cadastrar e realizar o login. | Login.cshtml \| Cadastro.ccshtml \| User.cs \| UsersController.cs |
+|RF-007| A aplicação deve permitir ao usuário ter acesso a um feed com seu histórico de interações. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-008| A aplicação deve permitir visualizar todas as publicações. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-009| A aplicação deve permitir ao usuário reagir com reações de emojis. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-010| A aplicação deve permitir ao usuário recuperar sua senha. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
+|RF-011| A aplicação deve permitir ao administrador inserir postagem de indicações de materiais relevantes. | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs ||RF-009| Exemplo de  Descrição do Requisito | exemplo.cshtml \| exemplo.cs \| controllerexemplo.cs |
 
 # Instruções de acesso
 
