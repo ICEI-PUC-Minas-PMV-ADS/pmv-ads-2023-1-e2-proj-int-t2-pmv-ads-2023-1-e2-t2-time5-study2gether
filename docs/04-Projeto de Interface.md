@@ -164,11 +164,20 @@ Figura 20 - Perfil/Histórico de Interações
 
 ### Tela - Editar Perfil
 
-Nesta tela o usuário poderá editar seu perfil, incluindo foto, dados pessoais e profissionais, suas redes sociais, tornando o ambiente mais personalizado. Nessa tela, poderá também trocar sua senha.
+Nesta tela o usuário poderá editar seu perfil, incluindo foto, dados pessoais e profissionais, suas redes sociais, tornando o ambiente mais personalizado. Esta tela, conta com um botão que possibilita o usuário alterar sua senha.
 
 ![Tela editar perfil](img/21-editarperfil.jpg)
 
 Figura 21 - Tela de Editar Perfil
 
+
+
+### Tela - Alterar Senha
+
+Nesta tela o usuário poderá realizar a alteração da sua senha de maneira fácil, seguindo a quantidade de caracteres pré-estabelecida.
+
+![Tela alterar senha](img/22-alterarsenha.jpg)
+
+Figura 22 - Tela de Editar Perfil
 
 
