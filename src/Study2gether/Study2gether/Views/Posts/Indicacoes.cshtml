@@ -1,7 +1,7 @@
 @model Study2gether.Models.Post
 
 @{
-    ViewData["Title"] = "Indicações";
+    ViewData["Title"] = "IndicaÃ§Ãµes";
 }
 @{
     var categories = ViewData["Categories"] as List<Category>;
@@ -14,9 +14,9 @@
     <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
         <div>
             <ul>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">IndicaÃ§Ãµes</a></li>
                 <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">InteraÃ§Ãµes</a></li>
             </ul>
         </div>
     </div>
@@ -43,7 +43,7 @@
 
                             @obj.Reactions.Count(r => r.Name == "star") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="star"><i class="fa-solid fa-star"></i></a>
                         </div>
-                        <label class="float-right" for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                        <label class="float-right" for="data-indicacao"><small>Data da indicaÃ§Ã£o: @obj.created_date</small></label>
                     </div>
                 </div>
             }
@@ -56,7 +56,7 @@
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header" id="testring">
-                <h5 class="modal-title" id="postIndicationLongTitle">Escreva sua indicação</h5>
+                <h5 class="modal-title" id="postIndicationLongTitle">Escreva sua indicaÃ§Ã£o</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
