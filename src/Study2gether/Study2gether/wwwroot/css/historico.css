@@ -1,0 +1,171 @@
+﻿
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+    background-color: #ddd;
+}
+
+.tablinks.active {
+    margin: 0px;
+    padding-inline: 22px;
+}
+
+.tab button {
+    background-color: inherit; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding:10px 5px;
+    transition: 0.3s;
+    font-size: 11px;
+    border-radius: 1px;
+    background-color: #f1f1f1;
+}
+
+.tab button:hover {
+    background-color: #ccc;
+    border-top-left-radius: 0.75rem; 
+}
+
+       
+.tab button.active {
+    background-color: #ffffff;
+    border-top-left-radius: 0.75rem;
+    border-bottom: none;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s; 
+    font-size: 12px;
+    overflow-y: scroll;
+    height: 350px;
+    margin-top: 0px;
+    background-color: white;
+}
+
+.perfilHistorico {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#container-a {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    float: left;
+}
+
+#container-b {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    float: left;
+    right: -25px;
+    max-height: 350px;
+}
+
+#historicoTitle {
+    font-size: 15px;
+    background-color: #ddd;
+    display: flex;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    justify-content: center; 
+    margin-bottom: 3px;  
+}
+
+p.historicoTitle {
+    padding-top: 3%;
+    vertical-align: middle;   
+}
+
+#sobreVoce-redesSociais {
+    height: 200px;
+}
+
+#fotoPerfil {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #808080;
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.box-description-socialMedia {
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    width: 100%;
+    min-width: 310px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 100px;
+    min-height: 180px;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+
+@media screen and (max-width: 480px) {
+    #container-b {
+        min-width: 250px;
+        width: 100%;
+        float: left;
+        right: 0px;
+    }
+
+@media screen and (max-width: 480px) {
+    #container-a {
+        min-width: 250px;
+        width: 100%;
+        float: left;
+
+    }
+}       
+/*
+@media screen and (min-width: 768px) {
+    .description-socialMedia {
+
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .description-socialMedia {
+
+
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    {}}
+
+
+
+320px — 480px: dispositivos móveis.
+481px — 768px: iPads, tablets.
+769px — 1024px: telas pequenas, laptops.
+1025px — 1200px: desktops, telas grandes.
+1201px e acima — telas muito grandes, TVs.
+
+*/

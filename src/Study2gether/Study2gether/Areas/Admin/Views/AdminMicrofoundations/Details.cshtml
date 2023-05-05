@@ -1,0 +1,43 @@
+﻿@model Study2gether.Models.Microfoundation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Microfoundation</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+    </dl>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Posts</th>
+                <th scope="col">Type</th>
+                <th scope="col">Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Posts.Count; i++)
+            {
+            <tr>
+                <th scope="row">@i</th>
+                <td>@Html.DisplayFor(model => model.Posts[i].type)</td>
+                <td>@Html.DisplayFor(model => model.Posts[i].title)</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idMicrofoundation">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

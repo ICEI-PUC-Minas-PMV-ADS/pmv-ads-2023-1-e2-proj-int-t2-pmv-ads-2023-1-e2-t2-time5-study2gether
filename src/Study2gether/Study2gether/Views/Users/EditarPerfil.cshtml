@@ -1,0 +1,49 @@
+@model Study2gether.Models.User
+
+@{
+    ViewData["Title"] = "Editar Perfil";
+}
+
+<link rel="stylesheet" href="../../css/editarPerfil.css">
+
+<div class="completePage-editarPerfil">
+    <h1 style="color: white"> Editar Perfil</h1>
+    <hr style="color: white"/>
+
+    <div class="editarPerfil">
+        <form asp-action="EditarPerfil">
+            
+                <img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil">
+            <div class="form-group">
+                <label style="color: white" asp-for="name">Inclua a URL da sua foto com extensão png! </label><br>
+                <input asp-for="imageLink" type="url" placeholder="Inclua a URL da sua foto em png!" />
+            </div>
+            <div id="container-c">
+                <div class="form-group">
+                    <label style="color: white" asp-for="name">Nome do Perfil </label>
+                    <input style="font-size: 12px" asp-for="name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label style="color: white" asp-for="description" class="control-label">Sobre Você </label>
+                    <textarea asp-for="description" class="description-socialMedia"></textarea>
+              
+                </div>
+                <div class="form-group">
+                    <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais </label>
+                    <textarea asp-for="socialMedia" class="description-socialMedia"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Salvar Perfil" class="btn btn-primary" />
+                    <a class="btn btn-info" asp-controller="Users" asp-action="Historico">Cancelar</a>
+                    <a class="btn btn-danger" asp-controller="Users" onclick="return confirm('Você deseja apagar sua conta DEFINITIVAMENTE?')" asp-action="DeleteUser">Excluir Perfil</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
