@@ -10,11 +10,11 @@ A funcionalidade permite que o usuário realize com o cadastro na platarforma da
 ![image](https://user-images.githubusercontent.com/107289791/236481283-d9019ff0-20fd-4877-824b-591f0c52fa27.png)
 
 ##### Intruções de acesso
-1. Acesse o site pelo [Link](a definir);
-2. Clique no botão `Cadastre-se`;
-3. Insira um `e-mail` com o formato `nome@sga.pucminas.br`;
-4. Insira uma `senha` com ao menos 8 caracteres;
-5. Clique no botão `Cadastrar`.
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Clique no botão `Cadastre-se`
+3. Insira um `e-mail` com o formato `nome@sga.pucminas.br`
+4. Insira uma `senha` com ao menos 8 caracteres
+5. Clique no botão `Cadastrar`
 
 ##### Artefatos produzidos
 * [Cadastro.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Login.cshtml)
@@ -28,10 +28,10 @@ A funcionalidade permite que o usuário realize com sucesso o login na platarfor
 ![image](https://user-images.githubusercontent.com/107289791/236481848-2788d278-4b83-44b6-951e-0d2e6676061d.png)
 
 ##### Intruções de acesso
-1. Acesse o site pelo [Link](a definir);
-2. Clique no botão "Login";
-3. Insira e-mail e senha já cadastrados previamente;
-4. Clique em "Login".
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Clique no botão `Login`
+3. Insira `e-mail` e `senha` já cadastrados previamente
+4. Clique no botão `Entrar`
 
 ##### Artefatos produzidos
 * [Login.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Login.cshtml)
