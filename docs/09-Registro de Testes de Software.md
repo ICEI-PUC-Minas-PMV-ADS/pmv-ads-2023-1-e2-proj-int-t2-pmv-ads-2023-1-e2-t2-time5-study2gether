@@ -5,23 +5,23 @@
 ## Avaliação
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
-| Registro da tela | | 
+| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. | Sucesso | Alta |
+| Registro da tela: | ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. |    |    |
-| Registro da tela: | 
+| CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. | Sucesso | Alta |
+| Registro da tela:|  ![image](https://user-images.githubusercontent.com/107289791/236537356-19dff8b1-498d-44a1-95ec-30676545ca2e.png) | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. |    |    |
-| Registro da tela: | 
+| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. | Sucesso | Alta |
+| Registro da tela:| ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. |    |    |
-| Registro da tela: |  
+| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. | Sucesso | Alta |
+| Registro da tela:| ![image](https://user-images.githubusercontent.com/107289791/236538716-f2d96097-497d-48c5-89a0-6759ebc4efac.png) |  
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
