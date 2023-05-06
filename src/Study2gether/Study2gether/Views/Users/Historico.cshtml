@@ -1,7 +1,7 @@
 @model Study2gether.Models.User
 
 @{
-    ViewData["Title"] = "Histórico";
+    ViewData["Title"] = "HistÃ³rico";
 
 }
 
@@ -11,18 +11,18 @@
     <table aria-hidden="true" class="fs-exclude ic-avatar">
         <tr>
             <td><img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil"></td>
-            <td><p>@Model.name</p></td>
+            <td style="color: white"><p>@Model.name</p></td>
         </tr>
     </table>
     <div id="container-a">
         <div class="sobreVoce-redesSociais">
-            <label asp-for="description" class="control-label">Sobre Você</label>
+            <label style="color: white" asp-for="description" class="control-label">Sobre VocÃª</label>
             <div class="box-description-socialMedia">
                 <p>@Model.description</p>
             </div>
         </div>
         <div class="sobreVoce-redesSociais">
-            <label asp-for="socialMedia" class="control-label">Redes Sociais</label>
+            <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais</label>
             <div class="box-description-socialMedia">
                 <p>@Model.socialMedia</p>
             </div>
@@ -35,18 +35,18 @@
     </div>
     <div id="container-b">
         <div id="historicoTitle">
-            <p>Histórico</p>
+            <span><strong>HistÃ³rico</strong></span>
         </div>
         <div class="tab">
             <button class="tablinks" onclick="openCity(event, 'Perguntas')" id="defaultOpen">PERGUNTAS</button>
             <button class="tablinks" onclick="openCity(event, 'Respostas')">RESPOSTAS</button>
-            <button class="tablinks" onclick="openCity(event, 'Interacoes')">INTERAÇÕES</button>
+            <button class="tablinks" onclick="openCity(event, 'Interacoes')">INTERAÃ‡Ã•ES</button>
             <button class="tablinks" onclick="openCity(event, 'Favoritos')">FAVORITOS</button>
         </div>
         <div id="Perguntas" class="tabcontent">
             @foreach (var pergunta in @Model.Posts)
             {
-                @if (pergunta.type == Types.Question)
+                @if (pergunta.type == Study2gether.Models.Types.Question)
                 {
                     <div>
                         <h6>@pergunta.title</h6>
@@ -69,7 +69,7 @@
         <div id="Interacoes" class="tabcontent">
             @foreach (var interacao in @Model.Posts)
             {
-                @if (interacao.type == Types.Interaction)
+                @if (interacao.type == Study2gether.Models.Types.Interaction)
                 {
                     <div>
                         <h6>@interacao.title</h6>
