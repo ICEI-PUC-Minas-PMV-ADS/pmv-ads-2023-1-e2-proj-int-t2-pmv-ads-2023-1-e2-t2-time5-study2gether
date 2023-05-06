@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Study2gether</title>
 
-
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 
@@ -39,31 +38,37 @@
     <header>
         <nav id="nav-bar">
             <div class="row bg-dark">
-                <div class="menu-img col-sm-4">
+                <div class="menu-img col-sm-2">
                     @if (User.IsInRole("admin"))
                     {
                         <a asp-area="Admin" asp-controller="AdminUsers" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                     }
                     else
                     {
-                        <img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server">
+                        <a asp-controller="Posts" asp-action="Perguntas"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                     }
                 </div>
-
-                <div class="col-sm-3 row align-content-center" id="divBusca">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon1">
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
+                <div class="col-sm-2 row justify-content-end align-content-center" id="divFiltroEixos">
+                    <select class="form-select bg-dark" name="eixo" id="eixo" style="color: white; border: none;">
+                        <option value="" default>Selecione um Eixo </option>
+                    </select>
                 </div>
-                <div class="col-sm-5 row justify-content-end align-content-center" id="btnLogin">
+                <div class="col-sm-3 row justify-content-end align-content-center" id="divFiltroMicrofundamentos">
+                    <select class="form-select bg-dark" name="microfundamento" id="microfundamento" style="color: white; border: none;">
+                        <option value="" default>Selecione um Microfundamento </option>
+                    </select>
+                </div>
+                <div class="col-sm-2 row justify-content-end align-content-center" id="divFiltroCategorias">
+                    <select class="form-select bg-dark" name="categoria" id="categoria" style="color: white; border: none;">
+                        <option value="" default> Selecione uma Categoria</option>
+                    </select>
+                </div>
+                <div class="col-sm-3 row justify-content-end align-content-center" id="btnLogin">
                     @if (User.Identity.IsAuthenticated)
                     {
-                    <div>
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Historico"><p>Oi, @User.Identity.Name</p></a>
-                    </div>
+                        <div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Historico"><p>Oi, @User.Identity.Name</p></a>
+                        </div>
                         <div>
                             <a class="btn btn-primary ml-2 mr-5" asp-area="" asp-controller="Users" asp-action="Logout">Sair</a>
                         </div>
@@ -83,6 +88,16 @@
     </header>
     <div class="">
         <main role="main" class="pb-3">
+            <div class="d-flex flex-row-reverse col-11">
+                <div class="col-sm-3 row align-content-end" id="divBusca">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @RenderBody()
         </main>
     </div>

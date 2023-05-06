@@ -15,14 +15,15 @@ Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, con
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher os campos obrigatórios (e-mail, senha, confirmação de senha)</li><li>Clicar no botão "Cadastrar-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
+|Verificar se o usuário consegue se cadastrar na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo obrigatório `e-mail` com o formato `nome@sga.pucminas.br`</li><li>Preencher o campo obrigatório `senha` com ao menos 8 caracteres</li><li>Clicar no botão `Cadastrar`</li></ol> | A aplicação deve direcionar o usuário para a página inicial, e no canto superior direito deve exibir `Oi, nome@sga.pucminas.br`.
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
-| Registro da tela | | 
+| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. | Sucesso | Alta |
+| ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | | 
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -30,44 +31,48 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se é impossível se cadastrar duas vezes com o mesmo email.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo email com "aluno@sga.pucminas.br</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar em "Cadastrar-se"</li><li>Clicar em "Desconectar"</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo e-mail com o valor "aluno@sga.pucminas.br"</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar no botão "Cadastrar-se"</li></ol> | A aplicação deve mostrar uma mensagem de erro descritiva|
+|Verificar se é impossível se cadastrar duas vezes com o mesmo email.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li>Clicar em "Cadastre-se"</li><li>Preencher o campo e-mail com "aluno@sga.pucminas.br</li><li>Preencher o campo obrigatório `senha` com ao menos 8 caracteres</li><li>Clicar no botão `Cadastrar`</li><li>Clicar no botão `Desconectar`</li><li>Clicar em no botão `Cadastre-se`</li><li>Preencher o campo e-mail com o valor "aluno@sga.pucminas.br"</li><li>Preencher os outros campos obrigatórios (senha, confirmação de senha)</li><li>Clicar no botão "Cadastrar-se"</li></ol> | A aplicação deve mostrar a seguinte mensagem de erro: `Este e-mail já está em uso. Por favor, use outro e-mail`|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. |    |    |
-| Registro da tela: | 
+| CT-02 - RF-006 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. | Sucesso | Alta |
+| ![image](https://user-images.githubusercontent.com/107289791/236537356-19dff8b1-498d-44a1-95ec-30676545ca2e.png) | 
  
- 
-| **Caso de teste** | **Requisitos Associados**|
-|--|--|
-|CT-03 - Fazer Login |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
 
-|Objetivo do teste| Passos | Critérios de êxito|
-|-|-|-|
-|Verificar se o usuário consegue realizar o Login na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Login” ou “Entrar"</li><li>Preencher os campos obrigatórios (e-mail e senha)</li><li>Clicar em "Entrar"</li></ol> | O login foi realizado com sucesso. |
-
-Registro:
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. |    |    |
-| Registro da tela: |  
-
-
+ # 
  
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
-|CT-04 - Fazer Login |RF-06 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
+|CT-03 - Fazer Login |RF-006 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o sistema impede a realização de login com campos em branco ou inválidos.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em “Login” ou “Entrar"</li><li>Manter campo e-mail em branco</li><li>Preencher o campo senha</li><li>Clicar em "Entrar"</li></ol> | A aplicação deve demonstrar uma mensagem de login inválido. |
+|Verificar se o usuário consegue realizar o Login na aplicação.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar no botão `Login`</li><li>Preencher os campos obrigatórios `e-mail` e `senha` com os dados após já ter se cadastrado.</li><li>Clicar no botão `Entrar`</li></ol> | A aplicação deve direcionar o usuário para a página inicial, e no canto superior direito deve exibir `Oi, nome@sga.pucminas.br`. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. |    |    |
-| Registro da tela: |  
+| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. | Sucesso | Alta |
+| ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) |  
+
+# 
+ 
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-04 - Fazer Login |RF-006 – A aplicação deve permitir ao usuário se cadastrar e realizar o login.|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|Verificar se o sistema impede a realização de login com campos em branco.|<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Clicar em `Login`</li><li>Preencher o campo `e-mail` ou `senha` e manter o outro em branco</li><li>Clicar no botão `Entrar`</li></ol> | A aplicação deve demonstrar uma mensagem de `Obrigatório Informar o Email!` ou `Obrigatório Informar a Senha!`. |
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. | Sucesso | Alta |
+| ![image](https://user-images.githubusercontent.com/107289791/236538716-f2d96097-497d-48c5-89a0-6759ebc4efac.png) |  
+
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -83,6 +88,8 @@ Registro:
 | CT-05 - RF-10 | Verificar se o usuário cadastrado consegue redefinir sua senha esquecida. |    |    |
 | Registro da tela: |
 
+# 
+
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
 |CT-06 - Fazer Login |RF-10 – A aplicação deve permitir ao usuário recuperar sua senha.|
@@ -96,6 +103,8 @@ Registro:
 |:---: |:---: |:---: |:---: |
 | CT-06 - RF-10 | Verificar se a aplicação impede a recuperação de senha com um e-mail inválido. |    |    |
 | Registro da tela: |
+
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -111,6 +120,8 @@ Registro:
 | CT-07 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Perguntas por Eixo. |    |    |
 | Registro da tela: |
 
+# 
+
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
 |CT-08 - Filtrar Perguntas por Microfundamento |RF-02 – A aplicação deve apresentar um filtro por eixos ou por microfundametos.|
@@ -124,6 +135,8 @@ Registro:
 |:---: |:---: |:---: |:---: |
 | CT-08 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Perguntas por este Microfundamento. |    |    |
 | Registro da tela: |
+
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -139,6 +152,7 @@ Registro:
 | CT-09 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Perguntas por essa categoria. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -154,6 +168,7 @@ Registro:
 | CT-10 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Interaçoes por Eixo. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -169,6 +184,7 @@ Registro:
 | CT-11 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Interações por este Microfundamento. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -184,6 +200,7 @@ Registro:
 | CT-12 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Interações por essa Categoria. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -199,6 +216,7 @@ Registro:
 | CT-13 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Indicações por Eixo. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -214,6 +232,7 @@ Registro:
 | CT-14 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Indicações por Microfundamento. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -229,6 +248,7 @@ Registro:
 | CT-15 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Indicações por essa categoria. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -244,6 +264,7 @@ Registro:
 | CT-16 - RF-05 | Verificar se a busca de perguntas por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -259,6 +280,7 @@ Registro:
 | CT-17 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -274,6 +296,7 @@ Registro:
 | CT-18 - RF-05 | Verificar se a busca de indicações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -289,6 +312,7 @@ Registro:
 | CT-19 - RF-03 | Verificar se usuário consegue postar uma pergunta. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -304,6 +328,7 @@ Registro:
 | CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -319,6 +344,7 @@ Registro:
 | CT-21 - RF-04 | Verificar se as respostas serão apresentadas corretamente junto às perguntas. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -334,6 +360,7 @@ Registro:
 | CT-22 - RF-04 | Verificar se o campo de comentários no rodapé das interações está registrando adequadamente os comentários feitos. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -349,6 +376,7 @@ Registro:
 | CT-23 - RF-04 | Verificar se o campo de comentários no rodapé das indicações está registrando adequadamente os comentários feitos. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -364,6 +392,7 @@ Registro:
 | CT-24 - RF-01 | Verificar se as publicações estão sendo apresentadas na "Lista de Interações". |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -379,6 +408,7 @@ Registro:
 | CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -394,6 +424,7 @@ Registro:
 | CT-26 - RF-11 | Verificar se as postagens de indicações estão sendo apresentadas na "Lista de Indicações". |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -409,6 +440,7 @@ Registro:
 | CT-27 - RF-11 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -424,6 +456,7 @@ Registro:
 | CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -439,6 +472,7 @@ Registro:
 | CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -454,6 +488,7 @@ Registro:
 | CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -469,6 +504,7 @@ Registro:
 | CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -484,6 +520,7 @@ Registro:
 | CT-32 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -499,6 +536,7 @@ Registro:
 | CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -514,6 +552,7 @@ Registro:
 | CT-34 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -529,6 +568,7 @@ Registro:
 | CT-35 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -544,6 +584,7 @@ Registro:
 | CT-36 - RF-08 | Verificar se a aplicação está apresentando todas as indicações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -559,6 +600,7 @@ Registro:
 | CT-37 - RF-07 | Verificar se as interações do usuário estão sewndo apresentadas corretamente na página de Perfil do usuário. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -575,6 +617,7 @@ Registro:
 | CT-38 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -591,6 +634,7 @@ Registro:
 | CT-39 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Firefox. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -607,6 +651,7 @@ Registro:
 | CT-40 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Edge. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -623,6 +668,7 @@ Registro:
 | CT-41 - RNF-04 | Verificar se o tempo de resposta da aplicação não será superior a 30 segundos. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -639,6 +685,7 @@ Registro:
 | CT-42 - RNF-05 | Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -647,7 +694,7 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela inicial "Home-Page" da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela "Home-Page" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela inicial "Home-Page" da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela "Home-Page" </li><li>  Clicar com o botão direito sobre a tela, ir até inspecionar. Clique no botão “DevTools” e movimente a visualize se os elementos da tela são reorganizados de forma a manter a qualidade da visualização..</li></ol> | As páginas apresentaram responsividade. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
@@ -655,6 +702,7 @@ Registro:
 | CT-43 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
 | Registro da tela: |
 
+# 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
@@ -663,42 +711,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de inicial da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Perguntas" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+|Verificar se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de inicial da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Perguntas" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram bom contraste dos elementos na tela. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-44 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| CT-44 - RNF-02 - RNF-06 | Verificar se o contraste dos elementos das telas estão com boa qualidade. |    |    |
 | Registro da tela: |
 
 
-| **Caso de teste** | **Requisitos Associados**|
-|--|--|
-|CT-45 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
-
-
-|Objetivo do teste| Passos | Critérios de êxito|
-|-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de Login da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Login" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
-
-Registro:
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-45 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |
-
-
-| **Caso de teste** | **Requisitos Associados**|
-|--|--|
-|CT-46 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
-
-
-|Objetivo do teste| Passos | Critérios de êxito|
-|-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de cadastro da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de cadastro </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
-
-Registro:
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-46 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |

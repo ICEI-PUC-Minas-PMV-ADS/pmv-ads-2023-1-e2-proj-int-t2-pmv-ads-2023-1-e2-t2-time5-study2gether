@@ -86,7 +86,6 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-17 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
-| Registro da tela: |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -97,7 +96,6 @@
 |:---: |:---: |:---: |:---: |
 | CT-19 - RF-03 | Verificar se usuário consegue postar uma pergunta. |  Positivo  |  Sucesso  |
 | Registro da tela: | ![Postagem de Pergunta](img/ct19postagemdeperguntaconcluida.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de perguntas. |
-
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |

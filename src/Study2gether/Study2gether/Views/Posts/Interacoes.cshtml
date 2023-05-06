@@ -1,8 +1,9 @@
-@model Study2gether.Models.Post
+﻿@model Study2gether.Models.Post
 
 @{
-    ViewData["Title"] = "Indicações";
+    ViewData["Title"] = "Interacoes";
 }
+
 @{
     var categories = ViewData["Categories"] as List<Category>;
     var axes = ViewData["Axes"] as List<Axis>;
@@ -27,14 +28,14 @@
             {
                 <div class="caixa card rounded-lg mb-3">
                     <div class="card-header">
-                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost" >@obj.title</a></h4>
+                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
                     </div>
                     <div class="card-body">
                         <div>@Html.Raw(@obj.content)</div>
                     </div>
                     <div class="card-footer">
                         <div class="reactions d-inline">
-                            
+
                             @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="comment"><i class="fa-regular fa-comment-dots"></i></a>
 
                             @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
@@ -43,26 +44,28 @@
 
                             @obj.Reactions.Count(r => r.Name == "star") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="star"><i class="fa-solid fa-star"></i></a>
                         </div>
-                        <label class="float-right" for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                        <label class="float-right" for="data-iteracao"><small>Data da interação: @obj.created_date</small></label>
                     </div>
                 </div>
             }
         </div>
+        <a class="pe-auto" data-toggle="modal" data-target="#postInteraction" style="cursor: pointer">
+            <i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i>
+        </a>
     </div>
-    <a class="pe-auto" data-toggle="modal" data-target="#postIndication" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
 </div>
-<!-- Modal -->
-<div class="modal fade bd-example-modal-lg no-enforce-focus" no-enforce-focus id="postIndication" tabindex="-1" role="dialog" aria-labelledby="postIndicationitle" aria-hidden="true">
+
+<div class="modal fade bd-example-modal-lg" id="postInteraction" tabindex="-1" role="dialog" aria-labelledby="postInteractionitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header" id="testring">
-                <h5 class="modal-title" id="postIndicationLongTitle">Escreva sua indicação</h5>
+                <h5 class="modal-title" id="postInteractionLongTitle">Publique sua Interação</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form asp-action="Indicacoes">
+                <form asp-action="Interacoes">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="row">
                         <div class="form-group col-md-4">
@@ -94,7 +97,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label asp-for="title" class="control-label text-center">Titulo</label>
+                        <label asp-for="title" class="control-label">Titulo</label>
                         <input asp-for="title" class="form-control" />
                         <span asp-validation-for="title" class="text-danger"></span>
                     </div>
@@ -104,9 +107,9 @@
                         <span asp-validation-for="content" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                         <div class="float-right d-inline-block">
-                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <input type="submit" value="Publicar" class="btn btn-primary" />
                         </div>
                     </div>
                 </form>
@@ -114,3 +117,4 @@
         </div>
     </div>
 </div>
+
