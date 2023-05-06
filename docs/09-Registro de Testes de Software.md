@@ -110,17 +110,17 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-21 - RF-04 | Verificar se as respostas serão apresentadas corretamente junto às perguntas. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se as respostas foram apresentadas corretamente.  | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-22 - RF-04 | Verificar se o campo de comentários no rodapé das interações está registrando adequadamente os comentários feitos. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se o campo de comentários está registrando adequadamente os comentários feitos. | Grave |   
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-23 - RF-04 | Verificar se o campo de comentários no rodapé das indicações está registrando adequadamente os comentários feitos. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se o campo de comentários das indicações está registrando adequadamente os comentários feitos. | Grave | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -150,7 +150,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente nas Respostas. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nas Respostas | Media | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -160,7 +160,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-31 - RF-09 | Verificar se os emojis aos Comentários das Interações estão sendo ativados corretamente. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nos Comentários das Interações | Media | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -170,7 +170,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente nos Comentários das Indicações. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nos Comentários das Indicações | Media | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
