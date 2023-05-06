@@ -12,13 +12,13 @@
 |--|--|--|--|--|
 ||O usuário tentará alcançar o resultado correto?|O usuário consegue notar que a ação correta está disponível?|O usuário consegue associar as ações disponíveis com o seu objetivo final?|O usuário vai perceber que foi feito um progresso na direção do seu objetivo?|
 |--|--|--|--|--|
-|**Tarefa 1: Pesquisa de Perguntas**|Sim|Sim|Sim|Sim|
-|Preencher campo de pesquisa|Sim|Sim|Sim|Sim|
-|Preencher filtros de pesquisa|Sim|Sim|Sim|Sim|
-|Pesquisar|Sim|Sim|Sim|Sim|
-|Identificar se os resultados foram satisfatórios|Sim|Sim|Sim|Sim|
+|**Tarefa 1: Pesquisa de Perguntas**|||||
+|Preencher campo de pesquisa|Sim|Não|Não|Não|
+|Preencher filtros de pesquisa|Sim|Não|Não|Não|
+|Pesquisar|Sim|Não|Não|Não|
+|Identificar se os resultados foram satisfatórios|Sim|Não|Não|Não|
 |--|--|--|--|--|
-|**Tarefa 2: Postagem de perguntas**|Sim|Sim|Sim|Sim|
+|**Tarefa 2: Postagem de perguntas**|||||
 |Acessar a área de perguntas|Sim|Sim|Sim|Sim|
 |Identificar botão de adição de nova pergunta|Sim|Sim|Sim|Sim|
 |Preencher campos  de nova pergunta|Sim|Sim|Sim|Sim|
@@ -62,8 +62,8 @@
 |||||
 |--|--|--|--|
 ||Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
-|**Tarefa 1: Pesquisa de Perguntas**|Não|0|5|
-|**Tarefa 2: Postagem de perguntas**|Não|0|5|
+|**Tarefa 1: Pesquisa de Perguntas**|Sim|5|0|
+|**Tarefa 2: Postagem de perguntas**|Não|1|3|
 |**Tarefa 3: Pesquisa de Indicações**||||
 |**Tarefa 4: Postagem de interações**||||
 |**Tarefa 5: Login**||||
