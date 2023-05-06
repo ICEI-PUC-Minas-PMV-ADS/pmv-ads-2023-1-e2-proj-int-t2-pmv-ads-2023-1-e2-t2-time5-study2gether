@@ -39,9 +39,9 @@
 |Finalizar publicação da nova interação|Foi facil concluir a publicação|Sim|Sim|Sim|
 |Identificar se a nova interação foi publicada com sucesso|Sim|Sim|Sim|Talvez possa ter uma confirmação da postagem|
 |**Tarefa 5: Login**|||||
-|Preencher campos para login|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim|Sim|
-|Fazer login|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim|Sim|
-|Identificar se o login foi feito|Sim, o layout da página é intuitivo|Sim, o e-mail do usuário logado aparece no canto da tela.|Sim|Sim|
+|Preencher campos para login|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim|
+|Fazer login|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim|
+|Identificar se o login foi feito|Sim, o layout da página é intuitivo|Sim, o e-mail do usuário logado aparece no canto da tela.|Sim, o processo é intuitivo|Sim|
 |--|--|--|--|--|
 |**Tarefa 6: Histórico de Ações do Usuário na Aplicação**|||||
 |Acessar o perfil|Sim - Clicou corretamente sobre o seu “Nome” na tela lagoda.|Sim - Foi de forma assertiva sobre o seu nome. |Sim, uma vez que é intuitivo que, para ter acesso a seu histórico ele precisa estar logado.|Sim, já que ao clicar no seu nome, a tela do Histórico já aparece pra ele.|
@@ -49,9 +49,9 @@
 |Acessar uma interação|Sim - foi até a aba correta do Histórico.|Sim - ao clicar sobre Interações abre-se o Histórico de interações.|Parece que sim, ao rolar a tela para procurar a Interação que ele deseja acessar.|Sim, já ele nesta aba todas as Interações postadas estarão registradas e acessíveis para ele. |
 |--|--|--|--|--|
 |**Tarefa 7: Cadastro**|||||
-|Preencher dados de cadastro|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim|Sim|
-|Fazer cadastro|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim|Sim|
-|Identificar se cadastro foi realizado|Sim, o layout da página é intuitivo|Não, poderia ter uma mensagem de cadastro com sucesso|Parcialmente||Parcialmente|
+|Preencher dados de cadastro|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim|
+|Fazer cadastro|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim|
+|Identificar se cadastro foi realizado|Sim, o layout da página é intuitivo|Não, poderia ter uma mensagem de cadastro com sucesso|Parcialmente, não aparece uma mensagem de cadastro realizado com sucesso|Parcialmente|
 |--|--|--|--|--|
 |**Tarefa 8: Redefinição de senha**|||||
 |Preencher formulário de redefinição de senha|||||
