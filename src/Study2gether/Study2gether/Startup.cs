@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -28,7 +30,21 @@ namespace Study2gether
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
-            services.AddControllersWithViews();
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => {
+                    options.AccessDeniedPath = "/user/AccessDenied/";
+                    options.LoginPath = "/user/Login/";                 
+                });
+
+        services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,13 +65,26 @@ namespace Study2gether
 
             app.UseRouting();
 
+            app.UseCookiePolicy();
+
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+               endpoints.MapAreaControllerRoute(
+                   name: "Admin",
+                   areaName: "Admin",
+                   pattern: "Admin/{controller=AdminHome}/{action=Index}/{id?}"
+               );
+               endpoints.MapControllerRoute(
+                   name: "areas",
+                   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+               );
+               endpoints.MapControllerRoute(
+                   name: "default",
+                   pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

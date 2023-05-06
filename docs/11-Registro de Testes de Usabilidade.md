@@ -50,7 +50,6 @@
 |Preencher formulário de redefinição de senha|||||
 |Solicitar redefinição|||||
 |Identificar se redefinição foi feita|||||
-
 |||||
 |--|--|--|--|
 ||Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
