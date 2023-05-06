@@ -60,11 +60,11 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |Conferir se os resultados desejados foram apresentados|||||
 |--|--|--|--|--|
 |**Tarefa 4: Postagem de interações**|||||
-|Acessar área de interações|||||
-|Identificar o botão de adição de interação|||||
-|Preencher campos de nova interação|||||
-|Finalizar publicação da nova interação|||||
-|Identificar se a nova interação foi publicada com sucesso|||||
+|Acessar área de interações|Sim, o layout da pagina é intuitivo|Sim, o botão está bem identificado|Sim|Parcialmente, talvez falte uma idenficiação clara da pagina em questão|
+|Identificar o botão de adição de interação|O botão foi de facil identificação|Sim o botão é intuitivo|Sim|Sim|
+|Preencher campos de nova interação|Sim, as intruções estão claras para que a publicação seja feita|Sim, os campos estão bem identificados|Sim|Sim|
+|Finalizar publicação da nova interação|Foi facil concluir a publicação|Sim|Sim|Sim|
+|Identificar se a nova interação foi publicada com sucesso|Sim|Sim|Sim|Talvez possa ter uma confirmação da postagem|
 |--|--|--|--|--|
 |**Tarefa 5: Login**|||||
 |Preencher campos para login|Sim|Sim|Sim|Sim|
@@ -73,7 +73,7 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |--|--|--|--|--|
 |**Tarefa 6: Histórico de interações**|||||
 |Acessar o perfil|||||
-|Verificar interações de perguntas|||||
+|Verificar interações postadas|||||
 |Acessar uma interação|||||
 |--|--|--|--|--|
 |**Tarefa 7: Cadastro**|||||
@@ -92,7 +92,7 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |**Tarefa 1: Pesquisa de Perguntas**||||
 |**Tarefa 2: Postagem de perguntas**||||
 |**Tarefa 3: Pesquisa de Indicações**||||
-|**Tarefa 4: Postagem de interações**||||
+|**Tarefa 4: Postagem de interações**|Não|0|5|
 |**Tarefa 5: Login**|Não|0|5|
 |**Tarefa 6: Histórico de interações**||||
 |**Tarefa 7: Cadastro**|Não|0|5|

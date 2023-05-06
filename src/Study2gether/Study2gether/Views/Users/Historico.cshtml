@@ -1,7 +1,7 @@
 @model Study2gether.Models.User
 
 @{
-    ViewData["Title"] = "Histórico";
+    ViewData["Title"] = "HistÃ³rico";
 
 }
 
@@ -16,7 +16,7 @@
     </table>
     <div id="container-a">
         <div class="sobreVoce-redesSociais">
-            <label style="color: white" asp-for="description" class="control-label">Sobre Você</label>
+            <label style="color: white" asp-for="description" class="control-label">Sobre VocÃª</label>
             <div class="box-description-socialMedia">
                 <p>@Model.description</p>
             </div>
@@ -35,12 +35,12 @@
     </div>
     <div id="container-b">
         <div id="historicoTitle">
-            <span><strong>Histórico</strong></span>
+            <span><strong>HistÃ³rico</strong></span>
         </div>
         <div class="tab">
             <button class="tablinks" onclick="openCity(event, 'Perguntas')" id="defaultOpen">PERGUNTAS</button>
             <button class="tablinks" onclick="openCity(event, 'Respostas')">RESPOSTAS</button>
-            <button class="tablinks" onclick="openCity(event, 'Interacoes')">INTERAÇÕES</button>
+            <button class="tablinks" onclick="openCity(event, 'Interacoes')">INTERAÃ‡Ã•ES</button>
             <button class="tablinks" onclick="openCity(event, 'Favoritos')">FAVORITOS</button>
         </div>
         <div id="Perguntas" class="tabcontent">

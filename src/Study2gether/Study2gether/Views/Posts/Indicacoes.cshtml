@@ -1,7 +1,7 @@
 @model Study2gether.Models.Post
 
 @{
-    ViewData["Title"] = "Indicações";
+    ViewData["Title"] = "IndicaÃ§Ãµes";
 }
 @{
     var categories = ViewData["Categories"] as List<Category>;
@@ -14,9 +14,9 @@
     <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
         <div>
             <ul>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">IndicaÃ§Ãµes</a></li>
                 <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">InteraÃ§Ãµes</a></li>
             </ul>
         </div>
     </div>
@@ -27,36 +27,39 @@
             {
                 <div class="caixa card rounded-lg mb-3">
                     <div class="card-header">
-                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost" >@obj.title</a></h4>
+                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
                     </div>
                     <div class="card-body">
                         <div>@Html.Raw(@obj.content)</div>
                     </div>
                     <div class="card-footer">
                         <div class="reactions d-inline">
-                            
-                            @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="comment"><i class="fa-regular fa-comment-dots"></i></a>
 
-                            @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
+                            @obj.Answers.Count() <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                            @obj.Reactions.Count(r => r.Name == "chart") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="chart"><i class="fa-solid fa-chart-column"></i></a>
+                            @obj.Reactions.Count(r => r.Name == "chart") <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
                             @obj.Reactions.Count(r => r.Name == "star") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="star"><i class="fa-solid fa-star"></i></a>
+
+                            @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
                         </div>
-                        <label class="float-right" for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                        <label class="float-right" for="data-indicacao"><small>Data da indicaÃ§Ã£o: @obj.created_date</small></label>
                     </div>
                 </div>
             }
         </div>
     </div>
-    <a class="pe-auto" data-toggle="modal" data-target="#postIndication" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
-</div>
+    @if (User.IsInRole("admin"))
+    {
+        <a class="pe-auto" data-toggle="modal" data-target="#postIndication" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
+    }
+ </div>
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg no-enforce-focus" no-enforce-focus id="postIndication" tabindex="-1" role="dialog" aria-labelledby="postIndicationitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header" id="testring">
-                <h5 class="modal-title" id="postIndicationLongTitle">Escreva sua indicação</h5>
+                <h5 class="modal-title" id="postIndicationLongTitle">Escreva sua indicaÃ§Ã£o</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
