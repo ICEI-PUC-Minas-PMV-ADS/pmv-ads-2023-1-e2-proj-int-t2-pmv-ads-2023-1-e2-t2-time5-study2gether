@@ -93,7 +93,7 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |**Tarefa 2: Postagem de perguntas**||||
 |**Tarefa 3: Pesquisa de Indicações**||||
 |**Tarefa 4: Postagem de interações**|Não|0|5|
-|**Tarefa 5: Login**|0|Não|5|
+|**Tarefa 5: Login**|Não|0|5|
 |**Tarefa 6: Histórico de interações**||||
-|**Tarefa 7: Cadastro**|0|Não|5|
+|**Tarefa 7: Cadastro**|Não|0|5|
 |**Tarefa 8: Redefinição de senha**||||
