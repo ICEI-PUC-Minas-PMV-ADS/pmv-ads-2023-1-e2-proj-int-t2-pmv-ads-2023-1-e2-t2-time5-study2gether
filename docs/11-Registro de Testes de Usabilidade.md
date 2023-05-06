@@ -44,10 +44,10 @@
 |Fazer login|||||
 |Identificar se o login foi feito|||||
 |--|--|--|--|--|
-|**Tarefa 6: Histórico de interações**|||||
-|Acessar o perfil|||||
-|Verificar interações de perguntas|||||
-|Acessar uma interação|||||
+|**Tarefa 6: Histórico de Ações do Usuário na Aplicação**|||||
+|Acessar o perfil|Sim - Clicou corretamente sobre o seu “Nome” na tela lagoda.|Sim - Foi de forma assertiva sobre o seu nome. |Sim, uma vez que é intuitivo que, para ter acesso a seu histórico ele precisa estar logado.|Sim, já que ao clicar no seu nome, a tela do Histórico já aparece pra ele.|
+|Verificar suas perguntas postadas|Sim - já que o Histórico tem o formato de fichário e suas abas sendo uma delas a de Perguntas.|Sim -  a aba Perguntas é facilmente identificada com um sombreamento ao passar o mouse sobre ela, indicando que são acessíveis.|Sim, é uma aplicação muito intuitiva.|Sim, ao clicar na aba, seu Histórico de Perguntas é automaticamente apresentado ao usuário.|
+|Acessar uma interação|Sim - foi até a aba correta do Histórico.|Sim - ao clicar sobre Interações abre-se o Histórico de interações.|Parece que sim, ao rolar a tela para procurar a Interação que ele deseja acessar.|Sim, já ele nesta aba todas as Interações postadas estarão registradas e acessíveis para ele. |
 |--|--|--|--|--|
 |**Tarefa 7: Cadastro**|||||
 |Preencher dados de cadastro|||||
@@ -58,7 +58,6 @@
 |Preencher formulário de redefinição de senha|||||
 |Solicitar redefinição|||||
 |Identificar se redefinição foi feita|||||
-
 |||||
 |--|--|--|--|
 ||Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
@@ -67,6 +66,6 @@
 |**Tarefa 3: Pesquisa de Indicações**||||
 |**Tarefa 4: Postagem de interações**||||
 |**Tarefa 5: Login**||||
-|**Tarefa 6: Histórico de interações**||||
+|**Tarefa 6: Histórico de Ações do Usuário na Aplicação**|Não|0|5|
 |**Tarefa 7: Cadastro**||||
 |**Tarefa 8: Redefinição de senha**||||
