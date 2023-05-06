@@ -1,0 +1,97 @@
+@model Study2gether.Models.User
+
+@{
+    ViewData["Title"] = "Histórico";
+
+}
+
+<link rel="stylesheet" href="../../css/historico.css">
+<hr />
+<div class="perfilHistorico">
+    <table aria-hidden="true" class="fs-exclude ic-avatar">
+        <tr>
+            <td><img id="fotoPerfil" src="@Model.imageLink" alt="Foto de Perfil"></td>
+            <td style="color: white"><p>@Model.name</p></td>
+        </tr>
+    </table>
+    <div id="container-a">
+        <div class="sobreVoce-redesSociais">
+            <label style="color: white" asp-for="description" class="control-label">Sobre Você</label>
+            <div class="box-description-socialMedia">
+                <p>@Model.description</p>
+            </div>
+        </div>
+        <div class="sobreVoce-redesSociais">
+            <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais</label>
+            <div class="box-description-socialMedia">
+                <p>@Model.socialMedia</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <a class="btn btn-info" asp-controller="Users" asp-action="EditarPerfil">Editar Perfil</a>
+            <a class="btn btn-info" asp-controller="Users" asp-action="AlterarSenha">Alterar Senha</a>
+            <a class="btn btn-info" asp-controller="Home" asp-action="Index">Sair</a>
+        </div>
+    </div>
+    <div id="container-b">
+        <div id="historicoTitle">
+            <span><strong>Histórico</strong></span>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Perguntas')" id="defaultOpen">PERGUNTAS</button>
+            <button class="tablinks" onclick="openCity(event, 'Respostas')">RESPOSTAS</button>
+            <button class="tablinks" onclick="openCity(event, 'Interacoes')">INTERAÇÕES</button>
+            <button class="tablinks" onclick="openCity(event, 'Favoritos')">FAVORITOS</button>
+        </div>
+        <div id="Perguntas" class="tabcontent">
+            @foreach (var pergunta in @Model.Posts)
+            {
+                @if (pergunta.type == Study2gether.Models.Types.Question)
+                {
+                    <div>
+                        <h6>@pergunta.title</h6>
+                        <p>@pergunta.content</p>
+                    </div>
+                    <hr>
+                }
+            }
+        </div>
+        <div id="Respostas" class="tabcontent">
+            @foreach (var resposta in @Model.Answers)
+            {
+                <div>
+                    <h6>@resposta.title</h6>
+                    <p>@resposta.content</p>
+                </div>
+                <hr>
+            }
+        </div>
+        <div id="Interacoes" class="tabcontent">
+            @foreach (var interacao in @Model.Posts)
+            {
+                @if (interacao.type == Study2gether.Models.Types.Interaction)
+                {
+                    <div>
+                        <h6>@interacao.title</h6>
+                        <p>@interacao.content</p>
+                    </div>
+                    <hr>
+                }
+            }
+
+        </div>
+
+        <div id="Favoritos" class="tabcontent">
+            <h6>Favority Subject Title Title</h6>
+            <p>The best way to do something is to plan before.</p>
+        </div>
+    </div>
+    <script src="../../js/historico.js"></script>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

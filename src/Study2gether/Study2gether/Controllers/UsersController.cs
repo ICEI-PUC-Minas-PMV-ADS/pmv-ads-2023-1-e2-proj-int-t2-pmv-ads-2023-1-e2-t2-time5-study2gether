@@ -5,10 +5,14 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Study2gether.Models;
+using System.Web;
+using Microsoft.AspNetCore.Http;
+using System.Text.RegularExpressions;
 
 namespace Study2gether.Controllers
 {
@@ -72,27 +76,22 @@ namespace Study2gether.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Logout() 
+        public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
-
 
         public IActionResult AccessDenied()
         {
             return View();
         }
 
-
         public IActionResult Cadastro()
         {
             return View();
         }
-        // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Cadastro([Bind("idUser,email,password,createdDate")] User user)
@@ -101,23 +100,25 @@ namespace Study2gether.Controllers
             var checkExistingEmail = _context.Users.FirstOrDefault(stored => stored.email == user.email);
             var validatePasswordLength = user.password.Length >= 8;
             if (!validateEmail)
-{
-    ModelState.AddModelError("email", "O e-mail deve ser um endereço de e-mail da PUC Minas.");
-}
+            {
+                ModelState.AddModelError("email", "O e-mail deve ser um endereço de e-mail da PUC Minas.");
+            }
 
-if (checkExistingEmail != null)
-{
-    ModelState.AddModelError("email", "Este e-mail já está em uso. Por favor, use outro e-mail.");
-}
+            if (checkExistingEmail != null)
+            {
+                ModelState.AddModelError("email", "Este e-mail já está em uso. Por favor, use outro e-mail.");
+            }
 
-if (!validatePasswordLength)
-{
-    ModelState.AddModelError("password", "A senha deve ter pelo menos 8 caracteres.");
-}
+            if (!validatePasswordLength)
+            {
+                ModelState.AddModelError("password", "A senha deve ter pelo menos 8 caracteres.");
+            }
             if (ModelState.IsValid)
             {
                 user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
                 user.idUser = Guid.NewGuid();
+                user.name = user.email;
+                user.imageLink = "https://cdn-icons-png.flaticon.com/512/6596/6596121.png";
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Home");
@@ -128,6 +129,109 @@ if (!validatePasswordLength)
         private bool UserExists(Guid id)
         {
             return _context.Users.Any(e => e.idUser == id);
+        }
+
+        public async Task<IActionResult> Historico()
+        {   
+            var user = await _context.Users
+                .Include(teste => teste.Posts)
+                .Include(teste => teste.Answers)
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+
+            return View("Historico", user);
+        }
+
+        public async Task<IActionResult> EditarPerfil()
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+
+            return View("EditarPerfil", user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditarPerfil(string name, string description, string imageLink, string socialMedia)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+
+            if (user != null)
+            {
+                if (!string.IsNullOrEmpty(name))
+                    user.name = name;
+
+                user.description = description;
+                user.socialMedia = socialMedia;
+
+                if (!string.IsNullOrEmpty(imageLink))
+                { 
+                    user.imageLink = imageLink;
+                }
+
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                ViewBag.Message = "Usuário não encontrado.";
+                return View();
+            }
+
+            return RedirectToAction("Historico");
+        }
+
+        public async Task<IActionResult> AlterarSenha()
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+
+            return View("AlterarSenha", user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AlterarSenha(string previousPassword, string newPassword1, string newPassword2)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+
+            if (user != null)
+            {
+                if (string.IsNullOrEmpty(previousPassword))
+                {
+                    ViewBag.Message = "Senha atual vazia.";
+                }
+                else
+                {
+                    bool ispasswordOk = BCrypt.Net.BCrypt.Verify(previousPassword, user.password);
+                    if (ispasswordOk)
+                    {
+                        if (!string.IsNullOrEmpty(newPassword1) && !string.IsNullOrEmpty(newPassword2) && newPassword1 == newPassword2 && newPassword1.Length >= 8)
+                        {
+                            user.password = BCrypt.Net.BCrypt.HashPassword(newPassword1);
+                            await _context.SaveChangesAsync();
+                            return RedirectToAction("Historico");
+                        }
+                        else
+                        {
+                            ViewBag.Message = "Confirmação de senha inválida";
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Senha atual errada.";
+                    }
+                }
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> DeleteUser()
+        {
+            var user = _context.Users.First(excluir => excluir.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+            _context.Users.Remove(user);
+            _context.SaveChanges();
+            await HttpContext.SignOutAsync();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

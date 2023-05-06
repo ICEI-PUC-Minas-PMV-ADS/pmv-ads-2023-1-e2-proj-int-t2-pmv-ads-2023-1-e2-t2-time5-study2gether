@@ -73,7 +73,7 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |--|--|--|--|--|
 |**Tarefa 6: Histórico de interações**|||||
 |Acessar o perfil|||||
-|Verificar interações de perguntas|||||
+|Verificar interações postadas|||||
 |Acessar uma interação|||||
 |--|--|--|--|--|
 |**Tarefa 7: Cadastro**|||||
