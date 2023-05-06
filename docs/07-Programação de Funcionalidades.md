@@ -58,7 +58,27 @@ A funcionalidade permite que os usuários visualizem as postagens de interaçõe
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. clicar em Interações
 
+### Funcionalidade 05: Postar Perguntas (RF-003)
+A aplicação deve permitir ao usuário postar perguntas na platarforma da `Study2gether`.
 
+![Postar perguntar](img/ct19postagemdeperguntaconcluida.jpg)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. clicar em "Perguntas"
+3. Clicar em '+' (usuários já cadastrados e previamente logados)
+
+### Funcionalidade 06: Postar Perguntas (RF-004)
+A aplicação deve permitir ao usuário responder as perguntas na platarforma da `Study2gether`.
+
+![Postar resposta](img/ct34enviarresposta.jpg)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. clicar em "Perguntas"
+3. Clicar no ícone de respostas (usuários já cadastrados e previamente logados)
+4. Digitar o texto
+5. Clicar no botão "Enviar"
 
 
 
