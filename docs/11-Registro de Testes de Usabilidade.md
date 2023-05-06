@@ -33,11 +33,11 @@
 |Conferir se os resultados desejados foram apresentados|||||
 |--|--|--|--|--|
 |**Tarefa 4: Postagem de interações**|||||
-|Acessar área de interações|Sim, o layout da pagina é intuitivo|Sim, o botão está bem identificado|Sim|Parcialmente, talvez falte uma idenficiação clara da pagina em questão|
-|Identificar o botão de adição de interação|O botão foi de facil identificação|Sim o botão é intuitivo|Sim|Sim|
+|Acessar área de interações|Sim, o layout da pagina é intuitivo|Sim, o botão está bem identificado|Sim, as informações estão claras|Parcialmente, talvez falte uma idenficiação clara da pagina em questão|
+|Identificar o botão de adição de interação|O botão foi de facil identificação|Sim o botão é intuitivo|Parcialmente, o botão pode estar melhor posicionado.|Sim, ao clicar no botão, o formulário de postagem é apresentado|
 |Preencher campos de nova interação|Sim, as intruções estão claras para que a publicação seja feita|Sim, os campos estão bem identificados|Sim|Sim|
-|Finalizar publicação da nova interação|Foi facil concluir a publicação|Sim|Sim|Sim|
-|Identificar se a nova interação foi publicada com sucesso|Sim|Sim|Sim|Talvez possa ter uma confirmação da postagem|
+|Finalizar publicação da nova interação|Foi facil concluir a publicação|Sim, o formulário está bem apresentado|As informações estão claras e concisas|O botão de publicação está bem apresentado|
+|Identificar se a nova interação foi publicada com sucesso|Sim, a nova postagem aparece no topo|Sim|Sim|Talvez possa ter uma confirmação da postagem|
 |**Tarefa 5: Login**|||||
 |Preencher campos para login|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim|
 |Fazer login|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim|
