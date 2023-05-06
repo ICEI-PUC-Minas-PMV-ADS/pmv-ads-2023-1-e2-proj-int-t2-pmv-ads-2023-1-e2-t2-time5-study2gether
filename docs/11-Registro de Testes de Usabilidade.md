@@ -26,11 +26,10 @@
 |Identificar se a pergunta foi publicada com sucesso|Sim|Sim|Sim|Sim|
 |--|--|--|--|--|
 |**Tarefa 3: Pesquisa de Indicações**|||||
-|Preencher campo de pesquisa|||||
-|Preencher filtros de pesquisa|||||
-|Pesquisar|||||
-|Finalizar a publicação da pergunta|||||
-|Conferir se os resultados desejados foram apresentados|||||
+|Preencher campo de pesquisa|Não|Não|Não|Não|
+|Preencher filtros de pesquisa|Não|Não|Não|Não|
+|Pesquisar|Não|Não|Não|Não|
+|Conferir se os resultados desejados foram apresentados|Não|Não|Não|Não|
 |--|--|--|--|--|
 |**Tarefa 4: Postagem de interações**|||||
 |Acessar área de interações|||||
@@ -64,7 +63,7 @@
 ||Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
 |**Tarefa 1: Pesquisa de Perguntas**|Sim|5|0|
 |**Tarefa 2: Postagem de perguntas**|Não|1|3|
-|**Tarefa 3: Pesquisa de Indicações**||||
+|**Tarefa 3: Pesquisa de Indicações**|sim|5|0|
 |**Tarefa 4: Postagem de interações**||||
 |**Tarefa 5: Login**||||
 |**Tarefa 6: Histórico de interações**||||
