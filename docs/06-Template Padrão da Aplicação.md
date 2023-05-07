@@ -4,7 +4,7 @@
 
 O padrão de layout a ser utilizado na aplicação tem correspondência ao projeto de Interface elaborado anteriormente, conforme Figura 5.
 
-![Captura de tela 2023-05-05 194632](https://user-images.githubusercontent.com/114453508/236589437-4ec55061-c934-47bb-9515-92343e71e547.png)
+![image](https://user-images.githubusercontent.com/114453508/236688982-d253542d-a8df-4d37-8462-658154b3e65a.png)
 <p align="center">Figura 26 - Template padrão do site</p>
 
 O template criado está dispoto nos seguintes layouts: 
@@ -23,29 +23,29 @@ O template criado está dispoto nos seguintes layouts:
 * Tela Compartilhe sua Resposta
 * Tela de Postagem de Interações
 * Tela de Postagem de Indicações
-* Tela de Perfil/Histórico de Interações
+* Tela de Perfil/Histórico de Ações do Usuário na Aplicação
 * Tela de Editar Perfil
 * Tela de Alterar Senha
 
 ## Tela Principal
 
-Este layout é utilizado para apresentar a aplicação com seu objetivo e os botões de acesso aos Posts, liberado a todos os usuários.
+Este layout é utilizado para apresentar a aplicação aos usuários, permitindo a todos navegarem utilizando os botões de acesso aos Posts, "Indicações", "Perguntas" e Interações".
 
-![Captura de tela 2023-05-05 200513](https://user-images.githubusercontent.com/114453508/236589635-8632f833-8dcd-4385-9d12-0295126577ef.png)
+![image](https://user-images.githubusercontent.com/114453508/236693884-37b47a78-a81b-41ee-8f1c-47728925f3ba.png)
 <p align="center">Figura 27 - Tela Principal</p>
 
 ## Tela Visualização das Perguntas
 
 Este layout é utilizado para a visualização das Perguntas por todos usuários.
 
-![Captura de tela 2023-05-05 194632](https://user-images.githubusercontent.com/114453508/236589672-ab768831-6ed0-4107-bb92-275af0102ee0.png)
+![image](https://user-images.githubusercontent.com/114453508/236688993-e4374382-4d32-4d5e-96f2-4190233870a7.png)
 <p align="center">Figura 28 - Tela Visualização de Perguntas</p>
 
 ## Tela Visualização das Respostas
 
 Este layout é utilizado para a visualização das Respostas postadas.
 
-xxxxxxx
+Esta funcionalidade será implementada na Etapa 4.
 
 <p align="center">Figura 29 - Tela Visualização de Respostas</p>
 
@@ -53,52 +53,49 @@ xxxxxxx
 
 Este layout é utilizado para a visualização das Interações postadas por usuários logados.
 
-xxxxxxx
-
+![image](https://user-images.githubusercontent.com/114453508/236689061-89188808-e86c-4c1d-9daa-eb80dc1ec40c.png)
 <p align="center">Figura 30 - Tela Visualização das Interações</p>
 
 ## Tela Visualização dos Comentários das Interações
 
 Este layout é utilizado para a visualização dos Comentários das Interações.
 
-xxxxxxx
-
+![image](https://user-images.githubusercontent.com/114453508/236689148-6d39d09d-052f-4151-8567-f7bc07498cff.png)
 <p align="center">Figura 31 - Tela Visualização das Interações</p>
 
 ## Tela Visualização das Indicações
 
 Este layout é utilizado para a visualização das Indicações postadas pelos administradores da Aplicação.
 
-![Captura de tela 2023-05-05 203343](https://user-images.githubusercontent.com/114453508/236590347-5af1059f-61b8-42af-b881-64fd4f171ca0.png)
+![image](https://user-images.githubusercontent.com/114453508/236689204-c8828c7f-8155-4050-ac95-3bad78cdded3.png)
 <p align="center">Figura 32 - Tela Visualização das Interações</p>
 
 ## Tela Visualização dos Comentários das Indicações
 
 Este layout é utilizado para a visualização dos Comentários das Indicações.
 
-xxxxxxx
-
+![image](https://user-images.githubusercontent.com/114453508/236689269-05038386-6033-4108-8c1f-df89dfab118e.png)
 <p align="center">Figura 33 - Tela Visualização das Indicações</p>
 
 ## Tela Cadastro
 
 Este layout é utilizado para a visualização do Tela de Cadastro simplificado do Usuário. Em um segundo momento, o usuário poderá Editar seu Perfil já no ambiente logado, em tela específica.
 
-![Captura de tela 2023-05-05 203628](https://user-images.githubusercontent.com/114453508/236590395-af430d30-100c-4b5f-a481-edbeb3dde63c.png)
+![image](https://user-images.githubusercontent.com/114453508/236689498-e7ad6aa0-9841-40ac-8d8f-836a31b07c4c.png)
 <p align="center">Figura 34 - Tela Cadastro</p>
 
 ## Tela de Login
 
-Este layout é utilizado para a visualização do Login de Usuário. 
+Este layout é utilizado para a visualização do Login de Usuário.
 
-![Captura de tela 2023-05-05 204145](https://user-images.githubusercontent.com/114453508/236590540-49fae0d4-2eb8-4b89-9623-1df2d21ad0c2.png)
+![image](https://user-images.githubusercontent.com/114453508/236694829-7aefcb9e-fca5-4424-a8ce-3b95615ef0af.png)
 <p align="center">Figura 35 - Tela de Login</p>
 
 ## Tela de Esqueceu sua Senha
 
 Este layout é utilizado para a visualização da Tela Esqueceu sua Senha, a qual será redefinida por meio de E-mail enviado ao Usuário. 
 
-xxxxxx
+Esta tela será implementada na Etapa 4.
 
 <p align="center">Figura 36 - Tela de Esqueceu sua Senha</p>
 
@@ -106,49 +103,48 @@ xxxxxx
 
 Este layout é utilizado para a Postagem da Pergunta por parte do usuário cadastrado ao clicar no botão Azul de acrescer. 
 
-![Captura de tela 2023-05-05 204736](https://user-images.githubusercontent.com/114453508/236590593-fb5f1c66-decd-44c6-a1f9-2d89c4b52010.png)
+![image](https://user-images.githubusercontent.com/114453508/236690770-c2953870-8a73-43e6-a05d-75b5fb467bb7.png)
 <p align="center">Figura 37 - Tela Envie sua Pergunta</p>
 
 ## Tela Compartilhe sua Resposta
 
-Este layout é utilizado para o compartilhamento de Respostas a Perguntas postadas por usuários logados.
+Este layout é utilizado para o compartilhamento de Respostas às Perguntas postadas por usuários logados.
 
-![Captura de tela 2023-05-05 201232](https://user-images.githubusercontent.com/114453508/236590644-f719ddc7-30f8-4517-bd79-d0466b1ab380.png)
+![image](https://user-images.githubusercontent.com/114453508/236690949-72e19b28-c3dc-45c6-b459-3955be0638e9.png)
 <p align="center">Figura 38 - Tela de Compartilhamento de Respostas</p>
 
 ## Tela de Postagem de Interações
 
 Este layout é utilizado para a postagem de Interações.
 
-xxxx 
-
+![image](https://user-images.githubusercontent.com/114453508/236690816-acb49daf-cda6-4821-9042-447ffa3a679d.png)
 <p align="center">Figura 39 - Tela de Postagem de Interações</p>
 
 ## Tela de Postagem de Indicações
 
 Este layout é utilizado para a postagem de Indicações.
 
-![Captura de tela 2023-05-05 203343](https://user-images.githubusercontent.com/114453508/236590704-3b310257-4ca7-4e81-80bf-14dc1df5288f.png)
+![image](https://user-images.githubusercontent.com/114453508/236691045-5f2499a8-51d7-4315-8ad8-bdf6783c5e02.png)
 <p align="center">Figura 40 - Tela de Postagem de Indicações</p>
 
 ## Tela de Perfil/Histórico de Ações do Usuário na Aplicação
 
-Este layout é utilizado para a visualização do Histórico de Ações do Usuário na Aplicação..
+Este layout é utilizado para a visualização do Histórico de Ações do Usuário na Aplicação.
 
-![Captura de tela 2023-05-05 210050](https://user-images.githubusercontent.com/114453508/236590748-24c80810-69dd-48f2-8714-6aa48968b26a.png)
+![image](https://user-images.githubusercontent.com/114453508/236688804-392b5d28-ab27-45d5-913a-933c34484b78.png)
 <p align="center">Figura 41 - Tela de Perfil/Histórico de Ações do Usuário na Aplicação</p>
 
 ## Tela de Editar Perfil
 
 Este layout é utilizado para a visualização da Tela de Edição de Perfil do Usuário.
 
-![Captura de tela 2023-05-05 210658](https://user-images.githubusercontent.com/114453508/236590841-78607912-0a56-4d7c-b84f-1b4383d89fb7.png)
+![image](https://user-images.githubusercontent.com/114453508/236688865-a2781d33-0e41-4185-9e7e-2d8672e9fb15.png)
 <p align="center">Figura 42 - Tela de Editar Perfil</p>
 
 ## Tela de Alterar Senha
 
-Este layout é utilizado para a visualização da Tela de Alteração de Senha.
+Este layout é utilizado para a visualização da Tela de Alteração de Senha de usuário logado.
 
-![Captura de tela 2023-05-05 211035](https://user-images.githubusercontent.com/114453508/236590852-347debb6-5edd-4d76-9fab-a3b23d2d2d15.png)
+![image](https://user-images.githubusercontent.com/114453508/236688918-8009f248-1764-48b9-897f-8bf98392576b.png)
 <p align="center">Figura 43 - Tela de Alterar Senha</p>
 
