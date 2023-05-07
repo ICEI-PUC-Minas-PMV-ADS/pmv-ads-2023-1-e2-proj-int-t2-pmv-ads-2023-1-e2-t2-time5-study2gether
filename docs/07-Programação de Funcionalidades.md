@@ -4,25 +4,83 @@
 
 Implementação do sistema descrita por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos com os artefatos criados (código fonte), deverão apresentadas as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
 
-Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos desenvolvidos.
+### Funcionalidade 01: Fazer Publicações (RF-001)
+A funcionalidade permite que o usuário faça uma postagem na pagina de Interações na platarforma da `Study2gether`.
 
-|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-002| Emitir um relatório de tarefas no mês   | relatorio.shtml |
+![Publicação de interação](https://user-images.githubusercontent.com/114435981/236596298-7cd632ef-6ee6-4599-a987-28b4ae6e4869.png)
 
-# Instruções de acesso
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. clicar em Interações
+3. Clicar em '+' (usuários já cadastrados e previamente logados)
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+### Funcionalidade 02: Efetuar Cadastro	(RF-006)
+A funcionalidade permite que o usuário realize com o cadastro na platarforma da `Study2gether`.
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+![image](https://user-images.githubusercontent.com/107289791/236481283-d9019ff0-20fd-4877-824b-591f0c52fa27.png)
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Clique no botão `Cadastre-se`
+3. Insira um `e-mail` com o formato `nome@sga.pucminas.br`
+4. Insira uma `senha` com ao menos 8 caracteres
+5. Clique no botão `Cadastrar`
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+##### Artefatos produzidos
+* [Cadastro.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Login.cshtml)
+* [User.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Models/User.cs)
+* [UsersController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/UsersController.cs)
+
+
+### Funcionalidade 03: Efetuar Login	(RF-006)
+A funcionalidade permite que o usuário realize com sucesso o login na platarforma da `Study2gether`.
+
+![image](https://user-images.githubusercontent.com/107289791/236481848-2788d278-4b83-44b6-951e-0d2e6676061d.png)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Clique no botão `Login`
+3. Insira `e-mail` e `senha` já cadastrados previamente
+4. Clique no botão `Entrar`
+
+##### Artefatos produzidos
+* [Login.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Login.cshtml)
+* [User.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Models/User.cs)
+* [UsersController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/UsersController.cs)
+
+### Funcionalidade 04: Visualizar publicações (RF-008)
+
+A funcionalidade permite que os usuários visualizem as postagens de interações na platarforma da `Study2gether`.
+
+![Pagina de Interações](https://user-images.githubusercontent.com/114435981/236595542-a8e16566-daaa-4e59-af18-8db9534eebd1.png)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. clicar em Interações
+
+### Funcionalidade 05: Postar Perguntas (RF-003)
+A aplicação deve permitir ao usuário postar perguntas na platarforma da `Study2gether`.
+
+![Postar perguntar](img/ct19postagemdeperguntaconcluida.jpg)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. clicar em "Perguntas"
+3. Clicar em '+' (usuários já cadastrados e previamente logados)
+
+### Funcionalidade 06: Postar Respostas (RF-004)
+A aplicação deve permitir ao usuário responder as perguntas na platarforma da `Study2gether`.
+
+![Postar resposta](img/ct34enviarresposta.jpg)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Clicar em "Perguntas"
+3. Selecionar uma Pergunta
+4. Clicar no local de inserir Respostas (usuários já cadastrados e previamente logados)
+5. Digitar o texto
+6. Clicar no botão "Enviar"
+
+
+
+

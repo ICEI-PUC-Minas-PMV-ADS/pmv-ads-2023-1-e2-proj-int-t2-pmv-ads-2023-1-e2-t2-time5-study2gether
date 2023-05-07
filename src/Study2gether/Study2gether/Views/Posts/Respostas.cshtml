@@ -11,9 +11,9 @@
     <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
         <div>
             <ul>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">IndicaÃ§Ãµes</a></li>
                 <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
+                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">InteraÃ§Ãµes</a></li>
             </ul>
         </div>
     </div>
@@ -33,15 +33,21 @@
                 <div class="container">
                     <form asp-action="Respostas">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-group">
-                            <label asp-for="title" class="control-label"></label>
-                            <input asp-for="title" class="form-control" />
-                            <span asp-validation-for="title" class="text-danger"></span>
+                        <div class="form-floating">
+                            <div class="form-group">
+                                <label asp-for="title" class="control-label">TÃ­tulo</label>
+                                <input asp-for="title" class="form-control" />
+                                <span asp-validation-for="title" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="content" class="control-label">ConteÃºdo</label>
+                                <input asp-for="content" class="form-control" />
+                                <span asp-validation-for="content" class="text-danger"></span>
+                            </div>
+                            <div>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                            <a class="btn btn-secondary" asp-action="Create" role="button">Cancelar</a>
                         </div>
-                        <div class="form-group">
-                            <label asp-for="content" class="control-label"></label>
-                            <input asp-for="content" class="form-control" />
-                            <span asp-validation-for="content" class="text-danger"></span>
                         </div>
 
                             <button class="btn btn-primary" type="submit">Enviar</button>

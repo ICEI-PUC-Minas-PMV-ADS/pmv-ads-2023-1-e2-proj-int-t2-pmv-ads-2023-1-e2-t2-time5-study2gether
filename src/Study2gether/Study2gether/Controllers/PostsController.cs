@@ -20,8 +20,7 @@ namespace Study2gether.Controllers
             _context = context;
         }
 
-        //Views INDICAÇÕES, INTERAÇÕES E PERGUNTAS
-        
+                
         public IActionResult PostagemPergunta()
         {
             return View();
@@ -47,12 +46,10 @@ namespace Study2gether.Controllers
 
         public IActionResult Indicacoes()
         {
-            //Provavelmente não é a melhor forma de fazer isso
-            //Mas eu não vou estudar .net tão a fundo assim
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).OrderByDescending(o => o.created_date).ToList();
+            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -62,7 +59,7 @@ namespace Study2gether.Controllers
         public async Task<IActionResult> Indicacoes([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)
         {
             
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && User.IsInRole("admin"))
             {
                 var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
                 var axis = await _context.Axis.Where(c => axisId.Contains(c.idAxis)).ToListAsync();
@@ -150,21 +147,19 @@ namespace Study2gether.Controllers
                     resposta.idAnswer = Guid.NewGuid();
                     resposta.idPost = id;
                     resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
-
-                    // Salva a resposta no banco de dados
+                               
                     _context.Add(resposta);
                     _context.SaveChanges();
-                    // Redireciona o usuário de volta para a página da pergunta correspondente
+                    
                     return RedirectToAction("Detalhes", "Pergunta", new { id = resposta.idPost });
                 }
             
-            // Se o modelo for inválido, exiba o formulário novamente com as mensagens de erro apropriadas
+            
             return View(resposta);
         }
         public IActionResult Perguntas()
         {
-            //Provavelmente não é a melhor forma de fazer isso
-            //Mas eu não vou estudar .net tão a fundo assim
+
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
@@ -205,10 +200,6 @@ namespace Study2gether.Controllers
 
         public IActionResult ReactToPost(Guid idPost, string reactioName)
         {
-            // isso devia na verdade ser um request por ajax ou coisa do tipo
-            // visto que assim a page do usuario vai atulizar toda vez que
-            // ele fizer uma nova reação, mas meu tempo é limitado.
-            // talvez tenha alguma forma de fazer sem ser por ajax tbm.
             var user = Guid.Parse(User.FindFirstValue("idUser"));
             var shouldCreate = _context.Reactions.Any(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
             if (!shouldCreate)
@@ -223,7 +214,6 @@ namespace Study2gether.Controllers
             }
             else
             {
-                // talvez valesse mais apena eu já pegar a reação no shouldCreate pra evitar uma segunda query, mas vamo que vamo.
                 var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
                 _context.Reactions.Remove(reaction);
                 _context.SaveChanges();
