@@ -68,6 +68,10 @@ A aplicação deve permitir ao usuário postar perguntas na platarforma da `Stud
 2. clicar em "Perguntas"
 3. Clicar em '+' (usuários já cadastrados e previamente logados)
 
+##### Artefatos produzidos
+* [Perguntas.cshtml] https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/develop/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml
+* [PostsController.cs] https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/develop/src/Study2gether/Study2gether/Controllers/PostsController.cs
+
 ### Funcionalidade 06: Postar Respostas (RF-004)
 A aplicação deve permitir ao usuário responder as perguntas na platarforma da `Study2gether`.
 
