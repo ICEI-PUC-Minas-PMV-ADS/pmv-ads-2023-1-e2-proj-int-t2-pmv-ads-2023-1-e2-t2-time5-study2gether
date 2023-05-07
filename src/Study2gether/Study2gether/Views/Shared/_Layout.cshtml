@@ -48,24 +48,24 @@
                         <a asp-controller="Posts" asp-action="Perguntas"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                     }
                 </div>
-                    <div class="col-sm-2 row justify-content-end align-content-center" id="divFiltroEixos">
-                        <select class="form-select" id="autoSizingSelect" style="padding: 5px; width: 220px;border-radius: 2.5rem; text-align: center;">
-                            <option selected>Selecione um Eixo</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                <div class="col-sm-2 row justify-content-end align-content-center" id="divFiltroMicrofundamentos">
-                    <select class="form-select" id="autoSizingSelect" style="padding: 5px; width: 220px;border-radius: 2.5rem; text-align: center;">
+                <div class="col-sm-2 row justify-content-around align-content-center" id="divFiltroEixos">
+                    <select class="form-select" id="autoSizingSelect" style="padding: 5px; width: 220px; border-radius: 2.5rem; text-align: center;">
+                        <option selected>Selecione um Eixo</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-sm-3 row justify-content-around align-content-center" id="divFiltroMicrofundamentos">
+                    <select class="form-select" id="autoSizingSelect" style="padding: 5px; width: 270px; border-radius: 2.5rem; text-align: center;">
                         <option selected>Selecione um Microfundamento</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
                 </div>
-                <div class="col-sm-2 row justify-content-end align-content-center" id="divFiltroEixos">                
-                    <select class="form-select" id="autoSizingSelect" style="padding: 5px; width: 220px;border-radius: 2.5rem; text-align: center;">
+                <div class="col-sm-2 row justify-content-around align-content-center" id="divFiltroEixos">
+                    <select class="form-select" id="autoSizingSelect" style="padding: 5px; width: 220px; border-radius: 2.5rem; text-align: center;">
                         <option selected>Selecione uma Categoria</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -96,20 +96,21 @@
         </nav>
     </header>
     <div class="">
-        <main role="main" class="pb-3">
-            <div class="d-flex flex-row-reverse col-11">
-                <div class="col-sm-3 row align-content-end" id="divBusca">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon1">
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-                        </div>
+        <div class="d-flex flex-row-reverse col-11">
+            <div class="col-sm-3 row align-content-end" id="divBusca">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon1">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
             </div>
+        </div>
+        <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
