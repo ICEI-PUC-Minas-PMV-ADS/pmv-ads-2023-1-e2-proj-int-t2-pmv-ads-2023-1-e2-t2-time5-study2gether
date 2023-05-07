@@ -31,7 +31,7 @@ A funcionalidade permite que o usuário realize com o cadastro na platarforma da
 * [User.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Models/User.cs)
 * [UsersController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/UsersController.cs)
 
-### Funcionalidade 03: Efetuar Login	(RF-006)
+### Funcionalidade 03: Efetuar Login	(RF-006) 
 A funcionalidade permite que o usuário realize com sucesso o login na platarforma da `Study2gether`.
 
 ![Screenshot 2023-05-07 143223](https://user-images.githubusercontent.com/107289791/236693541-74942825-5920-4273-a7e2-b30db3eca14e.png)
