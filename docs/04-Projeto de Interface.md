@@ -154,7 +154,7 @@ Figura 19 - Tela de Postagem de Indicações
 
 ### Tela - Perfil/Histórico de Interações
 
-Nesta tela o usuário terá acesso ao seu perfil, onde poderá editá-lo, juntamente a seu histórico de interações, visualizando todas as  perguntas feitas, respostas dadas e publicações favoritadas.
+Nesta tela o usuário terá acesso às informações do seu perfil, onde será direcionado para tela de Edição, juntamente a seu histórico de ações na aplicação, podendo visualizar e acessar as Perguntas, Respostas e Interações postadas e também os conteúdos Favoritados.
 
 ![Tela de perfil e histórico de interações](img/20-perfilehistóricodeinterações.jpg)
 

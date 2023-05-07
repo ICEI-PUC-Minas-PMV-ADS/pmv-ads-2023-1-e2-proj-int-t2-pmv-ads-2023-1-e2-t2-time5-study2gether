@@ -1,23 +1,23 @@
-﻿@model Study2gether.Models.User
+@model Study2gether.Models.User
 
 @{
     ViewData["Title"] = "Cadastro";
 }
 
-<h1>Cadastro</h1>
+<h1 class="text-center" style="color:white">Cadastro</h1>
 
 <hr />
-<div class="row">
+<div class="row text-center justify-content-center">
     <div class="col-md-4">
         <form asp-action="Cadastro">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="email" class="control-label"></label>
+            <div class="form-group text-left">
+                <label asp-for="email" class="control-label" style="color:white"></label>
                 <input asp-for="email" class="form-control" type="email"/>
                 <span asp-validation-for="email" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="password" class="control-label"></label>
+            <div class="form-group text-left">
+                <label asp-for="password" class="control-label" style="color:white"></label>
                 <input asp-for="password" class="form-control" />
                 <span asp-validation-for="password" class="text-danger"></span>
             </div>

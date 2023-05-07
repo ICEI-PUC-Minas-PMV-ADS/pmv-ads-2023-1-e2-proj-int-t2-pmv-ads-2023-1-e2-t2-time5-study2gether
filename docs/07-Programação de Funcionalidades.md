@@ -52,12 +52,37 @@ A funcionalidade permite que os usuários visualizem as postagens de interaçõe
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. clicar em Interações
 
+### Funcionalidade 05: Postar Perguntas (RF-003)
+A aplicação deve permitir ao usuário postar perguntas na platarforma da `Study2gether`.
+
+![Postar perguntar](img/ct19postagemdeperguntaconcluida.jpg)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. clicar em "Perguntas"
+3. Clicar em '+' (usuários já cadastrados e previamente logados)
+
+##### Artefatos produzidos
+* [Perguntas.cshtml] https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/develop/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml
+* [PostsController.cs] https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/develop/src/Study2gether/Study2gether/Controllers/PostsController.cs
+
+### Funcionalidade 06: Postar Respostas (RF-004)
+A aplicação deve permitir ao usuário responder as perguntas na platarforma da `Study2gether`.
+
+![Postar resposta](img/ct34enviarresposta.jpg)
+
+##### Intruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Clicar em "Perguntas"
+3. Selecionar uma Pergunta
+4. Clicar no local de inserir Respostas (usuários já cadastrados e previamente logados)
+5. Digitar o texto
+6. Clicar no botão "Enviar"
 
 ### Funcionalidade 07: Visualizar um histórico com as próprias ações (RF-007)
 A funcionalidade permite que o usuário, logado na `Study2gether`, acesse sua página de perfil e visualize um histórico com suas ações de Perguntas, Interações, respostas e seus itens favoritados.
 
 ![Página de Perfil e Histórico](https://user-images.githubusercontent.com/12260321/236688605-a3024173-1971-451e-9c82-f2dc1af67902.png)
-
 
 ##### Intruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
