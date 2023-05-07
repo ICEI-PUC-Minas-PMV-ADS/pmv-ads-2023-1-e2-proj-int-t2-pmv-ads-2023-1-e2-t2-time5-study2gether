@@ -1,0 +1,43 @@
+﻿@model Study2gether.Models.User
+
+@{
+    ViewData["Title"] = "Editar Perfil";
+}
+<div class="completePage-alterarSenha">
+    <h1 style="color: white">Alterar Senha</h1>
+<hr />
+
+<link rel="stylesheet" href="../../css/editarPerfil.css">
+<div class="editarPerfil">
+    <h6 class="text-danger">@ViewBag.Message</h6>
+    <form asp-action="AlterarSenha">
+        <div id="container-d">
+            <div class="form-group-a">
+                <label style="color: white" asp-for="password">Senha Atual
+                    <input type="password" name="previousPassword" value="" />
+                </label>
+            </div>
+            <div class="form-group-a">
+                <label style="color: white">Nova Senha
+                    <input type="password" name="newPassword1" value="" />
+                </label>
+            </div>
+            <div class="form-group-a">
+                <label style="color: white" asp-for="password" class="confirmarNovaSenha">Confirmar Nova Senha
+                    <input type="password" name="newPassword2" value="" />
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Alterar senha" class="btn btn-primary" />
+                <a class="btn btn-info" asp-controller="Users" asp-action="Historico">Cancelar</a>
+            </div>
+        </div>
+    </form>
+ </div>
+ </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

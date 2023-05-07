@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study2gether</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <div class="page">
+        <nav id="nav-bar">
+            <div class="menu-img">
+                <img src="images/logo.png" alt="Imagem da logo: Study2gether">
+            </div>
+
+            <div class="temas">
+                <select id="eixos" name="eixos">
+                    <option value="">Selecione um Eixo</option>
+                    <option value="Eixo1">Eixo 1</option>
+                    <option value="Eixo2">Eixo 2</option>
+                    <option value="Eixo3">Eixo 3</option>
+                    <option value="Eixo4">Eixo 4</option>
+                    <option value="Eixo5">Eixo 5</option>
+                </select>
+        
+                 <select id="microfundamentos" name="microfundamentos">
+                    <option value="">Selecione um Microfundamento</option>
+                    <option value="Microfundamento1">Microfundamento 1</option>
+                    <option value="Microfundamento2">Microfundamento 2</option>
+                    <option value="Microfundamento3">Microfundamento 3</option>
+                    <option value="Microfundamento4">Microfundamento 4</option>
+                    <option value="Microfundamento5">Microfundamento 5</option>
+                </select>
+        
+                <select id="categorias" name="categorias">
+                    <option value="">Selecione uma Categoria</option>
+                    <option value="Categoria1">Categoria 1</option>
+                    <option value="Categoria2">Categoria 2</option>
+                    <option value="Categoria3">Categoria 3</option>
+                    <option value="Categoria4">Categoria 4</option>
+                    <option value="Categoria5">Categoria 5</option>
+                </select>
+                </div>
+
+                <div class="icone-usuario">
+                    <img src="./images/user.png" alt="Foto do usuário">
+                </div>
+        </nav>
+
+        <main>
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Pesquisar..."/>
+                <img src="images/search.png" id="btnBusca" alt="Buscar"/>
+            </div>
+
+            <div id="lista">
+                <ul>
+                  <li class="menu-item">Indicações</li>
+                  <li class="menu-item">Perguntas</li>
+                  <li class="menu-item">Interações</li>
+                </ul>
+              </div>
+
+            <div class="posts">
+
+                <div id="post-1">
+                    <div class="caixa">
+                        <h2>Título do material indicado</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris quis magna convallis lobortis. Proin lobortis libero eu odio varius convallis. Ut cursus sapien augue, eu ullamcorper neque lacinia vitae. Nulla facilisi. Sed semper magna non turpis aliquet, non finibus mauris pretium.</p>
+                        <label for="data-indicacao">Data da indicação:</label>
+                        <input type="date" id="data-indicacao" name="data-indicacao">
+                        <div class="reactions">
+                            <img src="images/balao.svg" alt="balão com três pontinhos">
+    
+                            <img src="images/smile.svg" alt="emoticon sorrindo">
+    
+                            <img src="images/grafico.svg" alt="gráfico">
+    
+                            <img src="images/estrela.svg" alt="estrela">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="post-2">
+                    <div class="caixa">
+                        <h2>Título do material indicado</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris quis magna convallis lobortis. Proin lobortis libero eu odio varius convallis. Ut cursus sapien augue, eu ullamcorper neque lacinia vitae. Nulla facilisi. Sed semper magna non turpis aliquet, non finibus mauris pretium.</p>
+                        <label for="data-indicacao">Data da indicação:</label>
+                        <input type="date" id="data-indicacao" name="data-indicacao">
+                        <div class="reactions">
+                            <img src="images/balao.svg" alt="balão com três pontinhos">
+    
+                            <img src="images/smile.svg" alt="emoticon sorrindo">
+    
+                            <img src="images/grafico.svg" alt="gráfico">
+    
+                            <img src="images/estrela.svg" alt="estrela">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="post-3">
+                    <div class="caixa">
+                        <h2>Título do material indicado</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris quis magna convallis lobortis. Proin lobortis libero eu odio varius convallis. Ut cursus sapien augue, eu ullamcorper neque lacinia vitae. Nulla facilisi. Sed semper magna non turpis aliquet, non finibus mauris pretium.</p>
+                        <label for="data-indicacao">Data da indicação:</label>
+                        <input type="date" id="data-indicacao" name="data-indicacao">
+                        <div class="reactions">
+                            <img src="images/balao.svg" alt="balão com três pontinhos">
+    
+                            <img src="images/smile.svg" alt="emoticon sorrindo">
+    
+                            <img src="images/grafico.svg" alt="gráfico">
+    
+                            <img src="images/estrela.svg" alt="estrela">
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+        </main>
+
+        <button id="meu-botao">+</button>
+
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>

@@ -71,9 +71,9 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |Fazer login|||||
 |Identificar se o login foi feito|||||
 |--|--|--|--|--|
-|**Tarefa 6: Histórico de interações**|||||
+|**Tarefa 6: Histórico de ações logado**|||||
 |Acessar o perfil|||||
-|Verificar interações de perguntas|||||
+|Verificar interações postadas|||||
 |Acessar uma interação|||||
 |--|--|--|--|--|
 |**Tarefa 7: Cadastro**|||||
@@ -94,6 +94,6 @@ Por fim, deve ser feita as seguintes perguntas para o usuário:
 |**Tarefa 3: Pesquisa de Indicações**||||
 |**Tarefa 4: Postagem de interações**||||
 |**Tarefa 5: Login**||||
-|**Tarefa 6: Histórico de interações**||||
+|**Tarefa 6: Histórico de açoes de usuário logado**||||
 |**Tarefa 7: Cadastro**||||
 |**Tarefa 8: Redefinição de senha**||||

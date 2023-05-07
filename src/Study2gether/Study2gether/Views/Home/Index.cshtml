@@ -1,8 +1,21 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Study2gether";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+<div container class="preenchimento col-10">
+    <img class="col-6" src="images/home.jpg" alt="Imagem de uma pessoa com fone de ouvido e computador em uma mesa de estudos.">
+    <div class="texto mt-0" style="background-color: #ff9900; padding: 0.5rem;">
+        <p>Conecte-se com seus colegas de estudo e ampliem seus conhecimentos juntos!</p>
+    </div>
+</div>
+
+<div>
+    <ul style="gap: 2rem; display: flex; justify-content: center;">
+        <li type="button" class="btn btn-primary btn-lg mt-2 p-4"><a class="text-light" asp-controller="Posts" asp-action="Indicacoes">Indicações</a></li>
+        <li type="button" class="btn btn-primary btn-lg mt-2 p-4"><a class="text-light" asp-controller="Posts" asp-action="Perguntas">Perguntas</a></li>
+        <li type="button" class="btn btn-primary btn-lg mt-2 p-4" ><a class="text-light" asp-controller="Posts" asp-action="Interacoes">Interações</a></li>
+    </ul>
 </div>
