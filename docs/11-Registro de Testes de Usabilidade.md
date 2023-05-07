@@ -1,12 +1,5 @@
 # Registro de Testes de Usabilidade
 
-| **Atividade**| **Tarefa** |
-|-|-|
-|**Preparação**|**Perfil do usuário:** Os usuários do sistema, são alunos do curso EAD de Análise e Desenvolvimento de Sistema da PUC Minas, o sistema será utilizado para postagem de dúvidas/respostas e materiais de ajuda e didáticos. Os alunos possuem, em sua maioria, boa habilidade com informática e smartphones.<br><br> **Objetivos dos usuários:**  O objetivo dos usuários é fazer perguntas sobre determinados temas, responder às perguntas, compartilhar materiais de ajuda e materiais didáticos, e interagir com os demais.|
-|**Coleta de dados**|Percorrer a interface de acordo com a sequência de ações necessárias para realizar cada tarefa.|
-|Interpretação|Para cada ação enumerada, analisar se o usuário executaria a ação corretamente, respondendo e justificando a resposta às perguntas.<br><br>Relatar uma história aceitável sobre o sucesso ou falha em realizar cada ação que compõe a tarefa|
-|Consolidação do Resultado|Sintetizar resultado sobre: <br> - O que o usuário precisa saber a priori para realizar as tarefas <br> - O que o usuário deve aprender enquanto realiza as tarefas <br> - Sugestões de correções para os problemas encontrados|
-
 ### Método de Percurso Cognitivo
 ||||||
 |--|--|--|--|--|
@@ -26,10 +19,10 @@
 |Identificar se a pergunta foi publicada com sucesso|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois quando a pergunta é postada, ela ficará disponível na aba "perguntas".|
 |--|--|--|--|--|
 |**Tarefa 3: Pesquisa de Indicações**|||||
-|Preencher campo de pesquisa|Não|Não|Não|Não|
-|Preencher filtros de pesquisa|Não|Não|Não|Não|
-|Pesquisar|Não|Não|Não|Não|
-|Conferir se os resultados desejados foram apresentados|Não|Não|Não|Não|
+|Preencher campo de pesquisa| | | | |
+|Preencher filtros de pesquisa| | | | |
+|Pesquisar| | | | |
+|Conferir se os resultados desejados foram apresentados| | | | |
 |--|--|--|--|--|
 |**Tarefa 4: Postagem de interações**|||||
 |Acessar área de interações|Sim, o layout da pagina é intuitivo|Sim, o botão está bem identificado|Sim, as informações estão claras|Parcialmente, talvez falte uma idenficiação clara da pagina em questão|
@@ -56,9 +49,11 @@
 |Preencher formulário de redefinição de senha|||||
 |Solicitar redefinição|||||
 |Identificar se redefinição foi feita|||||
+
+
 |||||
 |--|--|--|--|
-|**Tarefa 8: Redefinição de senha|Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
+| |Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
 |**Tarefa 1: Pesquisa de Perguntas**|Sim|5|0|
 |**Tarefa 2: Postagem de perguntas**|Não|1|3|
 |**Tarefa 3: Pesquisa de Indicações**||||
