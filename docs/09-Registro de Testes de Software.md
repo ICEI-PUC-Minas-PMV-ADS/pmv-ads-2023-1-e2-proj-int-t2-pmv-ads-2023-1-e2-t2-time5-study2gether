@@ -65,8 +65,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-13 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Indicações por Eixo. |    |    |
-| Registro da tela: |
+| CT-13 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Indicações por Eixo. | ||
+| Registro da tela: |![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685939-c5de9408-3bc7-4dda-b032-ba3be5bd577e.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -76,7 +76,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-15 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Indicações por essa categoria. |    |    |
-| Registro da tela: |
+| Registro da tela:| ![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685944-cbdbcf4f-9068-40f9-8def-04018985471c.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -86,7 +86,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-17 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
-| Registro da tela: || **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+| Registro da tela:| ![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685944-cbdbcf4f-9068-40f9-8def-04018985471c.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -121,7 +121,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-24 - RF-01 | Verificar se as publicações estão sendo apresentadas na "Lista de Interações". |    |    |
-| Registro da tela: |
+| Registro da tela: |![Tela de Interações](https://user-images.githubusercontent.com/114435981/236686931-25264723-ae85-46f1-8d76-7b567f4e114d.png)|Data do teste: 06/05/2023 - Resultado Positivo - As publicações de interações estão sendo apresentadas na pagina correta.|Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -151,7 +151,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: |
+| Registro da tela: |![Interações](https://user-images.githubusercontent.com/114435981/236687776-74eb2daa-a0e8-4232-a2fd-0fe4b40a44c4.png)| Data do teste: 06/05/2023 - Os emojis estão sendo contabilizados corretamente, mas passará por nova validação| Média |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -175,8 +175,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-35 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
-| Registro da tela: |
+| CT-35 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. ||  |
+| Registro da tela: |![Tela de Interações](https://user-images.githubusercontent.com/114435981/236688381-4dbd89c1-a14c-435d-8d75-17319a920356.png)|Data do teste: 06/05/2023 - As interações estão sendo apresentadas, no entanto os comentarios ainda não estão implementados| Grave|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
