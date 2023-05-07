@@ -20,8 +20,8 @@ Os Casos de Testes serão realizados utilizando dados Válidos e Inválidos, con
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. | Sucesso | Alta |
-| ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | | 
+| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. | | |
+| | | 
 
 # 
 
@@ -36,8 +36,8 @@ Registro:
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-02 - RF-006 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. | Sucesso | Alta |
-| ![image](https://user-images.githubusercontent.com/107289791/236537356-19dff8b1-498d-44a1-95ec-30676545ca2e.png) | 
+| CT-02 - RF-006 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. | |  |
+| | 
  
 
  # 
@@ -53,8 +53,8 @@ Registro:
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. | Sucesso | Alta |
-| ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) |  
+| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. | | |
+| |  
 
 # 
  
@@ -69,8 +69,8 @@ Registro:
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. | Sucesso | Alta |
-| ![image](https://user-images.githubusercontent.com/107289791/236538716-f2d96097-497d-48c5-89a0-6759ebc4efac.png) |  
+| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. | | |
+| |  
 
 # 
 
@@ -694,7 +694,7 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela inicial "Home-Page" da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela "Home-Page" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela inicial "Home-Page" da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela "Home-Page" </li><li>  Clicar com o botão direito sobre a tela, ir até inspecionar. Clique no botão “DevTools” e movimente a visualize se os elementos da tela são reorganizados de forma a manter a qualidade da visualização..</li></ol> | As páginas apresentaram responsividade. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
@@ -711,44 +711,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de inicial da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Perguntas" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
+|Verificar se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de inicial da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Perguntas" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram bom contraste dos elementos na tela. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-44 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| CT-44 - RNF-02 - RNF-06 | Verificar se o contraste dos elementos das telas estão com boa qualidade. |    |    |
 | Registro da tela: |
 
-# 
 
-| **Caso de teste** | **Requisitos Associados**|
-|--|--|
-|CT-45 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
-
-
-|Objetivo do teste| Passos | Critérios de êxito|
-|-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de Login da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Login" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
-
-Registro:
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-45 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |
-
-# 
-
-| **Caso de teste** | **Requisitos Associados**|
-|--|--|
-|CT-46 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
-
-
-|Objetivo do teste| Passos | Critérios de êxito|
-|-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de cadastro da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de cadastro </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram responsividade e bom contraste. |
-
-Registro:
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-46 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |

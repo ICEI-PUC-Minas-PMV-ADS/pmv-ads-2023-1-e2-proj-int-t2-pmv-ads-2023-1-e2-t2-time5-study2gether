@@ -82,6 +82,7 @@ Este layout é utilizado para a visualização dos Comentários das Indicações
 Este layout é utilizado para a visualização do Tela de Cadastro simplificado do Usuário. Em um segundo momento, o usuário poderá Editar seu Perfil já no ambiente logado, em tela específica.
 
 ![image](https://user-images.githubusercontent.com/114453508/236689498-e7ad6aa0-9841-40ac-8d8f-836a31b07c4c.png)
+
 <p align="center">Figura 34 - Tela Cadastro</p>
 
 ## Tela de Login
@@ -89,6 +90,7 @@ Este layout é utilizado para a visualização do Tela de Cadastro simplificado 
 Este layout é utilizado para a visualização do Login de Usuário.
 
 ![image](https://user-images.githubusercontent.com/114453508/236694829-7aefcb9e-fca5-4424-a8ce-3b95615ef0af.png)
+
 <p align="center">Figura 35 - Tela de Login</p>
 
 ## Tela de Esqueceu sua Senha
