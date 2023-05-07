@@ -61,7 +61,7 @@ A funcionalidade permite que os usuários visualizem as postagens de interaçõe
 ### Funcionalidade 05: Postar Perguntas (RF-003)
 A aplicação deve permitir ao usuário postar perguntas na platarforma da `Study2gether`.
 
-![Postar perguntar](img/ct19postagemdeperguntaconcluida.jpg)
+![Postar perguntar](img/teladeperguntas.jpg)
 
 ##### Intruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
