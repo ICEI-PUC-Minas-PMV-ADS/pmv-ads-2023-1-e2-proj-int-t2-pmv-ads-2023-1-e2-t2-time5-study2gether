@@ -35,18 +35,18 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-07 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Perguntas por Eixo. |  Negativo  |  Grave  |
-| Registro da tela: | ![Pesquisa por Eixo](img/ct07filtroporeixo.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - Os Eixos ainda não foram inseridos para que o usuário possa selecioná-los. |
+| CT-07 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Perguntas por Eixo. |    |    |
+| Registro da tela: | ![Pesquisa por Eixo](img/ct07filtroporeixo.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - Os Eixos ainda não foram inseridos para que o usuário possa selecioná-los. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-08 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Perguntas por este Microfundamento. |  Negativo  |  Grave  |
-| Registro da tela: | ![Pesquisa por Microfundamentos](img/ct08filtropormicro.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - Os Microfundamentos ainda não foram inseridos para que o usuário possa selecioná-los. |
+| CT-08 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Perguntas por este Microfundamento. |    |    |
+| Registro da tela: | ![Pesquisa por Microfundamentos](img/ct08filtropormicro.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - Os Microfundamentos ainda não foram inseridos para que o usuário possa selecioná-los. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-09 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Perguntas por essa categoria. |  Negativo  |  Grave  |
-| Registro da tela: | ![Pesquisa por Categorias](img/ct09filtroporcategoria.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - As Categorias ainda não foram inseridas para que o usuário possa selecioná-las. |
+| CT-09 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Perguntas por essa categoria. |    |    |
+| Registro da tela: | ![Pesquisa por Categorias](img/ct09filtroporcategoria.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - As Categorias ainda não foram inseridas para que o usuário possa selecioná-las. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -80,8 +80,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-16 - RF-05 | Verificar se a busca de perguntas por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |  Negativo  |  Grave  |
-| Registro da tela: | ![Pesquisa por Palavra Chave](img/ct16perguntabarradepesquisa.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão de pesquisa não está funcionando. |
+| CT-16 - RF-05 | Verificar se a busca de perguntas por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
+| Registro da tela: | ![Pesquisa por Palavra Chave](img/ct16perguntabarradepesquisa.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão de pesquisa não está funcionando. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -94,13 +94,13 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-19 - RF-03 | Verificar se usuário consegue postar uma pergunta. |  Positivo  |  Sucesso  |
-| Registro da tela: | ![Postagem de Pergunta](img/ct19postagemdeperguntaconcluida.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de perguntas. |
+| CT-19 - RF-03 | Verificar se usuário consegue postar uma pergunta. |    |    |
+| Registro da tela: | ![Postagem de Pergunta](img/ct19postagemdeperguntaconcluida.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de perguntas. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |  Positivo  |  Grave  |
-| Registro da tela: | ![Postagem de Pergunta sem selecionar os campos "Categoria", "Eixo", "Microfundamento" e "Título".](img/ct20postagemsempreenchereixocategoriamicro.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de perguntas sem selecionar os campos “Categoria”, “Eixo”, “Microfundamento” e “Título”. |
+| CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
+| Registro da tela: | ![Postagem de Pergunta sem selecionar os campos "Categoria", "Eixo", "Microfundamento" e "Título".](img/ct20postagemsempreenchereixocategoriamicro.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de perguntas sem selecionar os campos “Categoria”, “Eixo”, “Microfundamento” e “Título”. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -124,8 +124,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |   Positivo |  Grave  |
-| Registro da tela: | ![Postagem de Pergunta sem selecionar os campos "Categoria", "Eixo", "Microfundamento" e "Título".](img/ct25postagemsempreenchereixocategoriamicro2.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de conteúdos sem selecionar os campos “Categoria”, “Eixo”, “Microfundamento” e “Título”. |
+| CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
+| Registro da tela: | ![Postagem de Pergunta sem selecionar os campos "Categoria", "Eixo", "Microfundamento" e "Título".](img/ct25postagemsempreenchereixocategoriamicro2.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de conteúdos sem selecionar os campos “Categoria”, “Eixo”, “Microfundamento” e “Título”. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -139,8 +139,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |  Negativo  |  Grave  |
-| Registro da tela: | ![Reagir com Emojis](img/ct28emojisnaoativos.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O usuário não consegue reagir às perguntas com emojis. |
+| CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| Registro da tela: | ![Reagir com Emojis](img/ct28emojisnaoativos.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O usuário não consegue reagir às perguntas com emojis. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -169,8 +169,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-34 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |  Negativo  |  Grave  |
-| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34enviarresposta.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão "Enviar" não está funcionando, logo não é possível enviar respostas para realizar o teste. |
+| CT-34 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
+| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34enviarresposta.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão "Enviar" não está funcionando, logo não é possível enviar respostas para realizar o teste. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
