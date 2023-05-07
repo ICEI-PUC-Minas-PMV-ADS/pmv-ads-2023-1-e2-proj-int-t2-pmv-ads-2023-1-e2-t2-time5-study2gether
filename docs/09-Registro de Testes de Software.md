@@ -5,23 +5,23 @@
 ## Avaliação
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. |    |    |
-| Registro da tela | | 
+| CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. | Sucesso | Alta |
+| Registro da tela: | ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. |    |    |
-| Registro da tela: | 
+| CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. | Sucesso | Alta |
+| Registro da tela:|  ![image](https://user-images.githubusercontent.com/107289791/236537356-19dff8b1-498d-44a1-95ec-30676545ca2e.png) | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. |    |    |
-| Registro da tela: | 
+| CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. | Sucesso | Alta |
+| Registro da tela:| ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. |    |    |
-| Registro da tela: |  
+| CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. | Sucesso | Alta |
+| Registro da tela:| ![image](https://user-images.githubusercontent.com/107289791/236538716-f2d96097-497d-48c5-89a0-6759ebc4efac.png) |  
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -86,6 +86,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-17 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
+| Registro da tela: || **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -105,17 +106,17 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-21 - RF-04 | Verificar se as respostas serão apresentadas corretamente junto às perguntas. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se as respostas foram apresentadas corretamente.  | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-22 - RF-04 | Verificar se o campo de comentários no rodapé das interações está registrando adequadamente os comentários feitos. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se o campo de comentários está registrando adequadamente os comentários feitos. | Grave |   
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-23 - RF-04 | Verificar se o campo de comentários no rodapé das indicações está registrando adequadamente os comentários feitos. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se o campo de comentários das indicações está registrando adequadamente os comentários feitos. | Grave | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -145,7 +146,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nas Respostas | Media | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -155,7 +156,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nos Comentários das Interações | Media | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -165,7 +166,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nos Comentários das Indicações | Media | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -184,54 +185,42 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-37 - RF-07 | Verificar se as interações do usuário estão sewndo apresentadas corretamente na página de Perfil do usuário. |    |    |
-| Registro da tela: |
+
+| CT-37 - RF-07 | Verificar se as interações do usuário estão sewndo apresentadas corretamente na página de Perfil do usuário. |  |  |
+| Registro da tela: |![Tela Histórico - Com apresentação da Funcionalidade Histórico por Post](https://user-images.githubusercontent.com/114453508/236344419-f282cc48-f13f-474c-a6a9-8d836d1bc35a.png) |Data do Teste: 04/05/23 - Resultado Negativo - A tela Histórico não apresentou todos os históricos aguardados nas devidas abas. As Perguntas e Interações, vieram corretamente, porém, ao testar o input de uma Resposta ela não veio para o Histórico. Quanto a aba Favoritos ainda não veio nenhum resultado. AÇÃO DE CORREÇÃO: Realizar revisão do código da funcionalidade Post Resposta e implementar a funcionalidade de "Favoritar" | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-38 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |    |    |
-| Registro da tela: |
+| CT-38 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |  |  |
+| Registro da tela: |    |  Teste não realizado - Nesta data - 05/05/23 - A aplicação ainda não foi publicada, devido ao cronograma. | Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-39 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Firefox. |    |    |
-| Registro da tela: |
+| Registro da tela: |  | Teste não realizado - Nesta data - 05/05/23 - A aplicação ainda não foi publicada, devido ao cronograma. | Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-40 - RNF-01 - RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Edge. |    |    |
-| Registro da tela: |
+| Registro da tela: |  | Teste não realizado - Nesta data - 05/05/23 - A aplicação ainda não foi publicada, devido ao cronograma. | Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-41 - RNF-04 | Verificar se o tempo de resposta da aplicação não será superior a 30 segundos. |    |    |
-| Registro da tela: |
+| Registro da tela: |  | Teste não realizado - Nesta data - 05/05/23 - A aplicação ainda não foi publicada, devido ao cronograma. | Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-42 - RNF-05 | Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |    |    |
-| Registro da tela: |
+| Registro da tela: |  | Teste não realizado - Nesta data - 05/05/23 - A aplicação ainda não foi publicada, devido ao cronograma. | Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-43 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |
-
-| **Caso de teste** | **Requisitos Associados**|
-|--|--|
-|CT-44 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
+| CT-43 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |    |    |
+| Registro da tela: |![image](https://user-images.githubusercontent.com/114453508/236561619-4a6477e1-e225-4cca-a872-f4fdf662ee36.png) | Data do Teste: 05/05/23 - Resultado Negativo - A tela Histórico não apresentou uma responsividade satisfatória. AÇÃO DE CORREÇÃO: Realizar revisão do CSS com a aplicação do @Media para correção da superposição das telas em dimensões menores. | Médio |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-44 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |
+| CT-44 - RNF-02 - RNF-06 | Verificar se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| Registro da tela: |![image](https://user-images.githubusercontent.com/114453508/236567015-24cf3efc-453e-4309-948c-8e142ca7a0b8.png)| Data do Teste: 05/05/23 - Resultado Positivo - A Tela Editar Perfil apresentou uma qualidade satisfatória no contraste dos seus elementos. | - |
 
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-45 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |
-
-| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
-|:---: |:---: |:---: |:---: |
-| CT-46 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
-| Registro da tela: |

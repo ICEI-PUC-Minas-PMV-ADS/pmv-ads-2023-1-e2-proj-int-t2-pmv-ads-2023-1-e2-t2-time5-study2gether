@@ -49,7 +49,7 @@ namespace Study2gether.Controllers
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).OrderByDescending(o => o.created_date).ToList();
+            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -59,7 +59,7 @@ namespace Study2gether.Controllers
         public async Task<IActionResult> Indicacoes([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)
         {
             
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && User.IsInRole("admin"))
             {
                 var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
                 var axis = await _context.Axis.Where(c => axisId.Contains(c.idAxis)).ToListAsync();
