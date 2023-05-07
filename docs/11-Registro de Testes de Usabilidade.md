@@ -26,11 +26,10 @@
 |Identificar se a pergunta foi publicada com sucesso|Sim|Sim|Sim|Sim|
 |--|--|--|--|--|
 |**Tarefa 3: Pesquisa de Indicações**|||||
-|Preencher campo de pesquisa|||||
-|Preencher filtros de pesquisa|||||
-|Pesquisar|||||
-|Finalizar a publicação da pergunta|||||
-|Conferir se os resultados desejados foram apresentados|||||
+|Preencher campo de pesquisa|Não|Não|Não|Não|
+|Preencher filtros de pesquisa|Não|Não|Não|Não|
+|Pesquisar|Não|Não|Não|Não|
+|Conferir se os resultados desejados foram apresentados|Não|Não|Não|Não|
 |--|--|--|--|--|
 |**Tarefa 4: Postagem de interações**|||||
 |Acessar área de interações|Sim, o layout da pagina é intuitivo|Sim, o botão está bem identificado|Sim, as informações estão claras|Parcialmente, talvez falte uma idenficiação clara da pagina em questão|
