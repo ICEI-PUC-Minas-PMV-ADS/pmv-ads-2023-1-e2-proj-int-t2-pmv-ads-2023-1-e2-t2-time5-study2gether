@@ -76,7 +76,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <div>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Historico"><p>Oi, @User.Identity.Name</p></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Historico"><p style="color: white;">Oi, @User.Identity.Name</p></a>
                         </div>
                         <div>
                             <a class="btn btn-primary ml-2 mr-5" asp-area="" asp-controller="Users" asp-action="Logout">Sair</a>
