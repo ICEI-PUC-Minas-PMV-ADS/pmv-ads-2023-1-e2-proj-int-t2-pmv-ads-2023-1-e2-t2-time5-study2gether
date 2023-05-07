@@ -9,7 +9,7 @@ A funcionalidade permite que o usuário faça uma postagem na pagina de Interaç
 
 ![Publicação de interação](https://user-images.githubusercontent.com/114435981/236596298-7cd632ef-6ee6-4599-a987-28b4ae6e4869.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. clicar em Interações
 3. Clicar em '+' (usuários já cadastrados e previamente logados)
@@ -19,7 +19,7 @@ A funcionalidade permite que o usuário realize com o cadastro na platarforma da
 
 ![image](https://user-images.githubusercontent.com/107289791/236481283-d9019ff0-20fd-4877-824b-591f0c52fa27.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. Clique no botão `Cadastre-se`
 3. Insira um `e-mail` com o formato `nome@sga.pucminas.br`
@@ -36,7 +36,7 @@ A funcionalidade permite que o usuário realize com sucesso o login na platarfor
 
 ![image](https://user-images.githubusercontent.com/107289791/236481848-2788d278-4b83-44b6-951e-0d2e6676061d.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. Clique no botão `Login`
 3. Insira `e-mail` e `senha` já cadastrados previamente
@@ -48,7 +48,7 @@ A funcionalidade permite que os usuários visualizem as postagens de interaçõe
 
 ![Pagina de Interações](https://user-images.githubusercontent.com/114435981/236595542-a8e16566-daaa-4e59-af18-8db9534eebd1.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. clicar em Interações
 
@@ -57,7 +57,7 @@ A aplicação deve permitir ao usuário postar perguntas na platarforma da `Stud
 
 ![Postar perguntar](img/ct19postagemdeperguntaconcluida.jpg)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. clicar em "Perguntas"
 3. Clicar em '+' (usuários já cadastrados e previamente logados)
@@ -71,7 +71,7 @@ A aplicação deve permitir ao usuário responder as perguntas na platarforma da
 
 ![Postar resposta](img/ct34enviarresposta.jpg)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. Clicar em "Perguntas"
 3. Selecionar uma Pergunta
@@ -84,7 +84,7 @@ A funcionalidade permite que o usuário, logado na `Study2gether`, acesse sua p�
 
 ![Página de Perfil e Histórico](https://user-images.githubusercontent.com/12260321/236688605-a3024173-1971-451e-9c82-f2dc1af67902.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
 3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
@@ -101,7 +101,7 @@ A funcionalidade permite que o usuário, logado na `Study2gether`, acesse seu pe
 
 ![Editar Perfil](https://user-images.githubusercontent.com/12260321/236688846-03e2b3c5-d952-4256-9dbe-6dc66fe913fd.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://user-images.githubusercontent.com/12260321/236688560-a4f53835-79c8-4227-b541-157af76215a0.png)
 2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
 3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
@@ -121,7 +121,7 @@ A funcionalidade permite que o usuário, logado na `Study2gether`, exclua sua co
 
 ![Excluir Perfil](https://user-images.githubusercontent.com/12260321/236689149-b2fd74bc-7bea-4a10-9744-b04b9989d393.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://user-images.githubusercontent.com/12260321/236688560-a4f53835-79c8-4227-b541-157af76215a0.png)
 2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
 3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
@@ -143,13 +143,24 @@ A funcionalidade permite que o usuário logado na `Study2gether` acesse seu Perf
 
 ![Alterar senha](https://user-images.githubusercontent.com/12260321/236688584-29440457-fa83-4c6e-8022-523ae1209be3.png)
 
-##### Intruções de acesso
+##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
 2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
 3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
 4. Na tela Perfil/Histórico, clicar em `Alterar senha`
 5. Na tela `Alterar Senha`, inserir qual a senha atual, qual será a senha nova e confirmar a nova senha
 6. Clicar em `Alterar Senha`.
+
+### Funcionalidade 11: A aplicação deve permitir ao administrador inserir postagem de indicações de materiais relevantes. (RF-011)
+
+A aplicação deve permitir ao administrador inserir postagem de indicações de materiais relevantes. `Study2gether`.
+
+![image](https://user-images.githubusercontent.com/96087622/236625920-4546a3d9-c931-4a82-8b53-4249ca0130fa.png)
+
+##### Instruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Acessar uma conta com permissão de administrador
+3. Clicar em Indicações
 
 ##### Artefatos produzidos
 * [Historico.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Historico.cshtml)
