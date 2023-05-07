@@ -17,7 +17,7 @@ A funcionalidade permite que o usuário faça uma postagem na pagina de Interaç
 ### Funcionalidade 02: Efetuar Cadastro	(RF-006)
 A funcionalidade permite que o usuário realize com o cadastro na platarforma da `Study2gether`.
 
-![image](https://user-images.githubusercontent.com/107289791/236481283-d9019ff0-20fd-4877-824b-591f0c52fa27.png)
+![Screenshot 2023-05-07 143228](https://user-images.githubusercontent.com/107289791/236693557-0f332727-bfe7-4258-a912-ece1326ff57b.png)
 
 ##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
@@ -34,7 +34,7 @@ A funcionalidade permite que o usuário realize com o cadastro na platarforma da
 ### Funcionalidade 03: Efetuar Login	(RF-006)
 A funcionalidade permite que o usuário realize com sucesso o login na platarforma da `Study2gether`.
 
-![image](https://user-images.githubusercontent.com/107289791/236481848-2788d278-4b83-44b6-951e-0d2e6676061d.png)
+![Screenshot 2023-05-07 143223](https://user-images.githubusercontent.com/107289791/236693541-74942825-5920-4273-a7e2-b30db3eca14e.png)
 
 ##### Instruções de acesso
 1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
