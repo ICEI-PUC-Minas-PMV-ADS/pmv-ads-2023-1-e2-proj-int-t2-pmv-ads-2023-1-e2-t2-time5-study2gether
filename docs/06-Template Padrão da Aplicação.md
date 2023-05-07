@@ -84,14 +84,14 @@ xxxxxxx
 
 Este layout é utilizado para a visualização do Tela de Cadastro simplificado do Usuário. Em um segundo momento, o usuário poderá Editar seu Perfil já no ambiente logado, em tela específica.
 
-![Captura de tela 2023-05-05 203628](https://user-images.githubusercontent.com/114453508/236590395-af430d30-100c-4b5f-a481-edbeb3dde63c.png)
+![Screenshot 2023-05-07 143228](https://user-images.githubusercontent.com/107289791/236693402-bcd930d4-786c-423b-b9cf-1a89c2b9db24.png)
 <p align="center">Figura 34 - Tela Cadastro</p>
 
 ## Tela de Login
 
 Este layout é utilizado para a visualização do Login de Usuário. 
 
-![Captura de tela 2023-05-05 204145](https://user-images.githubusercontent.com/114453508/236590540-49fae0d4-2eb8-4b89-9623-1df2d21ad0c2.png)
+![Screenshot 2023-05-07 143223](https://user-images.githubusercontent.com/107289791/236693383-fa229d4f-05b8-4313-80b3-f17f151d6990.png)
 <p align="center">Figura 35 - Tela de Login</p>
 
 ## Tela de Esqueceu sua Senha
