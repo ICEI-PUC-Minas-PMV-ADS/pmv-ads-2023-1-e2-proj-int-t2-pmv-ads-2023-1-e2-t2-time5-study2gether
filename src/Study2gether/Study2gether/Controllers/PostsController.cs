@@ -151,7 +151,7 @@ namespace Study2gether.Controllers
                     _context.Add(resposta);
                     _context.SaveChanges();
                     
-                    return RedirectToAction("Detalhes", "Pergunta", new { id = resposta.idPost });
+                    return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
                 }
             
             
