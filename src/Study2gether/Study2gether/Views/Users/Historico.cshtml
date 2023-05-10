@@ -81,9 +81,15 @@
 
         </div>
 
-        <div id="Favoritos" class="tabcontent">
-            <h6>Favority Subject Title Title</h6>
-            <p>The best way to do something is to plan before.</p>
+        <div id="Favoritos" class="tabcontent">         
+            @foreach (var reacao in @Model.Reactions.Where(r => r.Name == "star"))
+            {
+                <div>
+                    <h6>@reacao.Post.title</h6>
+                    <p>@reacao.Post.title</p>
+                </div>
+                <hr>
+            }           
         </div>
     </div>
     <script src="../../js/historico.js"></script>
