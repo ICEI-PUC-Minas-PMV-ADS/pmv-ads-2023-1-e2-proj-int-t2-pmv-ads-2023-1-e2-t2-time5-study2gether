@@ -119,8 +119,7 @@ p.historicoTitle {
     min-width: 310px;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    height: 100px;
-    min-height: 180px;
+    min-height: 170px;
     overflow-y: scroll;
     background-color: white;
 }

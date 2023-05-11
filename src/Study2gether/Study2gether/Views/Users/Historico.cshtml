@@ -17,15 +17,17 @@
     <div id="container-a">
         <div class="sobreVoce-redesSociais">
             <label style="color: white" asp-for="description" class="control-label">Sobre Você</label>
-            <div class="box-description-socialMedia">
+            <textarea disabled asp-for="description" class="box-description-socialMedia">
                 <p>@Model.description</p>
-            </div>
+            </textarea>
+        
+            
         </div>
         <div class="sobreVoce-redesSociais">
             <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais</label>
-            <div class="box-description-socialMedia">
+            <textarea disabled asp-for="socialMedia" class="box-description-socialMedia">
                 <p>@Model.socialMedia</p>
-            </div>
+           </textarea>
         </div>
         <div class="form-group">
             <a class="btn btn-info" asp-controller="Users" asp-action="EditarPerfil">Editar Perfil</a>
