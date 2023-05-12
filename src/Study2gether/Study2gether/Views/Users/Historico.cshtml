@@ -19,9 +19,7 @@
             <label style="color: white" asp-for="description" class="control-label">Sobre Você</label>
             <textarea disabled asp-for="description" class="box-description-socialMedia">
                 <p>@Model.description</p>
-            </textarea>
-        
-            
+            </textarea>                 
         </div>
         <div class="sobreVoce-redesSociais">
             <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais</label>
@@ -51,8 +49,8 @@
                 @if (pergunta.type == Study2gether.Models.Types.Question)
                 {
                     <div>
-                        <h6>@pergunta.title</h6>
-                        <p>@pergunta.content</p>
+                        <a href="/Posts/Perguntas/obj.idPost"><h6>@pergunta.title</h6></a>
+                        <p id="limitContent">@pergunta.content</p>
                     </div>
                     <hr>
                 }
@@ -61,9 +59,9 @@
         <div id="Respostas" class="tabcontent">
             @foreach (var resposta in @Model.Answers)
             {
-                <div>
-                    <h6>@resposta.title</h6>
-                    <p>@resposta.content</p>
+                <div>                    
+                    <a href="/Posts/Respostas/obj.idPost"><h6>@resposta.title</h6></a>                   
+                    <p id="limitContent">@resposta.content</p>
                 </div>
                 <hr>
             }
@@ -73,22 +71,20 @@
             {
                 @if (interacao.type == Study2gether.Models.Types.Interaction)
                 {
-                    <div>
-                        <h6>@interacao.title</h6>
-                        <p>@interacao.content</p>
-                    </div>
+                    <div>                  
+                        <a href="/Posts/Interacoes/obj.idPost"><h6>@interacao.title</h6></a>
+                        <p id="limitContent">@interacao.content</p>
+                    </div>                   
                     <hr>
                 }
             }
-
         </div>
-
         <div id="Favoritos" class="tabcontent">         
             @foreach (var reacao in @Model.Reactions.Where(r => r.Name == "star"))
             {
                 <div>
-                    <h6>@reacao.Post.title</h6>
-                    <p>@reacao.Post.title</p>
+                    <a href="/Posts/Favoritos/obj.idPost"><h6>@reacao.Post.title</h6></a>
+                    <p id="limitContent">@reacao.Post.content</p>
                 </div>
                 <hr>
             }           
