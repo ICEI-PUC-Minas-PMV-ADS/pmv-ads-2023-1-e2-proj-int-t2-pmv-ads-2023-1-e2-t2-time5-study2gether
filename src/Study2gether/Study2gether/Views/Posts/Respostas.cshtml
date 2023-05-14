@@ -4,7 +4,7 @@
     ViewData["Title"] = "Respostas";
 }
 @{
-    var postList = ViewData["perguntas"] as Post;
+    var postList = ViewData["Perguntas"] as Post;
 }
 
 
@@ -23,38 +23,43 @@
         <div id="replies-container">
 
 
-            <div class="caixa card rounded-lg mb-3">
-                <div class="card-header">
-                    <h4 class="text-center">@postList.title</h4>
-                </div>
-                <div class="card-body">
-                    <div>@postList.content</div>
-                </div>
-                <!--Text area-->
-                <div class="container">
-                    <form asp-action="Respostas">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-floating">
-                            <div class="form-group">
-                                <label asp-for="title" class="control-label">Título</label>
-                                <input asp-for="title" class="form-control" />
-                                <span asp-validation-for="title" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="content" class="control-label">Conteúdo</label>
-                                <input asp-for="content" class="form-control" />
-                                <span asp-validation-for="content" class="text-danger"></span>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary" type="submit">Enviar</button>
-                                <a class="btn btn-secondary" asp-action="Create" role="button">Cancelar</a>
-                            </div>
-                        </div>
 
-                    </form>
-                </div>
+            @foreach (var answer in postList)
+            {
+                <div class="caixa card rounded-lg mb-3">
+                    <div class="card-header">
+                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@answer.idPost">@answer.title</a></h4>
+                    </div>
+                    <div class="card-body">
+                        <div>@Html.Raw(answer.content)</div>
+                    </div>
 
-            </div>
+                    <!--Text area-->
+                    <div class="container">
+                        <form asp-action="Respostas">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-floating">
+                                <div class="form-group">
+                                    <label asp-for="title" class="control-label">Título</label>
+                                    <input asp-for="title" class="form-control" />
+                                    <span asp-validation-for="title" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="content" class="control-label">Conteúdo</label>
+                                    <input asp-for="content" class="form-control" />
+                                    <span asp-validation-for="content" class="text-danger"></span>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                    <a class="btn btn-secondary" asp-controller="Posts" asp-action="Perguntas" role="button">Cancelar</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            }
             <div class="card-footer">
 
                 <div class="reactions d-inline">
@@ -69,7 +74,8 @@
 
                 <label class="float-right" for="data-resposta"><small>Data da resposta: @postList.created_date)</small></label>
             </div>
-        </div>
+            <!-- </div>-->
 
+        </div>
     </div>
 </div>

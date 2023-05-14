@@ -14,13 +14,15 @@ namespace Study2gether.Controllers
     public class PostsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private object answerId;
+        private object post;
 
         public PostsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-                
+
         public IActionResult PostagemPergunta()
         {
             return View();
@@ -58,7 +60,7 @@ namespace Study2gether.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Indicacoes([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)
         {
-            
+
             if (ModelState.IsValid && User.IsInRole("admin"))
             {
                 var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
@@ -66,8 +68,8 @@ namespace Study2gether.Controllers
                 var microfoundation = await _context.Microfoundation.Where(c => microfoundationId.Contains(c.idMicrofoundation)).ToListAsync();
 
                 foreach (var obj in category) { post.Categories.Add(obj); }
-                foreach (var obj in axis){post.Axes.Add(obj);}
-                foreach (var obj in microfoundation) {post.Microfoundations.Add(obj);}
+                foreach (var obj in axis) { post.Axes.Add(obj); }
+                foreach (var obj in microfoundation) { post.Microfoundations.Add(obj); }
 
                 post.views = 0;
                 post.created_date = DateTime.Now;
@@ -139,22 +141,26 @@ namespace Study2gether.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Respostas([Bind("title,content")] Answer resposta, Guid id)
+        public IActionResult Respostas([Bind("title,content")] Answer resposta, Guid id, List<Guid> answerId)
         {
-            
-                if (ModelState.IsValid)
-                {
-                    resposta.idAnswer = Guid.NewGuid();
-                    resposta.idPost = id;
-                    resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
-                               
-                    _context.Add(resposta);
-                    _context.SaveChanges();
-                    
-                    return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
-                }
-            
-            
+
+            if (ModelState.IsValid)
+            {
+                var answer = _context.Answer.Where(c => answerId.Contains(c.idAnswer)).ToList();
+
+                foreach (var obj in answer) { post.Answer.Add(obj); }
+
+                resposta.idAnswer = Guid.NewGuid();
+                resposta.idPost = id;
+                resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+
+                _context.Add(resposta);
+                _context.SaveChanges();
+
+                return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
+            }
+
+
             return View(resposta);
         }
         public IActionResult Perguntas()
@@ -168,7 +174,7 @@ namespace Study2gether.Controllers
             return View();
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Perguntas([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)

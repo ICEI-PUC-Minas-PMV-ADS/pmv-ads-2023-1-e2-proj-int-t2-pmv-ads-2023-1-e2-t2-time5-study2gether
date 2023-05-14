@@ -18,6 +18,7 @@ namespace Study2gether.Models
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Reaction> Reactions { get; set; }
         public object Posts { get; internal set; }
+        public IEnumerable<object> Answer { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
