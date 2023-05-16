@@ -18,13 +18,13 @@
         <div class="sobreVoce-redesSociais">
             <label style="color: white" asp-for="description" class="control-label">Sobre Você</label>
             <textarea disabled asp-for="description" class="box-description-socialMedia">
-                <p>@Model.description</p>
+                @Model.description
             </textarea>                 
         </div>
         <div class="sobreVoce-redesSociais">
             <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais</label>
             <textarea disabled asp-for="socialMedia" class="box-description-socialMedia">
-                <p>@Model.socialMedia</p>
+                @Model.socialMedia
            </textarea>
         </div>
         <div class="form-group">
@@ -80,7 +80,7 @@
             }
         </div>
         <div id="Favoritos" class="tabcontent">         
-            @foreach (var reacao in @Model.Reactions.Where(r => r.Name == "star"))
+            @foreach (var reacao in @Model.Reactions.Where(r => r.Name == "Star"))
             {
                 <div>
                     <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@reacao.idPost"><h6>@reacao.Post.title</h6></a>
