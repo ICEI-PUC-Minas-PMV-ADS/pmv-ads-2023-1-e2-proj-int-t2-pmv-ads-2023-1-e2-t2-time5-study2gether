@@ -163,7 +163,7 @@ namespace Study2gether.Controllers
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).ToList();
+            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)2).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -201,8 +201,34 @@ namespace Study2gether.Controllers
         public IActionResult ReactToPost(Guid idPost, string reactioName)
         {
             var user = Guid.Parse(User.FindFirstValue("idUser"));
-            var shouldCreate = _context.Reactions.Any(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
-            if (!shouldCreate)
+
+            if(reactioName == "Star")
+            {
+                var shouldCreate = _context.Reactions.Any(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
+                if (!shouldCreate)
+                {
+                    var reaction = new Reaction();
+                    reaction.Id = Guid.NewGuid();
+                    reaction.Name = reactioName;
+                    reaction.idUser = user;
+                    reaction.idPost = idPost;
+                    _context.Reactions.Add(reaction);
+                    _context.SaveChanges();
+                    return Json(new { status = "success", message = "Post favoritado com successo", type = "FavAdd" });
+                }
+                else
+                {
+                    var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
+                    _context.Reactions.Remove(reaction);
+                    _context.SaveChanges();
+                    return Json(new { status = "success", message = "Post removido dos favoritos", type = "FavRemove" });
+                }
+
+            }
+
+            var userReaction = _context.Reactions.FirstOrDefault(m => m.Name != "Star" &&  m.idPost == idPost && m.idUser == user);
+
+            if (userReaction == null)
             {
                 var reaction = new Reaction();
                 reaction.Id = Guid.NewGuid();
@@ -211,29 +237,19 @@ namespace Study2gether.Controllers
                 reaction.idPost = idPost;
                 _context.Reactions.Add(reaction);
                 _context.SaveChanges();
+                return Json(new { status = "success", message = "Reação adiciona com sucesso", type="add" });
             }
-            else
+            else if(userReaction.Name == reactioName)
             {
                 var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
                 _context.Reactions.Remove(reaction);
                 _context.SaveChanges();
+                return Json(new { status = "success", message = "Reação removida com sucesso", type = "remove" });
             }
-
-            var post = _context.Post.First(m => m.idPost == idPost);
-            if (post.type == (Types)0)
+            else
             {
-                return RedirectToAction(nameof(Indicacoes));
+                return Json(new { status = "Error", message = "Você já reagiu a este post", type = "error" });
             }
-            else if (post.type == (Types)1)
-            {
-                return RedirectToAction(nameof(Interacoes));
-            }
-            else if (post.type == (Types)2)
-            {
-                return RedirectToAction(nameof(Perguntas));
-            }
-
-            return RedirectToAction("Index", "Home");
         }
     }
 }
