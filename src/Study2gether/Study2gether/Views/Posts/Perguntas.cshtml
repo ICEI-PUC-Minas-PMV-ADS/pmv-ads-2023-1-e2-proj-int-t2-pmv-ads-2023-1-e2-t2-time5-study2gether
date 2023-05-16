@@ -43,7 +43,7 @@
 
                                 <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
-                                <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
+                                <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
                                 <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
 
