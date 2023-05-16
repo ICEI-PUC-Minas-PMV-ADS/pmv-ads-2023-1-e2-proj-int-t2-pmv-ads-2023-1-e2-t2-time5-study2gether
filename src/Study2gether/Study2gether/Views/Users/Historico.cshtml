@@ -17,15 +17,15 @@
     <div id="container-a">
         <div class="sobreVoce-redesSociais">
             <label style="color: white" asp-for="description" class="control-label">Sobre Você</label>
-            <div class="box-description-socialMedia">
-                <p>@Model.description</p>
-            </div>
+            <textarea disabled asp-for="description" class="box-description-socialMedia">
+                @Model.description
+            </textarea>                 
         </div>
         <div class="sobreVoce-redesSociais">
             <label style="color: white" asp-for="socialMedia" class="control-label">Redes Sociais</label>
-            <div class="box-description-socialMedia">
-                <p>@Model.socialMedia</p>
-            </div>
+            <textarea disabled asp-for="socialMedia" class="box-description-socialMedia">
+                @Model.socialMedia
+           </textarea>
         </div>
         <div class="form-group">
             <a class="btn btn-info" asp-controller="Users" asp-action="EditarPerfil">Editar Perfil</a>
@@ -49,8 +49,8 @@
                 @if (pergunta.type == Study2gether.Models.Types.Question)
                 {
                     <div>
-                        <h6>@pergunta.title</h6>
-                        <p>@pergunta.content</p>
+                        <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@pergunta.idPost"><h6>@pergunta.title</h6></a>
+                        <p id="limitContent">@Html.Raw(@pergunta.content)</p>
                     </div>
                     <hr>
                 }
@@ -59,9 +59,9 @@
         <div id="Respostas" class="tabcontent">
             @foreach (var resposta in @Model.Answers)
             {
-                <div>
-                    <h6>@resposta.title</h6>
-                    <p>@resposta.content</p>
+                <div>                    
+                    <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@resposta.idPost"><h6>@resposta.title</h6></a>                   
+                    <p id="limitContent">@Html.Raw(@resposta.content)</p>
                 </div>
                 <hr>
             }
@@ -71,19 +71,23 @@
             {
                 @if (interacao.type == Study2gether.Models.Types.Interaction)
                 {
-                    <div>
-                        <h6>@interacao.title</h6>
-                        <p>@interacao.content</p>
-                    </div>
+                    <div>                  
+                        <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@interacao.idPost"><h6>@interacao.title</h6></a>
+                        <p id="limitContent">@Html.Raw(@interacao.content)</p>
+                    </div>                   
                     <hr>
                 }
             }
-
         </div>
-
-        <div id="Favoritos" class="tabcontent">
-            <h6>Favority Subject Title Title</h6>
-            <p>The best way to do something is to plan before.</p>
+        <div id="Favoritos" class="tabcontent">         
+            @foreach (var reacao in @Model.Reactions.Where(r => r.Name == "Star"))
+            {
+                <div>
+                    <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@reacao.idPost"><h6>@reacao.Post.title</h6></a>
+                    <p id="limitContent">@Html.Raw(@reacao.Post.content)</p>
+                </div>
+                <hr>
+            }           
         </div>
     </div>
     <script src="../../js/historico.js"></script>

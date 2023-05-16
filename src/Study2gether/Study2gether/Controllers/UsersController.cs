@@ -136,6 +136,8 @@ namespace Study2gether.Controllers
             var user = await _context.Users
                 .Include(teste => teste.Posts)
                 .Include(teste => teste.Answers)
+                .Include(r => r.Reactions)
+                .ThenInclude(r => r.Post)
                 .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
 
             return View("Historico", user);

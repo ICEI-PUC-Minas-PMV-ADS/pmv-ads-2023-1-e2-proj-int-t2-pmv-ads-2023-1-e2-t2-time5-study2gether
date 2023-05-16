@@ -88,8 +88,16 @@ p.historicoTitle {
     vertical-align: middle;   
 }
 
+#limitContent {
+    max-width: 150ch;
+    overflow: hidden auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 #sobreVoce-redesSociais {
     height: 200px;
+    min-width: 150px;
 }
 
 #fotoPerfil {
@@ -116,56 +124,48 @@ p.historicoTitle {
     border: 1px solid #ccc;
     font-size: 12px;
     width: 100%;
-    min-width: 310px;
+    min-width: 150px;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    height: 100px;
-    min-height: 180px;
+    min-height: 170px;
     overflow-y: scroll;
     background-color: white;
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 550px) {
     #container-b {
-        min-width: 250px;
         width: 100%;
-        float: left;
         right: 0px;
     }
 
-@media screen and (max-width: 480px) {
     #container-a {
-        min-width: 250px;
+        min-width: 150px;
         width: 100%;
+        margin-right: 5%;
+    }
+}
+
+
+@media screen and (min-width:551px) and (max-width: 804px) {
+    #container-b {
+        min-width: 100px;
         float: left;
-
+        width: 40%;
+        margin-right: 3%;
     }
-}       
-/*
-@media screen and (min-width: 768px) {
-    .description-socialMedia {
 
+    #container-a {
+        min-width: 100px;
+        float: left;
+        width: 40%;
+        margin-left: 3%;
+     }
 
+    .perfilHistorico {
+        width: 96%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
-
-@media screen and (min-width: 768px) {
-    .description-socialMedia {
-
-
-    }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-    {}}
-
-
-
-320px — 480px: dispositivos móveis.
-481px — 768px: iPads, tablets.
-769px — 1024px: telas pequenas, laptops.
-1025px — 1200px: desktops, telas grandes.
-1201px e acima — telas muito grandes, TVs.
-
-*/
+   
