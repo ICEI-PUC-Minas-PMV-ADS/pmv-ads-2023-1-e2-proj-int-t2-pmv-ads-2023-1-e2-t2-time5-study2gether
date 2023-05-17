@@ -50,8 +50,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-10 - RF- |    |    |    |
-| Registro da tela: |
+| CT-10 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Interações por Eixo. |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -60,8 +60,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-12 - RF- |    |    |    |
-| Registro da tela: |
+| CT-12 - RF- 02 | Verificar se o filtro por Categoria está fazendo a busca correta de Interações por essa categoria.  |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -90,8 +90,8 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-18 - RF- |    |    |    |
-| Registro da tela: |
+| CT-18 - RF-05 | Verificar se a busca de indicações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto.   |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -148,6 +148,7 @@
 |:---: |:---: |:---: |:---: |
 | CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nas Respostas | Media | 
+| Registro da tela: | ![Captura de tela 2023-05-16 220427](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/87c4ba02-f98b-4bd3-845f-1d21d2510674)| Data do Teste: 16/05/23 - Resultado Positivo - O usuário pode reagir às Respostas com emojis | - | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -186,38 +187,41 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-37 - RF-07 | Verificar se as interações do usuário estão sewndo apresentadas corretamente na página de Perfil do usuário. |  |  |
+| CT-37 - RF-07 | Verificar se as interações do usuário estão sendo apresentadas corretamente na página de Perfil do usuário. |  |  |
 | Registro da tela: |![Tela Histórico - Com apresentação da Funcionalidade Histórico por Post](https://user-images.githubusercontent.com/114453508/236344419-f282cc48-f13f-474c-a6a9-8d836d1bc35a.png) |Data do Teste: 04/05/23 - Resultado Negativo - A tela Histórico não apresentou todos os históricos aguardados nas devidas abas. As Perguntas e Interações, vieram corretamente, porém, ao testar o input de uma Resposta ela não veio para o Histórico. Quanto a aba Favoritos ainda não veio nenhum resultado. AÇÃO DE CORREÇÃO: Realizar revisão do código da funcionalidade Post Resposta e implementar a funcionalidade de "Favoritar" | Grave |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/53580704-7f74-43b3-b6e9-e888c39c4c2d) |Data do Teste: 16/05/23 - Resultado Positivo - A tela Histórico apresentou todas as ações de Postagens e Favoritados conforme planejado nas devidas abas, com a formatação adequada e com o link no título levando o usuário ao Post na tela de origem, possibilitando sua leitura completa. Foi realizado a implementação da funcionalidade de "Favoritar" aqueles conteúdos e postagens de interesse. | - |
+
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-38 - RF- |    |    |    |
-| Registro da tela: |
+| CT-38 - RNF-01 e RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-39 - RF- |    |    |    |
-| Registro da tela: |
+| CT-39 - RNF-01 e RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Firefox. |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-40 - RF- |    |    |    |
-| Registro da tela: |
+| CT-40 - RNF-01 e RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Edge. |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-41 - RF- |    |    |    |
-| Registro da tela: |
+| CT-41 - RNF-04 | Verificar se o tempo de resposta da aplicação não será superior a 30 segundos. |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-42 - RF- |    |    |    |
-| Registro da tela: |
+| CT-42 - RNF-05 | Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |    |    |
+| Registro da tela: | | | |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-43 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |    |    |
 | Registro da tela: |![image](https://user-images.githubusercontent.com/114453508/236561619-4a6477e1-e225-4cca-a872-f4fdf662ee36.png) | Data do Teste: 05/05/23 - Resultado Negativo - A tela Histórico não apresentou uma responsividade satisfatória. AÇÃO DE CORREÇÃO: Realizar revisão do CSS com a aplicação do @Media para correção da superposição das telas em dimensões menores. | Médio |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/b91afb8e-3e7c-4ce7-a300-be01d15c6eaf)| Data do Teste: 16/05/23 - Resultado Positivo - A tela Histórico apresentou uma responsividade satisfatória. | - |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
