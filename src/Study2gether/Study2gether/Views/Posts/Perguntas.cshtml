@@ -29,7 +29,7 @@
             {
                 <div class="caixa card rounded-lg mb-3">
                     <div class="card-header">
-                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="obj.idPost">@obj.title</a></h4>
+                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
                     </div>
                     <div class="card-body">
                         <div>@Html.Raw(@obj.content)</div>
