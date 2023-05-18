@@ -143,12 +143,12 @@
 |:---: |:---: |:---: |:---: |
 | CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: | ![Reagir com Emojis](img/ct28emojisnaoativos.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O usuário não consegue reagir às perguntas com emojis. | Grave |
+| Registro da tela: | ![Captura de tela 2023-05-16 220427](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/87c4ba02-f98b-4bd3-845f-1d21d2510674)| Data do Teste: 16/05/23 - Resultado Positivo - O usuário pode reagir às Perguntas com emojis | - | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
 | Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nas Respostas | Media | 
-| Registro da tela: | ![Captura de tela 2023-05-16 220427](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/87c4ba02-f98b-4bd3-845f-1d21d2510674)| Data do Teste: 16/05/23 - Resultado Positivo - O usuário pode reagir às Respostas com emojis | - | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
