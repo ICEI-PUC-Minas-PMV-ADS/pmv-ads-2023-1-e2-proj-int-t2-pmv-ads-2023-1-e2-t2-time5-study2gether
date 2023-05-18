@@ -86,7 +86,7 @@ namespace Study2gether.Controllers
             return RedirectToAction(nameof(Indicacoes));
         }
 
-        public IActionResult Interacoes()
+        public IActionResult Interacoes(string searchText)
         {
             var categories = _context.Category.ToList();
             var axes = _context.Axis.ToList();
@@ -95,7 +95,14 @@ namespace Study2gether.Controllers
             ViewData["Axes"] = axes;
             ViewData["Microfoundations"] = microfoundations;
             ViewData["postList"] = _context.Post.Where(o => o.type == (Types)1).Include(o => o.Reactions).OrderByDescending(o => o.created_date).ToList();
+            ViewData["FilteredPostList"] = _context.Post
+               .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+               .Where(p => p.type == Types.Interaction)
+               .Include(p => p.Reactions)
+               .OrderByDescending(p => p.created_date)
+               .ToList();
             var applicationDbContext = _context.Post.Include(p => p.User);
+
             return View();
         }
 
@@ -128,6 +135,7 @@ namespace Study2gether.Controllers
             return RedirectToAction(nameof(Interacoes));
         }
 
+    
         public IActionResult PostagemResposta()
         {
             return View();
