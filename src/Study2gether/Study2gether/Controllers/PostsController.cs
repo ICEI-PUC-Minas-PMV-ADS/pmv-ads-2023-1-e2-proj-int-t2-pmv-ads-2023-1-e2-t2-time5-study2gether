@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -159,11 +160,21 @@ namespace Study2gether.Controllers
         }
         public IActionResult Perguntas()
         {
-
+            string value = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("axis");
+            
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).ToList();
+            if (value == "" || value == null)
+            {
+                ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).ToList();
+                }
+            else
+            {
+
+                ViewData["Filters"] = _context.Axis.First(x => x.idAxis == Guid.Parse(value)).name; //Exibir mensagem na tela
+                ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).Where(a => a.Axes.Any(x => x.idAxis == Guid.Parse(value))).ToList();
+            }
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }

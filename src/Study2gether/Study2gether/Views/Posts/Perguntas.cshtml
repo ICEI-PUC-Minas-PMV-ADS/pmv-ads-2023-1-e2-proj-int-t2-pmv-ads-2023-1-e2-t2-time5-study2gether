@@ -9,6 +9,7 @@
     var axes = ViewData["Axes"] as List<Axis>;
     var microfoundations = ViewData["Microfoundations"] as List<Microfoundation>;
     var postList = ViewData["postList"] as List<Post>;
+    var filters = ViewData["Filters"];
 }
 
 <div class="row">
@@ -24,6 +25,10 @@
 
 
     <div class="posts col-sm-9 mt-5">
+        @if (filters != null)
+        {
+            <h6 class="text-light">Mostrando resultados filtrados por @filters</h6>
+        }
         <div id="   -1">
             @foreach (var obj in postList)
             {
@@ -56,64 +61,64 @@
     <a class="pe-auto" data-toggle="modal" data-target="#postQuestion" style="cursor: pointer"><i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i></a>
 </div>
 
-        <div class="modal fade bd-example-modal-lg" id="postQuestion" tabindex="-1" role="dialog" aria-labelledby="postQuestionitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                <form asp-action="Perguntas">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="postQuestionLongTitle">Insira a sua pergunta:</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                            <div class="form-group">
-                                <label for="categoryId"><b>Categorias</b></label>
-                                <select multiple class="form-control selectpicker" data-live-search="true" id="categoryId" name="categoryId" required>
-                                    @foreach (var obj in categories)
-                                    {
-                                        <option value="@obj.idCategory">@obj.name</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label><b>Eixos</b></label>
-                                <select multiple class="form-control selectpicker" data-live-search="true" id="axisId" name="axisId">
-                                    @foreach (var obj in axes)
-                                    {
-                                        <option value="@obj.idAxis">@obj.name</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label><b>Microfundamentos</b></label>
-                                <select multiple class="form-control selectpicker" data-live-search="true" id="microfoundationId" name="microfoundationId">
-                                    @foreach (var obj in microfoundations)
-                                    {
-                                        <option value="@obj.idMicrofoundation">@obj.name</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="title" class="control-label"></label>
-                                <input asp-for="title" class="form-control" />
-                                <span asp-validation-for="title" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="content" class="control-label"></label>
-                                <input asp-for="content" class="form-control" />
-                                <span asp-validation-for="content" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Create" class="btn btn-primary" />
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+<div class="modal fade bd-example-modal-lg" id="postQuestion" tabindex="-1" role="dialog" aria-labelledby="postQuestionitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <form asp-action="Perguntas">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="postQuestionLongTitle">Insira a sua pergunta:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label for="categoryId"><b>Categorias</b></label>
+                        <select multiple class="form-control selectpicker" data-live-search="true" id="categoryId" name="categoryId" required>
+                            @foreach (var obj in categories)
+                            {
+                                <option value="@obj.idCategory">@obj.name</option>
+                            }
+                        </select>
                     </div>
-                </form>
+                    <div class="form-group">
+                        <label><b>Eixos</b></label>
+                        <select multiple class="form-control selectpicker" data-live-search="true" id="axisId" name="axisId">
+                            @foreach (var obj in axes)
+                            {
+                                <option value="@obj.idAxis">@obj.name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Microfundamentos</b></label>
+                        <select multiple class="form-control selectpicker" data-live-search="true" id="microfoundationId" name="microfoundationId">
+                            @foreach (var obj in microfoundations)
+                            {
+                                <option value="@obj.idMicrofoundation">@obj.name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="title" class="control-label"></label>
+                        <input asp-for="title" class="form-control" />
+                        <span asp-validation-for="title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="content" class="control-label"></label>
+                        <input asp-for="content" class="form-control" />
+                        <span asp-validation-for="content" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
-        </div>
+        </form>
+    </div>
+</div>
