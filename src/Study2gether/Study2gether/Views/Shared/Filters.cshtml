@@ -2,6 +2,7 @@
 @{
     var axis = ViewData["Axis"] as List<Axis>;
     var microfoundations = ViewData["Micros"] as List<Microfoundation>;
+    var category = ViewData["Category"] as List<Category>;
 }
 
 <div class="col-sm-2 row justify-content-around align-content-center" id="divFiltroEixos">
@@ -23,6 +24,16 @@
     </select>
 </div>
 
+<div class="col-sm-2 row justify-content-around align-content-center" id="divFiltroCategoria">
+    <select class="form-select" id="selectFiltroCategory" style="padding: 5px; width: 220px; border-radius: 2.5rem; text-align: center;">
+        <option selected>Selecione uma Categoria</option>
+            @foreach (var element in category)
+            {
+                <option value="@element.idCategory">@element.name</option>
+            }
+    </select>
+</div>
+
 <script>
     $(document).ready(function () {
         var combine = [false, false, false];
@@ -30,7 +41,7 @@
         $("#selectFiltroEixos").change(function () {
             var selectedOption = $(this).find("option:selected");
             var valor = selectedOption.attr("value");
-            
+
             let path = window.location.pathname.toString();
 
             if (path.includes("Perguntas")) {
@@ -50,7 +61,7 @@
         $("#selectFiltroMicros").change(function () {
             var selectedOption = $(this).find("option:selected");
             var valor = selectedOption.attr("value");
-            
+
             let path = window.location.pathname.toString();
 
             if (path.includes("Perguntas")) {
@@ -67,6 +78,27 @@
             }
         }
         );
+        $("#selectFiltroCategory").change(function () {
+            var selectedOption = $(this).find("option:selected");
+            var valor = selectedOption.attr("value");
+
+            let path = window.location.pathname.toString();
+
+            if (path.includes("Perguntas")) {
+                window.location.href = "/Posts/Perguntas?category=" + valor;
+            }
+            else if (path.includes("Indicacoes")) {
+                window.location.href = "/Posts/Indicacoes?category=" + valor;
+            }
+            else if (path.includes("Interacoes")) {
+                window.location.href = "/Posts/Interacoes?category=" + valor;
+            }
+            else {
+                window.location.href += "Posts/Perguntas?" + "category=" + valor;
+            }
+        }
+        );
+        
     });
 
 </script>

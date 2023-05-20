@@ -24,7 +24,8 @@ namespace Study2gether.Atributtes
             {
                 var controller = context.Controller as Controller;
                 controller.ViewData.Add("Axis", _context.Axis.OrderBy(x => x.name).ToList());
-                controller.ViewData.Add("Micros", _context.Microfoundation.OrderBy(linha => linha.name).ToList());
+                controller.ViewData.Add("Micros", _context.Microfoundation.OrderBy(x => x.name).ToList());
+                controller.ViewData.Add("Category", _context.Category.OrderBy(x => x.name).ToList());
             }
 
             base.OnResultExecuting(context);

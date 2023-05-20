@@ -51,14 +51,6 @@
 
                 @await Html.PartialAsync("Filters")
                 
-                <div class="col-sm-2 row justify-content-around align-content-center" id="divFiltroEixos">
-                    <select class="form-select" id="autoSizingSelect" style="padding: 5px; width: 220px; border-radius: 2.5rem; text-align: center;">
-                        <option selected>Selecione uma Categoria</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
                 <div class="col-sm-3 row justify-content-end align-content-center" id="btnLogin">
                     @if (User.Identity.IsAuthenticated)
                     {
