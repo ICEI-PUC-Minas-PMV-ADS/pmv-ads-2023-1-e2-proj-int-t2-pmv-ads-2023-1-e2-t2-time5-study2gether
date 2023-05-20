@@ -1,0 +1,72 @@
+﻿
+@{
+    var axis = ViewData["Axis"] as List<Axis>;
+    var microfoundations = ViewData["Micros"] as List<Microfoundation>;
+}
+
+<div class="col-sm-2 row justify-content-around align-content-center" id="divFiltroEixos">
+    <select class="form-select" name="option" id="selectFiltroEixos" style="padding: 5px; width: 220px; border-radius: 2.5rem; text-align: center;">
+        <option value="0">Selecione um Eixo</option>
+        @foreach (var obj in axis)
+        {
+            <option value="@obj.idAxis">@obj.name</option>
+        }
+    </select>
+</div>
+<div class="col-sm-3 row justify-content-around align-content-center" id="divFiltroMicrofundamentos">
+    <select class="form-select" id="selectFiltroMicros" style="padding: 5px; width: 270px; border-radius: 2.5rem; text-align: center;">
+        <option selected>Selecione um Microfundamento</option>
+        @foreach (var element in microfoundations)
+        {
+            <option value="@element.idMicrofoundation">@element.name</option>
+        }
+    </select>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var combine = [false, false, false];
+        var axisFilter;
+        $("#selectFiltroEixos").change(function () {
+            var selectedOption = $(this).find("option:selected");
+            var valor = selectedOption.attr("value");
+            
+            let path = window.location.pathname.toString();
+
+            if (path.includes("Perguntas")) {
+                window.location.href = "/Posts/Perguntas?axis=" + valor;
+            }
+            else if (path.includes("Indicacoes")) {
+                window.location.href = "/Posts/Indicacoes?axis=" + valor;
+            }
+            else if (path.includes("Interacoes")) {
+                window.location.href = "/Posts/Interacoes?axis=" + valor;
+            }
+            else {
+                window.location.href += "Posts/Perguntas?" + "axis=" + valor;
+            }
+        }
+        );
+        $("#selectFiltroMicros").change(function () {
+            var selectedOption = $(this).find("option:selected");
+            var valor = selectedOption.attr("value");
+            
+            let path = window.location.pathname.toString();
+
+            if (path.includes("Perguntas")) {
+                window.location.href = "/Posts/Perguntas?microfoundation=" + valor;
+            }
+            else if (path.includes("Indicacoes")) {
+                window.location.href = "/Posts/Indicacoes?microfoundation=" + valor;
+            }
+            else if (path.includes("Interacoes")) {
+                window.location.href = "/Posts/Interacoes?microfoundation=" + valor;
+            }
+            else {
+                window.location.href += "Posts/Perguntas?" + "microfoundation=" + valor;
+            }
+        }
+        );
+    });
+
+</script>
