@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NovaPasta\**" />
     <Compile Remove="static\**" />
     <Compile Remove="Views\Answers\**" />
     <Compile Remove="Views\Axis\**" />
@@ -20,6 +21,8 @@
     <Compile Remove="Views\Post\**" />
     <Compile Remove="Views\Shared\NovaPasta\**" />
     <Compile Remove="Views\Users\**" />
+    <Compile Remove="wwwroot\NovaPasta\**" />
+    <Content Remove="NovaPasta\**" />
     <Content Remove="static\**" />
     <Content Remove="Views\Answers\**" />
     <Content Remove="Views\Axis\**" />
@@ -29,6 +32,8 @@
     <Content Remove="Views\Post\**" />
     <Content Remove="Views\Shared\NovaPasta\**" />
     <Content Remove="Views\Users\**" />
+    <Content Remove="wwwroot\NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
     <EmbeddedResource Remove="static\**" />
     <EmbeddedResource Remove="Views\Answers\**" />
     <EmbeddedResource Remove="Views\Axis\**" />
@@ -38,6 +43,8 @@
     <EmbeddedResource Remove="Views\Post\**" />
     <EmbeddedResource Remove="Views\Shared\NovaPasta\**" />
     <EmbeddedResource Remove="Views\Users\**" />
+    <EmbeddedResource Remove="wwwroot\NovaPasta\**" />
+    <None Remove="NovaPasta\**" />
     <None Remove="static\**" />
     <None Remove="Views\Answers\**" />
     <None Remove="Views\Axis\**" />
@@ -47,6 +54,7 @@
     <None Remove="Views\Post\**" />
     <None Remove="Views\Shared\NovaPasta\**" />
     <None Remove="Views\Users\**" />
+    <None Remove="wwwroot\NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -100,6 +108,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="NovaPasta1\" />
   </ItemGroup>
 
   <ItemGroup>

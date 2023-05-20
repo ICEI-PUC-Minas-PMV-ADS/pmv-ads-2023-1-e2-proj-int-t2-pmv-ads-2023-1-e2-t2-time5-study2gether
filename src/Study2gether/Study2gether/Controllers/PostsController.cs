@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -159,11 +160,34 @@ namespace Study2gether.Controllers
         }
         public IActionResult Perguntas()
         {
+            string axisFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("axis");
+            string microFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("microfoundation");
+            string categoryFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("category");
+
 
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)2).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+
+            if (axisFilter != "" && axisFilter != null) 
+            {
+                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Axes.Any(b => b.idAxis == Guid.Parse(axisFilter))).ToList();
+                ViewData["Filters"] = _context.Axis.First(x => x.idAxis == Guid.Parse(axisFilter)).name;
+            }
+            else if (microFilter != "" && microFilter != null)
+            {
+                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Microfoundations.Any(b => b.idMicrofoundation == Guid.Parse(microFilter))).ToList();
+                ViewData["Filters"] = _context.Microfoundation.First(x => x.idMicrofoundation == Guid.Parse(microFilter)).name;
+            } 
+            else if (categoryFilter != "" && categoryFilter != null)
+            {
+                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Categories.Any(b => b.idCategory == Guid.Parse(categoryFilter))).ToList();
+                ViewData["Filters"] = _context.Category.First(x => x.idCategory == Guid.Parse(categoryFilter)).name;
+            }
+            else {
+                ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).ToList();
+            }
+   
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -250,6 +274,8 @@ namespace Study2gether.Controllers
             {
                 return Json(new { status = "Error", message = "Você já reagiu a este post", type = "error" });
             }
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
