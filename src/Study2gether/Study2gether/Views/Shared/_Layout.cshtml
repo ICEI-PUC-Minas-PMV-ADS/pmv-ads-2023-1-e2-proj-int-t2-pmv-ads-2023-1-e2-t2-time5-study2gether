@@ -83,12 +83,14 @@
     <div class="">
         <div class="d-flex flex-row-reverse col-11">
             <div class="col-sm-3 row align-content-end" id="divBusca">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon1">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                <form method="get" asp-action="Interacoes">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         <main role="main" class="pb-3">

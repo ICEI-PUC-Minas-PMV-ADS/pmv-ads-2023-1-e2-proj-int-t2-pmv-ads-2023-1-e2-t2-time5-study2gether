@@ -84,18 +84,45 @@ namespace Study2gether.Controllers
             return RedirectToAction(nameof(Indicacoes));
         }
 
-        public IActionResult Interacoes()
+        public IActionResult Interacoes(string searchText)
         {
+            if (searchText is null)
+            {
+                throw new ArgumentNullException(nameof(searchText));
+            }
+
             var categories = _context.Category.ToList();
             var axes = _context.Axis.ToList();
             var microfoundations = _context.Microfoundation.ToList();
             ViewData["Categories"] = categories;
             ViewData["Axes"] = axes;
             ViewData["Microfoundations"] = microfoundations;
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)1).Include(o => o.Reactions).OrderByDescending(o => o.created_date).ToList();
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                ViewData["FilteredPostList"] = _context.Post
+                    .Where(p => p.type == (Types)1)
+                    .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+                    .Include(p => p.Reactions)
+                    .OrderByDescending(p => p.created_date)
+                    .ToList();
+            }
+            else
+            {
+                ViewData["FilteredPostList"] = null; // Ou qualquer valor vazio que faça sentido para sua lógica
+            }
+
+            ViewData["postList"] = _context.Post
+                .Where(o => o.type == (Types)1)
+                .Include(o => o.Reactions)
+                .OrderByDescending(o => o.created_date)
+                .ToList();
+
             var applicationDbContext = _context.Post.Include(p => p.User);
+
             return View();
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -133,7 +160,7 @@ namespace Study2gether.Controllers
 
         public IActionResult Respostas(Guid id)
         {
-            ViewData["perguntas"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
+            ViewData["Post"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
             return View();
         }
 
@@ -142,20 +169,20 @@ namespace Study2gether.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Respostas([Bind("title,content")] Answer resposta, Guid id)
         {
-            
-                if (ModelState.IsValid)
-                {
-                    resposta.idAnswer = Guid.NewGuid();
-                    resposta.idPost = id;
-                    resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
-                               
-                    _context.Add(resposta);
-                    _context.SaveChanges();
-                    
-                    return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
-                }
-            
-            
+
+            if (ModelState.IsValid)
+            {
+                resposta.idAnswer = Guid.NewGuid();
+                resposta.idPost = id;
+                resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+
+                _context.Add(resposta);
+                _context.SaveChanges();
+
+                return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
+            }
+
+
             return View(resposta);
         }
         public IActionResult Perguntas()
