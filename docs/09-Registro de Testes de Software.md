@@ -26,37 +26,40 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-05 - RF-10 | Verificar se o usuário cadastrado consegue redefinir sua senha esquecida. |    |    |
-| Registro da tela: |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/c6671368-7bbf-4f06-a03e-10d08c1638a2) | Data do Teste: 21/05/2023 - Resultado Negativo - A aplicação não respondeu ao Clicar no Botão "Redefinir a senha". Ação: Implementar a funcionalidade. | Média |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-06 - RF-10 | Verificar se a aplicação impede a recuperação de senha com um e-mail inválido. |    |    |
-| Registro da tela: |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/c6671368-7bbf-4f06-a03e-10d08c1638a2) | Data do Teste: 21/05/2023 - Resultado Negativo - Como a aplicação não respondeu ao Clicar no Botão "Redefinir a senha", não é possível efetuar o teste. Ação: Implementar a funcionalidade. | Média |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-07 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Perguntas por Eixo. |    |    |
 | Registro da tela: | ![Pesquisa por Eixo](img/ct07filtroporeixo.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - Os Eixos ainda não foram inseridos para que o usuário possa selecioná-los. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/80646605-b8d8-4bc2-9f65-c983cff4613f) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A filtragem de Perguntas por Eixo ainda não está funcionando. Ação: Implementar a funcionalidade. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-08 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Perguntas por este Microfundamento. |    |    |
 | Registro da tela: | ![Pesquisa por Microfundamentos](img/ct08filtropormicro.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - Os Microfundamentos ainda não foram inseridos para que o usuário possa selecioná-los. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/b5b4df5f-2632-4edf-b6f5-e7b33503d68c) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A filtragem de Perguntas por Microfundamento ainda não está funcionando. Ação: Implementar a funcionalidade. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-09 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Perguntas por essa categoria. |    |    |
+| CT-09 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Perguntas por essa categoria. | | |
 | Registro da tela: | ![Pesquisa por Categorias](img/ct09filtroporcategoria.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - As Categorias ainda não foram inseridas para que o usuário possa selecioná-las. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/96ccbec0-89e5-4da1-b505-37ceeba7d8e9) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A filtragem de Perguntas por Categoria ainda não está funcionando. Ação: Implementar a funcionalidade.| Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-10 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Interações por Eixo. |    |    |
-| Registro da tela: | | | |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/f25098be-6b43-4393-b97c-f4fbb1d80907) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, impossibilitando o teste de filtragem de Interações por Eixo. Ação: Tratar primeiro a excessão apontada e então testar se a filtragem está sendo apresentada corretamente.| Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-11 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Interações por este Microfundamento. |    |    |
-| Registro da tela: |
+| Registro da tela: |||
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -67,123 +70,145 @@
 |:---: |:---: |:---: |:---: |
 | CT-13 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Indicações por Eixo. | ||
 | Registro da tela: |![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685939-c5de9408-3bc7-4dda-b032-ba3be5bd577e.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/553a8013-86d6-481c-8c9b-38bd24319aee) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A filtragem de Indicações por Eixo ainda não está funcionando. Ação: Implementar a funcionalidade.| Grave |
+
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-14 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Indicações por Microfundamento. |    |    |
-| Registro da tela: |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/11704e33-8d85-4222-9a93-a56d3b9ce3a9) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A filtragem de Indicações por Microfundamento ainda não está funcionando. Ação: Implementar a funcionalidade.| Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-15 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Indicações por essa categoria. |    |    |
 | Registro da tela:| ![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685944-cbdbcf4f-9068-40f9-8def-04018985471c.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/ab91c200-6876-4b15-9acc-2abe70425c0b) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A filtragem de Indicações por Categoria ainda não está funcionando. Ação: Implementar a funcionalidade.| Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-16 - RF-05 | Verificar se a busca de perguntas por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela: | ![Pesquisa por Palavra Chave](img/ct16perguntabarradepesquisa.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão de pesquisa não está funcionando. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/94225353-7c1e-4ade-af74-f039deab1ab7) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - Ao fazer pesquisa com palavras chaves, como por exemplo "adequadamente" a aplicação até buscou as postagens que apresentam essa palavra, no entanto buscou do banco de dados de "Interações" | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-17 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
-| Registro da tela:| ![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685944-cbdbcf4f-9068-40f9-8def-04018985471c.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
+| Registro da tela:| ![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685944-cbdbcf4f-9068-40f9-8def-04018985471c.png)| Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
+| Registro da tela:| ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/1b14a422-747f-4cfb-8ea0-b100a72bd040) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, impossibilitando o teste de filtragem de Interações por por palavra chave. Ação: Tratar primeiro a excessão apontada e então testar se a filtragem por palavra chave.| Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-18 - RF-05 | Verificar se a busca de indicações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto.   |    |    |
-| Registro da tela: | | | |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/c3b9cfe8-8e6a-4c57-866a-156a70d0b548) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - Ao fazer pesquisa com palavras chaves, como por exemplo "Testando" a aplicação buscou todas as postagens que apresentam essa palavra, no entanto buscou do banco de dados de "Interações". Ação: Corrigir a função de busca. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-19 - RF-03 | Verificar se usuário consegue postar uma pergunta. |    |    |
 | Registro da tela: | ![Postagem de Pergunta](img/ct19postagemdeperguntaconcluida.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de perguntas. | Sucesso |
 
+
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
+| CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta sem os campos obrigatórios, “Categoria”, “Título” e "Pergunta". |    |    |
 | Registro da tela: | ![Postagem de Pergunta sem selecionar os campos "Categoria", "Eixo", "Microfundamento" e "Título".](img/ct20postagemsempreenchereixocategoriamicro.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de perguntas sem selecionar os campos “Categoria”, “Eixo”, “Microfundamento” e “Título”. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/a97e8086-2418-481d-a6b8-c234761fbdf6) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - O usuário não consegue realizar a postagem de perguntas. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-21 - RF-04 | Verificar se as respostas serão apresentadas corretamente junto às perguntas. |    |    |
-| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se as respostas foram apresentadas corretamente.  | Grave |
+| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possível verificar se as respostas foram apresentadas corretamente.  | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/377410ed-7952-4b4b-b043-45777dd333f6) | Data do Teste: 21/05/23 - Resultado POSITIVO - Foi possível visualizar as respostas postadas anteriormente para aquela pergunta.  | - |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-22 - RF-04 | Verificar se o campo de comentários no rodapé das interações está registrando adequadamente os comentários feitos. |    |    |
-| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se o campo de comentários está registrando adequadamente os comentários feitos. | Grave |   
+| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possÍvel verificar se o campo de comentários está registrando adequadamente os comentários feitos. | Grave |   
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, impossibilitando a verificação se os comentários estão sendo apresentados abaixo do conteúdo publicado adequadamente. Ação: Tratar primeiro a excessão apontada e então verificar se os comentários estão sendo apresentados corretamente.| Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-23 - RF-04 | Verificar se o campo de comentários no rodapé das indicações está registrando adequadamente os comentários feitos. |    |    |
-| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar se o campo de comentários das indicações está registrando adequadamente os comentários feitos. | Grave | 
+| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possível verificar se o campo de comentários das indicações está registrando adequadamente os comentários feitos. | Grave | 
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/31ddc12a-53fb-43c7-8222-b541db2947df) | Data do Teste: 21/05/23 - Resultado NEGATIVO - O registro do comentário feito no campo indicado no rodapé das indicações não foi apresentado junto aos comentários feitos anteriormente. Ação: Revisar o código e corrigí-lo | Grave | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-24 - RF-01 | Verificar se as publicações estão sendo apresentadas na "Lista de Interações". |    |    |
 | Registro da tela: |![Tela de Interações](https://user-images.githubusercontent.com/114435981/236686931-25264723-ae85-46f1-8d76-7b567f4e114d.png)|Data do teste: 06/05/2023 - Resultado Positivo - As publicações de interações estão sendo apresentadas na pagina correta.|Baixa|
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, impossibilitando verificar se as postagens de interações estão sendo apresentadas na "Lista" corretamente. Ação: Tratar primeiro a excessão apontada e então verificar se as postagens são apresentadas corretamente. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
+| CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Conteúdo". |    |    |
 | Registro da tela: | ![Postagem de Pergunta sem selecionar os campos "Categoria", "Eixo", "Microfundamento" e "Título".](img/ct25postagemsempreenchereixocategoriamicro2.jpg) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O usuário consegue realizar a postagem de conteúdos sem selecionar os campos “Categoria”, “Eixo”, “Microfundamento” e “Título”. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, não sendo possível efetuar o teste de postagem de conteúdo "Interações". Ação: Tratar primeiro a excessão apontada e então verificar se está sendo possível registrar Interações mesmo sem preencher os campos obrigatórios. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-26 - RF-11 | Verificar se as postagens de indicações estão sendo apresentadas na "Lista de Indicações". |    |    |
-| Registro da tela: | ![image](https://user-images.githubusercontent.com/96087622/236625920-4546a3d9-c931-4a82-8b53-4249ca0130fa.png) | Resultado Positivo - As postagens foram devidamente apresentadas - Data do Teste: 06/05/2023 | Sucesso |
+| Registro da tela: | ![image](https://user-images.githubusercontent.com/96087622/236625920-4546a3d9-c931-4a82-8b53-4249ca0130fa.png) | Resultado Positivo - As postagens foram devidamente apresentadas - Data do Teste: 06/05/2023 | Sucesso 
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/d288e297-592c-4ec8-9927-cb3a9e4f232b) | Data do Teste: 21/05/2023 - Resultado Positivo - As postagens foram apresentadas corretamente |-|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-27 - RF-11 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    
-| Registro da tela: | ![image](https://user-images.githubusercontent.com/96087622/236625619-8361a81c-d85f-4f55-9607-88adbefc7595.png) | Resultado negativo - A aplicação não permitiu a postagem da indicação, mas não retornou nenhum erro ou aviso sobre os campos obrigatorios - Data do Teste: 06/05/2023 | Baixa |
-
+| CT-27 - RF-11 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Conteúdo". |    |    
+| Registro da tela: | ![image](https://user-images.githubusercontent.com/96087622/236625619-8361a81c-d85f-4f55-9607-88adbefc7595.png) | Resultado Negativo - A aplicação não permitiu a postagem da indicação, mas não retornou nenhum erro ou aviso sobre os campos obrigatórios - Data do Teste: 06/05/2023 | Baixa |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/61ba2738-f8c0-4405-9f53-f227694562f5) | Data do Teste: 21/05/2023 - Resultado Negativo - A aplicação não restringiu a postagem da indicação faltando dados obrigatórios. Ação: Implementar "Restrições" e informar o usuário da necessidade de preencher os campos obrigatórios. | Baixa |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir às Perguntas. |    |    |
 | Registro da tela: | ![Reagir com Emojis](img/ct28emojisnaoativos.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O usuário não consegue reagir às perguntas com emojis. | Grave |
 | Registro da tela: | ![Captura de tela 2023-05-16 220427](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/87c4ba02-f98b-4bd3-845f-1d21d2510674)| Data do Teste: 16/05/23 - Resultado Positivo - O usuário pode reagir às Perguntas com emojis | - | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nas Respostas | Media | 
+| CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir às Respostas. |    |    |
+| Registro da tela: | ![image](https://i.imgur.com/3Y0pVvF.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possível verificar a ativação dos emojis nas Respostas | Media | 
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/0fdd4220-b84d-4c15-a3af-fb684436f1f1) | Data do Teste: 21/05/23 - Resultado Negativo - A ativação do emoji nas Respostas ainda não é possível | Média | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir às Interações. |    |    |
 | Registro da tela: |![Interações](https://user-images.githubusercontent.com/114435981/236687776-74eb2daa-a0e8-4232-a2fd-0fe4b40a44c4.png)| Data do teste: 06/05/2023 - Os emojis estão sendo contabilizados corretamente, mas passará por nova validação| Média |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, não sendo possível verificar se os emojis estão sendo ativados corretamente ao reagir às "Interações". Ação: Tratar primeiro a excessão apontada e então verificar se a reação com emojis está sendo ativada corretamente. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nos Comentários das Interações | Media | 
+| CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir aos Comentários das Interações. |    |    |
+| Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possível verificar a ativação dos emojis nos Comentários das Interações | Média | 
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, não sendo possível verificar se os emojis estão sendo ativados corretamente ao reagir aos "Comentários das Interações". Ação: Tratar primeiro a excessão apontada e então verificar se a reação com emojis aos Comentários está sendo ativada corretamente. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-32 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-32 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao regir às Indicações. |    |    |
 | Registro da tela: | ![image](https://user-images.githubusercontent.com/96087622/236626167-0ff8bc20-7530-4c99-acc1-ebc6e44f8375.png) | Data do Teste: 05/05/23 - Resultado Negativo - Foi possivel reagir a publicação, mas as unicas opções eram estrela e sorriso | Baixa |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/81dad345-65a2-4f65-b808-bcab6e7de185) | Data do Teste: 21/05/23 - Resultado POSITIVO - Foi possível reagir a publicação com o Emoji escolhido. | - |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possivel verificar a ativação dos emojis nos Comentários das Indicações | Media | 
+| CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir aos Comentários das Indicações. | | |
+| Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possível verificar a ativação dos emojis nos Comentários das Indicações | Media | 
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/90d52098-8985-49db-9395-7070f74c3cda) | Data do Teste: 21/05/23 - Resultado Negativo - Não foi possível reagir com emojis aos Comentários das Indicações. Ação: Implementar a funcionalidade. | Média | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-34 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
 | Registro da tela: | ![Perguntas com respectivas respostas](img/ct34enviarresposta.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão "Enviar" não está funcionando, logo não é possível enviar respostas para realizar o teste. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/dadaec90-1ba0-4831-a291-9218df907de3)| Data do Teste: 21/05/2023 - Resultado: POSITIVO - As respostas estão sendo apresentadas logo abaixo da Pergunta, tanto para o usuário logado quanto não logado. | - |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-35 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. ||  |
 | Registro da tela: |![Tela de Interações](https://user-images.githubusercontent.com/114435981/236688381-4dbd89c1-a14c-435d-8d75-17319a920356.png)|Data do teste: 06/05/2023 - As interações estão sendo apresentadas, no entanto os comentarios ainda não estão implementados| Grave|
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, não sendo possível verificar se as interações com os respectivos comentários estão sendo apresentados para todos os usuários, logados ou não. Ação: Tratar primeiro a excessão apontada e então verificar se as postagem estão sendo apresentadas a todos os usuários com os seus respectivos comentários. | Grave |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-36 - RF-08 | Verificar se a aplicação está apresentando todas as indicações com os respectivos comentários para todos os usuários, logados ou não. |    |    |
 | Registro da tela: | ![image](https://user-images.githubusercontent.com/96087622/236626464-aef93303-b46c-48e4-a4f4-79b987197231.png) | Resultado Negativo - Não foram apresentadas todas as respostas respectivas a indicação - Data do Teste: 06/05/2023 | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/a0719257-8a69-4d74-8684-d8f286ab9069) | Data do Teste: 21/05/2023 - Resultado Positivo - A aplicação apresentou todas as indicações com os respectivos comentários para os usuários logados.| - |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/34518b08-cf8e-4d2a-a1cf-1a21d45a3b83) | Data do Teste: 21/05/2023 - Resultado Positivo - A aplicação apresentou todas as indicações com os respectivos comentários para os usuários não logados, também.| - |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
