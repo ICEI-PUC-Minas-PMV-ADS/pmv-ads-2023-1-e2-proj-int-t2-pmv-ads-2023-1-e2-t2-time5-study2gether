@@ -22,12 +22,13 @@
             </ul>
         </div>
     </div>
-    
+
     <div class="posts col-sm-9 mt-5">
         <div id="post-1">
-            @if (ViewData["FilteredPostList"] != null)
+
+            @if (ViewData["FilteredPostList"] != null && !string.IsNullOrEmpty(ViewData["FilteredPostList"].ToString()))
             {
-                foreach (var obj in filteredPosts)
+                @foreach (var obj in filteredPosts)
                 {
                     <div class="caixa card rounded-lg mb-3">
                         <div class="card-header">
@@ -37,22 +38,43 @@
                             <div>@Html.Raw(@obj.content)</div>
                         </div>
                         <div class="card-footer">
-                            <div class="reactions d-inline">
+                            <div class="d-flex justify-content-between">
+                                <div class="reactions d-inline">
 
-                                @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="comment"><i class="fa-regular fa-comment-dots"></i></a>
+                                    <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
+                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
-                                @obj.Reactions.Count(r => r.Name == "chart") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="chart"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
-                                @obj.Reactions.Count(r => r.Name == "star") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="star"><i class="fa-solid fa-star"></i></a>
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+
+                                </div>
+                                <div>
+                                    @{
+                                        var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
+                                        {
+                                            reactionName = n.Key,
+                                            reactionCount = n.Count()
+                                        }).OrderByDescending(n => n.reactionCount).ToList();
+                                        @for (var i = 0; i < 5; i++)
+                                        {
+                                            var react = @reactOrder.ElementAtOrDefault(@i);
+                                            if (react != null)
+                                            {
+                                                <p class="d-inline">@react.reactionCount</p>
+                                                <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            }
+                                        }
+                                    }
+                                </div>
+                                <div>
+                                    <label for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                                </div>
                             </div>
-                            <label class="float-right" for="data-iteracao"><small>Data da interação: @obj.created_date</small></label>
                         </div>
-                    </div>
-                }
+                    </div>}
             }
-
             else
             {
                 @foreach (var obj in postList)
@@ -65,21 +87,45 @@
                             <div>@Html.Raw(@obj.content)</div>
                         </div>
                         <div class="card-footer">
-                            <div class="reactions d-inline">
+                            <div class="d-flex justify-content-between">
+                                <div class="reactions d-inline">
 
-                                @obj.Reactions.Count(r => r.Name == "comment") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="comment"><i class="fa-regular fa-comment-dots"></i></a>
+                                    <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                @obj.Reactions.Count(r => r.Name == "smile") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="smile"><i class="fa-regular fa-face-smile"></i></a>
+                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
-                                @obj.Reactions.Count(r => r.Name == "chart") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="chart"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
-                                @obj.Reactions.Count(r => r.Name == "star") <a asp-action="ReactToPost" asp-route-idPost="@obj.idPost" asp-route-reactioName="star"><i class="fa-solid fa-star"></i></a>
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+
+                                </div>
+                                <div>
+                                    @{
+                                        var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
+                                        {
+                                            reactionName = n.Key,
+                                            reactionCount = n.Count()
+                                        }).OrderByDescending(n => n.reactionCount).ToList();
+                                        @for (var i = 0; i < 5; i++)
+                                        {
+                                            var react = @reactOrder.ElementAtOrDefault(@i);
+                                            if (react != null)
+                                            {
+                                                <p class="d-inline">@react.reactionCount</p>
+                                                <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            }
+                                        }
+                                    }
+                                </div>
+                                <div>
+                                    <label for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                                </div>
                             </div>
-                            <label class="float-right" for="data-iteracao"><small>Data da interação: @obj.created_date</small></label>
                         </div>
                     </div>
                 }
             }
+
         </div>
         <a class="pe-auto" data-toggle="modal" data-target="#postInteraction" style="cursor: pointer">
             <i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i>

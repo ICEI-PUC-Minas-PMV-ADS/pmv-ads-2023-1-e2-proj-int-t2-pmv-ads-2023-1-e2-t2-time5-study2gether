@@ -44,13 +44,33 @@ namespace Study2gether.Controllers
             return View(axis);
         }
 
-        public IActionResult Indicacoes()
+        public IActionResult Indicacoes(string searchText)
         {
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
+            ViewBag.ViewType = "Indicacoes";
+
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                ViewData["FilteredPostList"] = _context.Post
+                    .Where(p => p.type == (Types)0)
+                    .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+                    .Include(p => p.Reactions)
+                    .OrderByDescending(p => p.created_date)
+                    .ToList();
+            }
+
+            else
+            {
+                ViewData["FilteredPostList"] = null;
+            }
+
             ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+
             var applicationDbContext = _context.Post.Include(p => p.User);
+
             return View();
         }
 
@@ -91,13 +111,28 @@ namespace Study2gether.Controllers
             ViewData["Categories"] = categories;
             ViewData["Axes"] = axes;
             ViewData["Microfoundations"] = microfoundations;
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)1).Include(o => o.Reactions).OrderByDescending(o => o.created_date).ToList();
-            ViewData["FilteredPostList"] = _context.Post
-               .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
-               .Where(p => p.type == Types.Interaction)
-               .Include(p => p.Reactions)
-               .OrderByDescending(p => p.created_date)
-               .ToList();
+            ViewBag.ViewType = "Interacoes";
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                ViewData["FilteredPostList"] = _context.Post
+                    .Where(p => p.type == (Types)1)
+                    .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+                    .Include(p => p.Reactions)
+                    .OrderByDescending(p => p.created_date)
+                    .ToList();
+            }
+            else
+            {
+                ViewData["FilteredPostList"] = null; 
+            }
+
+            ViewData["postList"] = _context.Post
+                .Where(o => o.type == (Types)1)
+                .Include(o => o.Reactions)
+                .OrderByDescending(o => o.created_date)
+                .ToList();
+
             var applicationDbContext = _context.Post.Include(p => p.User);
 
             return View();
@@ -165,12 +200,29 @@ namespace Study2gether.Controllers
             
             return View(resposta);
         }
-        public IActionResult Perguntas()
+        public IActionResult Perguntas(string searchText)
         {
 
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
+            ViewBag.ViewType = "Perguntas";
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                ViewData["FilteredPostList"] = _context.Post
+                    .Where(p => p.type == (Types)2)
+                    .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+                    .Include(p => p.Reactions)
+                    .OrderByDescending(p => p.created_date)
+                    .ToList();
+            }
+
+            else
+            {
+                ViewData["FilteredPostList"] = null;
+            }
+
             ViewData["postList"] = _context.Post.Where(o => o.type == (Types)2).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();

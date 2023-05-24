@@ -9,6 +9,7 @@
     var axes = ViewData["Axes"] as List<Axis>;
     var microfoundations = ViewData["Microfoundations"] as List<Microfoundation>;
     var postList = ViewData["postList"] as List<Post>;
+    var filteredPosts = ViewData["FilteredPostList"] as List<Post>;
 }
 
 <div class="row">
@@ -25,54 +26,104 @@
 
     <div class="posts col-sm-9 mt-5">
         <div id="   -1">
-            @foreach (var obj in postList)
+            @if (ViewData["FilteredPostList"] != null && !string.IsNullOrEmpty(ViewData["FilteredPostList"].ToString()))
             {
-                <div class="caixa card rounded-lg mb-3">
-                    <div class="card-header">
-                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
-                    </div>
-                    <div class="card-body">
-                        <div>@Html.Raw(@obj.content)</div>
-                    </div>
+                @foreach (var obj in filteredPosts)
+                {
+                    <div class="caixa card rounded-lg mb-3">
+                        <div class="card-header">
+                            <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                        </div>
+                        <div class="card-body">
+                            <div>@Html.Raw(@obj.content)</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between">
+                                <div class="reactions d-inline">
 
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-between">
-                            <div class="reactions d-inline">
+                                    <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
+                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
-                                <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
-                                <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
 
-                                <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
-
-                            </div>
-                            <div>
-                                @{
-                                    var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
-                                    {
-                                        reactionName = n.Key,
-                                        reactionCount = n.Count()
-                                    }).OrderByDescending(n => n.reactionCount).ToList();
-                                    @for (var i = 0; i < 5; i++)
-                                    {
-                                        var react = @reactOrder.ElementAtOrDefault(@i);
-                                        if (react != null)
+                                </div>
+                                <div>
+                                    @{
+                                        var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
                                         {
-                                            <p class="d-inline">@react.reactionCount</p>
-                                            <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            reactionName = n.Key,
+                                            reactionCount = n.Count()
+                                        }).OrderByDescending(n => n.reactionCount).ToList();
+                                        @for (var i = 0; i < 5; i++)
+                                        {
+                                            var react = @reactOrder.ElementAtOrDefault(@i);
+                                            if (react != null)
+                                            {
+                                                <p class="d-inline">@react.reactionCount</p>
+                                                <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            }
                                         }
                                     }
-                                }
+                                </div>
+                                <div>
+                                    <label for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                                </div>
                             </div>
-                            <div>
-                                <label for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                        </div>
+                    </div>}
+            }
+            else
+            {
+                @foreach (var obj in postList)
+                {
+                    <div class="caixa card rounded-lg mb-3">
+                        <div class="card-header">
+                            <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                        </div>
+                        <div class="card-body">
+                            <div>@Html.Raw(@obj.content)</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between">
+                                <div class="reactions d-inline">
+
+                                    <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
+
+                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+
+                                    <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
+
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+
+                                </div>
+                                <div>
+                                    @{
+                                        var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
+                                        {
+                                            reactionName = n.Key,
+                                            reactionCount = n.Count()
+                                        }).OrderByDescending(n => n.reactionCount).ToList();
+                                        @for (var i = 0; i < 5; i++)
+                                        {
+                                            var react = @reactOrder.ElementAtOrDefault(@i);
+                                            if (react != null)
+                                            {
+                                                <p class="d-inline">@react.reactionCount</p>
+                                                <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            }
+                                        }
+                                    }
+                                </div>
+                                <div>
+                                    <label for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
+                }
             }
         </div>
     </div>

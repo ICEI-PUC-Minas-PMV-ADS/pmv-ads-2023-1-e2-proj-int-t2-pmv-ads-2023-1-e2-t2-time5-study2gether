@@ -103,18 +103,52 @@
     </header>
     <div class="">
         <main role="main" class="pb-3">
-            <div class="d-flex flex-row-reverse col-11">
-                <div class="col-sm-3 row align-content-end" id="divBusca">
-                    <form method="get" asp-action="Interacoes">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+
+            @if (ViewBag.ViewType == "Indicacoes")
+            {
+                <div class="d-flex flex-row-reverse col-11">
+                    <div class="col-sm-3 row align-content-end" id="divBusca">
+                        <form method="get" asp-action="Indicacoes">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            }
+            else if (ViewBag.ViewType == "Interacoes")
+            {
+                <div class="d-flex flex-row-reverse col-11">
+                    <div class="col-sm-3 row align-content-end" id="divBusca">
+                        <form method="get" asp-action="Interacoes">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            }
+            else if (ViewBag.ViewType == "Perguntas")
+            {
+                <div class="d-flex flex-row-reverse col-11">
+                    <div class="col-sm-3 row align-content-end" id="divBusca">
+                        <form method="get" asp-action="Perguntas">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            }
             @RenderBody()
         </main>
     </div>
