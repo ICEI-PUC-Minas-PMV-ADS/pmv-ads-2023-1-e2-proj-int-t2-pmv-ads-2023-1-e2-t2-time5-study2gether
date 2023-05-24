@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -105,6 +106,11 @@ namespace Study2gether.Controllers
 
         public IActionResult Interacoes(string searchText)
         {
+            if (searchText is null)
+            {
+                throw new ArgumentNullException(nameof(searchText));
+            }
+
             var categories = _context.Category.ToList();
             var axes = _context.Axis.ToList();
             var microfoundations = _context.Microfoundation.ToList();
@@ -137,6 +143,7 @@ namespace Study2gether.Controllers
 
             return View();
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -175,7 +182,7 @@ namespace Study2gether.Controllers
 
         public IActionResult Respostas(Guid id)
         {
-            ViewData["perguntas"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
+            ViewData["Post"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
             return View();
         }
 
@@ -184,28 +191,52 @@ namespace Study2gether.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Respostas([Bind("title,content")] Answer resposta, Guid id)
         {
-            
-                if (ModelState.IsValid)
-                {
-                    resposta.idAnswer = Guid.NewGuid();
-                    resposta.idPost = id;
-                    resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
-                               
-                    _context.Add(resposta);
-                    _context.SaveChanges();
-                    
-                    return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
-                }
-            
-            
+
+            if (ModelState.IsValid)
+            {
+                resposta.idAnswer = Guid.NewGuid();
+                resposta.idPost = id;
+                resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+
+                _context.Add(resposta);
+                _context.SaveChanges();
+
+                return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
+            }
+
+
             return View(resposta);
         }
         public IActionResult Perguntas(string searchText)
         {
+            string axisFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("axis");
+            string microFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("microfoundation");
+            string categoryFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("category");
+
 
             ViewData["Categories"] = _context.Category.ToList();
             ViewData["Axes"] = _context.Axis.ToList();
             ViewData["Microfoundations"] = _context.Microfoundation.ToList();
+
+            if (axisFilter != "" && axisFilter != null) 
+            {
+                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Axes.Any(b => b.idAxis == Guid.Parse(axisFilter))).ToList();
+                ViewData["Filters"] = _context.Axis.First(x => x.idAxis == Guid.Parse(axisFilter)).name;
+            }
+            else if (microFilter != "" && microFilter != null)
+            {
+                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Microfoundations.Any(b => b.idMicrofoundation == Guid.Parse(microFilter))).ToList();
+                ViewData["Filters"] = _context.Microfoundation.First(x => x.idMicrofoundation == Guid.Parse(microFilter)).name;
+            } 
+            else if (categoryFilter != "" && categoryFilter != null)
+            {
+                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Categories.Any(b => b.idCategory == Guid.Parse(categoryFilter))).ToList();
+                ViewData["Filters"] = _context.Category.First(x => x.idCategory == Guid.Parse(categoryFilter)).name;
+            }
+            else {
+                ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).ToList();
+            }
+   
             ViewBag.ViewType = "Perguntas";
 
             if (!string.IsNullOrEmpty(searchText))
@@ -310,6 +341,8 @@ namespace Study2gether.Controllers
             {
                 return Json(new { status = "Error", message = "Você já reagiu a este post", type = "error" });
             }
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
