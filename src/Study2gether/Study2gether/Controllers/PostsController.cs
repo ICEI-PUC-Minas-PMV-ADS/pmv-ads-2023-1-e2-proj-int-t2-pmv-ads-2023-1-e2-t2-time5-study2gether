@@ -63,7 +63,7 @@ namespace Study2gether.Controllers
             {
                 ViewData["FilteredPostList"] = null;
             }
-            Filtrar(0, axis, micro, category);
+            Filtrar(Types.Indication, axis, micro, category);
             var applicationDbContext = _context.Post.Include(p => p.User);
 
             return View();
@@ -100,11 +100,6 @@ namespace Study2gether.Controllers
 
         public IActionResult Interacoes([FromQuery] string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
         {
-            if (searchText is null)
-            {
-                throw new ArgumentNullException(nameof(searchText));
-            }
-
             ViewBag.ViewType = "Interacoes";
 
             if (!string.IsNullOrEmpty(searchText))
@@ -120,7 +115,7 @@ namespace Study2gether.Controllers
             {
                 ViewData["FilteredPostList"] = null; 
             }
-            Filtrar(1, axis, micro, category);
+            Filtrar(Types.Interaction, axis, micro, category);
 
             var applicationDbContext = _context.Post.Include(p => p.User);
 
@@ -185,9 +180,9 @@ namespace Study2gether.Controllers
                 return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
             }
 
-
             return View(resposta);
         }
+
         public IActionResult Perguntas([FromQuery]string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
         {
             ViewBag.ViewType = "Perguntas";
@@ -206,7 +201,8 @@ namespace Study2gether.Controllers
             {
                 ViewData["FilteredPostList"] = null;
             }
-            Filtrar(2, axis, micro, category);
+
+            Filtrar(Types.Question, axis, micro, category);
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -298,11 +294,11 @@ namespace Study2gether.Controllers
         }
 
         [HttpGet]
-        public void Filtrar(int postType, string? axis, string? micro, string? category)
+        public void Filtrar(Types postType, string? axis, string? micro, string? category)
         {
             ViewData["useFilters"] = true;
             string message = "";
-            var posts = _context.Post.Where(c => c.type == (Types)postType).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+            var posts = _context.Post.Where(c => c.type == (Types)postType);
 
             if (axis != "" && axis != null)
             {
@@ -319,7 +315,7 @@ namespace Study2gether.Controllers
                 posts = posts.Where(a => a.Categories.Any(x => x.idCategory == Guid.Parse(category)));
                 message += "\n * " + _context.Category.First(x => x.idCategory == Guid.Parse(category)).name;
             }
-            ViewData["postList"] = posts.ToList();
+            ViewData["postList"] = posts.Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
             ViewData["Filters"] = message;
         }
 

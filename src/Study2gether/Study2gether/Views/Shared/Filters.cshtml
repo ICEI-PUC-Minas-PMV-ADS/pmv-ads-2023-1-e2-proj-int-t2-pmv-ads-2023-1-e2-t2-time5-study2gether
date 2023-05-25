@@ -39,16 +39,6 @@
     </div>
 </form>
 
-<div class="col-sm-2 row justify-content-around align-content-center" id="divFiltroCategoria">
-    <select class="form-select" id="selectFiltroCategory" style="padding: 5px; width: 220px; border-radius: 2.5rem; text-align: center;">
-        <option selected>Selecione uma Categoria</option>
-            @foreach (var element in category)
-            {
-                <option value="@element.idCategory">@element.name</option>
-            }
-    </select>
-</div>
-
 <script>
     function Filtrar() {
         document.getElementById('filtros-form').submit();
