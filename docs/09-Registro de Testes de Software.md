@@ -85,8 +85,18 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
+| CT-16.1 - RF-05 | Verificar se a busca de perguntas por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
+| Registro da tela: | ![Filtro Perguntas ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/0e0d9994-3494-480d-8212-1c0bcd41d94f)| Data do Teste: 24/05/2023 - Resultado: POSITIVO -  O campo de pesquisa está funcionando perfeitamente. Foi inserido a palavra css e feito uma busca em titulo e conteudo, e foi mostrado apenas as publicações que continham o texto pesquisado. | Baixa |
+
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
 | CT-17 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
 | Registro da tela:| ![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685944-cbdbcf4f-9068-40f9-8def-04018985471c.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
+
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-17.1 - RF-05 | Verificar se a busca de interações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto. |    |    |
+| Registro da tela:| ![Filtro Interações](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/bf997d97-b8f3-41c4-9c48-ac08f3ba6ceb)|Data do Teste: 24/05/2023 - Resultado: POSITIVO -  O campo de pesquisa está funcionando perfeitamente. Foi inserido a palavra teste e feito uma busca em titulo e conteudo, e foi mostrado apenas as publicações que continham o texto pesquisado.| Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -178,6 +188,11 @@
 |:---: |:---: |:---: |:---: |
 | CT-35 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. ||  |
 | Registro da tela: |![Tela de Interações](https://user-images.githubusercontent.com/114435981/236688381-4dbd89c1-a14c-435d-8d75-17319a920356.png)|Data do teste: 06/05/2023 - As interações estão sendo apresentadas, no entanto os comentarios ainda não estão implementados| Grave|
+
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-35.1 - RF-08 | Verificar se a aplicação está apresentando todas as interações com os respectivos comentários para todos os usuários, logados ou não. ||  |
+| Registro da tela: |![Respostas de Interações](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/ec370078-7e1e-4f0b-9701-1d7bb0889548)|Data do teste: 24/05/2023 - As interações estão sendo apresentadas, e ao clicar no titulo da interação, é possivel visualizar a respostas referente á publicação|Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
