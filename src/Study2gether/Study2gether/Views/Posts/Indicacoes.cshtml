@@ -2,12 +2,12 @@
 
 @{
     ViewData["Title"] = "Indicações";
-}
-@{
     var categories = ViewData["Categories"] as List<Category>;
     var axes = ViewData["Axes"] as List<Axis>;
     var microfoundations = ViewData["Microfoundations"] as List<Microfoundation>;
     var postList = ViewData["postList"] as List<Post>;
+    string filters = ViewData["Filters"] as string;
+    filters = filters?.Replace("\n", "<br>");
     var filteredPosts = ViewData["FilteredPostList"] as List<Post>;
 }
 
@@ -23,6 +23,10 @@
     </div>
 
     <div class="posts col-sm-9 mt-5">
+        @if (filters != "")
+        {
+            <p class="text-light">Mostrando resultados filtrados por: @Html.Raw(filters)</p>
+        }
         <div id="post-1">
             @if (ViewData["FilteredPostList"] != null && !string.IsNullOrEmpty(ViewData["FilteredPostList"].ToString()))
             {

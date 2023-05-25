@@ -23,9 +23,9 @@ namespace Study2gether.Atributtes
             if (context.Controller is Controller)
             {
                 var controller = context.Controller as Controller;
-                controller.ViewData.Add("Axis", _context.Axis.OrderBy(x => x.name).ToList());
-                controller.ViewData.Add("Micros", _context.Microfoundation.OrderBy(x => x.name).ToList());
-                controller.ViewData.Add("Category", _context.Category.OrderBy(x => x.name).ToList());
+                controller.ViewData.Add("Axes", _context.Axis.OrderBy(x => x.name).ToList());
+                controller.ViewData.Add("Microfoundations", _context.Microfoundation.OrderBy(x => x.name).ToList());
+                controller.ViewData.Add("Categories", _context.Category.OrderBy(x => x.name).ToList());
             }
 
             base.OnResultExecuting(context);

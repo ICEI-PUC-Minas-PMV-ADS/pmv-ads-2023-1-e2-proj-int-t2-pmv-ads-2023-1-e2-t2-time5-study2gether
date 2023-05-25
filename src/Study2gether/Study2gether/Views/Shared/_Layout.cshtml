@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    bool useFilters = ViewData["useFilters"] != null ? (bool)ViewData["useFilters"] : false;
+}
+
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -54,10 +58,15 @@
                         <a asp-controller="Posts" asp-action="Perguntas"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                     }
                 </div>
+                
+                <div class="col-sm-8 row justify-content-around align-content-center">
+                    @if (useFilters)
+                    {
+                        @await Html.PartialAsync("Filters")
+                    }
+                </div>
 
-                @await Html.PartialAsync("Filters")
-
-                <div class="col-sm-3 row justify-content-end align-content-center" id="btnLogin">
+                <div class="col-sm-2 row justify-content-end align-content-center" id="btnLogin">
                     @if (User.Identity.IsAuthenticated)
                     {
                         <div>

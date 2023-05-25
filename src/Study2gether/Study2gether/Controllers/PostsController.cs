@@ -45,13 +45,9 @@ namespace Study2gether.Controllers
             return View(axis);
         }
 
-        public IActionResult Indicacoes(string searchText)
+        public IActionResult Indicacoes([FromQuery] string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
         {
-            ViewData["Categories"] = _context.Category.ToList();
-            ViewData["Axes"] = _context.Axis.ToList();
-            ViewData["Microfoundations"] = _context.Microfoundation.ToList();
             ViewBag.ViewType = "Indicacoes";
-
 
             if (!string.IsNullOrEmpty(searchText))
             {
@@ -67,9 +63,7 @@ namespace Study2gether.Controllers
             {
                 ViewData["FilteredPostList"] = null;
             }
-
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
-
+            Filtrar(0, axis, micro, category);
             var applicationDbContext = _context.Post.Include(p => p.User);
 
             return View();
@@ -104,19 +98,13 @@ namespace Study2gether.Controllers
             return RedirectToAction(nameof(Indicacoes));
         }
 
-        public IActionResult Interacoes(string searchText)
+        public IActionResult Interacoes([FromQuery] string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
         {
             if (searchText is null)
             {
                 throw new ArgumentNullException(nameof(searchText));
             }
 
-            var categories = _context.Category.ToList();
-            var axes = _context.Axis.ToList();
-            var microfoundations = _context.Microfoundation.ToList();
-            ViewData["Categories"] = categories;
-            ViewData["Axes"] = axes;
-            ViewData["Microfoundations"] = microfoundations;
             ViewBag.ViewType = "Interacoes";
 
             if (!string.IsNullOrEmpty(searchText))
@@ -132,18 +120,12 @@ namespace Study2gether.Controllers
             {
                 ViewData["FilteredPostList"] = null; 
             }
-
-            ViewData["postList"] = _context.Post
-                .Where(o => o.type == (Types)1)
-                .Include(o => o.Reactions)
-                .OrderByDescending(o => o.created_date)
-                .ToList();
+            Filtrar(1, axis, micro, category);
 
             var applicationDbContext = _context.Post.Include(p => p.User);
 
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -174,7 +156,6 @@ namespace Study2gether.Controllers
             return RedirectToAction(nameof(Interacoes));
         }
 
-    
         public IActionResult PostagemResposta()
         {
             return View();
@@ -207,36 +188,8 @@ namespace Study2gether.Controllers
 
             return View(resposta);
         }
-        public IActionResult Perguntas(string searchText)
+        public IActionResult Perguntas([FromQuery]string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
         {
-            string axisFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("axis");
-            string microFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("microfoundation");
-            string categoryFilter = HttpUtility.ParseQueryString(Request.QueryString.ToString()).Get("category");
-
-
-            ViewData["Categories"] = _context.Category.ToList();
-            ViewData["Axes"] = _context.Axis.ToList();
-            ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-
-            if (axisFilter != "" && axisFilter != null) 
-            {
-                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Axes.Any(b => b.idAxis == Guid.Parse(axisFilter))).ToList();
-                ViewData["Filters"] = _context.Axis.First(x => x.idAxis == Guid.Parse(axisFilter)).name;
-            }
-            else if (microFilter != "" && microFilter != null)
-            {
-                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Microfoundations.Any(b => b.idMicrofoundation == Guid.Parse(microFilter))).ToList();
-                ViewData["Filters"] = _context.Microfoundation.First(x => x.idMicrofoundation == Guid.Parse(microFilter)).name;
-            } 
-            else if (categoryFilter != "" && categoryFilter != null)
-            {
-                ViewData["postList"] = _context.Post.Where(x => x.type == (Types)2).Where(a => a.Categories.Any(b => b.idCategory == Guid.Parse(categoryFilter))).ToList();
-                ViewData["Filters"] = _context.Category.First(x => x.idCategory == Guid.Parse(categoryFilter)).name;
-            }
-            else {
-                ViewData["postList"] = _context.Post.Where(c => c.type == (Types)2).ToList();
-            }
-   
             ViewBag.ViewType = "Perguntas";
 
             if (!string.IsNullOrEmpty(searchText))
@@ -253,8 +206,7 @@ namespace Study2gether.Controllers
             {
                 ViewData["FilteredPostList"] = null;
             }
-
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)2).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+            Filtrar(2, axis, micro, category);
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -344,5 +296,32 @@ namespace Study2gether.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public void Filtrar(int postType, string? axis, string? micro, string? category)
+        {
+            ViewData["useFilters"] = true;
+            string message = "";
+            var posts = _context.Post.Where(c => c.type == (Types)postType).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+
+            if (axis != "" && axis != null)
+            {
+                posts = posts.Where(a => a.Axes.Any(x => x.idAxis == Guid.Parse(axis)));
+                message += "\n  * " + _context.Axis.First(x => x.idAxis == Guid.Parse(axis)).name;
+            }
+            if (micro != "" && micro != null)
+            {
+                posts = posts.Where(a => a.Microfoundations.Any(x => x.idMicrofoundation == Guid.Parse(micro)));
+                message += "\n * " + _context.Microfoundation.First(x => x.idMicrofoundation == Guid.Parse(micro)).name;
+            }
+            if (category != "" && category != null)
+            {
+                posts = posts.Where(a => a.Categories.Any(x => x.idCategory == Guid.Parse(category)));
+                message += "\n * " + _context.Category.First(x => x.idCategory == Guid.Parse(category)).name;
+            }
+            ViewData["postList"] = posts.ToList();
+            ViewData["Filters"] = message;
+        }
+
     }
 }
