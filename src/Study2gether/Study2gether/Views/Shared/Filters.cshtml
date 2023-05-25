@@ -7,8 +7,10 @@
 <form id="filtros-form" method="get">
     <div class="form-row align-items-center">
         <div class="col" id="divFiltroEixos">
-            <select class="form-select" name="axis" style="padding: 5px; border-radius: 2.5rem; text-align: center;">
-                <option selected value="">Selecione um Eixo</option>
+            <select class="form-select" name="axis" style="width: 60px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                width: 200px;
+                height: auto;
+                <option selected value="">Eixo</option>
                 @foreach (var element in axes)
                 {
                     <option value="@element.idAxis">@element.name</option>
@@ -16,8 +18,8 @@
             </select>
         </div>
         <div class="col" id="divFiltroMicrofundamentos">
-            <select class="form-select" name="micro" id="selectFiltroMicros" style="padding: 5px; border-radius: 2.5rem; text-align: center;">
-                <option selected value="">Selecione um Microfundamento</option>
+            <select class="form-select" name="micro" id="selectFiltroMicros" style="width: 160px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                <option selected value="">Microfundamento</option>
                 @foreach (var element in microfoundations)
                 {
                     <option value="@element.idMicrofoundation">@element.name</option>
@@ -25,8 +27,8 @@
             </select>
         </div>
         <div class="col" id="divFiltroCategorias">
-            <select class="form-select" name="category" id="selectFiltroCategories" style="padding: 5px; border-radius: 2.5rem; text-align: center;">
-                <option selected value="">Selecione uma Categoria</option>
+            <select class="form-select" name="category" id="selectFiltroCategories" style="width: 110px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                <option selected value="">Categoria</option>
                 @foreach (var element in categories)
                 {
                     <option value="@element.idCategory">@element.name</option>
