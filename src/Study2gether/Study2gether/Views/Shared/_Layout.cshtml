@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    bool useFilters = ViewData["useFilters"] != null ? (bool)ViewData["useFilters"] : false;
+}
+
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -55,9 +59,14 @@
                     }
                 </div>
 
-                @await Html.PartialAsync("Filters")
+                <div class="col-sm-8 row justify-content-around align-content-center">
+                    @if (useFilters)
+                    {
+                        @await Html.PartialAsync("Filters")
+                    }
+                </div>
 
-                <div class="col-sm-3 row justify-content-end align-content-center" id="btnLogin">
+                <div class="col-sm-2 row justify-content-end align-content-center" id="btnLogin">
                     @if (User.Identity.IsAuthenticated)
                     {
                         <div>
@@ -78,7 +87,7 @@
                     }
                 </div>
             </div>
-</nav>
+        </nav>
     </header>
     <div class="">
         <main role="main" class="pb-3">

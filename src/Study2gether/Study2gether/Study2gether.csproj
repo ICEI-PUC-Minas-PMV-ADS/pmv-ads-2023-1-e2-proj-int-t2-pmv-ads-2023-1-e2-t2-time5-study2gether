@@ -112,6 +112,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Study2gether - Backup.csproj" />
     <None Include="Views\Users\AlterarSenha.cshtml" />
     <None Include="Views\Users\EditarPerfil.cshtml" />
     <None Include="Views\Users\Historico.cshtml" />

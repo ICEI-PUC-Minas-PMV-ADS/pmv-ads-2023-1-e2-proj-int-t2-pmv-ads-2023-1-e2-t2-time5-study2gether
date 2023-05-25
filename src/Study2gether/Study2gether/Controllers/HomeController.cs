@@ -19,8 +19,12 @@ namespace Study2gether.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index([FromQuery] string? axis, [FromQuery] string? micro, [FromQuery] string? category)
         {
+            if(axis != null || micro != null || category != null)
+                return RedirectToAction("Perguntas", "Posts", new { axis = axis, micro = micro, category = category });
+
+            ViewData["useFilters"] = true;
             return View();
         }
 
