@@ -38,7 +38,7 @@
 
         @foreach (var obj in post.Answers)
         {
-            <div class="caixa card rounded-lg mb-3">
+            <div class="caixa card rounded-lg mb-3 bg-answers">
                 <div class="card-header">
                     <h4 class="text-center">@obj.title</h4>
                     <p>@obj.User.name</p>
@@ -50,6 +50,8 @@
                     <label class="float-right" for="data-resposta"><small>Data da resposta: @post.created_date)</small></label>
                 </div>
             </div>
+        }
+
         }
     </div>
 </div>
