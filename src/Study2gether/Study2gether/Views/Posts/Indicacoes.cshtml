@@ -45,7 +45,7 @@
 
                                     <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
                                     <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
@@ -94,7 +94,7 @@
 
                                     <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
                                     <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
@@ -145,7 +145,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form asp-action="Indicacoes">
+                <form asp-action="Indicacoes" id="postIndication">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="row">
                         <div class="form-group col-md-4">
@@ -198,7 +198,7 @@
     </div>
 </div>
 <div class="modal fade" id="emojiPicker" tabindex="-1" role="dialog" aria-labelledby="emojiPickerLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered"  role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" id="picker" style="background-color:transparent"></div>
     </div>
 </div>
@@ -207,7 +207,7 @@
 <script>
     const pickerOptions = { onEmojiSelect: sendReaction };
     const picker = new EmojiMart.Picker(pickerOptions);
-   
+
     $(document).ready(function () {
         $('#picker').append(picker)
         $('[data-toggle="popover"]').popover()
@@ -216,11 +216,11 @@
             let emoji = search($(this).html())
             let element = $(this)
             test = emoji.then(
-                function (value) { element.html(value[0]);},
+                function (value) { element.html(value[0]); },
             )
         })
     });
-    
+
     function setReactionToPost(postId) {
         $('#emojiRedirect').html(postId)
     }
@@ -271,4 +271,25 @@
 
         return results
     }
+</script>
+<script>
+    $("#postIndication").submit(function (e) {
+        category = $("#categoryId").val()
+        title = $("#title").val()
+        content = $("#tiny").val()
+        if (category.length > 0 && title && content) {
+            return true
+        }
+        else {
+            console.log('b')
+            Toastify({
+                text: "Titulo, Conteudo e Categoria são obrigatórios",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #ffa8a8, #bbbd1c)",
+                },
+            }).showToast();
+            return false
+        };
+    });
 </script>

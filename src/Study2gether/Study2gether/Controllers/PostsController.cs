@@ -55,6 +55,7 @@ namespace Study2gether.Controllers
                     .Where(p => p.type == (Types)0)
                     .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
                     .Include(p => p.Reactions)
+                    .Include(p => p.Categories)
                     .OrderByDescending(p => p.created_date)
                     .ToList();
             }
@@ -73,12 +74,12 @@ namespace Study2gether.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Indicacoes([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)
         {
+            var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
+            var axis = await _context.Axis.Where(c => axisId.Contains(c.idAxis)).ToListAsync();
+            var microfoundation = await _context.Microfoundation.Where(c => microfoundationId.Contains(c.idMicrofoundation)).ToListAsync();
             
-            if (ModelState.IsValid && User.IsInRole("admin"))
+            if (ModelState.IsValid && User.IsInRole("admin") && category.Count > 0)
             {
-                var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
-                var axis = await _context.Axis.Where(c => axisId.Contains(c.idAxis)).ToListAsync();
-                var microfoundation = await _context.Microfoundation.Where(c => microfoundationId.Contains(c.idMicrofoundation)).ToListAsync();
 
                 foreach (var obj in category) { post.Categories.Add(obj); }
                 foreach (var obj in axis){post.Axes.Add(obj);}
@@ -94,6 +95,7 @@ namespace Study2gether.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Indicacoes));
             }
+
             ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email", post.idUser);
             return RedirectToAction(nameof(Indicacoes));
         }
@@ -158,11 +160,11 @@ namespace Study2gether.Controllers
 
         public IActionResult Respostas(Guid id)
         {
-            ViewData["Post"] = _context.Post
-                .Include(p => p.Answers)
-                .Include(p => p.Answers).ThenInclude(a => a.User)
-                .Single(p => p.idPost == id);
 
+            var post = _context.Post.Include(p => p.Answers).ThenInclude(a => a.User).Single(p => p.idPost == id);
+            ViewData["Post"] = post;
+            post.views = ++post.views;
+            _context.SaveChanges();
             return View();
         }
 
@@ -243,12 +245,37 @@ namespace Study2gether.Controllers
 
         public IActionResult ReactToPost(Guid idPost, string reactioName)
         {
-            var user = Guid.Parse(User.FindFirstValue("idUser"));
 
-            if(reactioName == "Star")
+            if (User.FindFirstValue("idUser") != null)
             {
-                var shouldCreate = _context.Reactions.Any(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
-                if (!shouldCreate)
+                var user = Guid.Parse(User.FindFirstValue("idUser"));
+                if (reactioName == "Star")
+                {
+                    var shouldCreate = _context.Reactions.Any(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
+                    if (!shouldCreate)
+                    {
+                        var reaction = new Reaction();
+                        reaction.Id = Guid.NewGuid();
+                        reaction.Name = reactioName;
+                        reaction.idUser = user;
+                        reaction.idPost = idPost;
+                        _context.Reactions.Add(reaction);
+                        _context.SaveChanges();
+                        return Json(new { status = "success", message = "Post favoritado com successo", type = "FavAdd" });
+                    }
+                    else
+                    {
+                        var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
+                        _context.Reactions.Remove(reaction);
+                        _context.SaveChanges();
+                        return Json(new { status = "success", message = "Post removido dos favoritos", type = "FavRemove" });
+                    }
+
+                }
+
+                var userReaction = _context.Reactions.FirstOrDefault(m => m.Name != "Star" && m.idPost == idPost && m.idUser == user);
+
+                if (userReaction == null)
                 {
                     var reaction = new Reaction();
                     reaction.Id = Guid.NewGuid();
@@ -257,44 +284,24 @@ namespace Study2gether.Controllers
                     reaction.idPost = idPost;
                     _context.Reactions.Add(reaction);
                     _context.SaveChanges();
-                    return Json(new { status = "success", message = "Post favoritado com successo", type = "FavAdd" });
+                    return Json(new { status = "success", message = "Reação adiciona com sucesso", type = "add" });
                 }
-                else
+                else if (userReaction.Name == reactioName)
                 {
                     var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
                     _context.Reactions.Remove(reaction);
                     _context.SaveChanges();
-                    return Json(new { status = "success", message = "Post removido dos favoritos", type = "FavRemove" });
+                    return Json(new { status = "success", message = "Reação removida com sucesso", type = "remove" });
                 }
-
-            }
-
-            var userReaction = _context.Reactions.FirstOrDefault(m => m.Name != "Star" &&  m.idPost == idPost && m.idUser == user);
-
-            if (userReaction == null)
-            {
-                var reaction = new Reaction();
-                reaction.Id = Guid.NewGuid();
-                reaction.Name = reactioName;
-                reaction.idUser = user;
-                reaction.idPost = idPost;
-                _context.Reactions.Add(reaction);
-                _context.SaveChanges();
-                return Json(new { status = "success", message = "Reação adiciona com sucesso", type="add" });
-            }
-            else if(userReaction.Name == reactioName)
-            {
-                var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
-                _context.Reactions.Remove(reaction);
-                _context.SaveChanges();
-                return Json(new { status = "success", message = "Reação removida com sucesso", type = "remove" });
+                else
+                {
+                    return Json(new { status = "error", message = "Você já reagiu a este post", type = "error" });
+                }
             }
             else
             {
-                return Json(new { status = "Error", message = "Você já reagiu a este post", type = "error" });
+                return Json(new { status = "error", message = "Você precisa estar logado para reagir", type = "error" });
             }
-
-            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
