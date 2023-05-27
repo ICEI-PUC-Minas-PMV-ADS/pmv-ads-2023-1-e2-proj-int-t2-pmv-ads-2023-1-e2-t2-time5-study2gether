@@ -50,18 +50,19 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-10 - RF- |    |    |    |
-| Registro da tela: |
+| CT-10 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Interaçoes por Eixo. |    |    |
+| Registro da tela:|![Filtro Eixo - Interacoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/9477803b-cabc-4c8a-b9ca-3a7b6ebe7ac5)|Data do Teste: 26/05/2023 - Resultado: POSITIVO - A funcionalidade foi completamente implementada, sendo possivel ver as postagens pelo filtro de Eixo, e antes das postagens é apresentado qual filtro está ativo.|Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-11 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Interações por este Microfundamento. |    |    |
-| Registro da tela: |
+| Registro da tela: |![Filtro Microfundamento - Interacoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/90fdb797-f765-4717-b934-481606d4ee29)|Data do Teste: 26/05/2023 - Resultado: POSITIVO - A funcionalidade foi completamente implementada, sendo possivel ver as postagens pelo filtro de Microfundamento, e antes das postagens é apresentado qual filtro está ativo.|Baixa.|
+
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-12 - RF- |    |    |    |
-| Registro da tela: |
+| CT-12 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Interações por essa Categoria. |    |    |
+| Registro da tela: |![Filtro Cetegoria - Interacoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/24609323-cd1e-4bc8-accd-a391b8f8f876)|Data do Teste: 26/05/2023 - Resultado: POSITIVO - A funcionalidade foi completamente implementada, sendo possivel ver as postagens pelo filtro de Categoria, e antes das postagens é apresentado qual filtro está ativo.|Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -70,13 +71,24 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
+| CT-13.1 - RF-02 | Verificar se o filtro por Eixo está fazendo a busca correta de Indicações por Eixo. | ||
+| Registro da tela: |![Filtro Eixo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/23626def-75e7-45b6-a9e0-63397e2cc97d)|Data do Teste: 26/05/2023 - Resultado: POSITIVO - A funcionalidade foi completamente implementada, sendo possivel ver as postagens pelo filtro de eixo, e antes das postagens é apresentado qual filtro está ativo.| Baixa|
+
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
 | CT-14 - RF-02 | Verificar se o filtro por Microfundamento está fazendo a busca correta de Indicações por Microfundamento. |    |    |
-| Registro da tela: |
+| Registro da tela: |![Filtro Microfundamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/9e0b0415-80d3-4b17-b75e-61e14b61ddc5)|Data do Teste: 26/05/2023 - Resultado: POSITIVO - A funcionalidade foi completamente implementada, sendo possivel ver as postagens pelo filtro de microfundamento, e antes das postagens é apresentado qual filtro está ativo.| Baixa|
+
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-15 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Indicações por essa categoria. |    |    |
 | Registro da tela:| ![Tela de Pesquisa de Indicações](https://user-images.githubusercontent.com/114435981/236685944-cbdbcf4f-9068-40f9-8def-04018985471c.png)|Data do Teste: 06/05/2023 - Resultado: NEGATIVO - A funcionalidade dos filtros de pesquisa ainda não foram implementada.| Alta|
+
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-15.1 - RF-02 | Verificar se o filtro por Categoria está fazendo a busca correta de Indicações por essa categoria. |    |    |
+| Registro da tela:|![Filtro Categoria](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/c64e50f3-5253-4120-b5fc-a8eb484bded6)|Data do Teste: 26/05/2023 - Resultado: POSITIVO - A funcionalidade foi completamente implementada, sendo possivel ver as postagens pelo filtro de categoria, e antes das postagens é apresentado qual filtro está ativo.|Baixa|
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -162,7 +174,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
-| Registro da tela: |![Interações](https://user-images.githubusercontent.com/114435981/236687776-74eb2daa-a0e8-4232-a2fd-0fe4b40a44c4.png)| Data do teste: 06/05/2023 - Os emojis estão sendo contabilizados corretamente, mas passará por nova validação| Média |
+| Registro da tela: |![Emojis de Interacoes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/7826faa9-be8f-4bb8-b2bb-43057180a1ab)| Data do teste: 26/05/2023 - Os emojis estão sendo contabilizados corretamente, e é possivel visualizar os emojis que foram adicionados no footer da publicação.| Baixa |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
