@@ -6,17 +6,17 @@
 ||O usuário tentará alcançar o resultado correto?|O usuário consegue notar que a ação correta está disponível?|O usuário consegue associar as ações disponíveis com o seu objetivo final?|O usuário vai perceber que foi feito um progresso na direção do seu objetivo?|
 |--|--|--|--|--|
 |**Tarefa 1: Pesquisa de Perguntas**|||||
-|Preencher campo de pesquisa|Sim, o usuário consegue preencher o campo de pesquisa.|Não, pois apesar do campo estar disponível, ele não está funcionando.|Sim, pois o campo de pesquisa está disponível.|Não, pois o botão de "buscar" não está funcionando.|
-|Preencher filtros de pesquisa|Sim, ele consegue selecionar uma opção.|Sim, ele consegue notar que existem os campos de pesquisa.|Sim, pois o campo está disponível.|Não, pois os filtros não estão funcionando.|
-|Pesquisar|Sim, pois o campo de pesquisa está visível.|Não, pois o botão de "buscar" não está funcionando.|Sim, pois o campo de pesquisa está disponível|Não, pois os campos de pesquisa ainda não estão funcionando.|
-|Identificar se os resultados foram satisfatórios|Não, pois os campos de pesquisa não estão funcionando.|Não, pois os campos de pesquisa não estão funcionando.|Não, pois os campos de pesquisa não estão funcionando.|Não, pois os campos de pesquisa não estão funcionando.|
+|Preencher campo de pesquisa|Sim, o usuário consegue preencher o campo de pesquisa.|Sim, pois está objetiva.|Sim, pois ele obtém sucesso com as suas ações.|Sim, pois ele obtém sucesso e as informações são claras e objetivas.|
+|Preencher filtros de pesquisa|Sim, ele consegue selecionar uma opção.|Sim, pois ele consegue notar que existem os campos de pesquisa.|Sim, pois o campo está disponível e é objetivo.|Sim, pois as informações são claras e objetivas.|
+|Pesquisar|Sim, pois o campo de pesquisa está visível.|Sim, pois ele consegue notar que existem os campos de pesquisa.|Sim, pois o campo de pesquisa está disponível.|Sim, pois as informações são claras e objetivas.|
+|Identificar se os resultados foram satisfatórios|Sim, pois o usuário consegue obter o resultado desejado.|Sim, pois os campos de pesquisa são funcionais.|Sim, pois os campos de pesquisa estão funcionando e está intuitivo.|Sim, pois está intuitivo e ele consegue observar progresso.|
 |--|--|--|--|--|
 |**Tarefa 2: Postagem de perguntas**|||||
 |Acessar a área de perguntas|Sim, o acesso foi realizado com sucesso.|Sim, pois o acesso é realizado de forma simples e objetiva.|Sim, pois as informações estão claras.|Sim, pois as informações estão claras.|
 |Identificar botão de adição de nova pergunta|Sim, pois está visualmente objetivo.|Sim, pois a tela está intuitiva.|Sim, pois as informações estão claras.|Sim, pois as informações estão claras.|
 |Preencher campos  de nova pergunta|Sim, pois está visualmente objetivo.|Sim, pois a tela está intuitiva.|Sim, pois as informações estão claras.|Sim, pois o usuário consegue postar sua pergunta.|
-|Finalizar a publicação da pergunta|Sim, pois todos os passos seguidos até este ponto foram objetivos.|Sim, pois o botão "publicar" está objetivo.|Sim, pois a tela está intuitiva.|Sim, pois ele consegue postar a pergunta.|
-|Identificar se a pergunta foi publicada com sucesso|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois quando a pergunta é postada, ela ficará disponível na aba "perguntas".|
+|Finalizar a publicação da pergunta|Sim, pois todos os passos seguidos até este ponto foram objetivos.|Sim, pois o botão "create" está objetivo.|Sim, pois a tela está intuitiva.|Sim, pois ele consegue postar a pergunta.|
+|Identificar se a pergunta foi publicada com sucesso|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois o processo é intuitivo e ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois quando a pergunta é postada, ela ficará disponível na aba "perguntas".|
 |--|--|--|--|--|
 |**Tarefa 3: Pesquisa de Indicações**|||||
 |Preencher campo de pesquisa| | | | |
@@ -54,8 +54,8 @@
 |||||
 |--|--|--|--|
 | |Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
-|**Tarefa 1: Pesquisa de Perguntas**|Sim|5|0|
-|**Tarefa 2: Postagem de perguntas**|Não|1|3|
+|**Tarefa 1: Pesquisa de Perguntas**|Não|0|5|
+|**Tarefa 2: Postagem de perguntas**|Não|0|5|
 |**Tarefa 3: Pesquisa de Indicações**||||
 |**Tarefa 4: Postagem de interações**|Não|0|5|
 |**Tarefa 5: Login**|Não|0|5|
