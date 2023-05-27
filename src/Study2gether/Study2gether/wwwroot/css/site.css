@@ -67,3 +67,8 @@ li.selected {
     background-color: #E68A00;
     border: none;
 }
+
+.bg-answers {
+    background-color: #cbcbcb;
+}
+
