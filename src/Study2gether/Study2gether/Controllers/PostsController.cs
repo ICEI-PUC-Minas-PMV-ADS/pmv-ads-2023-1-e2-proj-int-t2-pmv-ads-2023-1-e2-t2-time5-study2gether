@@ -55,7 +55,6 @@ namespace Study2gether.Controllers
                     .Where(p => p.type == (Types)0)
                     .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
                     .Include(p => p.Reactions)
-                    .Include(p => p.Categories)
                     .OrderByDescending(p => p.created_date)
                     .ToList();
             }
