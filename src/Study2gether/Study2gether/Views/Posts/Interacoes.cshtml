@@ -46,7 +46,7 @@
 
                                     <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
                                     <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
@@ -95,7 +95,7 @@
 
                                     <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                    <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
                                     <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
@@ -146,7 +146,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form asp-action="Interacoes">
+                <form asp-action="Interacoes" id="postInteraction">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="row">
                         <div class="form-group col-md-4">
@@ -273,4 +273,25 @@
 
         return results
     }
+</script>
+<script>
+    $("#postInteraction").submit(function (e) {
+        category = $("#categoryId").val()
+        title = $("#title").val()
+        content = $("#tiny").val()
+        if (category.length > 0 && title && content) {
+            return true
+        }
+        else {
+            console.log('b')
+            Toastify({
+                text: "Titulo, Conteudo e Categoria são obrigatórios",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #ffa8a8, #bbbd1c)",
+                },
+            }).showToast();
+            return false
+        };
+    });
 </script>
