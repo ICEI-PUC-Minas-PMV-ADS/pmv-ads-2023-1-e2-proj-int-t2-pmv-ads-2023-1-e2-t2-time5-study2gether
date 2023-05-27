@@ -135,7 +135,7 @@ namespace Study2gether.Controllers
         {   
             var user = await _context.Users
                 .Include(teste => teste.Posts)
-                .Include(teste => teste.Answers)
+                .Include(teste => teste.Answers.OrderByDescending(a => a.Post.created_date))
                 .Include(r => r.Reactions)
                 .ThenInclude(r => r.Post)
                 .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
@@ -210,7 +210,8 @@ namespace Study2gether.Controllers
                         {
                             user.password = BCrypt.Net.BCrypt.HashPassword(newPassword1);
                             await _context.SaveChangesAsync();
-                            return RedirectToAction("Historico");
+                            TempData["success"] = "Sua Senha alterada com sucesso!";                       
+                            return View();
                         }
                         else
                         {
