@@ -182,7 +182,12 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-34 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
-| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34enviarresposta.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão "Enviar" não está funcionando, logo não é possível enviar respostas para realizar o teste. | Grave |
+| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34rf08usuariologado.jpg) | Data do Teste: 27/05/2023 - Resultado: POSITIVO - O usuário "logado" consegue visualizar as repostas. | Sucesso |
+
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-34.1 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
+| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34rf08usuarionaologado.jpg) | Data do Teste: 27/05/2023 - Resultado: POSITIVO - O usuário "não logado" consegue visualizar as repostas. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
