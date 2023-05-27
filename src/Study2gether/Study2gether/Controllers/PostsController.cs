@@ -325,7 +325,7 @@ namespace Study2gether.Controllers
                 posts = posts.Where(a => a.Categories.Any(x => x.idCategory == Guid.Parse(category)));
                 message += "\n * " + _context.Category.First(x => x.idCategory == Guid.Parse(category)).name;
             }
-            ViewData["postList"] = posts.Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+            ViewData["postList"] = posts.Include(o => o.Reactions).Include(o => o.Answers).Include(o => o.Axes).Include(o => o.Microfoundations).Include(o => o.Categories).OrderByDescending(o => o.created_date).ToList();
             ViewData["Filters"] = message;
         }
 
