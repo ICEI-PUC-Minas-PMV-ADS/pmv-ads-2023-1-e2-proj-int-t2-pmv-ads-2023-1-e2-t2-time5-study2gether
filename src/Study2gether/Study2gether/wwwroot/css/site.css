@@ -62,3 +62,8 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 2.5rem;
 }
+
+li.selected {
+    background-color: #E68A00;
+    border: none;
+}
