@@ -1,3 +1,4 @@
+
 @model Study2gether.Models.User
 
 @{
@@ -60,9 +61,8 @@
             @foreach (var resposta in @Model.Answers)
             {
                 <div>
-                   
+                    <h6>@resposta.Post.title)</h6>
                     <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@resposta.idPost"><p id="limitContent">@Html.Raw(@resposta.content)</p></a>
-
                 </div>
                 <hr>
             }
