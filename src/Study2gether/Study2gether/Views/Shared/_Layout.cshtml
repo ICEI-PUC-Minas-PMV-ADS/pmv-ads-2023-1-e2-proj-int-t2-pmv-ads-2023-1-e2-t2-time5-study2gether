@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     bool useFilters = ViewData["useFilters"] != null ? (bool)ViewData["useFilters"] : false;
 }
 
@@ -96,9 +96,9 @@
             {
                 <div class="d-flex flex-row-reverse col-11">
                     <div class="col-sm-3 row align-content-end" id="divBusca">
-                        <form method="get" asp-action="Indicacoes">
+                        <form method="get" asp-action="Indicacoes" id="searchForm">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
+                                <input type="text" class="form-control" name="searchText" id="searchText" placeholder="Digite o texto para buscar">
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
@@ -111,9 +111,9 @@
             {
                 <div class="d-flex flex-row-reverse col-11">
                     <div class="col-sm-3 row align-content-end" id="divBusca">
-                        <form method="get" asp-action="Interacoes">
+                        <form method="get" asp-action="Interacoes" id="searchForm">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
+                                <input type="text" class="form-control" name="searchText" id="searchText" placeholder="Digite o texto para buscar">
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
@@ -126,9 +126,9 @@
             {
                 <div class="d-flex flex-row-reverse col-11">
                     <div class="col-sm-3 row align-content-end" id="divBusca">
-                        <form method="get" asp-action="Perguntas">
+                        <form method="get" asp-action="Perguntas" id="searchForm">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="searchText" placeholder="Digite o texto para buscar">
+                                <input type="text" class="form-control" name="searchText" id="searchText" placeholder="Digite o texto para buscar">
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
@@ -145,5 +145,25 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        (function () {
+            var searchTextElement = document.getElementById('searchText');
+
+            if (localStorage.getItem('lastSearchText')) {
+                var lastSearchText = localStorage.getItem('lastSearchText');
+                searchTextElement.value = lastSearchText;
+                localStorage.removeItem('lastSearchText'); // Limpa a memória após a exibição
+            }
+
+            document.getElementById('searchForm').addEventListener('submit', function (event) {
+                var searchTextValue = searchTextElement.value;
+                localStorage.setItem('lastSearchText', searchTextValue);
+            });
+        })();
+    </script>
+
+
+
 </body>
 </html>
