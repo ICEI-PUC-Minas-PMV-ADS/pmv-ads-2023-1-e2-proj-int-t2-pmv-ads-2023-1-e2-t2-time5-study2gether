@@ -38,6 +38,18 @@
                         </div>
                         <div class="card-body">
                             <div>@Html.Raw(@obj.content)</div>
+                            @foreach (var x in @obj.Axes)
+                            {
+                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Microfoundations)
+                            {
+                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Categories)
+                            {
+                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
                         </div>
                         <div class="card-footer">
                             <div class="d-flex justify-content-between">
@@ -87,6 +99,18 @@
                         </div>
                         <div class="card-body">
                             <div>@Html.Raw(@obj.content)</div>
+                            @foreach (var x in @obj.Axes)
+                            {
+                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Microfoundations)
+                            {
+                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Categories)
+                            {
+                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
                         </div>
                         <div class="card-footer">
                             <div class="d-flex justify-content-between">
