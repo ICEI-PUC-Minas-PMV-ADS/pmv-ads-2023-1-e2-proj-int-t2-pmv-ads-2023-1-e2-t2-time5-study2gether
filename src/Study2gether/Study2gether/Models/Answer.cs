@@ -20,7 +20,7 @@ namespace Study2gether.Models
         public User User { get; set; }
 
 
-        [Required(ErrorMessage = "Obrigatório fornecer um título!")]
+
         public string title { get; set; }
 
         [Required(ErrorMessage = "Obrigatório possuir conteúdo!")]

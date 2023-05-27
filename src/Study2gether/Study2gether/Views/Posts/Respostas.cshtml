@@ -31,17 +31,6 @@
                 </div>
 
                 <div class="card-footer">
-
-                    <div class="reactions d-inline">
-                        <i class="fa-regular fa-comment-dots"></i>
-
-                        <i class="fa-regular fa-face-smile"></i>
-
-                        <i class="fa-solid fa-chart-column"></i>
-
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
                     <label class="float-right" for="data-resposta"><small>Data da pergunta: @post.created_date)</small></label>
                 </div>
             </div>
@@ -52,9 +41,13 @@
             <div class="caixa card rounded-lg mb-3">
                 <div class="card-header">
                     <h4 class="text-center">@obj.title</h4>
+                    <p>@obj.User.name</p>
                 </div>
                 <div class="card-body">
                     <div>@obj.content</div>
+                </div>
+                <div class="card-footer">
+                    <label class="float-right" for="data-resposta"><small>Data da resposta: @post.created_date)</small></label>
                 </div>
             </div>
         }
@@ -66,18 +59,13 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-floating">
             <div class="form-group">
-                <label asp-for="title" class="control-label">Título</label>
-                <input asp-for="title" class="form-control" />
-                <span asp-validation-for="title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="content" class="control-label">Conteúdo</label>
+                <label asp-for="content" class="control-label">Resposta</label>
                 <input asp-for="content" class="form-control" />
                 <span asp-validation-for="content" class="text-danger"></span>
             </div>
             <div>
                 <button class="btn btn-primary" type="submit">Enviar</button>
-                <a class="btn btn-secondary" asp-action="Create" role="button">Cancelar</a>
+                <a class="btn btn-secondary" asp-action="Perguntas" asp-controller="Posts" role="button">Voltar</a>
             </div>
         </div>
 

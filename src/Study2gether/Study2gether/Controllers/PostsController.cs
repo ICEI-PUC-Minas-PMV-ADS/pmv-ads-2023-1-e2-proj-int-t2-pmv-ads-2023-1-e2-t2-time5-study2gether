@@ -158,21 +158,25 @@ namespace Study2gether.Controllers
 
         public IActionResult Respostas(Guid id)
         {
-            ViewData["Post"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
+            ViewData["Post"] = _context.Post
+                .Include(p => p.Answers)
+                .Include(p => p.Answers).ThenInclude(a => a.User)
+                .Single(p => p.idPost == id);
+
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Respostas([Bind("title,content")] Answer resposta, Guid id)
+        public IActionResult Respostas([Bind("content")] Answer resposta, Guid id)
         {
-
             if (ModelState.IsValid)
             {
                 resposta.idAnswer = Guid.NewGuid();
                 resposta.idPost = id;
                 resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+
+                resposta.User = _context.Users.Find(resposta.idUser);
 
                 _context.Add(resposta);
                 _context.SaveChanges();
