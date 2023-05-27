@@ -5,6 +5,7 @@
 }
 @{
     var post = ViewData["Post"] as Post;
+    var isAuthenticated = User.Identity.IsAuthenticated;
 }
 
 
@@ -52,24 +53,25 @@
             </div>
         }
 
+
+        @if (isAuthenticated)
+        {
+            <div class="container">
+                <form asp-action="Respostas">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-floating">
+                        <div class="form-group">
+                            <label asp-for="content" class="control-label">Resposta</label>
+                            <input asp-for="content" class="form-control" />
+                            <span asp-validation-for="content" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                            <a class="btn btn-secondary" asp-action="Perguntas" asp-controller="Posts" role="button">Voltar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
         }
     </div>
-</div>
-
-<div class="container">
-    <form asp-action="Respostas">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-floating">
-            <div class="form-group">
-                <label asp-for="content" class="control-label">Resposta</label>
-                <input asp-for="content" class="form-control" />
-                <span asp-validation-for="content" class="text-danger"></span>
-            </div>
-            <div>
-                <button class="btn btn-primary" type="submit">Enviar</button>
-                <a class="btn btn-secondary" asp-action="Perguntas" asp-controller="Posts" role="button">Voltar</a>
-            </div>
-        </div>
-
-    </form>
 </div>
