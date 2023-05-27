@@ -48,3 +48,29 @@ input {
     height: 80px;
 }
 
+
+@media screen and (max-width: 279px) and (min-width: 550px) {
+    #modal fade show in {
+        display: block;
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    input {
+        display: block;
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .completePage-editarPerfil {
+        display: block;
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+       
+    }
+}
+
+   
