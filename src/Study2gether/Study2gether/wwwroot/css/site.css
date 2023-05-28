@@ -69,6 +69,13 @@ li.selected {
 }
 
 .bg-answers {
-    background-color: #cbcbcb;
+    background-color: #fff;
 }
 
+    .bg-answers .card-header {
+        background-color: #EFCA5A;
+    }
+
+    .bg-answers .card-footer {
+        background-color: #EFCA5A;
+    }
