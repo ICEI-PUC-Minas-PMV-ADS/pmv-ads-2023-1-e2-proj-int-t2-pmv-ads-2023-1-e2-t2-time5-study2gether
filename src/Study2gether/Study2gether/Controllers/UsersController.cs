@@ -210,7 +210,7 @@ namespace Study2gether.Controllers
                         {
                             user.password = BCrypt.Net.BCrypt.HashPassword(newPassword1);
                             await _context.SaveChangesAsync();
-                            TempData["success"] = "Sua Senha alterada com sucesso!";                       
+                            TempData["success"] = "Sua Senha foi alterada com sucesso!";                       
                             return View();
                         }
                         else
