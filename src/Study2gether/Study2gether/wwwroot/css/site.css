@@ -72,10 +72,10 @@ li.selected {
     background-color: #fff;
 }
 
-    .bg-answers .card-header {
-        background-color: #EFCA5A;
-    }
+.bg-answers .card-header {
+    background-color: #d9f6f3;
+}
 
-    .bg-answers .card-footer {
-        background-color: #EFCA5A;
-    }
+.bg-answers .card-footer {
+    background-color: #d9f6f3;
+}
