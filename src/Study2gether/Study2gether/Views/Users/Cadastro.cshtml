@@ -13,7 +13,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group text-left">
                 <label asp-for="email" class="control-label" style="color:white"></label>
-                <input asp-for="email" class="form-control" type="email"/>
+                <input asp-for="email" class="form-control" type="email" />
                 <span asp-validation-for="email" class="text-danger"></span>
             </div>
             <div class="form-group text-left">
@@ -29,6 +29,32 @@
     </div>
 </div>
 
+<div class="modal fade" id="changePasswordConfirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color: green">Olá @User.Identity.Name,</h5>
+
+            </div>
+            <div class="modal-body">
+                @TempData["success"]
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-success" asp-controller="Home" asp-action="Index">Fechar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@if (TempData["success"] != null)
+{
+    <script>
+        $('#changePasswordConfirmation').modal('show');
+    </script>
+}
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

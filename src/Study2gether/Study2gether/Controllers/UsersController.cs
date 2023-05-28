@@ -115,13 +115,14 @@ namespace Study2gether.Controllers
             }
             if (ModelState.IsValid)
             {
+                TempData["success"] = "Sua conta foi criada com sucesso!";
                 user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
                 user.idUser = Guid.NewGuid();
                 user.name = user.email;
                 user.imageLink = "https://cdn-icons-png.flaticon.com/512/6596/6596121.png";
                 _context.Add(user);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                return View();
             }
             return View(user);
         }
