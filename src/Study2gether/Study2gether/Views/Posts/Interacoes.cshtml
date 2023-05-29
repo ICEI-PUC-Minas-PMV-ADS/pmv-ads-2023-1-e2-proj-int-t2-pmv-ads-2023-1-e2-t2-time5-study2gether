@@ -42,15 +42,15 @@
                             <div>@Html.Raw(@obj.content)</div>
                             @foreach (var x in @obj.Axes)
                             {
-                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
                             }
                             @foreach (var x in @obj.Microfoundations)
                             {
-                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
                             }
                             @foreach (var x in @obj.Categories)
                             {
-                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
                             }
                         </div>
                         <div class="card-footer">
@@ -103,15 +103,15 @@
                             <div>@Html.Raw(@obj.content)</div>
                             @foreach (var x in @obj.Axes)
                             {
-                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
                             }
                             @foreach (var x in @obj.Microfoundations)
                             {
-                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
                             }
                             @foreach (var x in @obj.Categories)
                             {
-                                <div class="bg-light text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
                             }
                         </div>
                         <div class="card-footer">
@@ -301,6 +301,16 @@
 </script>
 <script>
     $("#postInteraction").submit(function (e) {
+        if (!'@Html.Raw(User.Identity.Name)') {
+            Toastify({
+                text: "É necessario estar logado para efetuar uma postagem.",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #ffa8a8, #bbbd1c)",
+                },
+            }).showToast();
+            return false
+        }
         category = $("#categoryId").val()
         title = $("#title").val()
         content = $("#tiny").val()
@@ -308,7 +318,6 @@
             return true
         }
         else {
-            console.log('b')
             Toastify({
                 text: "Titulo, Conteudo e Categoria são obrigatórios",
                 duration: 3000,
