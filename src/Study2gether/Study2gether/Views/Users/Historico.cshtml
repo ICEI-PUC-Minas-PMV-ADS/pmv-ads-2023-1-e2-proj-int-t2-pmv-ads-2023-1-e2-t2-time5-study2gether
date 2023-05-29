@@ -58,7 +58,7 @@
             }
         </div>
         <div id="Respostas" class="tabcontent">
-            @foreach (var resposta in @Model.Answers)
+            @foreach (var resposta in @Model.Answers.OrderByDescending(o => o.created_date))
             {
                 <div>
                     <h6>@resposta.Post.title)</h6>

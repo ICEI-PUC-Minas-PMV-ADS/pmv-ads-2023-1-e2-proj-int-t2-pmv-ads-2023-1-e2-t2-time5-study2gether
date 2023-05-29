@@ -138,8 +138,8 @@ namespace Study2gether.Controllers
         public async Task<IActionResult> Historico()
         {   
             var user = await _context.Users
-                .Include(teste => teste.Posts)
-                .Include(teste => teste.Answers.OrderByDescending(a => a.Post.created_date))
+                .Include(p => p.Posts)
+                .Include(a => a.Answers)
                 .Include(r => r.Reactions)
                 .ThenInclude(r => r.Post)
                 .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));

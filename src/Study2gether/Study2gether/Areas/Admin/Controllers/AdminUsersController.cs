@@ -12,7 +12,7 @@ using Study2gether.Models;
 
 namespace Study2gether.Controllers
 {
-    //[Authorize(Roles = "admin")] Temporariamente enquanto se cria a aplicação
+    [Authorize(Roles = "admin")]
     public class AdminUsersController : Controller
     {
         private readonly ApplicationDbContext _context;
