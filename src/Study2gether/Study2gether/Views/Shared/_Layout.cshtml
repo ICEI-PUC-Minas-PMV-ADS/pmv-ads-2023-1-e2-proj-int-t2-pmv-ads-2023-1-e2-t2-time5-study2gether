@@ -49,14 +49,7 @@
         <nav id="nav-bar">
             <div class="row bg-dark">
                 <div class="menu-img col-sm-2">
-                    @if (User.IsInRole("admin"))
-                    {
-                        <a asp-area="Admin" asp-controller="AdminUsers" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
-                    }
-                    else
-                    {
-                        <a asp-controller="Home" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
-                    }
+                    <a asp-controller="Home" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                 </div>
 
                 <div class="col-sm-8 row justify-content-around align-content-center">
