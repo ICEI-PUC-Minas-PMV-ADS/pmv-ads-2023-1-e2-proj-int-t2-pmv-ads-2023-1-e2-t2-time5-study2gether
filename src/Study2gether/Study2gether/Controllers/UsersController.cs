@@ -122,6 +122,7 @@ namespace Study2gether.Controllers
                 user.idUser = Guid.NewGuid();
                 user.name = user.email;
                 user.imageLink = "https://cdn-icons-png.flaticon.com/512/6596/6596121.png";
+                user.createdDate = DateTime.Now;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return View();

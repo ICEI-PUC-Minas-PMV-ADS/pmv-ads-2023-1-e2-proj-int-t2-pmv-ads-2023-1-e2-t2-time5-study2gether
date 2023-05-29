@@ -26,6 +26,8 @@ namespace Study2gether.Models
         [Required(ErrorMessage = "Obrigatório possuir conteúdo!")]
         public string content { get; set; }
 
+        public DateTime created_date { get; set; }
+
         public virtual IList<Reaction> Reactions { get; } = new List<Reaction>();
 
     }
