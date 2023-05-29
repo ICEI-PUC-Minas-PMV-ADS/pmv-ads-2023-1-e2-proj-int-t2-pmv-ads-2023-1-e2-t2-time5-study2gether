@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        @foreach (var obj in post.Answers)
+        @foreach (var obj in post.Answers.OrderBy(o => o.created_date))
         {
             <div class="caixa card rounded-lg mb-3 bg-answers">
                 <div class="card-header">
@@ -45,10 +45,10 @@
                     <p>@obj.User.name</p>
                 </div>
                 <div class="card-body">
-                    <div>@obj.content</div>
+                    <div>@Html.Raw(@obj.content)</div>
                 </div>
                 <div class="card-footer">
-                    <label class="float-right" for="data-resposta"><small>Data da resposta: @post.created_date)</small></label>
+                    <label class="float-right" for="data-resposta"><small>Data da resposta: @obj.created_date)</small></label>
                 </div>
             </div>
         }
@@ -56,18 +56,24 @@
 
         @if (isAuthenticated)
         {
-            <div class="container">
+            <div class="">
                 <form asp-action="Respostas">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-floating">
-                        <div class="form-group">
-                            <label asp-for="content" class="control-label">Resposta</label>
-                            <input asp-for="content" class="form-control" />
-                            <span asp-validation-for="content" class="text-danger"></span>
+                        <div class="card bg-answers">
+                            <div class="form-group">
+                                <div class="card-header text-center">
+                                    <label asp-for="content" class="control-label text-center">Responder</label>
+                                </div>
+                                <div class="card-body">
+                                    <textarea asp-for="content" id="tiny" class="form-control" ></textarea>
+                                    <span asp-validation-for="content" class="text-danger"></span>
+                                </div>
+                            </div>
+                        <div class="mt-2 card-footer">
+                            <a class="btn btn-secondary float-left" asp-action="Perguntas" asp-controller="Posts" role="button">Voltar</a>
+                            <button class="btn btn-primary float-right" type="submit">Enviar</button>
                         </div>
-                        <div>
-                            <button class="btn btn-primary" type="submit">Enviar</button>
-                            <a class="btn btn-secondary" asp-action="Perguntas" asp-controller="Posts" role="button">Voltar</a>
                         </div>
                     </div>
                 </form>

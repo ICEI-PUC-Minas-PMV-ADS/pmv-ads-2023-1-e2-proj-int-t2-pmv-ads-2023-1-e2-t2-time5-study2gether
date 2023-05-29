@@ -176,6 +176,7 @@ namespace Study2gether.Controllers
                 resposta.idAnswer = Guid.NewGuid();
                 resposta.idPost = id;
                 resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+                resposta.created_date = DateTime.Now;
 
                 resposta.User = _context.Users.Find(resposta.idUser);
 
