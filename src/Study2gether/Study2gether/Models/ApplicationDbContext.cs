@@ -9,7 +9,9 @@ namespace Study2gether.Models
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){}
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){
+            Database.EnsureCreated();
+        }
         public DbSet<User> Users { get; set; }
         public DbSet<Post> Post { get; set; }
         public DbSet<Axis> Axis { get; set; }
