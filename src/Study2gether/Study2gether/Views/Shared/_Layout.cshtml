@@ -52,14 +52,14 @@
                     <a asp-controller="Home" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                 </div>
 
-                <div class="col-sm-8 row justify-content-around align-content-center">
+                <div class="col-sm-7 row justify-content-around align-items-center">
                     @if (useFilters)
                     {
                         @await Html.PartialAsync("Filters")
                     }
                 </div>
 
-                <div class="col-sm-2 row justify-content-end align-content-center" id="btnLogin">
+                <div class="col-sm-3 row btnLogin">
                     @if (User.Identity.IsAuthenticated)
                     {
                         <div>
@@ -71,11 +71,11 @@
                     }
                     else
                     {
-                        <div>
-                            <a class="btn btn-primary ml-2 mr-2" asp-area="" asp-controller="Users" asp-action="Cadastro">Cadastre-se</a>
+                        <div class="cadastroLogin">
+                            <a class="btn btn-primary ml-1 mr-1" asp-area="" asp-controller="Users" asp-action="Cadastro">Cadastre-se</a>
                         </div>
-                        <div>
-                            <a class="btn btn-primary ml-2 mr-5" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
+                        <div class="cadastroLogin">
+                            <a class="btn btn-primary ml-1 mr-1" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
                         </div>
                     }
                 </div>

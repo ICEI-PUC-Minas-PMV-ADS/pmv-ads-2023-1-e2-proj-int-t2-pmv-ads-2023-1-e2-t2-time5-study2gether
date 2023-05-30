@@ -4,12 +4,13 @@
     var categories = ViewData["Categories"] as List<Category>;
 }
 
+<link rel="stylesheet" href="~/css/site.css" />
+
 <form id="filtros-form" method="get">
-    <div class="form-row align-items-center">
+    <div class="form-row">
         <div class="col" id="divFiltroEixos">
-            <select class="form-select" name="axis" style="width: 60px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
-                width: 200px;
-                height: auto;
+            <select class="form-select" name="axis">
+             
                 <option selected value="">Eixo</option>
                 @foreach (var element in axes)
                 {
@@ -18,7 +19,7 @@
             </select>
         </div>
         <div class="col" id="divFiltroMicrofundamentos">
-            <select class="form-select" name="micro" id="selectFiltroMicros" style="width: 160px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
+            <select class="form-select" name="micro">
                 <option selected value="">Microfundamento</option>
                 @foreach (var element in microfoundations)
                 {
@@ -27,7 +28,7 @@
             </select>
         </div>
         <div class="col" id="divFiltroCategorias">
-            <select class="form-select" name="category" id="selectFiltroCategories" style="width: 110px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
+            <select class="form-select" name="category">
                 <option selected value="">Categoria</option>
                 @foreach (var element in categories)
                 {

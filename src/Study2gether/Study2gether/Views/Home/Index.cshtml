@@ -3,19 +3,19 @@
 }
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/css/site.css" />
 
-
-<div container class="preenchimento col-10">
+<div container class="preenchimento col-12">
     <img class="col-6" src="images/home.jpg" alt="Imagem de uma pessoa com fone de ouvido e computador em uma mesa de estudos.">
-    <div class="texto mt-0" style="background-color: #ff9900; padding: 0.5rem;">
-        <p>Conecte-se com seus colegas de estudo e ampliem seus conhecimentos juntos!</p>
+    <div class="texto mt-0" style="background-color: #ff9900; padding: 15px; align-content:center;">
+        <p style="font-size: 20px">Conecte-se com seus colegas de estudo e ampliem seus conhecimentos juntos!</p>
     </div>
 </div>
 
-<div>
-    <ul style="gap: 2rem; display: flex; justify-content: center;">
-        <li type="button" class="btn btn-primary btn-lg mt-2 p-4"><a class="text-light" asp-controller="Posts" asp-action="Indicacoes">Indicações</a></li>
-        <li type="button" class="btn btn-primary btn-lg mt-2 p-4"><a class="text-light" asp-controller="Posts" asp-action="Perguntas">Perguntas</a></li>
-        <li type="button" class="btn btn-primary btn-lg mt-2 p-4" ><a class="text-light" asp-controller="Posts" asp-action="Interacoes">Interações</a></li>
+<div >
+    <ul id="listMenuPosts">
+        <li id="menuPosts" type="button" class="btn btn-primary btn-lg "><a class="text-light" asp-controller="Posts" asp-action="Indicacoes">Indicações</a></li>
+        <li id="menuPosts" type="button" class="btn btn-primary btn-lg "><a class="text-light" asp-controller="Posts" asp-action="Perguntas">Perguntas</a></li>
+        <li id="menuPosts" type="button" class="btn btn-primary btn-lg "><a class="text-light" asp-controller="Posts" asp-action="Interacoes">Interações</a></li>
     </ul>
 </div>

@@ -79,3 +79,123 @@ li.selected {
 .bg-answers .card-footer {
     background-color: #d9f6f2;
 }
+
+
+
+/*responsividade da Index e header.*/
+
+.form-select {
+    width: 140px;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+    height: 40px;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (min-width: 250px) and (max-width: 550px) {
+    .col {
+        display: flex;
+        position: center;
+        align-items: center;
+        
+    }
+}
+
+
+@media screen and (max-width: 299px) {
+    .form-row {
+        margin-left: 10%;
+    }
+
+    .btnLogin {
+        margin-top: 3px;
+        margin-left: 10%;
+    }
+
+    .cadastroLogin {
+        align-items: center;
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .form-row {
+        display: flex;
+        margin-left: 30%;
+    }
+}
+
+
+    @media screen and (min-width: 300px) and (max-width: 550px) {
+        .form-row {
+            display: flex;
+            margin-left: 30%;
+        }
+
+        .btnLogin {
+            margin-top: 3px;
+            margin-left: 25%;
+            align-items: center;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .cadastroLogin {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+
+    @media screen and (min-width: 551px) and (max-width: 577px) {
+        .form-row {
+            display: flex;
+            margin-left: 30%;
+        }
+
+        .btnLogin {
+            margin-top: 3px;
+            margin-left: 30%;
+            align-items: center;
+            display: flex;
+            margin-bottom: 10px;
+        }
+    }
+
+
+    @media screen and (min-width: 852px) {
+        .btnLogin {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    #menuPosts {
+        margin-top: 10px;
+        width: 130px;
+        height: 70px;
+        align-content: center;
+        text-align: center;
+        padding: 18px;
+    }
+
+
+    #listMenuPosts {
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin-left: -5%;
+    }
+
+    .preenchimento col-12 {
+        margin-left: 5%;
+        margin-right: 10%;
+        margin-top: 10%;
+    }
