@@ -5,17 +5,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 
-<div container class="preenchimento col-10">
-    <img class="col-6" src="images/home.jpg" alt="Imagem de uma pessoa com fone de ouvido e computador em uma mesa de estudos.">
-    <div class="texto mt-0" style="background-color: #ff9900; padding: 0.5rem;">
-        <p>Conecte-se com seus colegas de estudo e ampliem seus conhecimentos juntos!</p>
+<div class="container">
+    <div class="row justify-content-center align-items-center p-0 m-0">
+        <div class="col-sm-12 row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                <img class="img-fluid rounded" src="images/home.jpg" alt="Imagem de uma pessoa com fone de ouvido e computador em uma mesa de estudos.">
+            </div>
+        </div>
+        <div class="col-sm-12 row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                <div class="container rounded text-center" style="background-color: #ff9900;">
+                    <p class=" p-2">Conecte-se com seus colegas de estudo e ampliem seus conhecimentos juntos!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <ul class="p-0 m-0">
+            <li type="button" class="btn btn-primary btn"><a class="text-light" asp-controller="Posts" asp-action="Indicacoes">Indicações</a></li>
+            <li type="button" class="btn btn-primary btn"><a class="text-light" asp-controller="Posts" asp-action="Perguntas">Perguntas</a></li>
+            <li type="button" class="btn btn-primary btn" ><a class="text-light" asp-controller="Posts" asp-action="Interacoes">Interações</a></li>
+        </ul>
     </div>
 </div>
 
-<div>
-    <ul style="gap: 2rem; display: flex; justify-content: center;">
-        <li type="button" class="btn btn-primary btn-lg mt-2 p-4"><a class="text-light" asp-controller="Posts" asp-action="Indicacoes">Indicações</a></li>
-        <li type="button" class="btn btn-primary btn-lg mt-2 p-4"><a class="text-light" asp-controller="Posts" asp-action="Perguntas">Perguntas</a></li>
-        <li type="button" class="btn btn-primary btn-lg mt-2 p-4" ><a class="text-light" asp-controller="Posts" asp-action="Interacoes">Interações</a></li>
-    </ul>
-</div>

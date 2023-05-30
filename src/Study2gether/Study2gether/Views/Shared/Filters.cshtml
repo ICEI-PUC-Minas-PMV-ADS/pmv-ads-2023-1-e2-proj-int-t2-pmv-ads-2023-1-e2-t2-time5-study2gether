@@ -3,44 +3,87 @@
     var microfoundations = ViewData["Microfoundations"] as List<Microfoundation>;
     var categories = ViewData["Categories"] as List<Category>;
 }
+<div class="w-100">
+    <form id="filtros-form" class="w-100" method="get">
+        <div class="row align-items-center justify-content-around">
+            <div class="col-sm-12 col-md-4" id="divFiltroEixos">
+                <select class="form-select p-1 w-100" name="axis" onchange="Filtrar()" style="padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                    <option value="">Eixo</option>
+                    @foreach (var element in axes)
+                    {
+                        @if (@ViewData["selectedAxis"] != null)
+                        {
+                            @if (@ViewData["selectedAxis"].ToString() == element.idAxis.ToString())
+                            {
 
-<form id="filtros-form" method="get">
-    <div class="form-row align-items-center">
-        <div class="col" id="divFiltroEixos">
-            <select class="form-select" name="axis" style="width: 60px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
-                width: 200px;
-                height: auto;
-                <option selected value="">Eixo</option>
-                @foreach (var element in axes)
-                {
-                    <option value="@element.idAxis">@element.name</option>
-                }
-            </select>
-        </div>
-        <div class="col" id="divFiltroMicrofundamentos">
-            <select class="form-select" name="micro" id="selectFiltroMicros" style="width: 160px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
-                <option selected value="">Microfundamento</option>
-                @foreach (var element in microfoundations)
-                {
-                    <option value="@element.idMicrofoundation">@element.name</option>
-                }
-            </select>
-        </div>
-        <div class="col" id="divFiltroCategorias">
-            <select class="form-select" name="category" id="selectFiltroCategories" style="width: 110px; padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
-                <option selected value="">Categoria</option>
-                @foreach (var element in categories)
-                {
-                    <option value="@element.idCategory">@element.name</option>
-                }
-            </select>
-        </div>
-        <div class="col">
-            <a class="btn btn-info" onclick="Filtrar()"><i class="fas fa-filter"></i></a>
-        </div>
-    </div>
-</form>
+                                <option value="@element.idAxis" selected>@element.name</option>
+                            }
+                            else
+                            {
+                                <option value="@element.idAxis">@element.name</option>
+                            }
+                        }
+                        else
+                        {
 
+                            <option value="@element.idAxis">@element.name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-4 " id="divFiltroMicrofundamentos">
+                <select class="form-select p-1 w-100" name="micro" id="selectFiltroMicros" onchange="Filtrar()" style="height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                    <option value="">Microfundamento</option>
+                    @foreach (var element in microfoundations)
+                    {
+                        @if (@ViewData["selectedMicro"] != null)
+                        {
+                            @if (@ViewData["selectedMicro"].ToString() == element.idMicrofoundation.ToString())
+                            {
+
+                                <option value="@element.idMicrofoundation" selected>@element.name</option>
+                            }
+                            else
+                            {
+                                <option value="@element.idMicrofoundation">@element.name</option>
+                            }
+                        }
+                        else
+                        {
+
+                            <option value="@element.idMicrofoundation">@element.name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-4 " id="divFiltroCategorias">
+                <select class="form-select p-1 w-100" name="category" id="selectFiltroCategories" onchange="Filtrar()" style="height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                    <option value="">Categoria</option>
+                    @foreach (var element in categories)
+                    {
+                        @if (@ViewData["selectedCategory"] != null)
+                        {
+                            @if (@ViewData["selectedCategory"].ToString() == element.idCategory.ToString())
+                            {
+
+                                <option value="@element.idCategory" selected>@element.name</option>
+                            }
+                            else
+                            {
+                                <option value="@element.idCategory">@element.name</option>
+                            }
+                        }
+                        else
+                        {
+
+                            <option value="@element.idCategory">@element.name</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
 <script>
     function Filtrar() {
         document.getElementById('filtros-form').submit();
