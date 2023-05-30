@@ -1,29 +1,23 @@
-@model Study2gether.Models.User
+@model Study2gether.Models.ForgotPassword
 
 @{
-    ViewData["Title"] = "Cadastro";
+    ViewData["Title"] = "Recuperar senha";
 }
 
-<h1 class="text-center" style="color:white">Cadastro</h1>
+<h1 class="text-center" style="color:white">Recuperar senha</h1>
 
 <hr />
 <div class="row text-center justify-content-center">
     <div class="col-md-4">
-        <form asp-action="Cadastro">
+        <form asp-action="RecuperarSenha">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group text-left">
                 <label asp-for="email" class="control-label" style="color:white"></label>
                 <input asp-for="email" class="form-control" type="email" />
                 <span asp-validation-for="email" class="text-danger"></span>
             </div>
-            <div class="form-group text-left">
-                <label asp-for="password" class="control-label" style="color:white"></label>
-                <input asp-for="password" class="form-control" />
-                <span asp-validation-for="password" class="text-danger"></span>
-            </div>
             <div class="form-group">
-                <input type="submit" value="Cadastrar" class="btn btn-primary" />
-                <a class="btn btn-info" asp-controller="Users" asp-action="RecuperarSenha">Recuperar senha</a>
+                <input type="submit" value="Recuperar senha" class="btn btn-primary" />
                 <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
             </div>
         </form>
@@ -34,7 +28,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" style="color: green">Bem vindo ao study2gether!,</h5>
+                <h5 class="modal-title" style="color: green">Alteração de senha:</h5>
 
             </div>
             <div class="modal-body">
@@ -47,13 +41,11 @@
     </div>
 </div>
 
-
-
 @if (TempData["success"] != null)
 {
-    <script>
-        $('#changePasswordConfirmation').modal('show');
-    </script>
+<script>
+    $('#changePasswordConfirmation').modal('show');
+</script>
 }
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

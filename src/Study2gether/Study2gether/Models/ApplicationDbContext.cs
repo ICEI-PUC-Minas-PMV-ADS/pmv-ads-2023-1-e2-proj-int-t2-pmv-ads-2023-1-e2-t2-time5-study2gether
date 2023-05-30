@@ -19,6 +19,7 @@ namespace Study2gether.Models
         public DbSet<Microfoundation> Microfoundation { get; set; }
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Reaction> Reactions { get; set; }
+        public DbSet<ForgotPassword> ForgotPassword { get; set; }
         public object Posts { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

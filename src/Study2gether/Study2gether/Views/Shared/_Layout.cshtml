@@ -46,44 +46,51 @@
 </head>
 <body class="bg-dark">
     <header>
-        <nav id="nav-bar">
+        <nav class="container-fluid">
             <div class="row bg-dark">
-                <div class="menu-img col-sm-2">
-                    @if (User.IsInRole("admin"))
-                    {
-                        <a asp-area="Admin" asp-controller="AdminUsers" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
-                    }
-                    else
-                    {
-                        <a asp-controller="Home" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
-                    }
+                <div class="col-6 col-sm-6 col-md-2">
+                    <a asp-controller="Home" asp-action="Index"><img class="img-fluid" style="height: 6em" src="~/images/logo.png" alt="Imagem da logo: Study2gether" runat="server"></a>
                 </div>
-
-                <div class="col-sm-8 row justify-content-around align-content-center">
+                <div class="col-8 ml-4 row justify-content-center align-content-center" id="bigFilter">
                     @if (useFilters)
                     {
                         @await Html.PartialAsync("Filters")
                     }
                 </div>
-
-                <div class="col-sm-2 row justify-content-end align-content-center" id="btnLogin">
+                <div class="col-6 col-sm-6 col-md-2 row justify-content-end align-content-center">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <div>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Historico"><p style="color: white;">Oi, @User.Identity.Name</p></a>
-                        </div>
-                        <div>
-                            <a class="btn btn-primary ml-2 mr-5" asp-area="" asp-controller="Users" asp-action="Logout">Sair</a>
+                        <div class="dropleft show">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="@User.Claims.FirstOrDefault(o => o.Type == "imageLink").Value"
+                                     class="rounded-circle"
+                                     height="50"
+                                     width="50"
+                                     alt="Sua foto de perfil"
+                                     loading="lazy" />
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" asp-area="" asp-controller="Users" asp-action="Historico">Meu perfil</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Users" asp-action="Logout">Sair</a>
+                            </div>
                         </div>
                     }
                     else
                     {
-                        <div>
-                            <a class="btn btn-primary ml-2 mr-2" asp-area="" asp-controller="Users" asp-action="Cadastro">Cadastre-se</a>
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <a class="btn btn-primary ml-2 mr-2 w-100" asp-area="" asp-controller="Users" asp-action="Cadastro">Cadastre-se</a>
+                            </div>
+                            <div class="col-12">
+                                <a class="btn btn-primary ml-2 mr-5 w-100" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
+                            </div>
                         </div>
-                        <div>
-                            <a class="btn btn-primary ml-2 mr-5" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
-                        </div>
+                    }
+                </div>
+                <div class="col-12 row justify-content-center align-content-center ml-1 mb-4" id="smallFilter" style="display:none">
+                    @if (useFilters)
+                    {
+                        @await Html.PartialAsync("Filters")
                     }
                 </div>
             </div>
@@ -91,11 +98,10 @@
     </header>
     <div class="">
         <main role="main" class="pb-3">
-
-            @if (ViewBag.ViewType == "Indicacoes")
-            {
-                <div class="d-flex flex-row-reverse col-11">
-                    <div class="col-sm-3 row align-content-end" id="divBusca">
+            <div class="row justify-content-end align-items-end mr-3">
+                @if (ViewBag.ViewType == "Indicacoes")
+                {
+                    <div class="col-11 col-sm-4" id="divBusca">
                         <form method="get" asp-action="Indicacoes" id="searchForm">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="searchText" id="searchText" placeholder="Digite o texto para buscar">
@@ -105,12 +111,11 @@
                             </div>
                         </form>
                     </div>
-                </div>
-            }
-            else if (ViewBag.ViewType == "Interacoes")
-            {
-                <div class="d-flex flex-row-reverse col-11">
-                    <div class="col-sm-3 row align-content-end" id="divBusca">
+
+                }
+                else if (ViewBag.ViewType == "Interacoes")
+                {
+                    <div class="col-11 col-sm-4" id="divBusca">
                         <form method="get" asp-action="Interacoes" id="searchForm">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="searchText" id="searchText" placeholder="Digite o texto para buscar">
@@ -120,12 +125,11 @@
                             </div>
                         </form>
                     </div>
-                </div>
-            }
-            else if (ViewBag.ViewType == "Perguntas")
-            {
-                <div class="d-flex flex-row-reverse col-11">
-                    <div class="col-sm-3 row align-content-end" id="divBusca">
+
+                }
+                else if (ViewBag.ViewType == "Perguntas")
+                {
+                    <div class="col-11 col-sm-4" id="divBusca">
                         <form method="get" asp-action="Perguntas" id="searchForm">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="searchText" id="searchText" placeholder="Digite o texto para buscar">
@@ -135,8 +139,8 @@
                             </div>
                         </form>
                     </div>
-                </div>
-            }
+                }
+            </div>
             @RenderBody()
         </main>
     </div>
@@ -162,8 +166,16 @@
             });
         })();
     </script>
-
-
-
+    <script>
+        var width = $(window).width();
+        var height = $(window).height();
+        if (width <= 750) {
+            $('#bigFilter').remove();
+            $('#smallFilter').show();
+        } else {
+            $('#smallFilter').remove()
+        }
+        
+    </script>
 </body>
 </html>
