@@ -328,6 +328,10 @@ namespace Study2gether.Controllers
             }
             ViewData["postList"] = posts.Include(o => o.Reactions).Include(o => o.Answers).Include(o => o.Axes).Include(o => o.Microfoundations).Include(o => o.Categories).OrderByDescending(o => o.created_date).ToList();
             ViewData["Filters"] = message;
+
+            ViewData["selectedAxis"] = axis;
+            ViewData["selectedMicro"] = micro;
+            ViewData["selectedCategory"] = category;
         }
 
     }

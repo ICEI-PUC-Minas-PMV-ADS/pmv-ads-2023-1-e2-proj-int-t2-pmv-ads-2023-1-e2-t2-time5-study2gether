@@ -11,24 +11,21 @@
     var filteredPosts = ViewData["FilteredPostList"] as List<Post>;
 }
 
-<div class="row">
-    <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
-        <div>
-            <ul>
-                <li class="btn btn-warning d-block mt-2 @((ViewContext.RouteData.Values["action"].ToString() == "Indicacoes") ? "selected" : "")"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
-                <li class="btn btn-warning d-block mt-2 @((ViewContext.RouteData.Values["action"].ToString() == "Perguntas") ? "selected" : "")"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
-                <li class="btn btn-warning d-block mt-2 @((ViewContext.RouteData.Values["action"].ToString() == "Interacoes") ? "selected" : "")"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
-            </ul>
+<div class="row container-fluid">
+    <div class="col-12 col-sm-2 mt-2" id="lista">
+        <div class="row justify-content-center align-items-center p-0">
+            <a class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Indicacoes") ? "selected" : "")" asp-action="Indicacoes">Indicações</a>
+            <a class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Perguntas") ? "selected" : "")" asp-action="Perguntas">Perguntas</a>
+            <a class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Interacoes") ? "selected" : "")" asp-action="Interacoes">Interações</a>
         </div>
-
     </div>
 
-    <div class="posts col-sm-9 mt-5">
+    <div class="posts justify-content-center col-12 col-sm-10 mt-2">
         @if (filters != "")
         {
             <p class="text-light">Mostrando resultados filtrados por: @Html.Raw(filters)</p>
         }
-        <div id="post-1">
+        <div id="post-1" class="container-fluid">
 
             @if (ViewData["FilteredPostList"] != null && !string.IsNullOrEmpty(ViewData["FilteredPostList"].ToString()))
             {
