@@ -122,8 +122,8 @@
     <None Include="Study2gether - Backup.csproj" />
     <Content Include="Views\Users\AlterarSenha.cshtml" />
     <Content Include="Views\Users\EditarPerfil.cshtml" />
-    <Content Include="Views\Users\Historico.cshtml" />
     <Content Include="Views\Users\Recuperacao.cshtml" />
+    <Content Include="Views\Users\Historico.cshtml" />
     <None Include="wwwroot\js\historico.js" />
   </ItemGroup>
 
