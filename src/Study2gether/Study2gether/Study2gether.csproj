@@ -122,7 +122,7 @@
     <None Include="Study2gether - Backup.csproj" />
     <None Include="Views\Users\AlterarSenha.cshtml" />
     <None Include="Views\Users\EditarPerfil.cshtml" />
-    <None Include="Views\Users\Historico.cshtml" />
+    <None Include="Views\Users\Historico2.cshtml" />
     <None Include="Views\Users\Recuperacao.cshtml" />
     <None Include="wwwroot\js\historico.js" />
   </ItemGroup>
