@@ -320,12 +320,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Acrescer"</li><li>Não preencher os Campos: "Categoria", "Eixo", "Microfundamento"</li><li>Preencher os Campo "Título da Pergunta" e então digitar a pergunta</li><li> Clicar em "Enviar"</li></ol> | A aplicação deve retornar com o alerta de: “O preenchimento dos campos: Categoria, Título e Pergunta são obrigatórios. Já os campos: Eixo e Microfundamento são opcionais”. |
+|Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Pergunta". |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Acrescer"</li><li>Não preencher os Campos: "Categoria", "Eixo", "Microfundamento"</li><li>Preencher os Campo "Título da Pergunta" e então digitar a pergunta</li><li> Clicar em "Enviar"</li></ol> | A aplicação deve retornar com o alerta de: “O preenchimento dos campos: Categoria, Título e Pergunta são obrigatórios. Já os campos: Eixo e Microfundamento são opcionais”. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
+| CT-20 - RF-03 | Verificar se o usuário consegue postar sua pergunta mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Pergunta". |    |    |
 | Registro da tela: |
 
 # 
@@ -400,12 +400,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Clicar no ícone de "Acrescer"</li><li>Não preencher os Campos: "Categoria", "Eixo", "Microfundamento"</li><li>Preencher os Campo "Título da Publicaçāo e então incluir o conteúdo</li><li> Clicar em "Enviar"</li></ol> | A aplicação deve retornar com o alerta de: “O preenchimento dos campos: Categoria, Título e Pergunta são obrigatórios. Já os campos: Eixo e Microfundamento são opcionais”. |
+|Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Conteúdo". |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Clicar no ícone de "Acrescer"</li><li>Não preencher os Campos: "Categoria", "Eixo", "Microfundamento"</li><li>Preencher os Campo "Título da Publicaçāo e então incluir o conteúdo</li><li> Clicar em "Enviar"</li></ol> | A aplicação deve retornar com o alerta de: “O preenchimento dos campos: Categoria, Título e Pergunta são obrigatórios. Já os campos: Eixo e Microfundamento são opcionais”. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
+| CT-25 - RF-01 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Conteúdo". |    |    |
 | Registro da tela: |
 
 # 
@@ -432,12 +432,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Clicar no ícone de "Acrescer"</li><li>Não preencher os Campos: "Categoria", "Eixo", "Microfundamento"</li><li>Preencher o Campo "Título da Publicaçāo" e então incluir o conteúdo</li><li> Clicar em "Enviar"</li></ol> | A aplicação deve retornar com o alerta de: “O preenchimento dos campos: Categoria, Título e Conteúdo são obrigatórios. Já os campos: Eixo e Microfundamento são opcionais”. |
+|Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Conteúdo". |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Clicar no ícone de "Acrescer"</li><li>Não preencher os Campos: "Categoria", "Eixo", "Microfundamento"</li><li>Preencher o Campo "Título da Publicaçāo" e então incluir o conteúdo</li><li> Clicar em "Enviar"</li></ol> | A aplicação deve retornar com o alerta de: “O preenchimento dos campos: Categoria, Título e Conteúdo são obrigatórios. Já os campos: Eixo e Microfundamento são opcionais”. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-27 - RF-11 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos de “Categoria”, “Eixo”, “Microfundamento” e “Título”. |    |    |
+| CT-27 - RF-11 | Verificar se o usuário consegue postar conteúdos mesmo sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Conteúdo". |    |    |
 | Registro da tela: |
 
 # 
@@ -448,12 +448,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Emojis" abaixo da pergunta e ecolher um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+|Verificar se os emojis estão sendo ativados corretamente ao reagir às Perguntas. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Emojis" abaixo da pergunta e ecolher um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-28 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir às Perguntas. |    |    |
 | Registro da tela: |
 
 # 
@@ -464,12 +464,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Diálogo" para ver as respostas de uma pergunta</li><li>Clicar no ícone de "Emojis" abaixo da Resposta e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+|Verificar se os emojis estão sendo ativados corretamente ao reagir às Respostas. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Perguntas"</li><li>Clicar no ícone de "Diálogo" para ver as respostas de uma pergunta</li><li>Clicar no ícone de "Emojis" abaixo da Resposta e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-29 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir às Respostas. |    |    |
 | Registro da tela: |
 
 # 
@@ -480,12 +480,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Clicar no ícone de "Emojis" abaixo do Conteúdo selecionado e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+|Verificar se os emojis estão sendo ativados corretamente ao reagir às Interações. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Clicar no ícone de "Emojis" abaixo do Conteúdo selecionado e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-30 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir às Interações. |    |    |
 | Registro da tela: |
 
 # 
@@ -496,12 +496,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Escolher um conteúdo na lista de interações </li><li>Escolher o primeiro comentário no rodapé do conteúdo </li><li> Clicar no ícone de "Emojis" e escolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+|Verificar se os emojis estão sendo ativados corretamente ao reagir aos Comentários das Interações. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Interações"</li><li>Escolher um conteúdo na lista de interações </li><li>Escolher o primeiro comentário no rodapé do conteúdo </li><li> Clicar no ícone de "Emojis" e escolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-31 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir aos Comentários das Interações. |    |    |
 | Registro da tela: |
 
 # 
@@ -512,12 +512,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Clicar no ícone de "Emojis" abaixo do Conteúdo selecionado e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+|Verificar se os emojis estão sendo ativados corretamente ao reagir às Indicações. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Clicar no ícone de "Emojis" abaixo do Conteúdo selecionado e ecolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-32 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-32 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir às Indicações. |    |    |
 | Registro da tela: |
 
 # 
@@ -528,12 +528,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se os emojis estão sendo ativados corretamente. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Escolher um conteúdo na lista de indicações </li><li>Escolher o primeiro comentário no rodapé do conteúdo </li><li> Clicar no ícone de "Emojis" e escolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
+|Verificar se os emojis estão sendo ativados corretamente ao reagir aos Comentários das Indicações. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://study2gether.com/src/index.html)</li><li> Fazer o Login</li><li>Clicar em "Indicações"</li><li>Escolher um conteúdo na lista de indicações </li><li>Escolher o primeiro comentário no rodapé do conteúdo </li><li> Clicar no ícone de "Emojis" e escolha um "Emoji" de reação.</li></ol> | A aplicação apresentou o emoji corretamente. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente. |    |    |
+| CT-33 - RF-09 | Verificar se os emojis estão sendo ativados corretamente ao reagir aos Comentários das Indicações. |    |    |
 | Registro da tela: |
 
 # 
