@@ -2,75 +2,155 @@
 
 @{
     ViewData["Title"] = "Interacoes";
-}
-
-@{
     var categories = ViewData["Categories"] as List<Category>;
     var axes = ViewData["Axes"] as List<Axis>;
     var microfoundations = ViewData["Microfoundations"] as List<Microfoundation>;
     var postList = ViewData["postList"] as List<Post>;
+    string filters = ViewData["Filters"] as string;
+    filters = filters?.Replace("\n", "<br>");
+    var filteredPosts = ViewData["FilteredPostList"] as List<Post>;
 }
 
-<div class="row">
-    <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
-        <div>
-            <ul>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
-            </ul>
-        </div>
+<div class="row container-fluid">
+    <div class="col-12 col-sm-2 mt-2" id="lista">
+        <ul class="row justify-content-center align-items-center p-0">
+            <li class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Indicacoes") ? "selected" : "")"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
+            <li class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Perguntas") ? "selected" : "")"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
+            <li class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Interacoes") ? "selected" : "")"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
+        </ul>
     </div>
 
-    <div class="posts col-sm-9 mt-5">
-        <div id="post-1">
-            @foreach (var obj in postList)
+    <div class="posts justify-content-center col-12 col-sm-10 mt-2">
+        @if (filters != "")
+        {
+            <p class="text-light">Mostrando resultados filtrados por: @Html.Raw(filters)</p>
+        }
+        <div id="post-1" class="container-fluid">
+
+            @if (ViewData["FilteredPostList"] != null && !string.IsNullOrEmpty(ViewData["FilteredPostList"].ToString()))
             {
-                <div class="caixa card rounded-lg mb-3">
-                    <div class="card-header">
-                        <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
-                    </div>
-                    <div class="card-body">
-                        <div>@Html.Raw(@obj.content)</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-between">
-                            <div class="reactions d-inline">
+                @foreach (var obj in filteredPosts)
+                {
+                    <div class="caixa card rounded-lg mb-3">
+                        <div class="card-header">
+                            <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                        </div>
+                        <div class="card-body">
+                            <div>@Html.Raw(@obj.content)</div>
+                            @foreach (var x in @obj.Axes)
+                            {
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Microfoundations)
+                            {
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Categories)
+                            {
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between">
+                                <div class="reactions d-inline">
 
-                                <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
+                                    <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                <p class="d-inline">@obj.Reactions.Count(r => r.Name == "chart")</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+                                    <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
-                                <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
+                                    <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
-                                <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
 
-                            </div>
-                            <div>
-                                @{
-                                    var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
-                                    {
-                                        reactionName = n.Key,
-                                        reactionCount = n.Count()
-                                    }).OrderByDescending(n => n.reactionCount).ToList();
-                                    @for (var i = 0; i < 5; i++)
-                                    {
-                                        var react = @reactOrder.ElementAtOrDefault(@i);
-                                        if (react != null)
+                                </div>
+                                <div>
+                                    @{
+                                        var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
                                         {
-                                            <p class="d-inline">@react.reactionCount</p>
-                                            <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            reactionName = n.Key,
+                                            reactionCount = n.Count()
+                                        }).OrderByDescending(n => n.reactionCount).ToList();
+                                        @for (var i = 0; i < 5; i++)
+                                        {
+                                            var react = @reactOrder.ElementAtOrDefault(@i);
+                                            if (react != null)
+                                            {
+                                                <p class="d-inline">@react.reactionCount</p>
+                                                <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            }
                                         }
                                     }
-                                }
+                                </div>
+                                <div>
+                                    <label><small>Postado em: @obj.created_date</small></label>
+                                </div>
                             </div>
-                            <div>
-                                <label for="data-indicacao"><small>Data da indicação: @obj.created_date</small></label>
+                        </div>
+                    </div>}
+            }
+            else
+            {
+                @foreach (var obj in postList)
+                {
+                    <div class="caixa card rounded-lg mb-3">
+                        <div class="card-header">
+                            <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                        </div>
+                        <div class="card-body">
+                            <div>@Html.Raw(@obj.content)</div>
+                            @foreach (var x in @obj.Axes)
+                            {
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Microfoundations)
+                            {
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                            @foreach (var x in @obj.Categories)
+                            {
+                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                            }
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between">
+                                <div class="reactions d-inline">
+
+                                    <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
+
+                                    <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+
+                                    <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
+
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+
+                                </div>
+                                <div>
+                                    @{
+                                        var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
+                                        {
+                                            reactionName = n.Key,
+                                            reactionCount = n.Count()
+                                        }).OrderByDescending(n => n.reactionCount).ToList();
+                                        @for (var i = 0; i < 5; i++)
+                                        {
+                                            var react = @reactOrder.ElementAtOrDefault(@i);
+                                            if (react != null)
+                                            {
+                                                <p class="d-inline">@react.reactionCount</p>
+                                                <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                            }
+                                        }
+                                    }
+                                </div>
+                                <div>
+                                    <label><small>Postado em: @obj.created_date</small></label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             }
+
         </div>
         <a class="pe-auto" data-toggle="modal" data-target="#postInteraction" style="cursor: pointer">
             <i class="fa-solid fa-circle-plus text-primary fa-3x fixed-bottom mb-3 ml-3 pe-auto"></i>
@@ -88,7 +168,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form asp-action="Interacoes">
+                <form asp-action="Interacoes" id="postInteraction">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="row">
                         <div class="form-group col-md-4">
@@ -126,7 +206,7 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="content" class="control-label">Conteudo</label>
-                        <mceEditor id="tiny" asp-for="content"></mceEditor>
+                        <textarea id="tiny" asp-for="content"></textarea>
                         <span asp-validation-for="content" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -215,4 +295,34 @@
 
         return results
     }
+</script>
+<script>
+    $("#postInteraction").submit(function (e) {
+        if (!'@Html.Raw(User.Identity.Name)') {
+            Toastify({
+                text: "É necessario estar logado para efetuar uma postagem.",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #ffa8a8, #bbbd1c)",
+                },
+            }).showToast();
+            return false
+        }
+        category = $("#categoryId").val()
+        title = $("#title").val()
+        content = $("#tiny").val()
+        if (category.length > 0 && title && content) {
+            return true
+        }
+        else {
+            Toastify({
+                text: "Titulo, Conteudo e Categoria são obrigatórios",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #ffa8a8, #bbbd1c)",
+                },
+            }).showToast();
+            return false
+        };
+    });
 </script>

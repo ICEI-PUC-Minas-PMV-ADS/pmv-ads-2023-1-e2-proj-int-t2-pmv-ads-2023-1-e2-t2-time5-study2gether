@@ -20,11 +20,13 @@ namespace Study2gether.Models
         public User User { get; set; }
 
 
-        [Required(ErrorMessage = "Obrigatório fornecer um título!")]
+
         public string title { get; set; }
 
         [Required(ErrorMessage = "Obrigatório possuir conteúdo!")]
         public string content { get; set; }
+
+        public DateTime created_date { get; set; }
 
         public virtual IList<Reaction> Reactions { get; } = new List<Reaction>();
 

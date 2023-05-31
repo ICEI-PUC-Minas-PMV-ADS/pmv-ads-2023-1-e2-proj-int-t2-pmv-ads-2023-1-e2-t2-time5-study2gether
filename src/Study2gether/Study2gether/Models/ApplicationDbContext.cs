@@ -9,7 +9,9 @@ namespace Study2gether.Models
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){}
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){
+            Database.EnsureCreated();
+        }
         public DbSet<User> Users { get; set; }
         public DbSet<Post> Post { get; set; }
         public DbSet<Axis> Axis { get; set; }
@@ -17,6 +19,7 @@ namespace Study2gether.Models
         public DbSet<Microfoundation> Microfoundation { get; set; }
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Reaction> Reactions { get; set; }
+        public DbSet<ForgotPassword> ForgotPassword { get; set; }
         public object Posts { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

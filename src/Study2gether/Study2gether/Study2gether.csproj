@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NovaPasta\**" />
     <Compile Remove="static\**" />
     <Compile Remove="Views\Answers\**" />
     <Compile Remove="Views\Axis\**" />
@@ -20,6 +21,8 @@
     <Compile Remove="Views\Post\**" />
     <Compile Remove="Views\Shared\NovaPasta\**" />
     <Compile Remove="Views\Users\**" />
+    <Compile Remove="wwwroot\NovaPasta\**" />
+    <Content Remove="NovaPasta\**" />
     <Content Remove="static\**" />
     <Content Remove="Views\Answers\**" />
     <Content Remove="Views\Axis\**" />
@@ -29,6 +32,8 @@
     <Content Remove="Views\Post\**" />
     <Content Remove="Views\Shared\NovaPasta\**" />
     <Content Remove="Views\Users\**" />
+    <Content Remove="wwwroot\NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
     <EmbeddedResource Remove="static\**" />
     <EmbeddedResource Remove="Views\Answers\**" />
     <EmbeddedResource Remove="Views\Axis\**" />
@@ -38,6 +43,8 @@
     <EmbeddedResource Remove="Views\Post\**" />
     <EmbeddedResource Remove="Views\Shared\NovaPasta\**" />
     <EmbeddedResource Remove="Views\Users\**" />
+    <EmbeddedResource Remove="wwwroot\NovaPasta\**" />
+    <None Remove="NovaPasta\**" />
     <None Remove="static\**" />
     <None Remove="Views\Answers\**" />
     <None Remove="Views\Axis\**" />
@@ -47,6 +54,7 @@
     <None Remove="Views\Post\**" />
     <None Remove="Views\Shared\NovaPasta\**" />
     <None Remove="Views\Users\**" />
+    <None Remove="wwwroot\NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -75,6 +83,10 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+    <Content Include="Views\Users\RecuperarSenha.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Include="Views\Users\Cadastro.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -95,17 +107,23 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
 	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+	<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.4" />
+	<PackageReference Include="SendGrid" Version="9.28.1" />
+
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="NovaPasta1\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Users\AlterarSenha.cshtml" />
-    <None Include="Views\Users\EditarPerfil.cshtml" />
-    <None Include="Views\Users\Historico.cshtml" />
+    <None Include="Study2gether - Backup.csproj" />
+    <Content Include="Views\Users\AlterarSenha.cshtml" />
+    <Content Include="Views\Users\EditarPerfil.cshtml" />
+    <Content Include="Views\Users\Recuperacao.cshtml" />
+    <Content Include="Views\Users\Historico.cshtml" />
     <None Include="wwwroot\js\historico.js" />
   </ItemGroup>
 

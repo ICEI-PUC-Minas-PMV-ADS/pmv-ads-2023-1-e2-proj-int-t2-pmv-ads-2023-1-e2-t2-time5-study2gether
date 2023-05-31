@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -44,13 +45,27 @@ namespace Study2gether.Controllers
             return View(axis);
         }
 
-        public IActionResult Indicacoes()
+        public IActionResult Indicacoes([FromQuery] string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
         {
-            ViewData["Categories"] = _context.Category.ToList();
-            ViewData["Axes"] = _context.Axis.ToList();
-            ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)0).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+            ViewBag.ViewType = "Indicacoes";
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                ViewData["FilteredPostList"] = _context.Post
+                    .Where(p => p.type == (Types)0)
+                    .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+                    .Include(p => p.Reactions)
+                    .OrderByDescending(p => p.created_date)
+                    .ToList();
+            }
+
+            else
+            {
+                ViewData["FilteredPostList"] = null;
+            }
+            Filtrar(Types.Indication, axis, micro, category);
             var applicationDbContext = _context.Post.Include(p => p.User);
+
             return View();
         }
 
@@ -58,12 +73,12 @@ namespace Study2gether.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Indicacoes([Bind("idPost,title,content")] Post post, List<Guid> categoryId, List<Guid> axisId, List<Guid> microfoundationId)
         {
+            var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
+            var axis = await _context.Axis.Where(c => axisId.Contains(c.idAxis)).ToListAsync();
+            var microfoundation = await _context.Microfoundation.Where(c => microfoundationId.Contains(c.idMicrofoundation)).ToListAsync();
             
-            if (ModelState.IsValid && User.IsInRole("admin"))
+            if (ModelState.IsValid && User.IsInRole("admin") && category.Count > 0)
             {
-                var category = await _context.Category.Where(c => categoryId.Contains(c.idCategory)).ToListAsync();
-                var axis = await _context.Axis.Where(c => axisId.Contains(c.idAxis)).ToListAsync();
-                var microfoundation = await _context.Microfoundation.Where(c => microfoundationId.Contains(c.idMicrofoundation)).ToListAsync();
 
                 foreach (var obj in category) { post.Categories.Add(obj); }
                 foreach (var obj in axis){post.Axes.Add(obj);}
@@ -79,20 +94,32 @@ namespace Study2gether.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Indicacoes));
             }
+
             ViewData["idUser"] = new SelectList(_context.Users, "idUser", "email", post.idUser);
             return RedirectToAction(nameof(Indicacoes));
         }
 
-        public IActionResult Interacoes()
+        public IActionResult Interacoes([FromQuery] string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
         {
-            var categories = _context.Category.ToList();
-            var axes = _context.Axis.ToList();
-            var microfoundations = _context.Microfoundation.ToList();
-            ViewData["Categories"] = categories;
-            ViewData["Axes"] = axes;
-            ViewData["Microfoundations"] = microfoundations;
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)1).Include(o => o.Reactions).OrderByDescending(o => o.created_date).ToList();
+            ViewBag.ViewType = "Interacoes";
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                ViewData["FilteredPostList"] = _context.Post
+                    .Where(p => p.type == (Types)1)
+                    .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+                    .Include(p => p.Reactions)
+                    .OrderByDescending(p => p.created_date)
+                    .ToList();
+            }
+            else
+            {
+                ViewData["FilteredPostList"] = null; 
+            }
+            Filtrar(Types.Interaction, axis, micro, category);
+
             var applicationDbContext = _context.Post.Include(p => p.User);
+
             return View();
         }
 
@@ -132,38 +159,56 @@ namespace Study2gether.Controllers
 
         public IActionResult Respostas(Guid id)
         {
-            ViewData["perguntas"] = _context.Post.Include(p => p.Answers).Single(p => p.idPost == id);
+
+            var post = _context.Post.Include(p => p.Answers).ThenInclude(a => a.User).Single(p => p.idPost == id);
+            ViewData["Post"] = post;
+            post.views = ++post.views;
+            _context.SaveChanges();
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Respostas([Bind("title,content")] Answer resposta, Guid id)
+        public IActionResult Respostas([Bind("content")] Answer resposta, Guid id)
         {
-            
-                if (ModelState.IsValid)
-                {
-                    resposta.idAnswer = Guid.NewGuid();
-                    resposta.idPost = id;
-                    resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
-                               
-                    _context.Add(resposta);
-                    _context.SaveChanges();
-                    
-                    return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
-                }
-            
-            
+            if (ModelState.IsValid)
+            {
+                resposta.idAnswer = Guid.NewGuid();
+                resposta.idPost = id;
+                resposta.idUser = Guid.Parse(User.FindFirstValue("idUser"));
+                resposta.created_date = DateTime.Now;
+
+                resposta.User = _context.Users.Find(resposta.idUser);
+
+                _context.Add(resposta);
+                _context.SaveChanges();
+
+                return RedirectToAction("Respostas", "Posts", new { id = resposta.idPost });
+            }
+
             return View(resposta);
         }
-        public IActionResult Perguntas()
-        {
 
-            ViewData["Categories"] = _context.Category.ToList();
-            ViewData["Axes"] = _context.Axis.ToList();
-            ViewData["Microfoundations"] = _context.Microfoundation.ToList();
-            ViewData["postList"] = _context.Post.Where(o => o.type == (Types)2).Include(o => o.Reactions).Include(o => o.Answers).OrderByDescending(o => o.created_date).ToList();
+        public IActionResult Perguntas([FromQuery]string? axis, [FromQuery] string? micro, [FromQuery] string? category, string searchText)
+        {
+            ViewBag.ViewType = "Perguntas";
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                ViewData["FilteredPostList"] = _context.Post
+                    .Where(p => p.type == (Types)2)
+                    .Where(p => p.title.Contains(searchText) || p.content.Contains(searchText))
+                    .Include(p => p.Reactions)
+                    .OrderByDescending(p => p.created_date)
+                    .ToList();
+            }
+
+            else
+            {
+                ViewData["FilteredPostList"] = null;
+            }
+
+            Filtrar(Types.Question, axis, micro, category);
             var applicationDbContext = _context.Post.Include(p => p.User);
             return View();
         }
@@ -200,12 +245,37 @@ namespace Study2gether.Controllers
 
         public IActionResult ReactToPost(Guid idPost, string reactioName)
         {
-            var user = Guid.Parse(User.FindFirstValue("idUser"));
 
-            if(reactioName == "Star")
+            if (User.FindFirstValue("idUser") != null)
             {
-                var shouldCreate = _context.Reactions.Any(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
-                if (!shouldCreate)
+                var user = Guid.Parse(User.FindFirstValue("idUser"));
+                if (reactioName == "Star")
+                {
+                    var shouldCreate = _context.Reactions.Any(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
+                    if (!shouldCreate)
+                    {
+                        var reaction = new Reaction();
+                        reaction.Id = Guid.NewGuid();
+                        reaction.Name = reactioName;
+                        reaction.idUser = user;
+                        reaction.idPost = idPost;
+                        _context.Reactions.Add(reaction);
+                        _context.SaveChanges();
+                        return Json(new { status = "success", message = "Post favoritado com successo", type = "FavAdd" });
+                    }
+                    else
+                    {
+                        var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
+                        _context.Reactions.Remove(reaction);
+                        _context.SaveChanges();
+                        return Json(new { status = "success", message = "Post removido dos favoritos", type = "FavRemove" });
+                    }
+
+                }
+
+                var userReaction = _context.Reactions.FirstOrDefault(m => m.Name != "Star" && m.idPost == idPost && m.idUser == user);
+
+                if (userReaction == null)
                 {
                     var reaction = new Reaction();
                     reaction.Id = Guid.NewGuid();
@@ -214,42 +284,55 @@ namespace Study2gether.Controllers
                     reaction.idPost = idPost;
                     _context.Reactions.Add(reaction);
                     _context.SaveChanges();
-                    return Json(new { status = "success", message = "Post favoritado com successo", type = "FavAdd" });
+                    return Json(new { status = "success", message = "Reação adiciona com sucesso", type = "add" });
                 }
-                else
+                else if (userReaction.Name == reactioName)
                 {
                     var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
                     _context.Reactions.Remove(reaction);
                     _context.SaveChanges();
-                    return Json(new { status = "success", message = "Post removido dos favoritos", type = "FavRemove" });
+                    return Json(new { status = "success", message = "Reação removida com sucesso", type = "remove" });
                 }
-
-            }
-
-            var userReaction = _context.Reactions.FirstOrDefault(m => m.Name != "Star" &&  m.idPost == idPost && m.idUser == user);
-
-            if (userReaction == null)
-            {
-                var reaction = new Reaction();
-                reaction.Id = Guid.NewGuid();
-                reaction.Name = reactioName;
-                reaction.idUser = user;
-                reaction.idPost = idPost;
-                _context.Reactions.Add(reaction);
-                _context.SaveChanges();
-                return Json(new { status = "success", message = "Reação adiciona com sucesso", type="add" });
-            }
-            else if(userReaction.Name == reactioName)
-            {
-                var reaction = _context.Reactions.First(m => m.Name == reactioName && m.idPost == idPost && m.idUser == user);
-                _context.Reactions.Remove(reaction);
-                _context.SaveChanges();
-                return Json(new { status = "success", message = "Reação removida com sucesso", type = "remove" });
+                else
+                {
+                    return Json(new { status = "error", message = "Você já reagiu a este post", type = "error" });
+                }
             }
             else
             {
-                return Json(new { status = "Error", message = "Você já reagiu a este post", type = "error" });
+                return Json(new { status = "error", message = "Você precisa estar logado para reagir", type = "error" });
             }
         }
+
+        [HttpGet]
+        public void Filtrar(Types postType, string? axis, string? micro, string? category)
+        {
+            ViewData["useFilters"] = true;
+            string message = "";
+            var posts = _context.Post.Where(c => c.type == (Types)postType);
+
+            if (axis != "" && axis != null)
+            {
+                posts = posts.Where(a => a.Axes.Any(x => x.idAxis == Guid.Parse(axis)));
+                message += "\n  * " + _context.Axis.First(x => x.idAxis == Guid.Parse(axis)).name;
+            }
+            if (micro != "" && micro != null)
+            {
+                posts = posts.Where(a => a.Microfoundations.Any(x => x.idMicrofoundation == Guid.Parse(micro)));
+                message += "\n * " + _context.Microfoundation.First(x => x.idMicrofoundation == Guid.Parse(micro)).name;
+            }
+            if (category != "" && category != null)
+            {
+                posts = posts.Where(a => a.Categories.Any(x => x.idCategory == Guid.Parse(category)));
+                message += "\n * " + _context.Category.First(x => x.idCategory == Guid.Parse(category)).name;
+            }
+            ViewData["postList"] = posts.Include(o => o.Reactions).Include(o => o.Answers).Include(o => o.Axes).Include(o => o.Microfoundations).Include(o => o.Categories).OrderByDescending(o => o.created_date).ToList();
+            ViewData["Filters"] = message;
+
+            ViewData["selectedAxis"] = axis;
+            ViewData["selectedMicro"] = micro;
+            ViewData["selectedCategory"] = category;
+        }
+
     }
 }

@@ -1,0 +1,91 @@
+﻿@{
+    var axes = ViewData["Axes"] as List<Axis>;
+    var microfoundations = ViewData["Microfoundations"] as List<Microfoundation>;
+    var categories = ViewData["Categories"] as List<Category>;
+}
+<div class="w-100">
+    <form id="filtros-form" class="w-100" method="get">
+        <div class="row align-items-center justify-content-around">
+            <div class="col-sm-12 col-md-4" id="divFiltroEixos">
+                <select class="form-select p-1 w-100" name="axis" onchange="Filtrar()" style="padding: 5px; height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                    <option value="">Eixo</option>
+                    @foreach (var element in axes)
+                    {
+                        @if (@ViewData["selectedAxis"] != null)
+                        {
+                            @if (@ViewData["selectedAxis"].ToString() == element.idAxis.ToString())
+                            {
+
+                                <option value="@element.idAxis" selected>@element.name</option>
+                            }
+                            else
+                            {
+                                <option value="@element.idAxis">@element.name</option>
+                            }
+                        }
+                        else
+                        {
+
+                            <option value="@element.idAxis">@element.name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-4 " id="divFiltroMicrofundamentos">
+                <select class="form-select p-1 w-100" name="micro" id="selectFiltroMicros" onchange="Filtrar()" style="height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                    <option value="">Microfundamento</option>
+                    @foreach (var element in microfoundations)
+                    {
+                        @if (@ViewData["selectedMicro"] != null)
+                        {
+                            @if (@ViewData["selectedMicro"].ToString() == element.idMicrofoundation.ToString())
+                            {
+
+                                <option value="@element.idMicrofoundation" selected>@element.name</option>
+                            }
+                            else
+                            {
+                                <option value="@element.idMicrofoundation">@element.name</option>
+                            }
+                        }
+                        else
+                        {
+
+                            <option value="@element.idMicrofoundation">@element.name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-4 " id="divFiltroCategorias">
+                <select class="form-select p-1 w-100" name="category" id="selectFiltroCategories" onchange="Filtrar()" style="height: auto; border-radius: 2.5rem; cursor: pointer; ">
+                    <option value="">Categoria</option>
+                    @foreach (var element in categories)
+                    {
+                        @if (@ViewData["selectedCategory"] != null)
+                        {
+                            @if (@ViewData["selectedCategory"].ToString() == element.idCategory.ToString())
+                            {
+
+                                <option value="@element.idCategory" selected>@element.name</option>
+                            }
+                            else
+                            {
+                                <option value="@element.idCategory">@element.name</option>
+                            }
+                        }
+                        else
+                        {
+
+                            <option value="@element.idCategory">@element.name</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    function Filtrar() {
+        document.getElementById('filtros-form').submit();
+    }
+</script>

@@ -74,6 +74,9 @@ namespace Study2gether.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("created_date")
+                        .HasColumnType("datetime2");
+
                     b.Property<Guid>("idPost")
                         .HasColumnType("uniqueidentifier");
 
@@ -81,7 +84,6 @@ namespace Study2gether.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("idAnswer");
@@ -119,6 +121,30 @@ namespace Study2gether.Migrations
                     b.HasKey("idCategory");
 
                     b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("Study2gether.Models.ForgotPassword", b =>
+                {
+                    b.Property<Guid>("idForgotPass")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("created_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("emailSent")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("passwordResetToken")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("idForgotPass");
+
+                    b.ToTable("ForgotPassword");
                 });
 
             modelBuilder.Entity("Study2gether.Models.Microfoundation", b =>
