@@ -25,13 +25,13 @@ O objetivo deste projeto é desenvolver uma ferramenta de comunicação assíncr
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+A Aplicação Study2gether está publicada e pode ser acessada pelo link: (http://studytwogether-001-site1.itempurl.com).
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Ela é uma ferramenta de fácil uso, no qual toda parte de conteúdos publicados, perguntas feitas, respostas e comentários ficam disponibilizados para o público em geral, já a parte logada, é aquela destinada aos alunos da PUCMinas e exigirá o seu cadastro para que ele possa interagir com os demais alunos, podendo fazer perguntas, responder, postar conteúdos, fazer comentários, favoritar, regir com emojis, personalizar o seu perfil e revisar seu histórico de ações na aplicação. 
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+O cadastro deve ser feito utilizando o E-mail do aluno (nome)@sga.pucminas.br, com uma senha de 8 dígitos.
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Esperamos que tenham uma ótima experiência ao navegar e interagir com os colegas.
 
 # Documentação
 
