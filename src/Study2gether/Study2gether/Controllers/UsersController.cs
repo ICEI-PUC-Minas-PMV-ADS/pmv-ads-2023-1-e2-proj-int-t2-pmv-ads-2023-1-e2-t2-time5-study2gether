@@ -232,6 +232,18 @@ namespace Study2gether.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> DeleteUser()
+        {
+            var user = _context.Users.First(excluir => excluir.idUser == Guid.Parse(User.FindFirstValue("idUser")));
+            _context.Users.Remove(user);
+            _context.SaveChanges();
+            await HttpContext.SignOutAsync();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+
         public IActionResult RecuperarSenha()
         { 
             return View();
