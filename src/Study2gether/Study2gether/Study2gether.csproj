@@ -83,6 +83,10 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+    <Content Include="Views\Users\RecuperarSenha.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Include="Views\Users\Cadastro.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -103,6 +107,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
 	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+	<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.4" />
+	<PackageReference Include="SendGrid" Version="9.28.1" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -113,9 +120,10 @@
 
   <ItemGroup>
     <None Include="Study2gether - Backup.csproj" />
-    <None Include="Views\Users\AlterarSenha.cshtml" />
-    <None Include="Views\Users\EditarPerfil.cshtml" />
-    <None Include="Views\Users\Historico.cshtml" />
+    <Content Include="Views\Users\AlterarSenha.cshtml" />
+    <Content Include="Views\Users\EditarPerfil.cshtml" />
+    <Content Include="Views\Users\Recuperacao.cshtml" />
+    <Content Include="Views\Users\Historico.cshtml" />
     <None Include="wwwroot\js\historico.js" />
   </ItemGroup>
 
