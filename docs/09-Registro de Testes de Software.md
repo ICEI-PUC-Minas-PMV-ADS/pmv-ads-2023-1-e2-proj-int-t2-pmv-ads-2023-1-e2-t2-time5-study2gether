@@ -247,6 +247,7 @@
 | CT-40 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |    |    |
 | Registro da tela: |![image](https://user-images.githubusercontent.com/114453508/236561619-4a6477e1-e225-4cca-a872-f4fdf662ee36.png) | Data do Teste: 05/05/23 - Resultado Negativo - A tela Histórico não apresentou uma responsividade satisfatória. AÇÃO DE CORREÇÃO: Realizar revisão do CSS com a aplicação do @Media para correção da superposição das telas em dimensões menores. | Médio |
 | Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/b91afb8e-3e7c-4ce7-a300-be01d15c6eaf)| Data do Teste: 16/05/23 - Resultado Positivo - A tela Histórico apresentou uma responsividade satisfatória. | Sucesso |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/27376627-b7ff-42ac-a732-cc432364b4a6) | Data do Teste: 01/06/23 - Resultado Positivo - O teste da URL foi feito no site mobile-friendly test o resultado foi de sucesso. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
