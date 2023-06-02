@@ -92,11 +92,15 @@ p.historicoTitle {
 }
 
 #limitContent {
-    max-width: 150ch;
-    overflow: hidden auto;
+    max-height: 40px;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    align-content: center;
 }
+
 
 #sobreVoce-redesSociais {
     height: 200px;

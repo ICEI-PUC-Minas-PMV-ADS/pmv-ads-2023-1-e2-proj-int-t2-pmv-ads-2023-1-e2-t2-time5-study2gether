@@ -46,47 +46,46 @@
         <div id="Perguntas" class="tabcontent">
             @foreach (var pergunta in @Model.Posts)
             {
-            @if (pergunta.type == Study2gether.Models.Types.Question)
-            {
-            <div>
-                <a asp-controller="Posts" asp-action="Perguntas" asp-route-id="@pergunta.idPost"><h6>@pergunta.title</h6></a>
-                <p id="limitContent">@Html.Raw(@pergunta.content)</p>
-            </div>
-            <hr>
-            }
+                @if (pergunta.type == Study2gether.Models.Types.Question)
+                {
+                    <div>
+                        <a id="limitContent" asp-controller="Posts" asp-action="Perguntas" asp-route-id="@pergunta.idPost"><h6>@pergunta.title</h6></a>
+                        <span id="limitContent">@Html.Raw(@pergunta.content)</span>
+                    </div>
+                    <hr>
+                }
             }
         </div>
         <div id="Respostas" class="tabcontent">
             @foreach (var resposta in @Model.Answers.OrderByDescending(o => o.created_date))
             {
-            <div>
-                <h6>@resposta.Post.title)</h6>
-                <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@resposta.idPost"><p id="limitContent">@Html.Raw(@resposta.content)</p></a>
-            </div>
-            <hr>
+                <div>
+                    <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@resposta.idPost"><p>@Html.Raw(@resposta.content)</p></a>
+                </div>
+                <hr>
             }
         </div>
         <div id="Interacoes" class="tabcontent">
             @foreach (var interacao in @Model.Posts)
             {
-            @if (interacao.type == Study2gether.Models.Types.Interaction)
-            {
-            <div>
-                <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@interacao.idPost"><h6>@interacao.title</h6></a>
-                <p id="limitContent">@Html.Raw(@interacao.content)</p>
-            </div>
-            <hr>
-            }
+                @if (interacao.type == Study2gether.Models.Types.Interaction)
+                {
+                    <div>
+                        <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@interacao.idPost"><h6>@interacao.title</h6></a>
+                        <span id="limitContent">@Html.Raw(@interacao.content)</span>
+                    </div>
+                    <hr>
+                }
             }
         </div>
         <div id="Favoritos" class="tabcontent">
             @foreach (var reacao in @Model.Reactions.Where(r => r.Name == "Star"))
             {
-            <div>
-                <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@reacao.idPost"><h6>@reacao.Post.title</h6></a>
-                <p id="limitContent">@Html.Raw(@reacao.Post.content)</p>
-            </div>
-            <hr>
+                <div>
+                    <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@reacao.idPost"><h6>@reacao.Post.title</h6></a>
+                    <span id="limitContent">@Html.Raw(@reacao.Post.content)</span>
+                </div>
+                <hr>
             }
         </div>
     </div>
@@ -98,4 +97,3 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
-
