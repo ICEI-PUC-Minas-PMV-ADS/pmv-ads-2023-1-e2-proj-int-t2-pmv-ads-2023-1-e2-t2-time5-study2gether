@@ -109,6 +109,7 @@
 |:---: |:---: |:---: |:---: |
 | CT-18 - RF-05 | Verificar se a busca de indicações por palavra chave digitada na barra de pesquisa está trazendo o resultado correto.   |    |    |
 | Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/c3b9cfe8-8e6a-4c57-866a-156a70d0b548) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - Ao fazer pesquisa com palavras chaves, como por exemplo "Testando" a aplicação buscou todas as postagens que apresentam essa palavra, no entanto buscou do banco de dados de "Interações". Ação: Corrigir a função de busca. | Grave |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/d33238dc-d244-4e69-bb03-5f567bb11845) | Data do Teste: 01/06/2023 - Resultado: POSITIVO - Ao fazer pesquisa com palavras chaves, como por exemplo "C#" a aplicação buscou todas as postagens que apresentam essa palavra, na área de "Interações". | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -145,6 +146,7 @@
 | CT-24 - RF-01 | Verificar se as publicações estão sendo apresentadas na "Lista de Interações". |    |    |
 | Registro da tela: |![Tela de Interações](https://user-images.githubusercontent.com/114435981/236686931-25264723-ae85-46f1-8d76-7b567f4e114d.png)|Data do teste: 06/05/2023 - Resultado Positivo - As publicações de interações estão sendo apresentadas na pagina correta.|Baixa|
 | Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, impossibilitando verificar se as postagens de interações estão sendo apresentadas na "Lista" corretamente. Ação: Tratar primeiro a excessão apontada e então verificar se as postagens são apresentadas corretamente. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/67608b06-ac43-49b2-86aa-bcfb50b72c19) | Data do Teste: 01/06/2023 - Resultado: POSITIVO - A página de Interações apresentou corretamente na sua listagem as postagens corretas. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -165,6 +167,7 @@
 | CT-27 - RF-11 | Verificar se a aplicação impede que o usuário poste conteúdos sem preencher todos os campos obrigatórios de “Categoria”, “Título” e "Conteúdo". |   |   |    
 | Registro da tela: | ![image](https://user-images.githubusercontent.com/96087622/236625619-8361a81c-d85f-4f55-9607-88adbefc7595.png) | Resultado Negativo - A aplicação não permitiu a postagem da indicação, mas não retornou nenhum erro ou aviso sobre os campos obrigatórios - Data do Teste: 06/05/2023 | Baixa |
 | Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/61ba2738-f8c0-4405-9f53-f227694562f5) | Data do Teste: 21/05/2023 - Resultado Negativo - A aplicação não restringiu a postagem da indicação faltando dados obrigatórios. Ação: Implementar "Restrições" e informar o usuário da necessidade de preencher os campos obrigatórios. | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/b3f80282-8b49-4fa5-b354-4edda3d28a3b) | Data do Teste: 01/06/2023 - Resultado Positivo - A aplicação restringiu a postagem da indicação faltando dados obrigatórios e apresentou um popup acusando a necessidade do preenchimento. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -244,6 +247,7 @@
 | CT-40 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |    |    |
 | Registro da tela: |![image](https://user-images.githubusercontent.com/114453508/236561619-4a6477e1-e225-4cca-a872-f4fdf662ee36.png) | Data do Teste: 05/05/23 - Resultado Negativo - A tela Histórico não apresentou uma responsividade satisfatória. AÇÃO DE CORREÇÃO: Realizar revisão do CSS com a aplicação do @Media para correção da superposição das telas em dimensões menores. | Médio |
 | Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/b91afb8e-3e7c-4ce7-a300-be01d15c6eaf)| Data do Teste: 16/05/23 - Resultado Positivo - A tela Histórico apresentou uma responsividade satisfatória. | Sucesso |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/27376627-b7ff-42ac-a732-cc432364b4a6) | Data do Teste: 01/06/23 - Resultado Positivo - O teste da URL foi feito no site mobile-friendly test o resultado foi de sucesso. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
