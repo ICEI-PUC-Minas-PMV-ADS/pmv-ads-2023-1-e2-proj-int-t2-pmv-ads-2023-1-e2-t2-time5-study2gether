@@ -186,3 +186,17 @@ A aplicação deve permitir ao administrador inserir postagem de indicações de
 ##### Artefatos produzidos
 * [Indicacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Indicacoes.cshtml)
 * [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
+
+### Funcionalidade 12: A aplicação deve apresentar um filtro por eixos ou por microfundamentos. (RF-002)
+
+A aplicação deve apresentar um filtro por eixos ou por microfundamentos.
+
+![image](img/programacaodefuncionalidadesrf02.jpg)
+
+##### Instruções de acesso
+1. Acesse o site pelo [Link]([https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether](http://studytwogether-001-site1.itempurl.com/))
+2. Clicar no filtro "Eixo" ou "Microfundamento".
+
+##### Artefatos produzidos
+* [Eixo]()
+* [Microfundamento]()
