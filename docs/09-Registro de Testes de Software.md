@@ -194,8 +194,8 @@
 | CT-31 - RF-08 | Verificar se a aplicação está apresentando todas as Perguntas com as respectivas Respostas para todos os usuários, logados ou não. |    |    |
 | Registro da tela: | ![Perguntas com respectivas respostas](img/ct34enviarresposta.jpg) | Data do Teste: 06/05/2023 - Resultado: NEGATIVO - O botão "Enviar" não está funcionando, logo não é possível enviar respostas para realizar o teste. | Grave |
 | Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/dadaec90-1ba0-4831-a291-9218df907de3)| Data do Teste: 21/05/2023 - Resultado: POSITIVO - As respostas estão sendo apresentadas logo abaixo da Pergunta, tanto para o usuário logado quanto não logado. | - |
-| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34rf08usuariologado.jpg) | Data do Teste: 27/05/2023 - Resultado: POSITIVO - O usuário "logado" consegue visualizar as repostas. | Sucesso |
-| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34rf08usuarionaologado.jpg) | Data do Teste: 27/05/2023 - Resultado: POSITIVO - O usuário "não logado" consegue visualizar as repostas. | Sucesso |
+| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34rf08usuariologado.jpg) | Data do Teste: 27/05/2023 - Resultado: POSITIVO - A aplicação está apresentando todas as perguntas com os respectivos comentários para usuários "logados", e ele consegue visualizar as repostas. | Sucesso |
+| Registro da tela: | ![Perguntas com respectivas respostas](img/ct34rf08usuarionaologado.jpg) | Data do Teste: 27/05/2023 - Resultado: POSITIVO - A aplicação está apresentando todas as perguntas com os respectivos comentários para usuários "não logados", e ele consegue visualizar as repostas. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
@@ -203,6 +203,8 @@
 | Registro da tela: |![Tela de Interações](https://user-images.githubusercontent.com/114435981/236688381-4dbd89c1-a14c-435d-8d75-17319a920356.png)|Data do teste: 06/05/2023 - As interações estão sendo apresentadas, no entanto os comentarios ainda não estão implementados| Grave|
 | Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, não sendo possível verificar se as interações com os respectivos comentários estão sendo apresentados para todos os usuários, logados ou não. Ação: Tratar primeiro a excessão apontada e então verificar se as postagem estão sendo apresentadas a todos os usuários com os seus respectivos comentários. | Grave |
 | Registro da tela: |![Respostas de Interações](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114435981/ec370078-7e1e-4f0b-9701-1d7bb0889548)|Data do teste: 24/05/2023 - As interações estão sendo apresentadas, e ao clicar no titulo da interação, é possivel visualizar a respostas referente á publicação|Baixa|
+| Registro da tela: |![Respostas de Interações](img/CT32RF08usuariologado.jpg)|Data do teste: 02/06/2023 - Resultado: POSITIVO - A aplicação está apresentando todas as interações com os respectivos comentários para usuários "logados", e ele consegue visualizar as repostas. | Sucesso |
+| Registro da tela: |![Respostas de Interações](img/CT32RF08usuarionaologado.jpg)|Data do teste: 02/06/2023 - Resultado: POSITIVO - A aplicação está apresentando todas as interações com os respectivos comentários para usuários "não logados", e ele consegue visualizar as repostas. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
