@@ -661,12 +661,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>O tester deve observar os elementos visuais que são apresentados na tela e validar se o contraste está dentro dos padrões planejados.</li></ol> | As páginas apresentaram padrão de contraste dos elementos na tela. |
+|A aplicação deve ter nível sufiente de contraste de cores em relação ao plano de fundo de acordo com WCAG (Web Content Accessibility Guidelines). |<ol><li>O tester deve acessar o site https://dequeuniversity.com/rules/axe/3.3/color-contrast</li><li>Preencher a cor de fundo e a cor de texto</li></ol> | As páginas apresentaram padrão de contraste dos elementos na tela. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-41 - RNF-02 - RNF-06 | Verificar se o contraste dos elementos das telas estão seguindo o padrão. |    |    |
+| CT-41 - RNF-02 - RNF-06 | A aplicação deve ter nível sufiente de contraste de cores em relação ao plano de fundo de acordo com WCAG (Web Content Accessibility Guidelines). | |  |
 | Registro da tela: |
 
 
