@@ -241,3 +241,25 @@ A aplicação deve permitir ao usuário reagir com reações de emojis `Study2ge
 * [Perguntas.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml)
 * [Interacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Interacoes.cshtml)
 * [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
+
+### Funcionalidade 15: A aplicação deve permitir ao usuário recuperar a senha. (RF-010)
+
+A aplicação deve permitir ao usuário recuperar a senha na aplicação `Study2gether`.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/107289791/e0ce2cd4-91d1-4b06-abfa-d541c83671ff)
+
+
+##### Instruções de acesso
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
+2. Clicar na área de `Login` ou `Cadastro`.
+3. Clicar no botão `Recuperar Senha`.
+4. Digite o e-mail que deseja recuperar no campo.
+5. Clique no botão `Recuperar Senha`. 
+6. Aparecerá um pop-up na tela com uma mensagem, e será enviado um e-mail para a recuperação de senha para o e-mail preenchido caso tenha sido cadastrado.
+
+##### Artefatos produzidos
+* [Login.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Login.cshtml)
+* [Cadastro.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Cadastro.cshtml)
+* [RecuperarSenha.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/RecuperarSenha.cshtml)
+* [UsersController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/UsersController.cs)
+
