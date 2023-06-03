@@ -135,12 +135,14 @@
 | CT-22 - RF-04 | Verificar se o campo de comentários no rodapé das interações está registrando adequadamente os comentários feitos. |    |    |
 | Registro da tela: | ![image](https://i.imgur.com/EzPwijN.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possÍvel verificar se o campo de comentários está registrando adequadamente os comentários feitos. | Grave |   
 | Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77f284b3-b38f-45f7-accc-7f7c46a06e38) | Data do Teste: 21/05/2023 - Resultado: NEGATIVO - A página de Interações não pode ser acessada por uma excessão apontada, impossibilitando a verificação se os comentários estão sendo apresentados abaixo do conteúdo publicado adequadamente. Ação: Tratar primeiro a excessão apontada e então verificar se os comentários estão sendo apresentados corretamente.| Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/21993438/10d670d0-bb57-4b61-ad54-a43b73d80b75) | Data do Teste: 03/06/2023 - Resultado: POSITIVO - Foi possível registrar adequadamente os comentários na parte de interações| - |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-23 - RF-04 | Verificar se o campo de comentários no rodapé das indicações está registrando adequadamente os comentários feitos. |    |    |
 | Registro da tela: | ![image](https://i.imgur.com/oRM1Bpo.png) | Data do Teste: 05/05/23 - Resultado Negativo - Não foi possível verificar se o campo de comentários das indicações está registrando adequadamente os comentários feitos. | Grave | 
-| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/31ddc12a-53fb-43c7-8222-b541db2947df) | Data do Teste: 21/05/23 - Resultado NEGATIVO - O registro do comentário feito no campo indicado no rodapé das indicações não foi apresentado junto aos comentários feitos anteriormente. Ação: Revisar o código e corrigí-lo | Grave | 
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/31ddc12a-53fb-43c7-8222-b541db2947df) | Data do Teste: 21/05/23 - Resultado NEGATIVO - O registro do comentário feito no campo indicado no rodapé das indicações não foi apresentado junto aos comentários feitos anteriormente. Ação: Revisar o código e corrigí-lo | Grave |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/21993438/3a576a49-4f9c-4d11-804b-0b0097f8ea98) | Data do Teste: 03/06/23 - Resultado POSITIVO - O registro do comentário feito no campo indicado no rodapé das indicações foi apresentado junto aos comentários feitos anteriormente. | - | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
