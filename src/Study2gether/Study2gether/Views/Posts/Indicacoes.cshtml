@@ -11,6 +11,8 @@
     var filteredPosts = ViewData["FilteredPostList"] as List<Post>;
 }
 
+<link rel="stylesheet" href="~/css/posts.css" />
+
 <div class="row container-fluid">
     <div class="col-12 col-sm-2 mt-2" id="lista">
         <ul class="row justify-content-center align-items-center p-0">
@@ -35,7 +37,7 @@
                             <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
                         </div>
                         <div class="card-body">
-                            <div>@Html.Raw(@obj.content)</div>
+                            <div class="overflow-auto post-max-size">@Html.Raw(@obj.content)</div>
                             @foreach (var x in @obj.Axes)
                             {
                                 <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
@@ -96,7 +98,7 @@
                             <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
                         </div>
                         <div class="card-body">
-                            <div>@Html.Raw(@obj.content)</div>
+                            <div class="overflow-auto post-max-size">@Html.Raw(@obj.content)</div>
                             @foreach (var x in @obj.Axes)
                             {
                                 <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>

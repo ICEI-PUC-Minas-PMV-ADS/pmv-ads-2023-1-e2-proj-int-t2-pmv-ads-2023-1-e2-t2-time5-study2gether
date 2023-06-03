@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="card-footer">
-                    <label class="float-right" for="data-resposta"><small>Postado em: @post.created_date)</small></label>
+                    <label class="float-right" for="data-resposta"><small>Postado em: @post.created_date.ToString("dd/MM/yyyy")</small></label>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                     <div>@Html.Raw(@obj.content)</div>
                 </div>
                 <div class="card-footer">
-                    <label class="float-right" for="data-resposta"><small>Data da resposta: @obj.created_date)</small></label>
+                    <label class="float-right" for="data-resposta"><small>Data da postagem: @obj.created_date.ToString("dd/MM/yyyy")</small></label>
                 </div>
             </div>
         }

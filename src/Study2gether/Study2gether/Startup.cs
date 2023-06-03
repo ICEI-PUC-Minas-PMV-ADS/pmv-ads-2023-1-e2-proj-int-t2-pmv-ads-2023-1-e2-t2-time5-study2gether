@@ -66,8 +66,8 @@ namespace Study2gether
 
         //    services.Configure<CookiePolicyOptions>(options =>
         //    {
-        //         options.CheckConsentNeeded = context => true;
-        //         options.MinimumSameSitePolicy = SameSiteMode.None;
+        //        options.CheckConsentNeeded = context => true;
+        //        options.MinimumSameSitePolicy = SameSiteMode.None;
         //    });
 
         //    services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

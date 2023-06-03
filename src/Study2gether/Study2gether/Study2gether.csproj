@@ -75,7 +75,6 @@
     <Content Remove="wwwroot\css\Historico.cs" />
     <Content Remove="wwwroot\js\editarperfil.js" />
     <Content Remove="wwwroot\js\Historico.js" />
-    <Content Remove="wwwroot\css\StyleSheet.css" />
     <Content Remove="wwwroot\js\JavaScript.js" />
   </ItemGroup>
 
