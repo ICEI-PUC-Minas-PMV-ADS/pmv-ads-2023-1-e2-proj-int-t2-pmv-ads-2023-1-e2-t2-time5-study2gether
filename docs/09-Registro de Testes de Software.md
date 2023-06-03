@@ -257,6 +257,7 @@
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-41 - RNF-02 - RNF-06 | Verificar se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| CT-41 - RNF-02 - RNF-06 | A aplicação deve ter nível sufiente de contraste de cores em relação ao plano de fundo de acordo com WCAG (Web Content Accessibility Guidelines). |    |    |
 | Registro da tela: |![image](https://user-images.githubusercontent.com/114453508/236567015-24cf3efc-453e-4309-948c-8e142ca7a0b8.png)| Data do Teste: 05/05/23 - Resultado Positivo - A Tela Editar Perfil apresentou uma qualidade satisfatória no contraste dos seus elementos. | Sucesso |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/8e3171c6-e37e-42b4-b748-fc491e842d8e) | Data do Teste: 03/06/23 - Resultado Positivo - O teste resultou em boas pontuações de contraste de acordo a escala da WCAG (Web Content Accessibility Guidelines). | Sucesso |
 
