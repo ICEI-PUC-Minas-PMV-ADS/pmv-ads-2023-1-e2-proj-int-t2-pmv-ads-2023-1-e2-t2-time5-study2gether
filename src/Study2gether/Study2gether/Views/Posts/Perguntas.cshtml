@@ -156,30 +156,6 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        @{
-                            var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
-                            {
-                                reactionName = n.Key,
-                                reactionCount = n.Count()
-                            }).OrderByDescending(n => n.reactionCount).ToList();
-                            @for (var i = 0; i < 5; i++)
-                            {
-                                var react = @reactOrder.ElementAtOrDefault(@i);
-                                if (react != null)
-                                {
-                                    <p class="d-inline">@react.reactionCount</p>
-                                    <p class="d-inline reactionsChanger">@react.reactionName</p>
-                                }
-                            }
-                        }
-                    </div>
-                    <div>
-                        <label><small>Postado em: @obj.created_date</small></label>
-                    </div>
-                </div>
-            </div>
-        </div>
                 }
             }
         </div>
