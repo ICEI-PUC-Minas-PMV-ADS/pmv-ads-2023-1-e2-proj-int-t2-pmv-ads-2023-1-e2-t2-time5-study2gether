@@ -10,6 +10,7 @@
     filters = filters?.Replace("\n", "<br>");
     var filteredPosts = ViewData["FilteredPostList"] as List<Post>;
 }
+<link rel="stylesheet" href="../../css/pergunta.css" runat="server">
 
 <link rel="stylesheet" href="~/css/posts.css" />
 
@@ -36,6 +37,10 @@
                     <div class="caixa card rounded-lg mb-3">
                         <div class="card-header">
                             <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                            <div class="card-header-tabs d-inline-flex align-items-center">
+                                <img class="rounded-circle mx-1" height="30" width="30" loading="lazy" src="@obj.User.imageLink" alt="Foto de @obj.User.name">
+                                <h6>@obj.User.name</h6>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="overflow-auto post-max-size">@Html.Raw(@obj.content)</div>
@@ -97,6 +102,10 @@
                     <div class="caixa card rounded-lg mb-3">
                         <div class="card-header">
                             <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                            <div class="card-header-tabs d-inline-flex align-items-center">
+                                <img class="rounded-circle mx-1" height="30" width="30" loading="lazy" src="@obj.User.imageLink" alt="Foto de @obj.User.name">
+                                <h6>@obj.User.name</h6>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="overflow-auto post-max-size">@Html.Raw(@obj.content)</div>
@@ -326,5 +335,9 @@
             }).showToast();
             return false
         };
+    });
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
