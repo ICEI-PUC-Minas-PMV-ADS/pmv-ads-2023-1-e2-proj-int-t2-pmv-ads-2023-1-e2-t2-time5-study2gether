@@ -200,3 +200,21 @@ A aplicação deve apresentar um filtro por eixos ou por microfundamentos.
 ##### Artefatos produzidos
 * [Eixo]()
 * [Microfundamento]()
+
+### Funcionalidade 13: Pesquisar por campo de texto (RF-005)
+
+A funcionalidade permite que os usuários pesquisem por campo de texto na platarforma da `Study2gether`.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/21993438/0d1e5d2a-3d45-43a0-bfcf-e7d0f5b02829)
+
+##### Instruções de acesso
+1. Acesse o site pelo [Link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether)
+2. Clicar na área de pesquisa localizada no topo do site, onde está escrito "Digite o texto para buscar".
+3. Digite o texto que você quer procurar.
+4. Clicar na lupa ao lado do texto ou dar enter para a busca ser finalizada. 
+
+##### Artefatos produzidos
+* [Indicacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Indicacoes.cshtml)
+* [Perguntas.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml)
+* [Interacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Interacoes.cshtml)
+* [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
