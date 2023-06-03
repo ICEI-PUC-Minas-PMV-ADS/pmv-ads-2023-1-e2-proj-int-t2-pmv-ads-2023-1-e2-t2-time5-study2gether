@@ -62,19 +62,27 @@ A funcionalidade permite que os usuários visualizem as postagens de indicaçõe
 2. Clicar em "Indicações", "Perguntas" ou "Interações".
 3. Clicar na postagem desejada para ser visualisada.
 
-### Funcionalidade 05: Postar Perguntas (RF-003)
-A aplicação deve permitir ao usuário postar perguntas na platarforma da `Study2gether`.
+##### Artefatos produzidos
+* [Perguntas.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml)
+* [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
+* [Interacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Interacoes.cshtml)
+* [Indicacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Indicacoes.cshtml)
+
+### Funcionalidade 05: Postar Perguntas e Interações (RF-003)
+
+A aplicação deve permitir ao usuário postar perguntas e interações na platarforma da `Study2gether`.
 
 ![Postar perguntar](img/teladeperguntas.jpg)
 
 ##### Instruções de acesso
 1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
-2. Clicar em "Indicações", "Perguntas" ou "Interações".
+2. Clicar em "Perguntas" ou "Interações".
 3. Clicar em "+" (usuários já cadastrados e previamente logados).
 
 ##### Artefatos produzidos
 * [Perguntas.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml)
 * [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
+* [Interacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Interacoes.cshtml)
 
 ### Funcionalidade 06: Postar Respostas (RF-004)
 A aplicação deve permitir ao usuário responder as perguntas na platarforma da `Study2gether`.
