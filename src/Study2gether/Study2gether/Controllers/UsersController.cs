@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Http;
 using System.Text.RegularExpressions;
 using SendGrid;
 using SendGrid.Helpers.Mail;
+using DotNetEnv;
 
 namespace Study2gether.Controllers
 {
@@ -259,6 +260,7 @@ namespace Study2gether.Controllers
                 {
                     try
                     {
+                        DotNetEnv.Env.Load();
                         model.idForgotPass = Guid.NewGuid();
                         model.emailSent = true;
                         model.email = emailExists.email;
@@ -267,7 +269,7 @@ namespace Study2gether.Controllers
                         _context.Add(model);
                         _context.SaveChanges();
 
-                        var apiKey = "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";
+                        string apiKey = Environment.GetEnvironmentVariable("API_KEY");
                         var client = new SendGridClient(apiKey);
 
                         var from = new EmailAddress("study2gether7789@gmail.com", "Study2Gether");
