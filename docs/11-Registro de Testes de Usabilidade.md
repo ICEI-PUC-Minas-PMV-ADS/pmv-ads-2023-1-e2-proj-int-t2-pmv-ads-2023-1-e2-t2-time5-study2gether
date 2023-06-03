@@ -46,9 +46,9 @@
 |Identificar se cadastro foi realizado|Sim, o layout da página é intuitivo|Não, poderia ter uma mensagem de cadastro com sucesso|Parcialmente, não aparece uma mensagem de cadastro realizado com sucesso|Parcialmente|
 |--|--|--|--|--|
 |**Tarefa 8: Redefinição de senha**|||||
-|Preencher formulário de redefinição de senha|||||
-|Solicitar redefinição|||||
-|Identificar se redefinição foi feita|||||
+|Preencher formulário de redefinição de senha|Sim, o layout da página é intuitivo|Sim, o formulário está bem identificado|Sim, o processo é intuitivo|Sim, o processo é intuitivo|Sim, É possível perceber que o formulário foi todo preenchido|
+|Solicitar redefinição|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim, o processo é intuitivo|Sim, pois aparece um pop-up dizendo que a tarefa foi concluída após clicar no botão de submissão|
+|Identificar se redefinição foi feita|Sim, o layout da página é intuitivo|Sim, o pop-up é bem identificado|Sim, o processo é intuitivo|Sim, o processo é intuitivo|Sim, pois aparece um pop-up dizendo que a tarefa foi concluída|
 
 
 |||||
@@ -61,4 +61,4 @@
 |**Tarefa 5: Login**|Não|0|5|
 |**Tarefa 6: Histórico de Ações do Usuário na Aplicação**|Não|0|5|
 |**Tarefa 7: Cadastro**|Não|0|5|
-|**Tarefa 8: Redefinição de senha**||||
+|**Tarefa 8: Redefinição de senha**|Não|0|5|
