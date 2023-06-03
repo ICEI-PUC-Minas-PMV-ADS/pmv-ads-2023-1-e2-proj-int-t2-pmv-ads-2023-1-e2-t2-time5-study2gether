@@ -225,12 +225,13 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-35 - RNF-01 e RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Chrome. |    |    |
-| Registro da tela: | | | |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/90de91c7-44ec-4610-a723-0038938c177f) | Data do Teste: 03/06/23 - Resultado Positivo - A aplicação rodou satisfatoriamente no navegador Chrome. | Sucesso |
+
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-36 - RNF-01 e RNF-03 | Verificar se a aplicação está publicada na internet e acessível pelo navegador Firefox. |    |    |
-| Registro da tela: | | | |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/4e179d8d-b418-463f-9344-f7b79ea00ecd)| Data do Teste: 03/06/23 - Resultado Positivo - A aplicação rodou satisfatoriamente no navegador Firefox. | Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
