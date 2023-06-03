@@ -12,6 +12,8 @@
 }
 <link rel="stylesheet" href="../../css/pergunta.css" runat="server">
 
+<link rel="stylesheet" href="~/css/posts.css" />
+
 <div class="row container-fluid">
     <div class="col-12 col-sm-2 mt-2" id="lista">
         <ul class="row justify-content-center align-items-center p-0">
@@ -41,7 +43,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div>@Html.Raw(@obj.content)</div>
+                            <div class="overflow-auto post-max-size">@Html.Raw(@obj.content)</div>
                             @foreach (var x in @obj.Axes)
                             {
                                 <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
@@ -65,7 +67,7 @@
 
                                     <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
-                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Where(r => r.Name != "Star").Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
 
                                 </div>
                                 <div>
@@ -87,7 +89,7 @@
                                     }
                                 </div>
                                 <div>
-                                    <label><small>Postado em: @obj.created_date</small></label>
+                                    <label><small>Postado em: @obj.created_date.ToString("dd/MM/yyyy")</small></label>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +108,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div>@Html.Raw(@obj.content)</div>
+                            <div class="overflow-auto post-max-size">@Html.Raw(@obj.content)</div>
                             @foreach (var x in @obj.Axes)
                             {
                                 <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
@@ -130,7 +132,7 @@
 
                                     <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
-                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Where(r => r.Name != "Star").Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
 
                                 </div>
                                 <div>
@@ -152,7 +154,7 @@
                                     }
                                 </div>
                                 <div>
-                                    <label><small>Postado em: @obj.created_date</small></label>
+                                    <label><small>Postado em: @obj.created_date.ToString("dd/MM/yyyy")</small></label>
                                 </div>
                             </div>
                         </div>

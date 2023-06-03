@@ -48,9 +48,9 @@
             {
             @if (pergunta.type == Study2gether.Models.Types.Question)
             {
-            <div>
-                <a asp-controller="Posts" asp-action="Perguntas" asp-route-id="@pergunta.idPost"><h6>@pergunta.title</h6></a>
-                <p id="limitContent">@Html.Raw(@pergunta.content)</p>
+             <div>
+                <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@pergunta.idPost"><h6>@pergunta.title</h6></a>
+                <span id="limitContent">@Html.Raw(@pergunta.content)</span>
             </div>
             <hr>
             }
@@ -60,8 +60,7 @@
             @foreach (var resposta in @Model.Answers.OrderByDescending(o => o.created_date))
             {
             <div>
-                <h6>@resposta.Post.title)</h6>
-                <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@resposta.idPost"><p id="limitContent">@Html.Raw(@resposta.content)</p></a>
+                <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@resposta.idPost"><p>@Html.Raw(@resposta.content)</p></a>
             </div>
             <hr>
             }
@@ -72,8 +71,8 @@
             @if (interacao.type == Study2gether.Models.Types.Interaction)
             {
             <div>
-                <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@interacao.idPost"><h6>@interacao.title</h6></a>
-                <p id="limitContent">@Html.Raw(@interacao.content)</p>
+                <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@interacao.idPost"><h6>@interacao.title</h6></a>
+                <span id="limitContent">@Html.Raw(@interacao.content)</span>
             </div>
             <hr>
             }
@@ -83,8 +82,8 @@
             @foreach (var reacao in @Model.Reactions.Where(r => r.Name == "Star"))
             {
             <div>
-                <a asp-controller="Posts" asp-action="Respostas" asp-route-id="@reacao.idPost"><h6>@reacao.Post.title</h6></a>
-                <p id="limitContent">@Html.Raw(@reacao.Post.content)</p>
+                 <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@reacao.idPost"><h6>@reacao.Post.title</h6></a>
+                 <span id="limitContent">@Html.Raw(@reacao.Post.content)</span>
             </div>
             <hr>
             }

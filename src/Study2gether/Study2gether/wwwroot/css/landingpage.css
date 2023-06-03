@@ -1,4 +1,4 @@
-* {
+﻿* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,7 +7,6 @@
 :root {
     font-size: 62.5%;
     --ff-p: 'Poppins', sans-serif;
-
     --bg-body: #202020;
     --bg-orange: #ff9900;
     --bg-blue: #146eb4;
@@ -43,32 +42,29 @@ body {
 
 #txtBusca::placeholder {
     padding: 2rem;
-
     color: gray;
     font-size: 1.6rem;
     font-family: var(--ff-p);
-  }
+}
 
 input {
     border: none;
     background-color: #DCE2E9;
     width: 30rem;
     border-radius: .4rem 0 0 .4rem;
-
     font-family: var(--ff-p);
     font-size: 1.6rem;
 }
-  
+
 #btnBusca {
     border: none;
     background-color: transparent;
     padding: 0;
     cursor: pointer;
-
     border-radius: 0 .4rem 0.4rem 0;
 }
-  
-#btnLogin button{
+
+#btnLogin button {
     display: inline-block;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -80,16 +76,14 @@ input {
     color: var(--bg-white);
     font-size: 1.6rem;
     cursor: pointer;
-
     font-family: var(--ff-p);
 }
-  
-#btnLogin button:hover {
-    text-decoration: none;
 
-    background-color: #0e5891;
-}
-  
+    #btnLogin button:hover {
+        text-decoration: none;
+        background-color: #0e5891;
+    }
+
 .temas select {
     display: inline-block;
     vertical-align: middle;
@@ -97,35 +91,33 @@ input {
     margin-bottom: 1rem;
     border: none;
     cursor: pointer;
-
     font-family: var(--ff-p);
     font-size: 1.3rem;
-
     background-color: var(--bg-body);
     color: var(--bg-white);
 }
 
-.temas select:hover {
-    background-color: #141414;
-}
- 
+    .temas select:hover {
+        background-color: #141414;
+    }
+
 .preenchimento img {
     width: 50%;
     height: 50%;
 }
 
-  .container {
+.container {
     position: relative;
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+    .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
 .texto {
     position: relative;
@@ -133,10 +125,8 @@ input {
     top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
-
     background-color: var(--bg-orange);
-
-    width:70%;
+    width: 70%;
     padding: 2rem;
 }
 
@@ -157,7 +147,7 @@ footer {
     width: 100%;
     height: 5rem;
 }
-  
+
 button {
     margin: 0 2rem 5rem;
     padding: 2rem;
@@ -166,73 +156,71 @@ button {
     color: var(--bg-white);
     border: none;
     border-radius: 0.4rem;
-
     cursor: pointer;
-
     text-transform: uppercase;
 }
 
-button:hover {
-    background-color: #0e5891;
-}
-  
+    button:hover {
+        background-color: #0e5891;
+    }
+
 @media (max-width: 490px) {
     .page {
-    padding: 0.5rem;
+        padding: 0.5rem;
     }
-  
+
     #nav-bar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .menu-img img {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
     }
-  
+
     #divBusca {
-      margin-top: 2.4rem;
+        margin-top: 2.4rem;
     }
-  
+
     input {
-      width: 100%;
-      border-radius: .4rem 0 0 .4rem;
+        width: 100%;
+        border-radius: .4rem 0 0 .4rem;
     }
-  
+
     #btnBusca {
-      border-radius: 0 .4rem .4rem 0;
+        border-radius: 0 .4rem .4rem 0;
     }
-  
+
     #btnLogin button {
-      font-size: 1.4rem;
-      padding: 1rem;
-      margin-top: 5rem;
+        font-size: 1.4rem;
+        padding: 1rem;
+        margin-top: 5rem;
     }
 
     .temas select {
         display: block;
     }
-     
+
     .preenchimento img {
         width: 100%;
     }
-    
+
     .container {
         position: relative;
     }
-       
+
     h1 {
         font-size: 3rem;
         font-weight: 700;
         text-transform: uppercase;
     }
-    
+
     p {
         font-size: 1.5rem;
     }
-    
+
     footer {
         display: flex;
         justify-content: center;
@@ -240,9 +228,9 @@ button:hover {
         width: 100%;
         height: 5rem;
     }
-      
+
     button {
         padding: 1.5rem;
         font-size: 1.4rem;
     }
-  }
+}

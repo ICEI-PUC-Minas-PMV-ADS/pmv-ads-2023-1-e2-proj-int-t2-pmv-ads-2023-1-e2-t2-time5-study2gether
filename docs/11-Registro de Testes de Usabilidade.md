@@ -19,10 +19,10 @@
 |Identificar se a pergunta foi publicada com sucesso|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois o processo é intuitivo e ao publicar a pergunta, ele consegue visualiar a mesma na aba "perguntas".|Sim, pois quando a pergunta é postada, ela ficará disponível na aba "perguntas".|
 |--|--|--|--|--|
 |**Tarefa 3: Pesquisa de Indicações**|||||
-|Preencher campo de pesquisa| | | | |
-|Preencher filtros de pesquisa| | | | |
-|Pesquisar| | | | |
-|Conferir se os resultados desejados foram apresentados| | | | |
+|Preencher campo de pesquisa|Sim, foi assertivo ao preencher a barra de pesquisa pelo assunto que queria pesquisar. | Sim, é muito intuitivo por refletir o que é usual nas aplicações web. | Consegue claramente. A tela permite que pesquisa por várias formas para facilitar sua busca do assunto de seu interesse. | Sim, a aplicação tem filtros automáticos com retorno da pesquisa, se positivos, aparecem o resultados encontrados. Caso contrário ele retorna a mensagens que a pesquisa foi realizada. |
+|Preencher filtros de pesquisa| Sim, cada filtro apresenta um Dropbox com as opções de pesquisa | Sim, os filtros estão dispostos no cabeçalho com um dropbox listando as possibilidades de filtragem. | Sim, ao passar o mouse sobre os filtros, o mouse no estilo pointer contribui para a que o usuário click sobre os filtros. | Sim, cada informação selecionada já traz um resultado, que pode ser acumulado ao próximo filtro se assim o usuário quiser. |
+|Pesquisar| Sim, por ser uma barra de pesquisa por texto e por dropbox muito usado nos ambientes web, a pesquisa é fácil e intuitiva. | Sim, claramente. | Sim, intuitivamente ele já realiza a pesquisa. | Sim, o retorno da pesquisa é instantâneo. |
+|Conferir se os resultados desejados foram apresentados| Sim, cada pesquisa feita aprensentou um resultado, conforme planejado| Sim os filtros estão destacados na aplicação com ótima visibilidade e oferecem o resultado imediato ao usuário. | Sim, o resultado é apresentado imediatamente. | Sim, como o retorno é instantâneo, a aplicação apresentará o reltado da pesquisa na tela. |
 |--|--|--|--|--|
 |**Tarefa 4: Postagem de interações**|||||
 |Acessar área de interações|Sim, o layout da pagina é intuitivo|Sim, o botão está bem identificado|Sim, as informações estão claras|Parcialmente, talvez falte uma idenficiação clara da pagina em questão|
@@ -46,9 +46,9 @@
 |Identificar se cadastro foi realizado|Sim, o layout da página é intuitivo|Não, poderia ter uma mensagem de cadastro com sucesso|Parcialmente, não aparece uma mensagem de cadastro realizado com sucesso|Parcialmente|
 |--|--|--|--|--|
 |**Tarefa 8: Redefinição de senha**|||||
-|Preencher formulário de redefinição de senha|||||
-|Solicitar redefinição|||||
-|Identificar se redefinição foi feita|||||
+|Preencher formulário de redefinição de senha|Sim, o layout da página é intuitivo|Sim, o formulário está bem identificado|Sim, o processo é intuitivo|Sim, o processo é intuitivo|Sim, É possível perceber que o formulário foi todo preenchido|
+|Solicitar redefinição|Sim, o layout da página é intuitivo|Sim, o botão está bem identificado|Sim, o processo é intuitivo|Sim, o processo é intuitivo|Sim, pois aparece um pop-up dizendo que a tarefa foi concluída após clicar no botão de submissão|
+|Identificar se redefinição foi feita|Sim, o layout da página é intuitivo|Sim, o pop-up é bem identificado|Sim, o processo é intuitivo|Sim, o processo é intuitivo|Sim, pois aparece um pop-up dizendo que a tarefa foi concluída|
 
 
 |||||
@@ -56,9 +56,9 @@
 | |Você, em algum momento, sentiu frustração durante a realização desta tarefa?|De 0 a 5 (com 0 para nenhuma dificuldade e 5 para muita dificuldade) qual foi a dificuldade da realização desta tarefa?|De 0 a 5 (com 0 para nenhuma satisfação e 5 para muita satisfação) qual foi a satisfação da realização desta tarefa?|
 |**Tarefa 1: Pesquisa de Perguntas**|Não|0|5|
 |**Tarefa 2: Postagem de perguntas**|Não|0|5|
-|**Tarefa 3: Pesquisa de Indicações**||||
+|**Tarefa 3: Pesquisa de Indicações**|Não|0|5|
 |**Tarefa 4: Postagem de interações**|Não|0|5|
 |**Tarefa 5: Login**|Não|0|5|
 |**Tarefa 6: Histórico de Ações do Usuário na Aplicação**|Não|0|5|
 |**Tarefa 7: Cadastro**|Não|0|5|
-|**Tarefa 8: Redefinição de senha**||||
+|**Tarefa 8: Redefinição de senha**|Não|0|5|
