@@ -31,7 +31,7 @@ O template criado está dispoto nos seguintes layouts:
 
 Este layout é utilizado para apresentar a aplicação aos usuários, permitindo a todos navegarem utilizando os botões de acesso aos Posts, "Indicações", "Perguntas" e Interações".
 
-![image](https://user-images.githubusercontent.com/114453508/236693884-37b47a78-a81b-41ee-8f1c-47728925f3ba.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/777a94b9-a0e2-495f-9d9c-ff928a58dd7a)
 <p align="center">Figura 27 - Tela Principal</p>
 
 ## Tela Visualização das Perguntas
@@ -45,8 +45,7 @@ Este layout é utilizado para a visualização das Perguntas por todos usuários
 
 Este layout é utilizado para a visualização das Respostas postadas.
 
-Esta funcionalidade será implementada na Etapa 4.
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/beee70a3-ccf8-4ff5-bff3-c4cc4047ce1c)
 <p align="center">Figura 29 - Tela Visualização de Respostas</p>
 
 ## Tela Visualização das Interações
@@ -60,8 +59,7 @@ Este layout é utilizado para a visualização das Interações postadas por usu
 
 Este layout é utilizado para a visualização dos Comentários das Interações.
 
-![image](https://user-images.githubusercontent.com/114453508/236689148-6d39d09d-052f-4151-8567-f7bc07498cff.png)
-<p align="center">Figura 31 - Tela Visualização das Interações</p>
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/2b70d1e1-bc90-45eb-951d-282090e21a4f)<p align="center">Figura 31 - Tela Visualização das Interações</p>
 
 ## Tela Visualização das Indicações
 
@@ -74,7 +72,7 @@ Este layout é utilizado para a visualização das Indicações postadas pelos a
 
 Este layout é utilizado para a visualização dos Comentários das Indicações.
 
-![image](https://user-images.githubusercontent.com/114453508/236689269-05038386-6033-4108-8c1f-df89dfab118e.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/e58f602a-653a-4436-b8ea-2028e1c21018)
 <p align="center">Figura 33 - Tela Visualização das Indicações</p>
 
 ## Tela Cadastro
@@ -82,7 +80,6 @@ Este layout é utilizado para a visualização dos Comentários das Indicações
 Este layout é utilizado para a visualização do Tela de Cadastro simplificado do Usuário. Em um segundo momento, o usuário poderá Editar seu Perfil já no ambiente logado, em tela específica.
 
 ![image](https://user-images.githubusercontent.com/114453508/236689498-e7ad6aa0-9841-40ac-8d8f-836a31b07c4c.png)
-
 <p align="center">Figura 34 - Tela Cadastro</p>
 
 ## Tela de Login
@@ -97,22 +94,21 @@ Este layout é utilizado para a visualização do Login de Usuário.
 
 Este layout é utilizado para a visualização da Tela Esqueceu sua Senha, a qual será redefinida por meio de E-mail enviado ao Usuário. 
 
-Esta tela será implementada na Etapa 4.
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/fade473f-2fc6-4835-a345-13af4aa5c7c0)
 <p align="center">Figura 36 - Tela de Esqueceu sua Senha</p>
 
 ## Tela Envie sua Pergunta
 
 Este layout é utilizado para a Postagem da Pergunta por parte do usuário cadastrado ao clicar no botão Azul de acrescer. 
 
-![image](https://user-images.githubusercontent.com/114453508/236690770-c2953870-8a73-43e6-a05d-75b5fb467bb7.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/758bb998-6c6f-4f4c-b32a-ece1340aa49a)
 <p align="center">Figura 37 - Tela Envie sua Pergunta</p>
 
 ## Tela Compartilhe sua Resposta
 
 Este layout é utilizado para o compartilhamento de Respostas às Perguntas postadas por usuários logados.
 
-![image](https://user-images.githubusercontent.com/114453508/236690949-72e19b28-c3dc-45c6-b459-3955be0638e9.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/77208d4c-4b4c-49f6-a604-4f8a02f02e19)
 <p align="center">Figura 38 - Tela de Compartilhamento de Respostas</p>
 
 ## Tela de Postagem de Interações
@@ -126,7 +122,7 @@ Este layout é utilizado para a postagem de Interações.
 
 Este layout é utilizado para a postagem de Indicações.
 
-![image](https://user-images.githubusercontent.com/114453508/236691045-5f2499a8-51d7-4315-8ad8-bdf6783c5e02.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/0af1e376-b364-4652-a1cb-d49a558c45e1)
 <p align="center">Figura 40 - Tela de Postagem de Indicações</p>
 
 ## Tela de Perfil/Histórico de Ações do Usuário na Aplicação
