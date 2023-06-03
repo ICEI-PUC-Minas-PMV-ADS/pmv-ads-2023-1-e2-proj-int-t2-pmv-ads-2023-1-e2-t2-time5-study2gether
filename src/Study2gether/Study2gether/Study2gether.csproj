@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NovaPasta1\**" />
     <Compile Remove="NovaPasta\**" />
     <Compile Remove="static\**" />
     <Compile Remove="Views\Answers\**" />
@@ -22,6 +23,7 @@
     <Compile Remove="Views\Shared\NovaPasta\**" />
     <Compile Remove="Views\Users\**" />
     <Compile Remove="wwwroot\NovaPasta\**" />
+    <Content Remove="NovaPasta1\**" />
     <Content Remove="NovaPasta\**" />
     <Content Remove="static\**" />
     <Content Remove="Views\Answers\**" />
@@ -33,6 +35,7 @@
     <Content Remove="Views\Shared\NovaPasta\**" />
     <Content Remove="Views\Users\**" />
     <Content Remove="wwwroot\NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta1\**" />
     <EmbeddedResource Remove="NovaPasta\**" />
     <EmbeddedResource Remove="static\**" />
     <EmbeddedResource Remove="Views\Answers\**" />
@@ -44,6 +47,7 @@
     <EmbeddedResource Remove="Views\Shared\NovaPasta\**" />
     <EmbeddedResource Remove="Views\Users\**" />
     <EmbeddedResource Remove="wwwroot\NovaPasta\**" />
+    <None Remove="NovaPasta1\**" />
     <None Remove="NovaPasta\**" />
     <None Remove="static\**" />
     <None Remove="Views\Answers\**" />
@@ -67,6 +71,7 @@
     <Content Remove="Areas\Admin\Index.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Cadastro.cshtml" />
     <Content Remove="Areas\Admin\Views\AdminUsers\Login.cshtml" />
+    <Content Remove="Views\Shared\Historico.cshtml" />
     <Content Remove="wwwroot\css\Historico.cs" />
     <Content Remove="wwwroot\js\editarperfil.js" />
     <Content Remove="wwwroot\js\Historico.js" />
@@ -116,7 +121,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="NovaPasta1\" />
   </ItemGroup>
 
   <ItemGroup>
