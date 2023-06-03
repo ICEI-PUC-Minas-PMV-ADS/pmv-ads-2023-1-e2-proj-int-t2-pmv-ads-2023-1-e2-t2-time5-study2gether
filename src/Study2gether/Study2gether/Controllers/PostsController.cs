@@ -160,7 +160,7 @@ namespace Study2gether.Controllers
         public IActionResult Respostas(Guid id)
         {
 
-            var post = _context.Post.Include(p => p.Answers).ThenInclude(a => a.User).Single(p => p.idPost == id);
+            var post = _context.Post.Include(t => t.User).Include(p => p.Answers).ThenInclude(a => a.User).Single(p => p.idPost == id);
             ViewData["Post"] = post;
             post.views = ++post.views;
             _context.SaveChanges();
@@ -326,7 +326,7 @@ namespace Study2gether.Controllers
                 posts = posts.Where(a => a.Categories.Any(x => x.idCategory == Guid.Parse(category)));
                 message += "\n * " + _context.Category.First(x => x.idCategory == Guid.Parse(category)).name;
             }
-            ViewData["postList"] = posts.Include(o => o.Reactions).Include(o => o.Answers).Include(o => o.Axes).Include(o => o.Microfoundations).Include(o => o.Categories).OrderByDescending(o => o.created_date).ToList();
+            ViewData["postList"] = posts.Include(o => o.Reactions).Include(o => o.Answers).Include(o => o.Axes).Include(o => o.Microfoundations).Include(o => o.Categories).Include(o => o.User).OrderByDescending(o => o.created_date).ToList();
             ViewData["Filters"] = message;
 
             ViewData["selectedAxis"] = axis;

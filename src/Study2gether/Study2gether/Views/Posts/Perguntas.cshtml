@@ -31,7 +31,11 @@
                 {
                     <div class="caixa card rounded-lg mb-3">
                         <div class="card-header">
-                            <h4 class="text-center bg-war"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                            <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                            <div class="card-header-tabs d-inline-flex align-items-center">
+                                <img class="rounded-circle mx-1" height="30" width="30" loading="lazy" src="@obj.User.imageLink" alt="Foto de @obj.User.name">
+                                <h6>@obj.User.name</h6>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div>@Html.Raw(@obj.content)</div>
@@ -90,62 +94,67 @@
             {
                 @foreach (var obj in postList)
                 {
-                    <div class="caixa card rounded-lg mb-3">
-                        <div class="card-header">
-                            <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
-                        </div>
-                        <div class="card-body">
-                            <div>@Html.Raw(@obj.content)</div>
-                            @foreach (var x in @obj.Axes)
-                            {
-                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
-                            }
-                            @foreach (var x in @obj.Microfoundations)
-                            {
-                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
-                            }
-                            @foreach (var x in @obj.Categories)
-                            {
-                                <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
-                            }
-                        </div>
-                        <div class="card-footer">
-                            <div class="d-flex justify-content-between">
-                                <div class="reactions d-inline">
+        <div class="caixa card rounded-lg mb-3">
+            <div class="card-header">
+                <h4 class="text-center"><a asp-action="Respostas" asp-route-id="@obj.idPost">@obj.title</a></h4>
+                <div class="card-header-tabs d-inline-flex align-items-center">
+                    <img class="rounded-circle mx-1" height="30" width="30" loading="lazy" src="@obj.User.imageLink" alt="Foto de @obj.User.name">
+                    <h6>@obj.User.name</h6>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <div>@Html.Raw(@obj.content)</div>
+                @foreach (var x in @obj.Axes)
+                {
+                    <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                }
+                @foreach (var x in @obj.Microfoundations)
+                {
+                    <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                }
+                @foreach (var x in @obj.Categories)
+                {
+                    <div class="bg-info text-dark d-inline-block p-2 rounded">@Html.Raw(x.name)</div>
+                }
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-between">
+                    <div class="reactions d-inline">
 
-                                    <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
+                        <p class="d-inline">@obj.Answers.Count()</p> <a asp-action="Respostas" asp-route-id="@obj.idPost"><i class="fa-regular fa-comment-dots"></i></a>
 
-                                    <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
+                        <p class="d-inline">@obj.views</p> <a href="#"><i class="fa-solid fa-chart-column"></i></a>
 
-                                    <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
+                        <p class="d-inline" id="favorites_@Html.Raw(@obj.idPost)">@obj.Reactions.Count(r => r.Name == "Star")</p> <a onclick="setReactionToPost('@obj.idPost');sendReaction('Star', '@obj.idPost')" style="color: #0366d6; cursor: pointer;"><i class="fa-solid fa-star"></i></a>
 
-                                    <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
+                        <p class="d-inline" id="react_@Html.Raw(@obj.idPost)">@obj.Reactions.Count()</p> <a onclick="setReactionToPost('@obj.idPost')" class="pe-auto" data-toggle="modal" data-target="#emojiPicker" style="color: #0366d6; cursor: pointer "><i class="fa-regular fa-face-smile"></i></a>
 
-                                </div>
-                                <div>
-                                    @{
-                                        var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
-                                        {
-                                            reactionName = n.Key,
-                                            reactionCount = n.Count()
-                                        }).OrderByDescending(n => n.reactionCount).ToList();
-                                        @for (var i = 0; i < 5; i++)
-                                        {
-                                            var react = @reactOrder.ElementAtOrDefault(@i);
-                                            if (react != null)
-                                            {
-                                                <p class="d-inline">@react.reactionCount</p>
-                                                <p class="d-inline reactionsChanger">@react.reactionName</p>
-                                            }
-                                        }
-                                    }
-                                </div>
-                                <div>
-                                    <label><small>Postado em: @obj.created_date</small></label>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    <div>
+                        @{
+                            var reactOrder = @obj.Reactions.GroupBy(info => info.Name).Select(n => new
+                            {
+                                reactionName = n.Key,
+                                reactionCount = n.Count()
+                            }).OrderByDescending(n => n.reactionCount).ToList();
+                            @for (var i = 0; i < 5; i++)
+                            {
+                                var react = @reactOrder.ElementAtOrDefault(@i);
+                                if (react != null)
+                                {
+                                    <p class="d-inline">@react.reactionCount</p>
+                                    <p class="d-inline reactionsChanger">@react.reactionName</p>
+                                }
+                            }
+                        }
+                    </div>
+                    <div>
+                        <label><small>Postado em: @obj.created_date</small></label>
+                    </div>
+                </div>
+            </div>
+        </div>
                 }
             }
         </div>
@@ -297,6 +306,9 @@
 
         return results
     }
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
 <script>
     $("#postQuestion").submit(function (e) {
