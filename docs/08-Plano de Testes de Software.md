@@ -629,7 +629,7 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |<ol><li>Acessar o navegador</li><li>Acessar o provedor de Host da aplicação</li><li>Verificar o Uptime da aplicação.</li></ol> | A aplicação atendeu os requisitos e teve um uptime igual ou superior a 95%. |
+|Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |<ol><li>Acessar o site app.statuscake.com</li><li>inserir a URL http://studytwogether-001-site1.itempurl.com no campo específico</li><li>Vá até monitoring e click em Push Tests</li></ol> | A aplicação atendeu os requisitos e teve um uptime igual ou superior a 95%. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
@@ -641,34 +641,32 @@ Registro:
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
-|CT-40 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
-
+|CT-40 - Teste de Responsividade. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. |
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela inicial "Home-Page" da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela "Home-Page" </li><li>  Clicar com o botão direito sobre a tela, ir até inspecionar. Clique no botão “DevTools” e movimente a visualize se os elementos da tela são reorganizados de forma a manter a qualidade da visualização..</li></ol> | As páginas apresentaram responsividade. |
+|Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela inicial "Home-Page" da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela "Home-Page" </li></ol> | As páginas apresentaram responsividade. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-40 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela e se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| CT-40 - RNF-02 - RNF-06 | Verificar se as telas estão sendo responsivas aos diversos tamanhos de tela. |    |    |
 | Registro da tela: |
 
 # 
 
 | **Caso de teste** | **Requisitos Associados**|
 |--|--|
-|CT-41 - Teste de Responsividade e Contraste. | RNF-02 – A aplicação deverá ser responsiva permitindo a visualização em diversos dispositivos de forma adequada. RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.|
-
+|CT-41 - Teste de contraste dos elementos das telas. | RNF-06 - A aplicação deve ter bom nível de contraste entre os elementos da tela.|
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|Verificar se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>Acessar o navegador</li><li>Informar o endereço do site (https://search.google.com/test/mobile-friendly)</li><li>Inserir o endereço da tela de inicial da aplicação </li><li> Verificar se a página recebeu um resultado positivo e é compatível com dispositivos móveis </li><li>Informar o endereço da tela de "Perguntas" </li><li> Verificar se contraste está dentro dos padrões.</li></ol> | As páginas apresentaram bom contraste dos elementos na tela. |
+|Verificar se o contraste dos elementos das telas estão com boa qualidade. |<ol><li>O tester deve observar os elementos visuais que são apresentados na tela e validar se o contraste está dentro dos padrões planejados.</li></ol> | As páginas apresentaram padrão de contraste dos elementos na tela. |
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-41 - RNF-02 - RNF-06 | Verificar se o contraste dos elementos das telas estão com boa qualidade. |    |    |
+| CT-41 - RNF-02 - RNF-06 | Verificar se o contraste dos elementos das telas estão seguindo o padrão. |    |    |
 | Registro da tela: |
 
 
