@@ -4,7 +4,7 @@
 
 O padrão de layout a ser utilizado na aplicação tem correspondência ao projeto de Interface elaborado anteriormente, conforme Figura 5.
 
-![image](https://user-images.githubusercontent.com/114453508/236688982-d253542d-a8df-4d37-8462-658154b3e65a.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/5a37f496-b231-4d78-bbb9-0e3964e7fd9f)
 <p align="center">Figura 26 - Template padrão do site</p>
 
 O template criado está dispoto nos seguintes layouts: 
