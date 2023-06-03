@@ -7,28 +7,28 @@ Implementação do sistema descrita por meio dos requisitos funcionais e/ou não
 ### Funcionalidade 01: Fazer Publicações (RF-001)
 A funcionalidade permite que o usuário faça uma postagem na pagina de Interações na platarforma da `Study2gether`.
 
-![Publicação de interação](https://user-images.githubusercontent.com/114435981/236596298-7cd632ef-6ee6-4599-a987-28b4ae6e4869.png)
+![Publicação de interação](https://user-images.githubusercontent.com/114435981/236596298-7cd632ef-6ee6-4599-a987-28b4ae6e4869.png).
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. clicar em Interações
-3. Clicar em '+' (usuários já cadastrados e previamente logados)
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Clicar em Interações.
+3. Clicar em '+' (usuários já cadastrados e previamente logados).
 
 ##### Artefatos produzidos
 * [Interacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Interacoes.cshtml)
 * [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
 
 ### Funcionalidade 02: Efetuar Cadastro	(RF-006)
-A funcionalidade permite que o usuário realize com o cadastro na platarforma da `Study2gether`.
+A funcionalidade permite que o usuário realize com sucesso o cadastro na platarforma da `Study2gether`.
 
 ![Screenshot 2023-05-07 143228](https://user-images.githubusercontent.com/107289791/236693557-0f332727-bfe7-4258-a912-ece1326ff57b.png)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Clique no botão `Cadastre-se`
-3. Insira um `e-mail` com o formato `nome@sga.pucminas.br`
-4. Insira uma `senha` com ao menos 8 caracteres
-5. Clique no botão `Cadastrar`
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Clique no botão `Cadastre-se`.
+3. Insira um `e-mail` com o formato `nome@sga.pucminas.br`.
+4. Insira uma `senha` com ao menos 8 caracteres.
+5. Clique no botão `Cadastrar`.
 
 ##### Artefatos produzidos
 * [Cadastro.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Cadastro.cshtml)
@@ -41,10 +41,10 @@ A funcionalidade permite que o usuário realize com sucesso o login na platarfor
 ![Screenshot 2023-05-07 143223](https://user-images.githubusercontent.com/107289791/236693541-74942825-5920-4273-a7e2-b30db3eca14e.png)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Clique no botão `Login`
-3. Insira `e-mail` e `senha` já cadastrados previamente
-4. Clique no botão `Entrar`
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Clique no botão `Login`.
+3. Insira o `e-mail` e a `senha` já cadastrados previamente.
+4. Clique no botão `Entrar`.
 
 ##### Artefatos produzidos
 * [Login.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Login.cshtml)
@@ -53,13 +53,14 @@ A funcionalidade permite que o usuário realize com sucesso o login na platarfor
 
 ### Funcionalidade 04: Visualizar publicações (RF-008)
 
-A funcionalidade permite que os usuários visualizem as postagens de interações na platarforma da `Study2gether`.
+A funcionalidade permite que os usuários visualizem as postagens de indicações, perguntas ou interações na platarforma da `Study2gether`.
 
 ![Pagina de Interações](https://user-images.githubusercontent.com/114435981/236595542-a8e16566-daaa-4e59-af18-8db9534eebd1.png)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. clicar em Interações
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Clicar em "Indicações", "Perguntas" ou "Interações".
+3. Clicar na postagem desejada para ser visualisada.
 
 ### Funcionalidade 05: Postar Perguntas (RF-003)
 A aplicação deve permitir ao usuário postar perguntas na platarforma da `Study2gether`.
@@ -67,9 +68,9 @@ A aplicação deve permitir ao usuário postar perguntas na platarforma da `Stud
 ![Postar perguntar](img/teladeperguntas.jpg)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. clicar em "Perguntas"
-3. Clicar em '+' (usuários já cadastrados e previamente logados)
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Clicar em "Indicações", "Perguntas" ou "Interações".
+3. Clicar em "+" (usuários já cadastrados e previamente logados).
 
 ##### Artefatos produzidos
 * [Perguntas.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml)
@@ -81,12 +82,12 @@ A aplicação deve permitir ao usuário responder as perguntas na platarforma da
 ![Postar resposta](img/ct34enviarresposta.jpg)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Clicar em "Perguntas"
-3. Selecionar uma Pergunta
-4. Clicar no local de inserir Respostas (usuários já cadastrados e previamente logados)
-5. Digitar o texto
-6. Clicar no botão "Enviar"
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Clicar em "Perguntas".
+3. Selecionar uma Pergunta.
+4. Clicar no local de inserir Respostas (usuários já cadastrados e previamente logados).
+5. Digitar o texto.
+6. Clicar no botão "Enviar".
 
 ##### Artefatos produzidos
 * [Perguntas.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Perguntas.cshtml)
@@ -99,10 +100,10 @@ A funcionalidade permite que o usuário, logado na `Study2gether`, acesse sua p�
 ![Página de Perfil e Histórico](https://user-images.githubusercontent.com/12260321/236688605-a3024173-1971-451e-9c82-f2dc1af67902.png)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
-3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
-5. Na tela Perfil/Histórico, é possível interagir entre as abas para visualizar suas ações
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`.
+3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito.
+5. Na tela Perfil/Histórico, é possível interagir entre as abas para visualizar suas ações.
 
 ##### Artefatos produzidos
 * [Historico.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Users/Historico.cshtml)
@@ -117,10 +118,10 @@ A funcionalidade permite que o usuário, logado na `Study2gether`, acesse seu pe
 
 ##### Instruções de acesso
 1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
-3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
-4. Na tela Perfil/Histórico, clicar em `Editar Perfil`
-5. Na tela de `Editar Perfil`, editar as informações
+2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`.
+3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito.
+4. Na tela Perfil/Histórico, clicar em `Editar Perfil`.
+5. Na tela de `Editar Perfil`, editar as informações.
 6. Clicar em `Salvar Perfil`. 
 
 ##### Artefatos produzidos
@@ -137,12 +138,12 @@ A funcionalidade permite que o usuário, logado na `Study2gether`, exclua sua co
 
 ##### Instruções de acesso
 1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
-3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
-4. Na tela Perfil/Histórico, clicar em `Editar Perfil`
-5. Na tela de `Editar Perfil`, clicar em `Excluir Perfil`
-6. Um prompt de confirmação será exibido informando que a exclusão será definitiva
-7. Caso escolha `Sim`, a conta é definitivamente excluída e o usuário poderá fazer outro cadastro com esse email futuramente
+2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`.
+3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito.
+4. Na tela Perfil/Histórico, clicar em `Editar Perfil`.
+5. Na tela de `Editar Perfil`, clicar em `Excluir Perfil`.
+6. Um prompt de confirmação será exibido informando que a exclusão será definitiva.
+7. Caso escolha `Sim`, a conta é definitivamente excluída e o usuário poderá fazer outro cadastro com esse email futuramente.
 8. Caso escolha `Cancelar`, a ação é abortada.
 
 ##### Artefatos produzidos
@@ -158,11 +159,11 @@ A funcionalidade permite que o usuário logado na `Study2gether` acesse seu Perf
 ![Alterar senha](https://user-images.githubusercontent.com/12260321/236688584-29440457-fa83-4c6e-8022-523ae1209be3.png)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`
-3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito
-4. Na tela Perfil/Histórico, clicar em `Alterar senha`
-5. Na tela `Alterar Senha`, inserir qual a senha atual, qual será a senha nova e confirmar a nova senha
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Caso usuário não esteja com login efetuado, basta efetuar o `Login`.
+3. Com o login já efetuado, clicar em seu nome de usuário no canto superior direito.
+4. Na tela Perfil/Histórico, clicar em `Alterar senha`.
+5. Na tela `Alterar Senha`, inserir qual a senha atual, qual será a senha nova e confirmar a nova senha.
 6. Clicar em `Alterar Senha`.
 
 ##### Artefatos produzidos
@@ -172,34 +173,36 @@ A funcionalidade permite que o usuário logado na `Study2gether` acesse seu Perf
 * [User.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Models/User.cs)
 * [UsersController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/UsersController.cs)
 
-### Funcionalidade 11: A aplicação deve permitir ao administrador inserir postagem de indicações de materiais relevantes. (RF-011)
+### Funcionalidade 11: Administrador inserir postagem de indicações de materiais relevantes. (RF-011)
 
 A aplicação deve permitir ao administrador inserir postagem de indicações de materiais relevantes. `Study2gether`.
 
 ![image](https://user-images.githubusercontent.com/96087622/236625920-4546a3d9-c931-4a82-8b53-4249ca0130fa.png)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
-2. Acessar uma conta com permissão de administrador
-3. Clicar em Indicações
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
+2. Acessar uma conta com permissão de administrador.
+3. Clicar em Indicações.
 
 ##### Artefatos produzidos
 * [Indicacoes.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Posts/Indicacoes.cshtml)
 * [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
 
-### Funcionalidade 12: A aplicação deve apresentar um filtro por eixos ou por microfundamentos. (RF-002)
+### Funcionalidade 12: Apresentar um filtro por eixos ou por microfundamentos. (RF-002)
 
 A aplicação deve apresentar um filtro por eixos ou por microfundamentos.
 
 ![image](img/programacaodefuncionalidadesrf02.jpg)
 
 ##### Instruções de acesso
-1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com)
+1. Acesse o site pelo [Link](http://studytwogether-001-site1.itempurl.com).
 2. Clicar no filtro "Eixo" ou "Microfundamento".
 
 ##### Artefatos produzidos
-* [Eixo]()
-* [Microfundamento]()
+* [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
+* [_Layout.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Views/Shared/_Layout.cshtml)
+* [Filters.cshtml](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/develop/src/Study2gether/Study2gether/Views/Shared/Filters.cshtml)
+* [ViewBagActionFilter.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/develop/src/Study2gether/Study2gether/Atributtes/ViewBagActionFilter.cs)
 
 ### Funcionalidade 13: Pesquisar por campo de texto (RF-005)
 
