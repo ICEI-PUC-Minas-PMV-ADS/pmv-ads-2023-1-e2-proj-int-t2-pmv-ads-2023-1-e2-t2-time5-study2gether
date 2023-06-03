@@ -49,7 +49,7 @@
             @if (pergunta.type == Study2gether.Models.Types.Question)
             {
              <div>
-                <a id="limitContent" asp-controller="Posts" asp-action="Perguntas" asp-route-id="@pergunta.idPost"><h6>@pergunta.title</h6></a>
+                <a id="limitContent" asp-controller="Posts" asp-action="Respostas" asp-route-id="@pergunta.idPost"><h6>@pergunta.title</h6></a>
                 <span id="limitContent">@Html.Raw(@pergunta.content)</span>
             </div>
             <hr>
