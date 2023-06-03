@@ -246,7 +246,7 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-39 - RNF-05 | Verificar se a aplicação permanecerá acessível sem interrupções por pelo menos 95% do tempo. |    |    |
-| Registro da tela: | | | |
+| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/45a5c3c1-e9d9-4eaf-8fda-c67b4a754671)| Data do teste: 03/06/23 - Resultado Positivo - O tempo de disponibilidade da aplicação publicada segundo a ferramenta statuscake.com testada no tempo de 5 min. foi de 100% de Uptime.| Sucesso |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
