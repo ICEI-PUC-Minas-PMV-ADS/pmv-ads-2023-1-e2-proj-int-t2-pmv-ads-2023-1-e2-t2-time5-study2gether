@@ -220,7 +220,7 @@ A funcionalidade permite que os usuários pesquisem por campo de texto na platar
 * [PostsController.cs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/blob/main/src/Study2gether/Study2gether/Controllers/PostsController.cs)
 
 
-### Funcionalidade 14: A aplicação deve permitir ao usuário reagir com reações de emojis (RF-09)
+### Funcionalidade 14: A aplicação deve permitir ao usuário reagir com reações de emojis (RF-009)
 
 A aplicação deve permitir ao usuário reagir com reações de emojis `Study2gether`.
 
