@@ -6,32 +6,32 @@
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-01 - RF-06 | Verificar se o usuário consegue se cadastrar na aplicação. 
-| Registro da tela: | ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | Data do Teste: 06/05/2023 - Resultado: Positivo - O cadastro foi realizado com sucesso. | Sucesso |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/107289791/7970e251-dd45-4428-9727-05369ddf54da) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O cadastro foi realizado com sucesso. | Alta |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-02 - RF-06 | Verificar se é impossível se cadastrar duas vezes com o mesmo e-mail. 
-| Registro da tela:|  ![image](https://user-images.githubusercontent.com/107289791/236537356-19dff8b1-498d-44a1-95ec-30676545ca2e.png) | Data do Teste: 06/05/2023 - Resultado: Positivo - Aparece uma mensagem de erro informando que o usuário ja foi cadastrado | Sucesso | 
+| Registro da tela:| ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/107289791/8da95112-ba95-4e59-b604-6232effe4105) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - Aparece uma mensagem de erro informando que o usuário ja foi cadastrado | Alta | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-03 - RF-06 | Verificar se o usuário consegue realizar o Login na aplicação. 
-| Registro da tela:| ![image](https://user-images.githubusercontent.com/107289791/236533227-cf14162d-223f-4da5-a286-7bf8397fcac7.png) | Data do Teste: 06/05/2023 - Resultado: Positivo - O Login foi realizado com sucesso. | Sucesso | 
+| Registro da tela:| ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/107289791/edd0e209-3183-46ba-b320-9cb915ce7fb5) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - O Login foi realizado com sucesso. | Alta | 
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-04 - RF-06 | Verificar se o sistema impede a realização de login com campos em branco ou inválidos. 
-| Registro da tela:| ![image](https://user-images.githubusercontent.com/107289791/236538716-f2d96097-497d-48c5-89a0-6759ebc4efac.png) | Data do Teste: 06/05/2023 - Resultado: Positivo - Aparece uma mensagem de erro caso todos os campos obrigatórios não estejam preenchidas. | Sucesso |  
+| Registro da tela:| ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/107289791/d2227e9d-890b-4eb3-b6fc-72f184a41533) | Data do Teste: 06/05/2023 - Resultado: POSITIVO - Aparece uma mensagem de erro caso todos os campos obrigatórios não estejam preenchidas. | Media |  
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-05 - RF-10 | Verificar se o usuário cadastrado consegue redefinir sua senha esquecida. |    |    |
-| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/c6671368-7bbf-4f06-a03e-10d08c1638a2) | Data do Teste: 21/05/2023 - Resultado Negativo - A aplicação não respondeu ao Clicar no Botão "Redefinir a senha". Ação: Implementar a funcionalidade. | Média |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/107289791/bd900879-5a6a-439b-9fd1-b72718ea7086) | Data do Teste: 03/06/2023 - Resultado: POSITIVO - A aplicação respondeu com um pop-up com uma mensagem "Caso o e-mail exista, você receberá um email com mais instruções em breve!" ao Clicar no Botão "Redefinir a senha". | Média |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
 | CT-06 - RF-10 | Verificar se a aplicação impede a recuperação de senha com um e-mail inválido. |    |    |
-| Registro da tela: |![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/114453508/c6671368-7bbf-4f06-a03e-10d08c1638a2) | Data do Teste: 21/05/2023 - Resultado Negativo - Como a aplicação não respondeu ao Clicar no Botão "Redefinir a senha", não é possível efetuar o teste. Ação: Implementar a funcionalidade. | Média |
+| Registro da tela: | ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether/assets/107289791/816b77a3-a593-43c8-a8ed-c4c8b757b9ef) | Data do Teste: 03/06/2023 - Resultado: POSITIVO - A aplicação respondeu com um pop-up com uma mensagem "Caso o e-mail exista, você receberá um email com mais instruções em breve!" ao Clicar no Botão "Redefinir a senha".  | Média |
 
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
