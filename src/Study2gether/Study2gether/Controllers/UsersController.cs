@@ -13,6 +13,9 @@ using Study2gether.Models;
 using System.Web;
 using Microsoft.AspNetCore.Http;
 using System.Text.RegularExpressions;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using DotNetEnv;
 
 namespace Study2gether.Controllers
 {
@@ -50,9 +53,11 @@ namespace Study2gether.Controllers
                 var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, userDb.name == null ? userDb.email : userDb.name),
+                        new Claim(ClaimTypes.Thumbprint, userDb.imageLink ),
                         new Claim(ClaimTypes.NameIdentifier, userDb.name == null ? userDb.email : userDb.name),
                         new Claim(ClaimTypes.Role, userDb.isAdmin ? "admin" : "user"),
                         new Claim("idUser", userDb.idUser.ToString()),
+                        new Claim("imageLink", userDb.imageLink.ToString()),
                     };
 
                 var userIdentity = new ClaimsIdentity(claims, "login");
@@ -115,13 +120,15 @@ namespace Study2gether.Controllers
             }
             if (ModelState.IsValid)
             {
+                TempData["success"] = "Sua conta foi criada com sucesso!";
                 user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
                 user.idUser = Guid.NewGuid();
                 user.name = user.email;
                 user.imageLink = "https://cdn-icons-png.flaticon.com/512/6596/6596121.png";
+                user.createdDate = DateTime.Now;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                return View();
             }
             return View(user);
         }
@@ -134,8 +141,10 @@ namespace Study2gether.Controllers
         public async Task<IActionResult> Historico()
         {   
             var user = await _context.Users
-                .Include(teste => teste.Posts)
-                .Include(teste => teste.Answers)
+                .Include(p => p.Posts)
+                .Include(a => a.Answers)
+                .Include(r => r.Reactions)
+                .ThenInclude(r => r.Post)
                 .FirstOrDefaultAsync(user => user.idUser == Guid.Parse(User.FindFirstValue("idUser")));
 
             return View("Historico", user);
@@ -208,7 +217,8 @@ namespace Study2gether.Controllers
                         {
                             user.password = BCrypt.Net.BCrypt.HashPassword(newPassword1);
                             await _context.SaveChangesAsync();
-                            return RedirectToAction("Historico");
+                            TempData["success"] = "Sua Senha foi alterada com sucesso!";                       
+                            return View();
                         }
                         else
                         {
@@ -232,6 +242,95 @@ namespace Study2gether.Controllers
             await HttpContext.SignOutAsync();
 
             return RedirectToAction("Index", "Home");
+        }
+
+
+        public IActionResult RecuperarSenha()
+        { 
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RecuperarSenha(ForgotPassword model)
+        {
+            if (ModelState.IsValid)
+            {
+                var emailExists = _context.Users.FirstOrDefault(o => o.email == model.email);
+                if (emailExists != null)
+                {
+                    try
+                    {
+                        DotNetEnv.Env.Load();
+                        model.idForgotPass = Guid.NewGuid();
+                        model.emailSent = true;
+                        model.email = emailExists.email;
+                        model.passwordResetToken = Guid.NewGuid();
+                        model.created_date = DateTime.Now;
+                        _context.Add(model);
+                        _context.SaveChanges();
+
+                        string apiKey = Environment.GetEnvironmentVariable("API_KEY");
+                        var client = new SendGridClient(apiKey);
+
+                        var from = new EmailAddress("study2gether7789@gmail.com", "Study2Gether");
+                        var to = new EmailAddress(model.email, emailExists.email);
+                        var subject = "[Study2Gether] Recuperação de senha";
+                        var plainTextContent = "Para recuperar sua senha, por favor entre no link: http://studytwogether-001-site1.itempurl.com/Users/Recuperacao/"+ model.passwordResetToken;
+                        var htmlContent = "<p>Para recuperar sua senha, por favor entre no link: http://studytwogether-001-site1.itempurl.com/Users/Recuperacao/" + model.passwordResetToken + "</p>";
+                        var message = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+
+                        var response = await client.SendEmailAsync(message);
+
+                        if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+                        {
+                            Console.WriteLine("Email sent successfully!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Failed to send email. Error: " + response.StatusCode);
+                        }
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        TempData["success"] = ("An error occurred while sending the email: " + ex.Message);
+                    }
+                   
+                }
+            }
+            TempData["success"] = "Caso o e-mail exista, você recebera um email com mais instruções em breve!";
+
+            return View(model);
+        }
+
+        public IActionResult Recuperacao()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Recuperacao(Guid id, User user)
+        {
+            DateTime yesterday = DateTime.Today.AddDays(-1);
+            var validatePasswordLength = user.password.Length >= 8;
+            var recovery = _context.ForgotPassword.FirstOrDefault(o => o.passwordResetToken == id && o.created_date > yesterday );
+            if (validatePasswordLength && recovery != null)
+            {
+                var usuario = _context.Users.FirstOrDefault(o => o.email == recovery.email);
+                usuario.password = BCrypt.Net.BCrypt.HashPassword(user.password);
+                _context.Remove(recovery);
+                _context.SaveChanges();
+
+                TempData["messages"] = "Senha alterada com Sucesso!";
+            }
+            else
+            {
+
+                TempData["messages"] = "Um erro ocorreu, tente recuperar sua senha novamente!";
+            }
+            return View();
         }
     }
 }

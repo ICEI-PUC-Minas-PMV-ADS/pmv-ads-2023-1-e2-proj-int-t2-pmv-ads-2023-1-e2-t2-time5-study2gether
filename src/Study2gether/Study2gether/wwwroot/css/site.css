@@ -62,3 +62,20 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 2.5rem;
 }
+
+li.selected {
+    background-color: #E68A00;
+    border: none;
+}
+
+.bg-answers {
+    background-color: #fff;
+}
+
+.bg-answers .card-header {
+    background-color: #d9f6f2;
+}
+
+.bg-answers .card-footer {
+    background-color: #d9f6f2;
+}

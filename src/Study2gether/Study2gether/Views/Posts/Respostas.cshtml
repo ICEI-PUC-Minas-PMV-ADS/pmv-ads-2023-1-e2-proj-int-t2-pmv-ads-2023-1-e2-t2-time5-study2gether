@@ -4,72 +4,81 @@
     ViewData["Title"] = "Respostas";
 }
 @{
-    var postList = ViewData["perguntas"] as Post;
+    var post = ViewData["Post"] as Post;
+    var isAuthenticated = User.Identity.IsAuthenticated;
 }
 
-
-<div class="row">
-    <div class="col-sm-3 mt-5 row justify-content-start align-content-start" id="lista">
-        <div>
-            <ul>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
-                <li class="btn btn-warning d-block mt-2"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
-            </ul>
-        </div>
+<link rel="stylesheet" href="~/css/pergunta.css" runat="server">
+<div class="row container-fluid mt-5">
+    <div class="col-12 col-sm-2 mt-2" id="lista">
+        <ul class="row justify-content-center align-items-center p-0">
+            <li class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Indicacoes") ? "selected" : "")"><a class="text-dark" asp-action="Indicacoes">Indicações</a></li>
+            <li class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Perguntas") ? "selected" : "")"><a class="text-dark" asp-action="Perguntas">Perguntas</a></li>
+            <li class="btn btn-warning d-block col-3 col-sm-8 mt-2 text-dark  @((ViewContext.RouteData.Values["action"].ToString() == "Interacoes") ? "selected" : "")"><a class="text-dark" asp-action="Interacoes">Interações</a></li>
+        </ul>
     </div>
 
-    <div class="replies col-sm-9 mt-5">
+    <div class="posts justify-content-center col-12 col-sm-10 mt-2">
         <div id="replies-container">
-
 
             <div class="caixa card rounded-lg mb-3">
                 <div class="card-header">
-                    <h4 class="text-center">@postList.title</h4>
+                    <h4 class="text-center">@post.title</h4>
+                    <div class="card-header-tabs d-inline-flex align-items-center">
+                        <img class="rounded-circle mx-1" height="30" width="30" loading="lazy" src="@post.User.imageLink" alt="Foto de @post.User.name">
+                        <h6>@post.User.name</h6>
+                    </div>
                 </div>
                 <div class="card-body">
-                    <div>@postList.content</div>
-                </div>
-                <!--Text area-->
-                <div class="container">
-                    <form asp-action="Respostas">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-floating">
-                            <div class="form-group">
-                                <label asp-for="title" class="control-label">Título</label>
-                                <input asp-for="title" class="form-control" />
-                                <span asp-validation-for="title" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="content" class="control-label">Conteúdo</label>
-                                <input asp-for="content" class="form-control" />
-                                <span asp-validation-for="content" class="text-danger"></span>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary" type="submit">Enviar</button>
-                                <a class="btn btn-secondary" asp-action="Create" role="button">Cancelar</a>
-                            </div>
-                        </div>
-
-                    </form>
+                    <div>@Html.Raw(@post.content)</div>
                 </div>
 
-            </div>
-            <div class="card-footer">
-
-                <div class="reactions d-inline">
-                    <i class="fa-regular fa-comment-dots"></i>
-
-                    <i class="fa-regular fa-face-smile"></i>
-
-                    <i class="fa-solid fa-chart-column"></i>
-
-                    <i class="fa-solid fa-star"></i>
+                <div class="card-footer">
+                    <label class="float-right" for="data-resposta"><small>Postado em: @post.created_date.ToString("dd/MM/yyyy")</small></label>
                 </div>
-
-                <label class="float-right" for="data-resposta"><small>Data da resposta: @postList.created_date)</small></label>
             </div>
         </div>
 
+        @foreach (var obj in post.Answers.OrderBy(o => o.created_date))
+        {
+            <div class="caixa card rounded-lg mb-3 bg-answers">
+                <div class="card-header d-inline-flex align-items-center">
+                    <img class="rounded-circle mx-1" height="30" width="30" alt="Sua foto de perfil" loading="lazy" src="@obj.User.imageLink" alt="Foto de @obj.User.name">
+                    <h6>@obj.User.name</h6>
+                </div>
+                <div class="card-body">
+                    <div>@Html.Raw(@obj.content)</div>
+                </div>
+                <div class="card-footer">
+                    <label class="float-right" for="data-resposta"><small>Data da postagem: @obj.created_date.ToString("dd/MM/yyyy")</small></label>
+                </div>
+            </div>
+        }
+
+        @if (isAuthenticated)
+        {
+            <div class="bg-answers">
+                <form asp-action="Respostas">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-floating">
+                        <div class="card bg-answers">
+                            <div class="form-group">
+                                <div class="card-header text-center">
+                                    <label asp-for="content" class="control-label text-center">Responder</label>
+                                </div>
+                                <div class="card-body">
+                                    <textarea asp-for="content" id="tiny" class="form-control" ></textarea>
+                                    <span asp-validation-for="content" class="text-danger"></span>
+                                </div>
+                            </div>
+                        <div class="mt-2 card-footer">
+                            <a class="btn btn-secondary float-left" asp-action="Perguntas" asp-controller="Posts" role="button">Voltar</a>
+                            <button class="btn btn-primary float-right" type="submit">Enviar</button>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        }
     </div>
 </div>

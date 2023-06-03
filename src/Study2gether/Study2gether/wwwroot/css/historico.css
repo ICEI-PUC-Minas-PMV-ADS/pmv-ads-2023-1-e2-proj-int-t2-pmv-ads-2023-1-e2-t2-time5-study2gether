@@ -22,7 +22,7 @@
     transition: 0.3s;
     font-size: 11px;
     border-radius: 1px;
-    background-color: #f1f1f1;
+    background-color: darkgray;
 }
 
 .tab button:hover {
@@ -43,7 +43,7 @@
     border: 1px solid #ccc;
     border-top: none;
     animation: fadeEffect 1s; 
-    font-size: 12px;
+    font-size: 14px;
     overflow-y: scroll;
     height: 350px;
     margin-top: 0px;
@@ -61,6 +61,8 @@
     width: 50%;
     min-width: 250px;
     float: left;
+    font-size: 14px;
+
 }
 
 #container-b {
@@ -70,6 +72,7 @@
     float: left;
     right: -25px;
     max-height: 350px;
+    font-size: 14px;
 }
 
 #historicoTitle {
@@ -88,8 +91,21 @@ p.historicoTitle {
     vertical-align: middle;   
 }
 
+#limitContent {
+    max-height: 40px;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-content: center;
+}
+
+
 #sobreVoce-redesSociais {
     height: 200px;
+    min-width: 150px;
+   
 }
 
 #fotoPerfil {
@@ -114,58 +130,55 @@ p.historicoTitle {
 .box-description-socialMedia {
     border-radius: 0.25rem;
     border: 1px solid #ccc;
-    font-size: 12px;
+    font-size: 14px;
     width: 100%;
-    min-width: 310px;
+    min-width: 150px;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    height: 100px;
-    min-height: 180px;
+    min-height: 170px;
     overflow-y: scroll;
     background-color: white;
+    font-size: 14px;
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 279px) and (max-width: 550px) {
     #container-b {
-        min-width: 250px;
         width: 100%;
-        float: left;
         right: 0px;
     }
 
-@media screen and (max-width: 480px) {
     #container-a {
-        min-width: 250px;
+        min-width: 150px;
         width: 100%;
+        margin-right: 3%;
+    }
+
+    .tab button {     
+        font-size: 10px;        
+    }
+}
+
+
+@media screen and (min-width:551px) and (max-width: 804px) {
+    #container-b {
+        min-width: 100px;
         float: left;
-
+        width: 40%;
+        margin-right: 3%;
     }
-}       
-/*
-@media screen and (min-width: 768px) {
-    .description-socialMedia {
 
+    #container-a {
+        min-width: 100px;
+        float: left;
+        width: 40%;
+        margin-left: 3%;
+     }
 
+    .perfilHistorico {
+        width: 96%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
-
-@media screen and (min-width: 768px) {
-    .description-socialMedia {
-
-
-    }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-    {}}
-
-
-
-320px — 480px: dispositivos móveis.
-481px — 768px: iPads, tablets.
-769px — 1024px: telas pequenas, laptops.
-1025px — 1200px: desktops, telas grandes.
-1201px e acima — telas muito grandes, TVs.
-
-*/
+   
