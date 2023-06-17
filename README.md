@@ -53,7 +53,7 @@ Esperamos que tenham uma ótima experiência ao navegar e interagir com os coleg
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="/src/Study2gether/Study2gether"> Código Fonte</a></li>
 
 # Apresentação
 
