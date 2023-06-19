@@ -1,6 +1,6 @@
 # Apresentação da Proposta da Solução
 Link do YouTube com a apresentação:
-https://www.youtube.com/watch?v=-EOuwIvd9is
+https://youtu.be/0YE5f9ntQd0
 
 # Apresentação da Solução Final
 
