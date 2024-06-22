@@ -1,0 +1,29 @@
+message: Please cite this software using these metadata.
+title: Study2gether
+authors:
+  - family-names: de Lima Ventura
+    given-names:  Amanda
+  - family-names: Caroline Trindade Gonçalves Cândido
+    given-names: Ellen
+  - family-names: Lomeu Junior
+    given-names: Elpidio
+ - family-names: Maia dos Santos
+    given-names: Fabrício 
+  - family-names: Correia de Sá e Silva
+    given-names: Leonardo
+  - family-names: Cordeiro Marra
+    given-names: Odair
+  - family-names: Matsumoto Fernandes
+    given-names: Shinji
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Wilson da Costa
+    given-names: José
+keywords:
+  - Learning
+  - College
+  - Shared Knowledge
+
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e2-proj-int-t2-pmv-ads-2023-1-e2-t2-time5-study2gether
+version: 1.0.0
+date-released: 2023-19-06
